@@ -1,0 +1,117 @@
+%==============================================================================
+% Appendix D: Endpoint and spectral evidence
+%==============================================================================
+\section{Endpoint and spectral evidence}
+\label{app:spectral}
+
+This appendix collects the spectral evidence of
+Sections~\ref{sec:rankdefect}--\ref{sec:spectral}.  The terminology is unified as
+the ``$k>0$ spectral completion over the analysed harmonic sectors.''  The
+verification criteria H1/H2/H3 correspond to the operational definitions at the
+start of Section~\ref{sec:spectral}.
+
+\subsection{Endpoint evidence}
+\label{app:spectral:endpoint}
+
+\begin{itemize}
+  \item \textbf{$\Tthree$ (full-$k$)}: in the Fourier sector the TT spatial
+        operator $=|k|^{2}$ is confirmed symbolically.  The $k=0$ locus is
+        separated (flat degeneracy; the all-three-axis scalar-axis zero modes are
+        a homogeneous-level result).
+  \item \textbf{$\Sthree$ ($l$-symbolic)}: the absence of the scalar-sector zero
+        mode is confirmed symbolically for all $l$ (not a finite sample); the
+        spin-2 TT has eigenvalue $(l-1)(l+3)$ for all $l\ge2$ with positive
+        definite kinetic Hessian.  The cases $l=0,1$ are endpoint
+        classifications (gauge/non-dynamical).
+\end{itemize}
+
+\subsection{Scalar full-spectral evidence ($\Nilthree$/$\Solthree$)}
+\label{app:spectral:scalar}
+
+For the scalar modes of the non-commutative harmonic sectors, the effective
+zero-mode count $d(M)$ is evaluated by the matrix harmonic closure:
+\begin{itemize}
+  \item $\Nilthree$: all non-commutative modes have a positive gap ($d(M)=0$)
+        $\Rightarrow$ the homogeneous-representative kernel count
+        ($\dim\ker n=2$) agrees with the full-spectral count (consistent).
+  \item $\Solthree$: the bulk has a positive gap ($d(M)=0$); the lowest-level
+        truncation-edge term is not counted as a theorem zero (scope-restricted).
+\end{itemize}
+
+\subsection{TT / spin-1 full-spectral evidence ($\Nilthree$/$\Solthree$)}
+\label{app:spectral:tt}
+
+Extending the same matrix harmonic closure to the spin-2 / spin-1 sectors:
+\begin{itemize}
+  \item TT: $d(M)=2$ (both topologies) -- full-spectral consistency of the
+        propagating 2 TT.
+  \item spin-1: $d(M)=0$ (both topologies) -- no physical degrees of freedom in
+        the transverse vector.
+\end{itemize}
+
+\subsection{Spectral towers (breakdown of the $k>0$ completion)}
+\label{app:spectral:towers}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\begingroup
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{llLY}
+\toprule
+Topology & Sector & Operator / spectrum & Grade \\
+\midrule
+$\Tthree$ & Fourier $k\ne0$ & $|k|^{2}$ & closed form (endpoint control) \\
+$\Sthree$ & $l\ge2$ TT & $(l-1)(l+3)$ & closed form (endpoint control) \\
+$\Nilthree$ & toroidal ($k=0$) & $4\pi^{2}(m^{2}+n^{2})$ & closed form \\
+$\Nilthree$ & Heisenberg ($k\ne0$) & $2\pi|k|(2N+1)$ & closed form / analytic \\
+$\Solthree$ & boost bulk ($pq\ne0$) & $\inf V=2|pq|>0$ &
+analytic bound (all labels) \\
+$\Solthree$ & compact edge &
+two-sided confining modified Mathieu; discrete, $\lambda_{1}>0$~\cite{ref40} &
+closed form / analytic (discreteness, positivity) $+$ representative numerics
+(explicit $\lambda_{1}$, representative $A$) \\
+$\Solthree$ & non-compact subline ($pq=0$) &
+gapless continuum $=$ signature of amenability~\cite{ref38,ref39} &
+interpretive line (separated from the main line; not counted in the theorem
+list) \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\caption{Spectral towers across the four topologies.}
+\label{tab:towers}
+\end{table}
+
+\subsection{Spectral verification summary}
+\label{app:spectral:summary}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\begingroup
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{lYYYY}
+\toprule
+Criterion & $\Tthree$ & $\Sthree$ & $\Nilthree$ & $\Solthree$ \\
+\midrule
+Propagation & closed form & closed form & closed form / analytic &
+analytic bound (bulk) $+$ representative numerics (edge) \\
+No-ghost & closed form & closed form & closed form / analytic &
+analytic bound (bulk; edge TT sign positive) \\
+Non-contamination & closed form & closed form & closed form / analytic &
+analytic bound (bulk; edge carrier separated) \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\caption{Spectral verification summary.}
+\label{tab:spectral_summary}
+\end{table}
+
+\subsection{Independent spectral witness}
+\label{app:spectral:witness}
+
+\code{script/scripts/paper07/spectral_completion_witness.py} reads no external
+spectral table; it constructs the formulas of Section~\ref{sec:spectral}
+in-script ($\Tthree$: $|k|^{2}$, $\Sthree$: $(l-1)(l+3)$, $\Nilthree$ two towers,
+$\Solthree$ bulk gap $\inf V=2|pq|$ and the representative finite-difference
+edge) and decides the H1--H3 positivity conditions.

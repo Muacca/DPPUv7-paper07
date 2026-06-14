@@ -1,0 +1,19 @@
+Paper07 S3 normalization factor witness
+=================================================================
+frame_convention=C_equals_epsilon
+base_n_matrix=[1,0,0; 0,1,0; 0,0,1]
+  scale=1: rank_n=3 dim_ker_n=0 status=PASS
+  scale=2: rank_n=3 dim_ker_n=0 status=PASS
+  scale=1/4: rank_n=3 dim_ker_n=0 status=PASS
+scale_detail_begin
+  scale_detail_row {"scale_factor": "1", "rank_n": "3", "dim_ker_n": "0", "curvature_sample": "6*q**2/R**2", "eigenvalue_sample": "(l - 1)*(l + 3)", "rank_invariant": "true", "curvature_scaled": "true", "eigenvalue_scaled": "true", "status": "PASS"}
+  scale_detail_row {"scale_factor": "2", "rank_n": "3", "dim_ker_n": "0", "curvature_sample": "6*q**2/R**2", "eigenvalue_sample": "(l - 1)*(l + 3)", "rank_invariant": "true", "curvature_scaled": "true", "eigenvalue_scaled": "true", "status": "PASS"}
+  scale_detail_row {"scale_factor": "1/4", "rank_n": "3", "dim_ker_n": "0", "curvature_sample": "6*q**2/R**2", "eigenvalue_sample": "(l - 1)*(l + 3)", "rank_invariant": "true", "curvature_scaled": "true", "eigenvalue_scaled": "true", "status": "PASS"}
+scale_detail_end
+
+fail_count=0
+overall_verdict=PASS_S3_NORMALIZATION_FACTOR_WITNESS
+
+Computation time: 0.1s
+
+*Script: scripts/paper07/s3_normalization_factor_witness.py

@@ -1,0 +1,140 @@
+%==============================================================================
+% Section 8: Torsion/Nieh-Yan sector robustness
+%==============================================================================
+\section{Torsion/Nieh--Yan sector robustness}
+\label{sec:torsion}
+
+Although the action contains the NY term and torsion, the theorem and robustness
+checks so far have not referred to torsion.  In this section we examine the
+effect of the torsion sector on the preceding results.  The claim is confined to
+a single point: \emph{the torsion sector affects none of the theorem hierarchy of
+this paper (quadratic / $k>0$ spectral completion / finite deformation).}  The
+physics of torsion itself (boundary charge, localisation, etc.) is outside the
+scope of this paper.
+
+\subsection{Known/new boundary}
+\label{sec:torsion:boundary}
+
+That the NY term is topological in the canonical analysis and does not change the
+classical dynamics is known~\cite{ref33,ref34,ref35}.  The content of this
+section is not a restatement of that generality but an \emph{exact demonstration
+in the reduced system}: (i) the reduced action is exactly at most quadratic in
+the torsion ansatz scalars; (ii) under field promotion no derivative coupling
+arises in the inspected criterion; and (iii) the finite-deformation
+classification is invariant.
+
+\subsection{(i) Exact auxiliary shell}
+\label{sec:torsion:shell}
+
+The reduced torsion Lagrangian of the NY-MAIN route can be organised as an
+auxiliary shell in the form
+\begin{equation}
+  \Laux
+  = a_{\eta}\,\eta^{2} + a_{V}\,V^{2} + b_{V}\,\dot{\vol}\,V
+    + \text{(boundary total-derivative)},
+\end{equation}
+(the coefficients $a_{\eta},a_{V},b_{V}$ are topology/mode dependent but
+algebraic in $\eta,V$).  By a polynomial-degree verification (symbolic up to
+degree 4, residual zero), it is \emph{exactly at most quadratic} in $(\eta,V)$.
+
+\paragraph{Algebraic proof (shell condition).}
+The Euler--Lagrange equations are
+\begin{equation}
+  \frac{\partial\Laux}{\partial\eta}=2a_{\eta}\,\eta=0,\qquad
+  \frac{\partial\Laux}{\partial V}=2a_{V}\,V + b_{V}\,\dot{\vol}=0.
+\end{equation}
+If $a_{\eta}\ne0$ then $\eta^{\ast}=0$.  The linear term
+$b_{V}\,\dot{\vol}\,V$ in $V$ can be separated as the boundary current
+\begin{equation}
+  2\,\frac{\dd}{\dd t}\!\left(\vol\cdot V\right),
+\end{equation}
+and the bulk equation gives $V^{\ast}=0$.  Hence
+\begin{equation}
+  \eta^{\ast}=0,\qquad V^{\ast}=0
+\end{equation}
+is an \emph{exact auxiliary shell}, not an approximation
+(Appendix~\ref{app:torsion}).
+
+\subsection{(ii) Field promotion does not generate kinetic terms}
+\label{sec:torsion:promotion}
+
+Decompose the connection as $\Gamma=\Gamma_{\mathrm{LC}}+K(\eta,V)$, with
+\begin{equation}
+  R[\Gamma]=\dd\Gamma+\Gamma\wedge\Gamma,\qquad
+  K=K(\eta,V)\ \text{(algebraic in the $\AX/\VT/\MX$ ansatz scalars)}.
+\end{equation}
+If $K$ is algebraic in $\eta,V$ then $dK$ is first order in the field
+derivatives, and the quadratic derivative couplings
+$(\dot\eta^{2},\dot V^{2},(\nabla\eta)^{2},(\nabla V)^{2})$ in the scalar
+contraction of $\Delta R$ cancel structurally (a native-action-gate statement;
+not a full torsion field theory).
+
+Promoting the scalars to fields $\eta(x),V(x)$, we inspected the above over all
+cells of four topologies $\times$ $\AX/\VT/\MX$.  The results:
+
+\begin{itemize}
+  \item No quadratic derivative coupling appears at all.  Even a linear spatial
+        gradient is absent.
+  \item What appears is only a boundary-type time-linear current: $2\,\vol\cdot\dot V$
+        on the EC side and $6\,\vol^{2/3}\,\dot\eta$ on the NY side.
+  \item At the level of the Riemann components individual derivative terms fire,
+        but they cancel under the scalar contraction, as confirmed by a
+        component computation.
+  \item The classification procedure is validated by positive-detector
+        controls in the native-action gate that the witness checks before
+        reporting the cells above: a free-scalar toy run through the same
+        classifier recovers the expected positive time-kinetic and negative
+        spatial-gradient coefficients (alongside ghost, wrong-sign, and
+        linear-current toys), so a genuine kinetic term would be detected
+        (\code{script/scripts/paper07/torsion_auxiliary_field_promotion_witness.py};
+        no claim about a full 24-component torsion field theory).
+\end{itemize}
+
+\subsection{(iii) Finite fate is unchanged}
+\label{sec:torsion:finite}
+
+The modulus/wall split of Section~\ref{sec:finite} is invariant under all of the
+torsion modes EH/AX/VT/MX (a corollary of $\Laux|_{\mathrm{shell}}=0$ on the
+auxiliary shell).
+
+\subsection{Conclusion and scope}
+\label{sec:torsion:conclusion}
+
+\begin{quote}
+Within the NY-MAIN route and the $\AX/\VT/\MX$ torsion ansatz scalars, the
+reduced torsion sector remains an exact auxiliary, and its promotion to fields
+$\eta(x),V(x)$ generates no quadratic kinetic/gradient term in the inspected
+native-action criterion.  Hence torsion/NY affects none of the DBR rank-defect
+kernel (Section~\ref{sec:rankdefect}), the robustness from the $k>0$ spectral
+completion (Section~\ref{sec:spectral}), or the finite homogeneous modulus/wall
+split (Section~\ref{sec:finite}).
+\end{quote}
+
+\paragraph{Scope (explicit).}
+The subject of this section is the $\AX/\VT/\MX$ ansatz scalars, not a
+$(\partial T)^{2}$-absence theorem for a full 24-component torsion field theory.
+The exact-degree-2 / exact-shell claim is restricted to the NY-MAIN route.  A
+time-linear boundary current is not called a kinetic/propagating mode.  The
+absence of NY bulk involvement is not claimed outside this scope.
+
+\begin{table}[H]
+\centering
+\begingroup
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{lLLl}
+\toprule
+Layer & Check & Result & Scope \\
+\midrule
+Quadratic & Polynomial-degree verification ($\eta,V$) &
+exact degree-2; $\eta^{\ast}=V^{\ast}=0$ exact shell & NY-MAIN route \\
+Finite & Invariance of the modulus/wall split &
+invariant (corollary) & finite Palatini branch \\
+Field-promoted & Derivative-coupling classification (4 topo.\ $\times$ AX/VT/MX) &
+kinetic/gradient absent; boundary current only & inspected native-action
+criterion \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\caption{Hierarchy of the torsion robustness.}
+\label{tab:torsion}
+\end{table}

@@ -1,0 +1,123 @@
+%==============================================================================
+% Appendix C: RBD route comparison and route-dependent discrepancy
+%==============================================================================
+\section{RBD route comparison and route-dependent discrepancy}
+\label{app:route}
+
+This appendix gives the details of the control experiment of
+Section~\ref{sec:dbr}.  Here ``Palatini reduction non-commutativity'' is a
+route-level descriptive term, not a claim of a general theorem.
+
+\subsection{The RBD route}
+\label{app:route:rbd}
+
+The RBD (Routh-before-Dirac) route solves the auxiliary components of the spatial
+connection (spatial-$\omega$) by their field equations and substitutes them into
+the action, and then performs the constraint analysis with the remaining
+variables.  This substitution has not passed the verification of the
+auxiliary-variable condition (algebraic solvability free of derivatives), and so
+incurs the non-commutativity risk warned of by the generality~\cite{ref13}.
+
+\subsection{Direct route recomputation}
+\label{app:route:model}
+
+Our negative control is not a toy model.  It uses the bundled DBR/RBD
+constraint-dynamics engine (\code{dppu.dirac}) and recomputes the route variants
+from the same $\Sthree$ Branch-A
+local first-order Lagrangian.  The reproducibility script
+\code{script/scripts/paper07/route_comparison_s3_branch_a_witness.py} does not
+use intermediate CSV files as evidence.  It directly executes:
+\begin{itemize}
+  \item \textbf{DBR\_KEEP\_ALL}: keep the independent connection through Dirac
+        closure;
+  \item \textbf{RBD\_SPATIAL\_OMEGA\_ROUTH}: Routh-eliminate spatial
+        $\omega$ first, then run scalar projection and Dirac closure;
+  \item \textbf{RBD\_FULL\_K\_ROUTH}: Routh-eliminate full $K$ first, then run
+        scalar projection and Dirac closure.
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.19\linewidth}>{\centering\arraybackslash}p{0.14\linewidth}>{\raggedleft\arraybackslash}p{0.12\linewidth}@{}}
+\toprule
+Route & $N_{\rm phys}$ at $l=0/1/\ge2$ & $l=0$ pair & $H_{PP}$ at $l=0$ & Status \\
+\midrule
+\texttt{DBR\_KEEP\_ALL} & $0/0/0$ & none & n/a & computed \\
+\begin{tabular}[t]{@{}l@{}}\texttt{RBD\_SPATIAL}\\\texttt{OMEGA\_ROUTH}\end{tabular} &
+$1/1/2$ & $(s_{l0},P_{s,l0})$ & $-3/8$ & computed \\
+\begin{tabular}[t]{@{}l@{}}\texttt{RBD\_FULL\_K}\\\texttt{ROUTH}\end{tabular} &
+$1/1/2$ & $(s_{l0},P_{s,l0})$ & $-3/8$ & computed \\
+\bottomrule
+\end{tabular}
+\endgroup
+\caption{Direct route recomputation in the $\Sthree$ Branch-A scalar sector.}
+\label{tab:route_direct}
+\end{table}
+
+The primary evidence for route non-commutativity is the mismatch in
+$N_{\rm phys}$.  The $l=0$ value $H_{PP}=-3/8$ is a diagnostic that the RBD
+extra scalar branch is not a benign rewriting.  Since RBD is not the adopted
+route, this negative sign is not used as a physical ghost or physical
+instability claim.
+
+\subsection{Comparison setup and result}
+\label{app:route:result}
+
+The control experiment was carried out on the $\Sthree$ background, Branch-A
+scalar sector.  The direct recomputation of \ref{app:route:model} reproduces the
+order-of-operations dependence in the DBR/RBD engine.
+\begin{itemize}
+  \item \textbf{DBR side}: after the Dirac closure, the physical scalar degrees
+        of freedom are $0$ at all harmonic levels (the kernel is absent for
+        $\Sthree$; $\dzero=0$).
+  \item \textbf{RBD side}: spatial-$\omega$ Routh and full-$K$ Routh both give
+        $N_{\rm phys}=1/1/2$, so they do not commute with DBR.
+  \item \textbf{Same-Lagrangian internal demonstration}: at $l=0$ the comparison
+        starts from the same Branch-A local first-order Lagrangian and
+        reproduces DBR:0 / RBD:1 together with $H_{PP}=-3/8$ (by symbolic
+        computation, with no numerical error).  This establishes that the
+        discrepancy arises from the route itself, not from an implementation or
+        normalisation difference.
+  \item \textbf{Scope restriction}: for $l\ge1$ the RBD extra count is recorded
+        as a route-level artefact involving Lorentz-gauge breaking by the
+        elimination-first frame.  The negative-kinetic diagnostic is claimed
+        only at $l=0$.
+\end{itemize}
+
+\subsection{Route comparison labels}
+\label{app:route:labels}
+
+\begin{table}[H]
+\centering
+\begingroup
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{lLL}
+\toprule
+Label & Content & Treatment \\
+\midrule
+RBD scalar discrepancy & RBD's extra scalar mode ($H_{PP}=-3/8$ at $l=0$) &
+not a physical instability (route-level); not used for physical claims \\
+RBD higher-level artefact & extra RBD counts for $l\ge1$ &
+recorded as elimination-first gauge breaking; no sign claim promoted \\
+DBR standard & standard route with Dirac closure first &
+the basis of all claims of this paper \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\caption{Route comparison labels.}
+\label{tab:route_labels}
+\end{table}
+
+\subsection{Scope and limitations (route sector)}
+\label{app:route:scope}
+
+\begin{itemize}
+  \item We do not use the output of the RBD route as the basis of any physical
+        claim, positive or negative.  We therefore do not treat the RBD extra
+        mode as a physical ghost / physical instability.
+  \item We do not claim the generality that ``RBD always fails.''  It is treated
+        only as a control experiment on a verified sector.
+\end{itemize}

@@ -1,0 +1,178 @@
+%==============================================================================
+% Section 5: Robustness I -- scoped k>0 spectral completion
+%==============================================================================
+\section{Robustness I: scoped $k>0$ spectral completion}
+\label{sec:spectral}
+
+In this section we show that the classification of Theorem~\ref{thm:rankdefect}
+is unchanged for the inhomogeneous modes, as a \emph{$k>0$ spectral completion
+over the analysed harmonic sectors}.  The verification is organised by the
+following operational definitions:
+
+\begin{itemize}
+  \item \textbf{H1 (propagation)}: at the analysed labels the TT propagation
+        operator is positive (for $k>0$ the two TT modes propagate with positive
+        dispersion).
+  \item \textbf{H2 (no-ghost)}: the TT kinetic Hessian is positive definite at
+        all labels.
+  \item \textbf{H3 (non-contamination)}: the analysed $k>0$ sectors introduce no
+        additional normalisable physical zero into
+        $\dzero=3-\rank(n)$.
+\end{itemize}
+
+H1--H3 are not a full field-theory spectral theorem; they are a robustness
+criterion restricted to the analysed harmonic sectors.
+
+\subsection{Endpoint controls: $\Tthree$ and $\Sthree$}
+\label{sec:spectral:endpoint}
+
+The two ends of the four-topology ladder ($\dzero=3$ and $0$) have known
+spectra, and serve as cross-checks of the method.
+
+\begin{itemize}
+  \item \textbf{$\Tthree$ (proof-like derivation of H1--H3)}.  In the abelian
+        Fourier expansion the TT spatial operator is as below, so for $k\ne0$
+        one has $\lambda_{\Tthree}>0$ (H1).  The kinetic block is positive
+        definite (H2).  The $k=0$ locus is separated as a flat-degeneracy
+        endpoint/gauge locus and is not included in the $k>0$ claim of H3:
+        \begin{equation}
+          \lambda_{\Tthree}(\bm{k})=|\bm{k}|^{2}.
+        \end{equation}
+  \item \textbf{$\Sthree$ (similarly)}.  By the tensor
+        harmonics~\cite{ref28,ref29} the TT eigenvalues are as below, so
+        $\lambda_{\Sthree}>0$ for $l\ge2$ (H1--H2).  The scalar zero is absent
+        for all $l$ ($l$-symbolic; H3).  The cases $l=0,1$ are classified as
+        endpoint/gauge/non-dynamical (Appendix~\ref{app:conventions}):
+        \begin{equation}
+          \lambda_{\Sthree}(l)=(l-1)(l+3)\qquad(C=\epsilon\ \text{frame}).
+        \end{equation}
+\end{itemize}
+
+\subsection{$\Nilthree$: closed-form spectral completion}
+\label{sec:spectral:nil}
+
+On $\Nilthree$ (a compact quotient of the Heisenberg group), the analysed
+harmonic sectors decompose into \emph{two towers}:
+
+\begin{itemize}
+  \item \textbf{toroidal sector} ($k=0$):
+        \begin{equation}
+          \lambda_{\mathrm{tor}}(m,n)=4\pi^{2}(m^{2}+n^{2}),\qquad
+          (m,n)\ne(0,0)\ \Rightarrow\ \lambda_{\mathrm{tor}}>0.
+        \end{equation}
+  \item \textbf{Heisenberg sector} ($k\ne0$): by non-commutativity this forms a
+        Landau-type tower, positive ($2\pi|k|>0$) even at the lowest rung $N=0$:
+        \begin{equation}
+          \lambda_{\mathrm{Heis}}(k,N)=2\pi|k|\,(2N+1),\qquad
+          N=0,1,2,\dots
+        \end{equation}
+\end{itemize}
+
+H1--H2 hold in both towers, and the positive gap implies H3 (no additional
+physical zero).  This is consistent with the matrix harmonic closure (TT:
+$d(M)=2$, spin-1: $d(M)=0$; Appendix~\ref{app:spectral}).  We call this result a
+``closed-form spectral completion over the analysed harmonic sectors.''
+
+\subsection{$\Solthree$: bulk gap and the compact edge}
+\label{sec:spectral:sol}
+
+The non-commutative sector of $\Solthree$ is labelled by boost-type harmonics,
+and the reduced spatial operator reduces to the one-dimensional Schr\"odinger
+form
+\begin{equation}
+  -\frac{\dd^{2}}{\dd w^{2}}+V(w),\qquad
+  V(w)=q^{2}e^{2w/R}+p^{2}e^{-2w/R},
+\end{equation}
+($p,q$ are labels).  We treat the \emph{bulk} and the \emph{compact edge}
+separately.
+
+\begin{itemize}
+  \item \textbf{Bulk ($pq\ne0$)}: by the arithmetic--geometric-mean inequality
+        \begin{equation}
+          V(w)\ge 2|pq|,\qquad
+          \text{with equality at } |q\,e^{w/R}|=|p\,e^{-w/R}|.
+        \end{equation}
+        Hence $\inf V=2|pq|>0$ (analytic bound, all labels) and H1--H3 hold.
+  \item \textbf{Compact edge (representative numerics)}: the physical
+        $\Solthree$ is a torus bundle with hyperbolic gluing
+        $A\in SL(2,\mathbb{Z})$ (an Anosov mapping torus), and each sector
+        becomes a two-sided confining modified-Mathieu type~\cite{ref40}.  For a
+        representative gluing parameter, a finite-difference Sturm--Liouville
+        witness confirms the lowest eigenvalue $\lambda_{1}>0$.  This is not an
+        all-Anosov closed-form theorem; it is kept at the level of
+        representative numerics
+        (\code{script/scripts/paper07/spectral_completion_witness.py}).
+\end{itemize}
+
+For $pq=0$ there is a gapless continuum with $\inf V=0$ (non-compact;
+a signature of amenability~\cite{ref38,ref39}); this is not called a normalisable
+zero and is separate from the compact edge.
+
+\subsection{No-ghost across all labels}
+\label{sec:spectral:noghost}
+
+The TT kinetic Hessian is given, for all topologies, in the form
+\begin{equation}
+  K=\mathrm{diag}\!\left(\frac{2q^{3}}{N}\right),
+\end{equation}
+label-independent ($\partial K/\partial k=0$) and positive definite.  Hence
+the no-ghost property extends to all analysed labels.  The minisuperspace
+no-ghost is treated as an independent verification in
+Section~\ref{sec:finite}.
+
+\subsection{Non-contamination of $\dzero$}
+\label{sec:spectral:noncontam}
+
+Since the bulk gap is positive in all analysed harmonic sectors, the $k>0$
+spectral completion introduces no additional physical zero into
+$\dzero=3-\rank(n)$.  The homogeneous count of $\dzero$ and the
+full-spectral statement about physical degrees of freedom are propositions at
+different levels; what this section shows is that the former is unchanged by the
+latter.
+
+\subsection{NY-inhomogeneous note}
+\label{sec:spectral:ny}
+
+The $O(\delta^{2})$ density of the NY term does not contribute to the rank in
+the bulk, even in the analysed spectral sectors.  This fact is detailed in
+Section~\ref{sec:torsion}.
+
+\subsection{Evidence tiers}
+\label{sec:spectral:tiers}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{lLY}
+\toprule
+Tier & Meaning & Instances in this section \\
+\midrule
+Closed form & Closed form / symbolic, all labels &
+$\Tthree$ full-$k$, $\Sthree$ $l$-symbolic, $\Nilthree$ tower \\
+Analytic bound & Analytic, all labels (incl.\ non-closed-form bound) &
+$\Solthree$ bulk gap $2|pq|$ \\
+Representative numerics & Numerical, representative label &
+$\Solthree$ compact edge $\lambda_{1}$ (representative) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The full spectral-verification table is collected in
+Appendix~\ref{app:spectral}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/fig04_spectral_completion_map.png}
+  \caption{Scoped $k>0$ spectral completion map.  The analysed harmonic sectors
+    of the four topologies and the verification criteria (propagation,
+    no-ghost, non-contamination) are shown.
+    \textbf{(a) $\Tthree$}: abelian Fourier sector, $|k|^{2}$ dispersion.
+    \textbf{(b) $\Sthree$}: $l$-symbolic tensor harmonics, $(l-1)(l+3)$.
+    \textbf{(c) $\Nilthree$}: sum of the toroidal sector and the Heisenberg
+    Landau tower $2\pi|k|(2N{+}1)$.
+    \textbf{(d) $\Solthree$}: boost Schr\"odinger potential $V(w)$, with the
+    compact main line (modified Mathieu, discrete $\lambda_{1}>0$) and the
+    non-compact subline ($pq=0$ gapless continuum) shown separately.
+    \emph{Scope}: this figure is restricted to the analysed harmonic sectors and
+    is not a full PDE theorem for arbitrary inhomogeneous perturbations.}
+  \label{fig:spectral}
+\end{figure}

@@ -1,0 +1,79 @@
+%==============================================================================
+% Section 6: Harmonic one-form realization of the zero kernel
+%==============================================================================
+\section{Harmonic one-form realisation of the zero kernel}
+\label{sec:harmonic}
+
+In this section we show how the scalar kernel of
+Theorem~\ref{thm:rankdefect} is realised as a geometric object.  The claim is
+within the left-invariant (representative) scope.
+
+\subsection{Left-invariant harmonic one-forms and $\ker n$}
+\label{sec:harmonic:lemma}
+
+\begin{lemma}[Harmonic one-form $\Leftrightarrow\ker n$]
+\label{lem:harmonic}
+On the left-invariant coframe $\{\sigma^{i}\}$ of a Bianchi class-A geometry,
+the space of left-invariant harmonic one-forms coincides with $\ker n$.
+\end{lemma}
+
+\begin{proof}
+For a left-invariant one-form $\xi=\xi_{i}\,\sigma^{i}$ ($\xi_{i}$ constant), the
+structure equations give
+\begin{equation}
+  \dd\xi = -\tfrac12\,\xi_{i}\,C^{i}{}_{jk}\,\sigma^{j}\wedge\sigma^{k},
+\end{equation}
+and since $C^{i}{}_{jk}=\epsilon_{jkl}n^{li}$ in class A,
+\begin{equation}
+  \dd\xi=0
+  \quad\Longleftrightarrow\quad
+  n\,\xi=0
+  \quad\Longleftrightarrow\quad
+  \xi\in\ker n.
+\end{equation}
+Moreover, for a left-invariant metric the co-closed condition
+$\dd{\star}\xi=0$ is satisfied automatically by unimodularity (class A).  Hence
+the harmonic one-forms are isomorphic to $\ker n$, of dimension $\dzero$.  On the
+compact quotient they provide representatives of the de Rham $H^{1}$, realising
+the geometric content of the coincidence with $b_{1}$
+(Section~\ref{sec:rankdefect:b1})~\cite{ref41,ref42}.
+\end{proof}
+
+The agreement of the nullspaces of the exterior-derivative operator $d_{1}$ (on
+left-invariant one-forms) and of $n$ is verifiable with
+\code{script/scripts/paper07/harmonic_kernel_correspondence.py}.
+
+\subsection{Map to the Hessian kernel}
+\label{sec:harmonic:hessian}
+
+Define the map from the scalar-axis perturbations $\beta_{a}$ to the
+left-invariant one-form directions by
+\begin{equation}
+  \Phi:\ \beta_{a} \longmapsto \beta_{a}\,\sigma^{a}
+\end{equation}
+(no sum; Milnor frame).
+
+\begin{proposition}[Hessian kernel $\leftrightarrow$ harmonic basis]
+\label{prop:hessian}
+The kernel of the scalar-axis Hessian of the reduced quadratic action is in
+one-to-one correspondence with $\Phi(\ker n)$.  The map $\Phi$ preserves the
+subspace (of dimension $\dzero$), not the axis names.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+For $\beta\in\ker n$, Lemma~\ref{lem:harmonic} makes $\Phi(\beta)$ harmonic.  By
+the activation rank of Section~\ref{sec:rankdefect:mechanism}, the $\beta$
+direction does not activate a secondary constraint, and no kinetic pairing arises
+in the scalar-axis Hessian.  Conversely, each direction of the Hessian kernel is
+realised as a frame stretching along the basis $\xi^{(\alpha)}$ of $\ker n$
+(Appendix~\ref{app:harmonic}).
+\end{proof}
+
+\subsection{Scope}
+\label{sec:harmonic:scope}
+
+This realisation is a correspondence at the left-invariant (homogeneous
+representative) level, not a full Hodge-theoretic statement including the
+inhomogeneous modes.  That no additional zero arises in the inhomogeneous sectors
+is independently guaranteed by the non-contamination criterion of
+Section~\ref{sec:spectral}.

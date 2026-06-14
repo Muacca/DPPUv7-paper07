@@ -1,0 +1,94 @@
+%==============================================================================
+% Appendix A: Conventions
+%==============================================================================
+\section{Conventions}
+\label{app:conventions}
+
+\subsection{Signature, Hodge, and $\epsilon$ conventions}
+\label{app:conventions:signature}
+
+\begin{itemize}
+  \item Metric signature: $(-,+,+,+)$ (Lorentzian).
+  \item Internal indices $I,J,\dots\in\{0,1,2,3\}$; spatial frame indices
+        $a,b,\dots\in\{1,2,3\}$.
+  \item Levi-Civita symbol: $\epsilon_{0123}=+1$; in three spatial dimensions
+        $\epsilon_{123}=+1$.
+  \item The Hodge dual is defined in the Lorentzian convention, with the
+        four-form orientation $e^{0}\wedge e^{1}\wedge e^{2}\wedge e^{3}$ taken
+        positive.
+  \item Curvature/torsion:
+        $R^{IJ}=\dd\omega^{IJ}+\omega^{I}{}_{K}\wedge\omega^{KJ}$,
+        $T^{I}=\dd e^{I}+\omega^{I}{}_{J}\wedge e^{J}$.
+\end{itemize}
+
+\subsection{Structure matrix sign convention}
+\label{app:conventions:structure}
+
+For the structure equation
+$\dd\sigma^{i}=-\tfrac12 C^{i}{}_{jk}\sigma^{j}\wedge\sigma^{k}$, we define
+\begin{equation}
+  n^{ij}=\tfrac12\,\epsilon^{ikl}\,C^{j}{}_{kl}
+\end{equation}
+(symmetric in class A).  The signs of the diagonal values in the Milnor frame
+are fixed to the convention of Table~\ref{tab:bianchi} ($\Nilthree$:
+$\mathrm{diag}(1,0,0)$, $\Solthree$: $\mathrm{diag}(1,-1,0)$, $\Sthree$:
+$\mathrm{diag}(1,1,1)$).  $\rank(n)$ and $\dim\ker n$ do not depend on the
+normalisation (scale) of the diagonal values.
+
+\subsection{$\Sthree$ normalisation: the $C=\epsilon$ frame}
+\label{app:conventions:s3}
+
+The $\Sthree$ structure constants are fixed throughout the paper to
+\begin{equation}
+  C^{i}{}_{jk}=\epsilon^{i}{}_{jk}\qquad(|C|=1;\ C=\epsilon\ \text{frame}).
+\end{equation}
+
+\paragraph{Scaling and invariants.}
+Under an overall scaling of the structure constants $C\to sC$ ($s>0$) one has
+$n\to sn$, but
+\begin{equation}
+  \rank(n),\qquad \dim\ker n,\qquad \dzero=3-\rank(n)
+\end{equation}
+are invariant.  By contrast, the \emph{numerical} values of the curvature and the
+eigenvalues are scale-dependent.  Representative formulas:
+\begin{equation}
+  R\,q^{2} \;\mapsto\; s^{2}\,(R\,q^{2})\qquad(\text{isotropic point}),
+\end{equation}
+\begin{equation}
+  \lambda_{\Sthree}(l)=(l-1)(l+3)\;\mapsto\; s^{2}\,(l-1)(l+3)
+  \qquad(\text{TT sector; }l\ge2).
+\end{equation}
+Every place where we write $R\,q^{2}=6$ and TT eigenvalue $(l-1)(l+3)$ refers to
+the value in the $C=\epsilon$ ($s=1$) frame.  The script
+\code{script/scripts/paper07/s3_normalization_factor_witness.py} independently
+confirms the rank invariance and the $s^{2}$ scaling of the curvature and
+eigenvalues.
+
+\paragraph{Correspondence with paper~VI.}
+The $\Sthree$ numerics of paper~VI~\cite{ref7} (e.g.\ $\chi=4$,
+$C_{\mathrm{topology}}=-36$, $V_{3}=2\pi^{2}$) are based on a different
+structure-constant normalisation.  The two are related by a scaling of the
+structure constants, with an explicit factor-16 conversion entering the
+second-order curvature quantities.  We do not quote the $\Sthree$ values of
+paper~VI without the explicit conversion; the factor conversion is confined to
+this appendix.
+
+\subsection{Harmonic conventions}
+\label{app:conventions:harmonic}
+
+\begin{itemize}
+  \item $\Tthree$: Fourier modes $e^{ik\cdot x}$, $k\in 2\pi\mathbb{Z}^{3}/L$.
+  \item $\Sthree$: the scalar/vector/tensor harmonics follow the convention
+        of~\cite{ref28,ref29}; the TT tensor-harmonic eigenvalues are written as
+        $(l-1)(l+3)$ ($l\ge2$) in the $C=\epsilon$ frame.
+  \item $\Nilthree$/$\Solthree$: the toroidal $\cup$ Heisenberg sector and the
+        boost sector, respectively, are collected in
+        Appendix~\ref{app:spectral}.
+\end{itemize}
+
+\subsection{Diagnostic exclusions}
+\label{app:conventions:diagnostic}
+
+This paper does not introduce Pontryagin-type diagnostics ($P_{\mathrm{form}}$,
+$P_{\mathrm{int}}$, etc.~\cite{ref5,ref6,ref7}).  A minimal definition of the NY
+boundary three-form appears only in Appendix~\ref{app:torsion} (for precision).

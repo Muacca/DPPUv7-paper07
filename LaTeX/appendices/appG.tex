@@ -1,0 +1,110 @@
+%==============================================================================
+% Appendix G: Torsion auxiliary exactness and field-promotion verification
+%==============================================================================
+\section{Torsion auxiliary exactness and field-promotion verification}
+\label{app:torsion}
+
+This appendix collects the verification details of Section~\ref{sec:torsion}.
+The scope is the NY-MAIN route and the $\AX/\VT/\MX$ torsion ansatz scalars.
+
+\subsection{Polynomial-degree verification (exact degree-2)}
+\label{app:torsion:degree}
+
+Organising the reduced torsion Lagrangian into the form of
+Section~\ref{sec:torsion:shell},
+\begin{equation}
+  \Laux= a_{\eta}\,\eta^{2} + a_{V}\,V^{2} + b_{V}\,\dot{\vol}\,V
+        + \text{(boundary)},
+\end{equation}
+we expanded it symbolically as a polynomial in $(\eta,V)$ up to degree
+$D_{\max}=4$.  Since all coefficients of degree $\ge3$ are identically $0$
+(residual zero), it is exactly at most quadratic in $(\eta,V)$.
+
+The Euler--Lagrange equations give algebraically $\eta^{\ast}=0$, $V^{\ast}=0$
+(the linear term in $V$ separates to the boundary as
+$2\,\dd_{t}(\vol\cdot V)$), an \emph{exact auxiliary shell} with no truncation.
+The auxiliary Hessian (the torsion mass datum) is non-negative, consistent with
+the stability of the shell.
+
+\subsection{Field-promotion derivative-coupling classification}
+\label{app:torsion:promotion}
+
+For the promotion $\eta(t)\to\eta(x)$, $V(t)\to V(x)$, we classified the
+derivative couplings arising in the EC+NY action by sector (EC/NY) $\times$
+topology (4) $\times$ mode (AX/VT/MX) $\times$ derivative type
+(time/spatial/mixed) $\times$ degree (128 cells in total).  The results:
+
+\begin{table}[H]
+\centering
+\begingroup
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{lLY}
+\toprule
+Derivative type & Quadratic (kinetic/gradient) & Linear \\
+\midrule
+Time ($\dot\eta,\dot V$) & \textbf{absent (all cells)} &
+boundary-type current only: EC $2\,\vol\cdot\dot V$ / NY
+$6\,\vol^{2/3}\,\dot\eta$ \\
+Spatial ($\partial_{i}\eta,\partial_{i}V$) & \textbf{absent (all cells)} &
+\textbf{even a linear term absent (all cells)} \\
+Mixed & absent & absent \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\caption{Field-promotion derivative-coupling classification.}
+\label{tab:coupling}
+\end{table}
+
+No quadratic derivative coupling appears at all.
+
+\paragraph{Structural reason.}
+With $\Gamma=\Gamma_{\mathrm{LC}}+K(\eta,V)$ and
+$R[\Gamma]=\dd\Gamma+\Gamma\wedge\Gamma$: if $K$ is algebraic in $\eta,V$ then
+$dK$ is first order in the field derivative, and in the scalar contraction of
+$\Delta R$ the quadratic derivative couplings cancel structurally
+(Section~\ref{sec:torsion:promotion}).  At the level of the Riemann components
+(24 components) individual derivative terms fire, but they cancel under the scalar
+contraction, as confirmed by a symbolic computation of the component sum.
+
+\paragraph{Cross-check.}
+The same classification procedure applied to a free-scalar toy Lagrangian was
+confirmed to detect the kinetic term correctly.  Reproduction:
+\code{script/scripts/paper07/torsion_auxiliary_field_promotion_witness.py}
+(no claim about a full 24-component torsion field theory).
+
+\subsection{Minimal definition of the NY boundary three-form (precision)}
+\label{app:torsion:ny}
+
+The NY four-form, in our convention, has a boundary three-form $\QNY$ satisfying
+\begin{equation}
+  \dd\QNY=e_{I}\wedge e_{J}\wedge R^{IJ}-T^{I}\wedge T_{I}
+\end{equation}
+(this identity is confirmed to have residual zero under our convention).  The
+NY-side time-linear current $6\,\vol^{2/3}\dot\eta$ of
+\ref{app:torsion:promotion} equals the time derivative of the $\QNY$ primitive,
+consistent with its boundary nature.  $\QNY$ is used only within this minimal
+definition and is not introduced as an object of the main text (the physics of
+boundary charge is outside the scope of this paper).
+
+\subsection{Corollary (finite-fate invariance)}
+\label{app:torsion:corollary}
+
+Since $\Laux|_{\mathrm{shell}}=0$ on the auxiliary shell, the modulus/wall
+decision of Appendix~\ref{app:finite} is invariant under all of EH/AX/VT/MX (a
+corollary; not an independent dynamical check).
+
+\subsection{Scope and limitations (torsion sector)}
+\label{app:torsion:scope}
+
+\begin{itemize}
+  \item This decision is for the field promotion of the $\AX/\VT/\MX$ ansatz
+        scalars, not a $(\partial T)^{2}$-absence theorem for a full 24-component
+        torsion field theory.
+  \item A linear boundary current is not called a kinetic/propagating mode.
+  \item The exact-degree-2 / exact-shell claim is restricted to the NY-MAIN route
+        (no automatic extension to other routes).
+  \item No torsional-charge theorem / quantised charge / localisation is claimed.
+  \item The homogeneous auxiliary persistence (\ref{app:torsion:degree}) and the
+        field-promotion verification (\ref{app:torsion:promotion}) are separate
+        layers; the latter does not reprove the former (it is an extension).
+\end{itemize}

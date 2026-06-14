@@ -1,0 +1,131 @@
+%==============================================================================
+% Appendix F: Finite-fate branch data
+%==============================================================================
+\section{Finite-fate branch data}
+\label{app:finite}
+
+This appendix collects the finite-deformation branch data of
+Section~\ref{sec:finite}.  The scope is the finite Palatini branch / homogeneous
+minisuperspace.
+
+\subsection{Branch parametrisation and tangent alignment}
+\label{app:finite:param}
+
+For each kernel direction we reconstruct a background-adapted static Palatini
+branch with the finite-deformation parameter $\beta$ (and an auxiliary direction
+$u$ where needed).  In each case we confirmed that the tangent vector of the
+branch is aligned with the kernel direction of the quadratic analysis (tangent
+alignment).
+
+\subsection{Energy-density expansion versus stationarity}
+\label{app:finite:expansion}
+
+\begin{itemize}
+  \item \textbf{Energy-density expansion}: evaluation of the reduced energy
+        density $\Delta(\beta)$ after solving the auxiliary-field equations
+        (auxiliary shell).  This is the main verification of this appendix.
+  \item \textbf{Stationarity decision}: a decision of whether the
+        finite-deformation point is a stationary point of the field equations.
+\end{itemize}
+
+These are distinct checks; we do not reread the result of the energy-density
+expansion (the value of $\Delta$) as a theorem of the stationarity decision (the
+existence of a stationary branch).
+
+\subsection{Branch classification summary}
+\label{app:finite:beta}
+
+\paragraph{Branch directions (Milnor frame; tangent alignment confirmed).}
+
+\begin{table}[H]
+\centering
+\begingroup
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{lll}
+\toprule
+Label & Tangent vector $\bm{\beta}$ & Classification \\
+\midrule
+$\Tthree$ $e_{a}$ & $e_{1},e_{2},e_{3}$ & exact modulus \\
+$\Nilthree$ $\beta_{-}$ & $(\tfrac12,-\tfrac12,0)$ & exact modulus \\
+$\Nilthree$ $\beta_{+}/u$ & $(-\tfrac12,-\tfrac12,1)$ & curvature wall \\
+$\Solthree$ $\beta_{x}$ & $(\tfrac13,-\tfrac16,-\tfrac16)$ & curvature wall \\
+\bottomrule
+\end{tabular}
+\endgroup
+\caption{Finite-deformation branch directions and their classification.}
+\label{tab:branch_directions}
+\end{table}
+
+\paragraph{Closed-form branch formula for $\beta_{-}$ (basis of the exact
+modulus).}
+On the background-adapted static Palatini branch the scale factors can be written
+\begin{equation}
+  q_{1}(s)=q_{0}\,e^{s/2},\qquad
+  q_{2}(s)=q_{0}\,e^{-s/2},\qquad
+  q_{3}(s)=q_{0},
+\end{equation}
+($s$ is the finite-deformation parameter along $\beta_{-}$ and $q_{0}$ a
+reference scale).  The reduced EH density $\Delta(s)$ obtained after solving the
+connection fluctuations by the field equations vanishes identically at all orders
+in $s$ (consistent with the residual $0$ up to fourth order).  For $\beta_{+}/u$
+the first-order coefficient (tadpole) of $\Delta$ is non-zero, and for
+$\beta_{x}$ one of the linear/quadratic coefficients is non-zero.
+
+\begin{table}[H]
+\centering
+\begingroup
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{lLY}
+\toprule
+Object & Check & Result \\
+\midrule
+$\Tthree$ (3 directions) & $\Delta(\beta)$ symbolic up to fourth order &
+identically $0$ (exact flat moduli) \\
+$\Nilthree$ $\beta_{-}$ &
+above $+$ linear-system rank check (rank $=$ aug rank $=18$, uniquely solvable) &
+residual $0$ at all orders (exact modulus) \\
+$\Nilthree$ $\beta_{+}/u$ & as above &
+curvature-induced non-zero term $+$ tadpole (curvature wall; no stationary finite
+branch) \\
+$\Solthree$ $\beta_{x}$ & as above &
+non-zero (curvature wall; stationary branch absent) \\
+$\Sthree$ & --- & not applicable ($\dzero=0$) \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\caption{Energy-density expansion results by branch direction.}
+\label{tab:branch_results}
+\end{table}
+
+\code{script/scripts/paper07/finite_fate_branch_witness.py} independently
+reproduces the above directions and classification, within the finite Palatini
+branch / homogeneous minisuperspace scope.  The result is based on the final
+branch construction.
+
+\subsection{Minisuperspace closure verification}
+\label{app:finite:closure}
+
+DBR closure of the lever-complete ansatz (log-scale variables $l_{a}$, conjugate
+momenta $p_{a}$, lapse $N$):
+\begin{itemize}
+  \item closure including the Hamiltonian constraint holds (lapse elimination
+        after closure);
+  \item the trace-free tangent norm of the DeWitt metric is positive
+        (minisuperspace no-ghost);
+  \item the configuration degrees of freedom of the homogeneous anisotropy
+        $=2$.
+\end{itemize}
+
+\subsection{Scope and limitations (finite-fate sector)}
+\label{app:finite:scope}
+
+\begin{itemize}
+  \item The walls are established within the finite Palatini branch.  This is not
+        called a full nonlinear lift/mass theorem.
+  \item The energy-density-expansion classification is not identified with a
+        Hamiltonian-constraint theorem / stationarity decision.
+  \item The finite moduli count ($\Tthree$:3, $\Nilthree$:1, $\Solthree$:0) is
+        not identified with $\dzero$ (3, 2, 1).
+  \item The minisuperspace no-ghost is not reread as a full field-theory
+        no-ghost.
+\end{itemize}

@@ -1,0 +1,54 @@
+Paper07 route comparison S3 Branch-A witness
+=================================================================
+scope=direct DBR/RBD engine recomputation
+physical_instability_claim=false
+toy_model_removed=true
+intermediate_csv_evidence=false
+  Comm(DBR_KEEP_ALL,RBD_SPATIAL_OMEGA_ROUTH)=NONCOMMUTES [Nphys differ (l0:0vs1, l1:0vs1, lge2:0vs2)]
+  Comm(DBR_KEEP_ALL,RBD_FULL_K_ROUTH)=NONCOMMUTES [Nphys differ (l0:0vs1, l1:0vs1, lge2:0vs2)]
+  Comm(RBD_SPATIAL_OMEGA_ROUTH,RBD_FULL_K_ROUTH)=COMMUTES [Nphys equal at all l sectors]
+route_detail_begin
+  route_detail_row {"route_id": "DBR_KEEP_ALL", "l_sector": "l=0", "sample_l": "0", "N_config": "26", "N_constraints": "52", "rank_constraint_matrix": "52", "N_first_class": "0", "N_second_class": "52", "N_phys_pair": "0", "calculation_path": "direct full DBR closure; no connection Routh elimination", "status": "COMPUTED"}
+  route_detail_row {"route_id": "RBD_SPATIAL_OMEGA_ROUTH", "l_sector": "l=0", "sample_l": "0", "N_config": "8", "N_constraints": "14", "rank_constraint_matrix": "14", "N_first_class": "0", "N_second_class": "14", "N_phys_pair": "1", "calculation_path": "direct spatial-omega Routh, then scalar projection and Dirac", "status": "COMPUTED"}
+  route_detail_row {"route_id": "RBD_FULL_K_ROUTH", "l_sector": "l=0", "sample_l": "0", "N_config": "2", "N_constraints": "2", "rank_constraint_matrix": "2", "N_first_class": "0", "N_second_class": "2", "N_phys_pair": "1", "calculation_path": "direct full-K Routh, then scalar projection and Dirac", "status": "COMPUTED"}
+  route_detail_row {"route_id": "DBR_KEEP_ALL", "l_sector": "l=1", "sample_l": "1", "N_config": "16", "N_constraints": "27", "rank_constraint_matrix": "22", "N_first_class": "5", "N_second_class": "22", "N_phys_pair": "0", "calculation_path": "direct full DBR closure; no connection Routh elimination", "status": "COMPUTED"}
+  route_detail_row {"route_id": "RBD_SPATIAL_OMEGA_ROUTH", "l_sector": "l=1", "sample_l": "1", "N_config": "10", "N_constraints": "15", "rank_constraint_matrix": "12", "N_first_class": "3", "N_second_class": "12", "N_phys_pair": "1", "calculation_path": "direct spatial-omega Routh, then scalar projection and Dirac", "status": "COMPUTED"}
+  route_detail_row {"route_id": "RBD_FULL_K_ROUTH", "l_sector": "l=1", "sample_l": "1", "N_config": "4", "N_constraints": "4", "rank_constraint_matrix": "2", "N_first_class": "2", "N_second_class": "2", "N_phys_pair": "1", "calculation_path": "direct full-K Routh, then scalar projection and Dirac", "status": "COMPUTED"}
+  route_detail_row {"route_id": "DBR_KEEP_ALL", "l_sector": "l>=2", "sample_l": "2", "N_config": "17", "N_constraints": "29", "rank_constraint_matrix": "24", "N_first_class": "5", "N_second_class": "24", "N_phys_pair": "0", "calculation_path": "direct full DBR closure; no connection Routh elimination", "status": "COMPUTED"}
+  route_detail_row {"route_id": "RBD_SPATIAL_OMEGA_ROUTH", "l_sector": "l>=2", "sample_l": "2", "N_config": "11", "N_constraints": "15", "rank_constraint_matrix": "12", "N_first_class": "3", "N_second_class": "12", "N_phys_pair": "2", "calculation_path": "direct spatial-omega Routh, then scalar projection and Dirac", "status": "COMPUTED"}
+  route_detail_row {"route_id": "RBD_FULL_K_ROUTH", "l_sector": "l>=2", "sample_l": "2", "N_config": "5", "N_constraints": "4", "rank_constraint_matrix": "2", "N_first_class": "2", "N_second_class": "2", "N_phys_pair": "2", "calculation_path": "direct full-K Routh, then scalar projection and Dirac", "status": "COMPUTED"}
+route_detail_end
+route_l0_sign_begin
+  route_l0_sign_row {"route_id": "RBD_SPATIAL_OMEGA_ROUTH", "l_sector": "l=0", "surviving_pair": "(s_l0, P_s_l0)", "H_PP": "-3/8", "sign": "NEGATIVE", "calculation": "direct second derivative d^2 H_c / d P_s_l0^2 at n_l0=0 from recomputed RBD Hamiltonian", "status": "PASS"}
+  route_l0_sign_row {"route_id": "RBD_FULL_K_ROUTH", "l_sector": "l=0", "surviving_pair": "(s_l0, P_s_l0)", "H_PP": "-3/8", "sign": "NEGATIVE", "calculation": "direct second derivative d^2 H_c / d P_s_l0^2 at n_l0=0 from recomputed RBD Hamiltonian", "status": "PASS"}
+route_l0_sign_end
+route_control_begin
+  route_control_row {"control_id": "SCALAR_AXIS_EXPAND_POISSON_DBR_CONTROL", "axis": "x", "rank_point": "unit", "N_config": "17", "N_constraints": "27", "rank_constraint_matrix": "20", "N_phys_pair": "0", "calculation_path": "unreduced Branch-A local L through dppu.dirac.scalar_axis.dirac_standard; expand-based Poisson; two rank points", "status": "PASS"}
+  route_control_row {"control_id": "SCALAR_AXIS_EXPAND_POISSON_DBR_CONTROL", "axis": "x", "rank_point": "generic", "N_config": "17", "N_constraints": "27", "rank_constraint_matrix": "20", "N_phys_pair": "0", "calculation_path": "unreduced Branch-A local L through dppu.dirac.scalar_axis.dirac_standard; expand-based Poisson; two rank points", "status": "PASS"}
+  route_control_row {"control_id": "SCALAR_AXIS_EXPAND_POISSON_DBR_CONTROL", "axis": "y", "rank_point": "unit", "N_config": "17", "N_constraints": "28", "rank_constraint_matrix": "22", "N_phys_pair": "0", "calculation_path": "unreduced Branch-A local L through dppu.dirac.scalar_axis.dirac_standard; expand-based Poisson; two rank points", "status": "PASS"}
+  route_control_row {"control_id": "SCALAR_AXIS_EXPAND_POISSON_DBR_CONTROL", "axis": "y", "rank_point": "generic", "N_config": "17", "N_constraints": "28", "rank_constraint_matrix": "22", "N_phys_pair": "0", "calculation_path": "unreduced Branch-A local L through dppu.dirac.scalar_axis.dirac_standard; expand-based Poisson; two rank points", "status": "PASS"}
+  route_control_row {"control_id": "SCALAR_AXIS_EXPAND_POISSON_DBR_CONTROL", "axis": "z", "rank_point": "unit", "N_config": "17", "N_constraints": "27", "rank_constraint_matrix": "20", "N_phys_pair": "0", "calculation_path": "unreduced Branch-A local L through dppu.dirac.scalar_axis.dirac_standard; expand-based Poisson; two rank points", "status": "PASS"}
+  route_control_row {"control_id": "SCALAR_AXIS_EXPAND_POISSON_DBR_CONTROL", "axis": "z", "rank_point": "generic", "N_config": "17", "N_constraints": "27", "rank_constraint_matrix": "20", "N_phys_pair": "0", "calculation_path": "unreduced Branch-A local L through dppu.dirac.scalar_axis.dirac_standard; expand-based Poisson; two rank points", "status": "PASS"}
+route_control_end
+route_nphys_begin
+  route_nphys_row {"route_id": "DBR_KEEP_ALL", "definition": "Dirac-before-Routh: keep independent connection through DBR closure", "l0": "0", "l1": "0", "lge2": "0", "source_stage": "direct DBR/RBD engine recomputation", "status": "PASS"}
+  route_nphys_row {"route_id": "RBD_SPATIAL_OMEGA_ROUTH", "definition": "Routh-before-Dirac: eliminate spatial omega first", "l0": "1", "l1": "1", "lge2": "2", "source_stage": "direct DBR/RBD engine recomputation", "status": "PASS"}
+  route_nphys_row {"route_id": "RBD_FULL_K_ROUTH", "definition": "Routh-before-Dirac: eliminate all K first", "l0": "1", "l1": "1", "lge2": "2", "source_stage": "direct DBR/RBD engine recomputation", "status": "PASS"}
+route_nphys_end
+route_commutator_begin
+  route_commutator_row {"route_A": "DBR_KEEP_ALL", "route_B": "RBD_SPATIAL_OMEGA_ROUTH", "Nphys_A_by_l": "0/0/0", "Nphys_B_by_l": "1/1/2", "commutator": "NONCOMMUTES", "notes": "Nphys differ (l0:0vs1, l1:0vs1, lge2:0vs2)", "status": "PASS"}
+  route_commutator_row {"route_A": "DBR_KEEP_ALL", "route_B": "RBD_FULL_K_ROUTH", "Nphys_A_by_l": "0/0/0", "Nphys_B_by_l": "1/1/2", "commutator": "NONCOMMUTES", "notes": "Nphys differ (l0:0vs1, l1:0vs1, lge2:0vs2)", "status": "PASS"}
+  route_commutator_row {"route_A": "RBD_SPATIAL_OMEGA_ROUTH", "route_B": "RBD_FULL_K_ROUTH", "Nphys_A_by_l": "1/1/2", "Nphys_B_by_l": "1/1/2", "commutator": "COMMUTES", "notes": "Nphys equal at all l sectors", "status": "PASS"}
+route_commutator_end
+DBR_recomputed_all_zero=True
+RBD_spatial_noncommutes_with_DBR=True
+RBD_fullK_noncommutes_with_DBR=True
+RBD_l0_HPP_negative=True
+scalar_axis_independent_control_all_zero=True
+
+fail_count=0
+overall_verdict=PASS_ROUTE_COMPARISON_S3_BRANCH_A_WITNESS
+
+Computation time: 167.2s
+
+*Script: scripts/paper07/route_comparison_s3_branch_a_witness.py

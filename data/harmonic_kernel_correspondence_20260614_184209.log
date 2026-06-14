@@ -1,0 +1,22 @@
+Paper07 harmonic kernel correspondence witness
+=================================================================
+hessian_model=nTn_disabled
+source=closed-form harmonic basis + DBR reduced-Hessian engine
+  T3: n=[0,0,0; 0,0,0; 0,0,0] closed_dim=3 active_axes=x,y,z hessian=PASS status=PASS
+  Nil3: n=[0,0,0; 0,0,0; 0,0,1] closed_dim=2 active_axes=x,y hessian=PASS status=PASS
+  Sol3: n=[0,0,0; 0,0,1; 0,1,0] closed_dim=1 active_axes=x hessian=PASS status=PASS
+  S3: n=[1,0,0; 0,1,0; 0,0,1] closed_dim=0 active_axes=NONE hessian=PASS status=PASS
+topology_detail_begin
+  topology_detail_row {"topology": "T3", "rank_n": "0", "dim_ker_n": "3", "closed_form_dim": "3", "closed_equals_ker_n": "true", "co_closed": "true", "active_axes": "x,y,z", "dbr_active_pair_count": "3", "hessian_tested_points": "9", "hessian_kernel_status": "PASS", "evidence_level": "CLOSED_FORM_BASIS_PLUS_DBR_REDUCED_HESSIAN", "status": "PASS"}
+  topology_detail_row {"topology": "Nil3", "rank_n": "1", "dim_ker_n": "2", "closed_form_dim": "2", "closed_equals_ker_n": "true", "co_closed": "true", "active_axes": "x,y", "dbr_active_pair_count": "2", "hessian_tested_points": "9", "hessian_kernel_status": "PASS", "evidence_level": "CLOSED_FORM_BASIS_PLUS_DBR_REDUCED_HESSIAN", "status": "PASS"}
+  topology_detail_row {"topology": "Sol3", "rank_n": "2", "dim_ker_n": "1", "closed_form_dim": "1", "closed_equals_ker_n": "true", "co_closed": "true", "active_axes": "x", "dbr_active_pair_count": "1", "hessian_tested_points": "9", "hessian_kernel_status": "PASS", "evidence_level": "CLOSED_FORM_BASIS_PLUS_DBR_REDUCED_HESSIAN", "status": "PASS"}
+  topology_detail_row {"topology": "S3", "rank_n": "3", "dim_ker_n": "0", "closed_form_dim": "0", "closed_equals_ker_n": "true", "co_closed": "true", "active_axes": "NONE", "dbr_active_pair_count": "0", "hessian_tested_points": "0", "hessian_kernel_status": "PASS", "evidence_level": "CLOSED_FORM_BASIS_PLUS_DBR_REDUCED_HESSIAN", "status": "PASS"}
+topology_detail_end
+
+total_topologies=4
+fail_count=0
+overall_verdict=PASS_HARMONIC_KERNEL_CORRESPONDENCE
+
+Computation time: 16.0s
+
+*Script: scripts/paper07/harmonic_kernel_correspondence.py

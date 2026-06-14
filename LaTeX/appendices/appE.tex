@@ -1,0 +1,72 @@
+%==============================================================================
+% Appendix E: Harmonic form and Hessian kernel realization
+%==============================================================================
+\section{Harmonic form and Hessian kernel realisation}
+\label{app:harmonic}
+
+This appendix collects the verification tables for the correspondence of
+Section~\ref{sec:harmonic}.
+
+\subsection{Lemma~\ref{lem:harmonic} and Proposition~\ref{prop:hessian}}
+\label{app:harmonic:checks}
+
+For Lemma~\ref{lem:harmonic} ($\mathrm{nullspace}(d_{1})=\ker n$) and
+Proposition~\ref{prop:hessian} (the map $\Phi:\beta_{a}\mapsto\beta_{a}\sigma^{a}$
+relating the Hessian kernel and the harmonic basis), we confirmed the following
+for each topology:
+\begin{enumerate}
+  \item \textbf{Closed condition}: for a left-invariant one-form
+        $\xi=\xi_{i}\sigma^{i}$, $\dd\xi=0\Leftrightarrow n\xi=0$, with agreement
+        of the exterior-derivative matrix $d_{1}$ and $n$,
+        $\mathrm{nullspace}(d_{1})=\mathrm{nullspace}(n)$.
+  \item \textbf{Co-closed condition}: under class A (unimodular), a
+        left-invariant one-form is automatically co-closed ($\dd\star\xi=0$).
+  \item \textbf{Hessian kernel dimension}: the kernel dimension of the
+        scalar-axis Hessian $=\dim\ker n$ (a subspace decision, not an axis-name
+        decision).
+  \item \textbf{Correspondence of $\Phi$}: one-to-one (up to a change of basis)
+        between the basis of $\ker n$ and the Hessian kernel directions.
+  \item \textbf{Dimension agreement}:
+        $\dim\{\text{harmonic one-forms}\}=\dzero=b_{1}$ ($\Tthree$:3,
+        $\Nilthree$:2, $\Solthree$:1, $\Sthree$:0).
+\end{enumerate}
+
+Reproduction:
+\code{script/scripts/paper07/harmonic_kernel_correspondence.py}.
+
+\subsection{Per-topology kernel directions (Milnor frame)}
+\label{app:harmonic:directions}
+
+\begin{table}[H]
+\centering
+\begingroup
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{llLY}
+\toprule
+Topology & $n$ & Basis of $\ker n$ & Harmonic one-forms \\
+\midrule
+$\Tthree$ & $\mathrm{diag}(0,0,0)$ & $e_{1},e_{2},e_{3}$ &
+$\sigma^{1},\sigma^{2},\sigma^{3}$ \\
+$\Nilthree$ & $\mathrm{diag}(1,0,0)$ & $e_{2},e_{3}$ &
+$\sigma^{2},\sigma^{3}$ (the fibre direction $\sigma^{1}$ is non-harmonic) \\
+$\Solthree$ & $\mathrm{diag}(1,-1,0)$ & $e_{3}$ &
+$\sigma^{3}$ (single singular axis) \\
+$\Sthree$ & $\mathrm{diag}(1,1,1)$ & $\{0\}$ & none \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\caption{Per-topology kernel directions and harmonic one-forms (Milnor frame).}
+\label{tab:kernel_directions}
+\end{table}
+
+The axis names depend on the Milnor frame convention; only the dimension is
+frame-invariant (Section~\ref{sec:rankdefect:frame}).
+
+\subsection{Scope note}
+\label{app:harmonic:scope}
+
+This correspondence is a realisation at the left-invariant representative level.
+The de Rham $H^{1}$ representativeness on the compact quotient relies on standard
+theory~\cite{ref18}, and that no additional zero arises in the inhomogeneous
+sectors is independently guaranteed by the non-contamination criterion of
+Section~\ref{sec:spectral}.

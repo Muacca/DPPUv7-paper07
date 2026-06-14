@@ -1,0 +1,200 @@
+%==============================================================================
+% Section 4: Rank-defect realization in the DBR constrained spectrum
+%==============================================================================
+\section{Rank-defect realisation in the DBR constrained spectrum}
+\label{sec:rankdefect}
+
+\subsection{Theorem statement}
+\label{sec:rankdefect:theorem}
+
+The rank defect $\dim\ker n$ is itself a known invariant of the Bianchi class-A
+algebra~\cite{ref15,ref16}.  The following theorem concerns its
+\emph{realisation}: it states that the scalar kernel surviving in the
+DBR-standard EC+NY constrained perturbation spectrum is given precisely by this
+known invariant.
+
+\begin{theorem}[Rank-defect realisation]
+\label{thm:rankdefect}
+On a Bianchi class-A background ($\Tthree,\Nilthree,\Solthree,\Sthree$), the
+quadratic constrained perturbation spectrum of the Lorentzian first-order EC+NY
+system under the DBR protocol satisfies, for each topology:
+
+\emph{(i) Propagating sector.}  The physical propagating degrees of freedom are
+two transverse-traceless (TT) gravitons, and their kinetic block is positive
+definite.
+
+\emph{(ii) Scalar kernel.}  In the scalar (diagonal/axis) sector, the dimension
+of the non-propagating modes surviving after the Dirac closure is
+\begin{equation}
+  \dzero=\dim\ker n = 3-\rank(n),
+\end{equation}
+with hierarchy $\Sthree{:}0$ / $\Solthree{:}1$ / $\Nilthree{:}2$ /
+$\Tthree{:}3$.
+
+\emph{(iii) Frame invariance.}  $\dzero$ is invariant under SO(3) rotations of
+the spatial frame.
+\end{theorem}
+
+\paragraph{Scope of the theorem.}
+\begin{itemize}
+  \item $\dzero$ is not claimed as a new topological invariant (the rank defect
+        is known~\cite{ref16}; the content of the theorem is its
+        constraint-dynamical realisation).
+  \item The kernel modes are not identified with propagating physical zero
+        modes.  They are a residual non-propagating scalar kernel in the DBR
+        quadratic constrained spectrum (directions unpaired with a kinetic
+        term); their higher-order fate is classified within the finite Palatini
+        branch in Section~\ref{sec:finite}.
+  \item The claim is restricted to class A (no extension to class B).
+\end{itemize}
+
+\subsection{Four-topology instances}
+\label{sec:rankdefect:instances}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\begingroup
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{llrrrlYY}
+\toprule
+Topology & Bianchi & $\rank(n)$ & $\dzero$ & $b_{1}$ & TT graviton & Zero-mode evidence & TT/propagation evidence ($k>0$) \\
+\midrule
+$\Tthree$ & I & 0 & 3 & 3 & 2 (pos.\ kin.) &
+full-$k$ endpoint &
+full-$k$ Fourier $|k|^{2}$ (closed form) \\
+$\Nilthree$ & II & 1 & 2 & 2 & 2 (pos.\ kin.) &
+full-spectral scalar (consistent) &
+closed-form spectral completion over analysed harmonic sectors: toroidal
+$\cup$ Heisenberg tower $2\pi|k|(2N{+}1)$ (closed form / analytic), with matrix
+harmonic closure $d(M)=2$ \\
+$\Solthree$ & VI$_{0}$ & 2 & 1 & 1 & 2 (pos.\ kin.) &
+full-spectral scalar (positive bulk gap) &
+bulk gap $2|pq|$ (all labels, analytic bound) $+$ compact edge $\lambda_{1}>0$
+(representative numerics) $+$ $d(M)=2$ \\
+$\Sthree$ & IX & 3 & 0 & 0 & 2 (pos.\ kin.) &
+endpoint (absent for all $l$) &
+$l$-symbolic for all $l\ge2$ (closed form) \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\caption{Four-topology instances of Theorem~\ref{thm:rankdefect} (the tier
+definitions of the evidence columns are in Appendix~\ref{app:spectral}).}
+\label{tab:instances}
+\end{table}
+
+The ``axes'' on which the zero modes appear correspond to the kernel directions
+of the structure matrix: a single singular axis (the zero eigendirection of $n$)
+for $\Solthree$, two axes for $\Nilthree$, all three axes (flat degeneracy) for
+$\Tthree$, and none for $\Sthree$.  The names of the axes (which coordinate
+axis) are frame-convention dependent; only the dimension of the kernel is
+frame-invariant.
+
+\subsection{Mechanism: activation rank of the constraint algebra}
+\label{sec:rankdefect:mechanism}
+
+The mechanism of Theorem~\ref{thm:rankdefect}(ii) starts from writing the
+scalar-axis perturbation as a vector $\bm{\beta}\in\mathbb{R}^{3}$ (components
+$\beta_{a}$, $a=1,2,3$), with the DBR consistency condition giving a linear map
+\begin{equation}
+  \Aop_{n}:\ \bm{\beta}\longmapsto \text{(secondary activation components)}.
+\end{equation}
+On the class-A Milnor frame, the formal structure map from the structure
+constants to the class-A matrix satisfies $\Aop_{\rm form}=n$.  We do not use
+this identity alone as the physical DBR activation evidence.  Its role as the
+DBR activation map is checked by the scalar-axis DBR closure audit described in
+Appendix~\ref{app:native:engine}.
+
+\begin{proof}[Proof skeleton of Theorem~\ref{thm:rankdefect}(ii)]
+\renewcommand{\qedsymbol}{}
+\begin{enumerate}
+  \item For the scalar-axis sector, the DBR closure is run through primary
+        preservation, secondary generation, the constraint Poisson matrix rank,
+        and the first/second-class split.  This determines whether each scalar
+        axis is activated.
+  \item In the four-topology by three-axis audit, the engine-derived activation
+        matrix has the same rank as $n$.  Hence the number of independent
+        secondary constraints that are activated is
+        $\rank(\Aop_{\rm DBR})=\rank(n)$ (the \emph{activation rank}).
+  \item The unactivated directions are $\ker n$, of dimension
+        $3-\rank(n)=\dzero$.
+  \item Along the $\ker n$ directions no kinetic term paired with the TT kinetic
+        block arises (these coincide with the kernel of the scalar-axis Hessian;
+        Section~\ref{sec:harmonic}).  Hence the surviving modes are not
+        propagating zero modes but a \emph{non-propagating scalar kernel}.
+\end{enumerate}
+\end{proof}
+
+This is not claimed as a fully general symbolic DBR theorem for arbitrary
+class-A structure constants.  For the four class-A backgrounds studied here,
+the formal identity $\Aop_{\rm form}=n$ is reported as a notation and structure
+map check, while the primary evidence for DBR activation is the axis-by-axis
+closure output of
+\code{script/scripts/paper07/rank_defect_activation_witness.py}.
+
+\paragraph{Remark on terminology.}
+In the constraint analysis of Poincar\'e gauge theory, ``constraint
+bifurcation'' and ``field activation'' phenomena arising from nonlinear
+constraints are known~\cite{ref30,ref31}.  Our activation rank is distinct from
+these: it is the algebraic statement that the activation dimension of the
+\emph{linear (quadratic-action) level} secondary constraints coincides exactly
+with the rank of the structure matrix.
+
+\subsection{Frame invariance}
+\label{sec:rankdefect:frame}
+
+\paragraph{Analytic proof.}
+Under an SO(3) rotation $R$ of the spatial frame, the structure matrix undergoes
+the congruence transformation
+\begin{equation}
+  n \longmapsto R\,n\,R^{\mathsf{T}}.
+\end{equation}
+The rank and $\dim\ker n$ are preserved not only by similarity but also by this
+congruence.  Hence $\dzero=3-\rank(n)$ is frame-invariant.  The basis vectors of
+$\ker n$ (the axis names) merely rotate under $R$ and are not physical.
+
+\paragraph{Auxiliary numerical check.}
+The above was confirmed by two routes: (a) random SO(3) rotations and (b)
+reconstruction of $n$ from the rotated structure constants
+(Appendix~\ref{app:native:frame}).  The kernel dimension was preserved in every
+check.
+
+\subsection{Cross-check: $\dzero=b_{1}$ (not primary)}
+\label{sec:rankdefect:b1}
+
+For class-A algebras, $\dim\ker n=\dim(\mathfrak{g}/[\mathfrak{g},\mathfrak{g}])$,
+which equals the first Betti number $b_{1}$ of the corresponding compact
+quotient.  This isomorphism (Lie-algebra cohomology of left-invariant
+representatives $\leftrightarrow$ de Rham cohomology of the compact quotient) is
+due to Nomizu~\cite{ref41} for nilmanifolds and to Hattori~\cite{ref42} for
+completely solvable solvmanifolds (since $\Solthree$(VI$_{0}$) is completely
+solvable, i.e.\ of type R, the latter applies and gives $\dzero=b_{1}=1$).  This
+coincidence is an \emph{independent cross-check} of
+Theorem~\ref{thm:rankdefect}, a geometrically known correspondence.  We do not use it as the primary support of the theorem (the
+primary support is the activation-rank derivation of
+Section~\ref{sec:rankdefect:mechanism}).  The geometric realisation of the
+kernel is given in Section~\ref{sec:harmonic}.
+
+\subsection{What remains after the quadratic theorem}
+\label{sec:rankdefect:remains}
+
+Theorem~\ref{thm:rankdefect} is a quadratic-order statement.  Two natural
+questions remain: (a) whether the classification is unchanged for the
+inhomogeneous modes ($k>0$), addressed in Section~\ref{sec:spectral}; and (b)
+whether the kernel directions are flat directions (moduli) under finite
+deformation or are blocked by walls, addressed in Section~\ref{sec:finite}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/fig03_Rank-defect-mechanism_and_four-topology-ladder.png}
+  \caption{Rank-defect mechanism and four-topology ladder.  The consistency
+    condition for the scalar-axis perturbations $\beta_{a}$ generates the
+    secondary constraints through the structure matrix $n$.  The $\rank(n)$ image
+    directions are activated (activation rank), and the $\dzero=3-\rank(n)$
+    directions of $\ker n$ survive as the non-propagating scalar kernel.  The
+    four topologies form the hierarchy $\Tthree{:}3$ / $\Nilthree{:}2$ /
+    $\Solthree{:}1$ / $\Sthree{:}0$.  \emph{Scope}: the axis names are
+    frame-convention dependent; only the kernel dimension is invariant
+    (Section~\ref{sec:rankdefect:frame}).}
+  \label{fig:mechanism}
+\end{figure}
