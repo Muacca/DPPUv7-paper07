@@ -1,5 +1,7 @@
 # Dirac-before-Routh Constrained Spectra in Bianchi Class-A Einstein–Cartan–Nieh–Yan Cosmologies: Rank-Defect Kernels, Spectral Robustness, and Torsion-Sector Closure
 
+[10.5281/zenodo.20678646](https://doi.org/10.5281/zenodo.20678646)
+
 [日本語 README](README_ja.md)
 
 ## Paper Contents
