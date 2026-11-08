@@ -1,115 +1,45 @@
-%==============================================================================
-% Section 3: DBR reduction protocol and route justification
-%==============================================================================
-\section{DBR reduction protocol and route justification}
-\label{sec:dbr}
+\section{Backgrounds and the six-component homogeneous action}
 
-\subsection{The Dirac-before-Routh protocol}
-\label{sec:dbr:protocol}
+\stepcounter{equation}\begin{equation}\tag{H-01}\label{eq:H-01}
+\begin{aligned}c&=\frac{\mathcal V_{\Sigma}}{2\kappa^2},\quad d=\det g,\quad v=\dot g-\mathcal L_{\beta}g,\quad K=\frac1{2N}g^{-1}v,\\ P(n,g)&=\frac12[\mathrm{tr}(ng)]^2-\mathrm{tr}(ngng),\qquad {}^{(3)}R=\frac{P(n,g)}{d},\\ L_0&=c\sqrt d\left[\frac{\mathrm{tr}((g^{-1}v)^2)-[\mathrm{tr}(g^{-1}v)]^2}{4N}+N\frac{P(n,g)}d\right].\end{aligned}
+\end{equation}
 
-The phase space of the first-order EC+NY system consists of the tetrad, the
-connection, and their conjugate momenta, and it carries many primary
-constraints.  Our reduction procedure adopts the following order \emph{as a
-protocol}.
+This action follows after solving the independent connection equation and treating the boundary. All six metric components, lapse and three shifts are varied before gauge choices. The shifts use invariant vector fields descending to the fixed quotient. Unimodularity removes the invariant-volume divergence, and this complete homogeneous variation retains the homogeneous Einstein equations \cite{Torre2004}. Counts obtained by imposing a diagonal metric beforehand are not the counts studied here.
 
-\begin{quote}
-\textbf{DBR (Dirac-before-Routh) protocol.}
-(i) Complete the Dirac--Bergmann algorithm~\cite{ref10,ref11,ref12}: generate
-the secondary constraints from the consistency of the primary constraints, and
-after closure classify first/second class and construct the Dirac bracket for
-the second-class pairs.  (ii) Only then perform the Routh-type elimination /
-reduction of the auxiliary variables (such as the non-dynamical connection
-components) and present the reduced spectrum.
-\end{quote}
+The curvature formula follows from $g=E^{\mathsf T}E$, the orthonormal structure matrix $m=EnE^{\mathsf T}/\det E$, and $R=\tfrac12(\mathrm{tr}m)^2-\mathrm{tr}(m^2)$. The kinetic term is $K_{ij}K^{ij}-K^2$. The metric Legendre map is invertible for positive-definite $g$; the six-velocity DeWitt form has five positive and one negative directions. This signature alone is not a physical ghost test.
 
-DBR is not a new principle; it is the standard procedure of constrained
-dynamics applied faithfully to this system.  The reverse order -- solving the
-auxiliary connection variables by their field equations and substituting into
-the action before the constraint analysis -- is called the \textbf{RBD
-(Routh-before-Dirac)} route here.
+\stepcounter{equation}\begin{equation}\tag{H-02}\label{eq:H-02}
+\begin{aligned}\pi^{ij}&=c\sqrt d\,(K^{ij}-(\mathrm{tr}K)g^{ij}),\qquad T(g,\pi)=\mathrm{tr}(\pi g\pi g)-\tfrac12[\mathrm{tr}(\pi g)]^2,\\ \mathcal H&=\frac{T-c^2P}{c\sqrt d},\qquad F=c\sqrt d\,\mathcal H=T-c^2P.\end{aligned}
+\end{equation}
 
-\subsection{Why the order matters: a recognised issue}
-\label{sec:dbr:order}
+The symmetric $\pi$ is spatially integrated, with all indices summed in $\pi^{ij}\delta g_{ij}$. The momentum conjugate to an independent off-diagonal coordinate is $2\pi^{ij}$. Replacing $\mathcal H$ by $F$ multiplies the constraint by the strictly positive $c\sqrt d$ and rescales its Hamiltonian direction on the zero set by the same nonzero factor.
 
-That substitution at the level of the action is not, in general, interchangeable
-with substitution at the level of the equations of motion is an established
-generality~\cite{ref13}.  Substitution is safe only for auxiliary variables
-(whose own equations are algebraically solvable and free of derivatives);
-otherwise a proof of equivalence is required.  In the Bianchi context it is also
-classically known that the validity of imposing the symmetry at the level of the
-action is restricted to class A (in class B it gives the wrong field
-equations)~\cite{ref21,ref22}, and the equivalence of the Palatini and metric
-formulations itself is a nontrivial statement to be proved by constraint
-analysis~\cite{ref23}.  In adopting DBR as the standard, we select the order of
-operations for which constraint equivalence is guaranteed against this known
-``Palatini reduction non-commutativity'' (route dependence).
+\subsection{Testing common-scale backgrounds}
 
-\subsection{Control experiment}
-\label{sec:dbr:control}
+The common-scale background test of Paper06 is recalled in (B-01) as the starting point for the constraint analysis here \cite{paper6}.
 
-To support the adoption of DBR empirically, we ran the RBD route as a
-\textbf{control experiment}.  The verification was carried out in the Branch-A
-scalar sector of the $\Sthree$ background.  The result is the following.
+\stepcounter{equation}\begin{equation}\tag{B-01}\label{eq:B-01}
+\begin{aligned}g&=q^2 I,\quad 6\chi=\tfrac12(\mathrm{tr}n)^2-\mathrm{tr}(n^2),\quad X=2n^2-(\mathrm{tr}n)n+4\chi I,\\ G_{00}&=3(H^2+\chi/q^2),\qquad G_{0i}=0,\\ \tfrac13\sum_iG_{ii}&=-(2DH+3H^2+\chi/q^2),\qquad (G_{ij})_{\rm TF}=X_{ij}/q^2.\end{aligned}
+\end{equation}
 
-\begin{quote}
-In the verified $\Sthree$ Branch-A scalar sector, eliminating the auxiliary
-connection variables before the Dirac closure produces a Dirac-inequivalent
-extra scalar mode.  The recomputation gives $N_{\rm phys}=0$ for
-DBR\_KEEP\_ALL at all representative harmonic levels, whereas the spatial-$\omega$
-and full-$K$ Routh variants give $N_{\rm phys}=1/1/2$ for $l=0,1,\ge2$.  At the
-lowest harmonic level the comparison starts from the same Branch-A local
-first-order Lagrangian, and reproduces the discrepancy DBR:0 / RBD:1 together
-with $H_{PP}=-3/8<0$.  For $l\ge1$ the RBD extra count is treated as a
-route-level gauge-breaking artefact; the negative-sign diagnostic is claimed
-only at $l=0$ (scope details in Appendix~\ref{app:route}).
-\end{quote}
+The complete connection shell gives the vacuum Einstein equations. A real common-scale reduced trajectory satisfies $(Dq)^2+\chi=0$, but $X$ remains for Nil and Sol. Standard Nil has $X=\mathrm{diag}(-1,-1,2)/3$ and Sol has $X=\mathrm{diag}(-4,2,2)/3$. The static torus is a full solution; the round sphere admits no real common-scale vacuum trajectory in this model.
 
-This discrepancy is \emph{route-level}, not a physical instability.  We do not
-draw from it any theorem that ``RBD is generally wrong.''  The claim is confined
-to a single point: \emph{since route equivalence demonstrably fails in this
-system, all subsequent physical topology claims are made within the DBR
-protocol.}
+The quadratic action about a static sphere is consequently an off-shell algebraic control, not a vacuum particle spectrum. The same caution applies to shape-frozen Nil and Sol trajectories. General anisotropic vacuum solutions are not excluded. The regular strata in Section 5 use general $g$ and momenta; Appendix C gives constraint-satisfying representatives.
 
-\begin{table}[H]
-\centering
-\begingroup
-\renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\linewidth}{lLLl}
-\toprule
-Route & Order of closure and elimination & Outcome in $\Sthree$ Branch-A scalar sector & Status \\
-\midrule
-DBR & Dirac closure $\to$ Routh elimination &
-$0$ physical scalars (kernel non-propagating; Section~\ref{sec:rankdefect}) &
-\textbf{adopted} (standard) \\
-RBD & Routh elimination $\to$ Dirac closure &
-Dirac-inequivalent extra scalar mode ($H_{PP}=-3/8<0$ at $l=0$; route-level) &
-control route (recorded) \\
-\bottomrule
-\end{tabularx}
-\endgroup
-\caption{Route taxonomy (compact version; details in
-Appendix~\ref{app:route}).}
-\label{tab:route}
-\end{table}
+Perturbations $e=\bar e+\varepsilon f$ and $\omega=\bar\omega+\varepsilon a$ must be expanded with the same grading. A nonzero first variation is not discarded to declare an on-shell background; background residuals in Noether identities remain relevant. Equal coframe scales on Nil or Sol do not provide spatial isotropy or guarantee separate scalar, vector and tensor closure.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.95\textwidth]{figures/fig02_DBR-vs-RBD_route-comparison.png}
-  \caption{DBR versus RBD route comparison.  From the same Branch-A local
-    first-order Lagrangian, the two routes -- differing only in the order of
-    operations -- are shown side by side.  DBR yields $0$ physical scalar
-    degrees of freedom, while RBD gives a Dirac-inequivalent extra mode; at
-    $l=0$ the diagnostic sign is $H_{PP}=-3/8<0$.  \emph{Scope}: the negative
-    sign is claimed only for the lowest level; for $l\ge1$ the RBD extra count
-    is recorded as a route-level gauge-breaking artefact.  The RBD outcome is
-    not a physical instability.}
-  \label{fig:route}
-\end{figure}
 
-\subsection{Scope declaration}
-\label{sec:dbr:scope}
+\subsection{Time-dependent vacuum backgrounds for perturbations}
 
-The claims of all subsequent sections
-(Sections~\ref{sec:rankdefect}--\ref{sec:torsion}) are results under the DBR
-protocol.  The RBD route is referred to only in the route-comparison details of
-Appendix~\ref{app:route}.
+For curved geometries we use the following time-dependent vacuum backgrounds instead of a common-scale reference metric. $G$ is the spatial metric in the fixed invariant coframe of Appendix A. Appendix F gives their normalization, quotient identifications and verification of the full Ricci tensor and ADM constraints.
+
+\stepcounter{equation}\begin{equation}\tag{BF-01}\label{eq:BF-01}
+\begin{aligned}
+\mathrm{Nil}:&\quad G=\mathrm{diag}(A,A,16u^2/(9A)),\quad N=3\sqrt A,\quad A=1+u^4,\\
+\mathrm{Sol}:&\quad G=\mathrm{diag}(F,t,t),\quad N=\sqrt F,\quad F=e^{t^2}/\sqrt t,\\
+S^3:&\quad G=\mathrm{diag}(4(1+\tau^2),4(1+\tau^2),16(1-\tau^2)/(1+\tau^2)),\\
+&\quad N=\sqrt{(1+\tau^2)/(1-\tau^2)}.
+\end{aligned}
+\end{equation}
+
+We use $1\le u\le2$ on Nil, $1\le t\le2$ on Sol, and $1/4\le\tau\le1/2$ in the Taub region. Throughout these intervals $N>0$ and $G$ is positive definite. The Taub parameters are $\ell=1$, $m=0$, away from both the Cauchy horizon and the time-symmetric slice. Lifting with the LC connection gives vacuum backgrounds of the same EC theory \cite{Tanimoto2004,Rendall2012,BeyerHennig2012}.

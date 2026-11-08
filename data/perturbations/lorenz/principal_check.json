@@ -1,0 +1,20 @@
+{
+  "checks": [
+    {
+      "name": "fourth derivative coefficient nonzero",
+      "passed": true
+    },
+    {
+      "name": "fourth derivative coefficient rank one by exact outer product",
+      "passed": true
+    },
+    {
+      "name": "leading generator coefficient square zero",
+      "passed": true
+    }
+  ],
+  "order": 4,
+  "leading_H_rank": 1,
+  "leading_JH_nilpotence_index": 2,
+  "scope": "Exact local highest-derivative coefficients. This alone does not determine full hyperbolicity, dispersion, wellposedness, or instability."
+}

@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "name": "full scalar background",
+      "passed": true
+    },
+    {
+      "name": "linear scalar independently differentiated",
+      "passed": true
+    },
+    {
+      "name": "linear momentum independently differentiated",
+      "passed": true
+    },
+    {
+      "name": "quadratic reduced H plus spatial endpoint",
+      "passed": true
+    },
+    {
+      "name": "first order charge",
+      "passed": true
+    },
+    {
+      "name": "second order source includes twist term",
+      "passed": true
+    }
+  ],
+  "full_scalar": "2*A*epsilon**2*k**2*rho + epsilon**2*k**2*rho**2/(2*epsilon*rho + 2*t) - 2*epsilon*k**2*rho + (delta_pP**2*epsilon**2 + delta_pr**2*epsilon**2*exp(-2*epsilon*p))/(2*epsilon*rho + 2*t) + (-delta_pa*epsilon + 2)*(delta_pR*epsilon - 2*t - 1/(2*t))/2 + (delta_pa*epsilon - 2)**2/(8*epsilon*rho + 8*t) + (epsilon*rho + t)*(epsilon**2*r**2*(I*k - 2)**2*exp(2*epsilon*p) + (I*epsilon*k*p + 2)**2)/2",
+  "full_momentum": "I*A*epsilon*k*(delta_pa*epsilon - 2) + delta_pP*epsilon*(I*epsilon*k*p + 2) - I*delta_pa*epsilon*k + delta_pr*epsilon**2*r*(I*k - 2) + I*epsilon*k*rho*(delta_pR*epsilon - 2*t - 1/(2*t))",
+  "quadratic_reduced_H_before_spatial_boundary": "t*(px**2 + (2*r - rx)**2)/2 + (delta_pP**2 + delta_pr**2)/(2*t)",
+  "exact_charge_expansion": "delta_pP*epsilon**2*px + 2*delta_pP*epsilon - 2*delta_pr*epsilon**2*r + delta_pr*epsilon**2*rx",
+  "explanation": "Second-order mean PiP is available to enforce the periodic constraint; setting all second-order homogeneous corrections to zero is an extra restriction. Sol has no global KID, so this is not the flat-torus four-charge obstruction."
+}

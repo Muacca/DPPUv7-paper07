@@ -1,133 +1,36 @@
-%==============================================================================
-% Appendix B: Native local action and DBR computational checks
-%==============================================================================
-\section{Native local action and DBR computational checks}
-\label{app:native}
+\section{Full contortion, Euler equations and endpoints}
 
-\subsection{Reduced action ingredients}
-\label{app:native:action}
-
-Under the homogeneous background ansatz (Section~\ref{sec:setup:perturbation}),
-the first-order EC+NY action reduces to a finite-dimensional reduced Lagrangian.
-The independent variables are the scale factors $q_{a}(t)$, the lapse $N(t)$, the
-homogeneous connection components, and the torsion ansatz scalars $(\eta,V)$.
-The perturbation analysis uses the quadratic action obtained by block-decomposing
-this reduced system into scalar / spin-1 / spin-2 sectors.
-
-\subsection{Symbolic Dirac--Bergmann engine}
-\label{app:native:engine}
-
-The constraint analysis was performed with a symbolic computation engine.  The
-procedure follows the standard Dirac--Bergmann
-algorithm~\cite{ref10,ref11,ref12}:
-\begin{enumerate}
-  \item Legendre transform and extraction of the primary constraints.
-  \item Generation of the secondary constraints by the consistency conditions
-        (iterated to closure).
-  \item Classification of first/second class, and construction of the Dirac
-        bracket for the second-class pairs.
-  \item Presentation of the reduced spectrum by Routh-type elimination after
-        closure (the DBR order).
-\end{enumerate}
-
-The decisions of the engine do not fix in advance the expected values of any
-particular topology.  In the implementation, each topology local builder is
-passed through the scalar-axis DBR closure, and the activation entry is read
-from primary preservation, secondary generation, the constraint Poisson matrix
-rank, and the first/second-class split.  The indeterminate-symbol relation
-between the structure constants and the class-A matrix is checked separately as
-a formal identity.  The physical role of that map as DBR activation is checked
-by the axis-by-axis closure audit.
-
-\paragraph{Correspondence with the proof skeleton of
-Section~\ref{sec:rankdefect:mechanism}.}
-Write $\Aop_{\rm DBR}$ for the secondary activation map for the scalar-axis
-perturbations $\bm{\beta}\in\mathbb{R}^{3}$.  In the class-A Milnor frame, the
-formal structure-map identity gives
-\begin{equation}
-  \Aop_{\rm form} = n .
+\stepcounter{equation}\begin{equation}\tag{CB-01}\label{eq:CB-01}
+\begin{aligned}K_{ab}&=K_{ab,c}e^c,\qquad K_{ab,c}=-K_{ba,c},\qquad s_a=\eta_{aa},\\ R_{\rm EC}&=R_{\rm LC}+\nabla_aJ^a+R_K,\qquad J^a=2s_a\sum_bs_bK_{ab,b},\\ R_K&=\sum_{a,b,e}s_as_bs_e(K_{ae,a}K_{eb,b}-K_{ae,b}K_{eb,a}).\end{aligned}
 \end{equation}
-This identity is a notation and structure-map check; it is not used as a
-substitute for DBR closure.  The witness
-\code{rank_defect_activation_witness.py} calls the bundled DBR
-constraint-closure engine (\code{dppu.dirac}) and computes the entries of
-$\Aop_{\rm DBR}$ from DBR closure for the four topologies and three scalar
-axes.  The resulting engine-derived activation matrix satisfies
-$\rank(\Aop_{\rm DBR})=\rank(n)$ and
-$\dim\ker(\Aop_{\rm DBR})=\dzero$.
 
-\subsection{Rank verification conventions}
-\label{app:native:rank}
+Use the 24 independent coordinates $a<b$, $c=0,\ldots,3$. The Hessian of $R_K$ has determinant $2^{32}$ and rank 24; the $24\times24$ linear map from $K$ to $T$ is also invertible. The determinant depends on coordinate normalization, whereas nondegeneracy does not. The contraction proof of the Cartan equation in Section 2 gives uniqueness for general nondegenerate coframes; this component calculation is an algebraic control.
 
-For the rank decisions of the constraint matrices and the kinetic Hessians we
-impose the following redundancies:
-\begin{itemize}
-  \item \textbf{Two routes}: agreement of the symbolic rank and the numerical
-        rank is required.
-  \item \textbf{Two generic points}: the numerical rank is evaluated at two
-        generic background points, and agreement is required (excluding an
-        accidental single-point degeneracy).
-  \item \textbf{Mod-$p$ check}: for large symbolic matrices, a rank computation
-        at a prime modulus is used in parallel to exclude a spurious rank from
-        cancellation/round-off.
-\end{itemize}
+Equation (CB-01) is tensorial and applies also with shift. The spatial slice has no boundary, so the integrated divergence contributes only the normal current at time endpoints. Treating the LC GHY term, this current and constant NY in corresponding boundary representatives gives $S_0=S_{\rm ADM}+\int\sqrt{-g}\,R_K/(2\kappa^2)$. Its $K$ equation gives $K=0$ pointwise.
 
-\subsection{Frame-invariance check protocol}
-\label{app:native:frame}
+\stepcounter{equation}\begin{equation}\tag{CB-02}\label{eq:CB-02}
+\begin{aligned}\omega&=K+W(e,\partial e),\quad W=\omega_{\rm LC},\\ E_K(S')&=E_\omega(S),\\ E_e(S')&=E_e(S)+E_\omega(S)\frac{\partial W}{\partial e}-\partial_\mu\left(E_\omega(S)\frac{\partial W}{\partial(\partial_\mu e)}\right).\end{aligned}
+\end{equation}
 
-The frame invariance of Section~\ref{sec:rankdefect:frame} is based first on the
-analytic argument that $\rank(n)$ and $\dim\ker n$ are preserved under the
-congruence $n\mapsto RnR^{\mathsf{T}}$.  The numerical verification reinforces it
-by two routes: (a) random SO(3) rotations ($\dim\ker n$ preserved in all 20
-rotations), and (b) reconstruction of $n$ from the rotated structure constants
-(tensor transformation) and recomputation of the kernel dimension.  The script
-\code{rank_defect_activation_witness.py} also confirms
-$\rank(RnR^{\mathsf{T}})=\rank(n)$ for rational orthogonal matrices $R$.
+Equation (CB-02) is the Euler chain rule with contractions suppressed. On the complete connection equation the extra terms vanish, and the coframe equation becomes the LC Einstein equation. This does not justify discarding selected Euler equations before imposing the connection shell.
 
-\subsection{Comparison procedure under a single protocol}
-\label{app:native:protocol}
+The endpoint one-form acquires a term proportional to $E_\omega$ from the integration by parts in (CB-02); its pullback to the connection shell vanishes. Boundary representatives additionally differ by $\delta B_{\rm end}$, whose exterior variation is zero. Hence the reduced two-forms agree. This is a statement about pullbacks to solution space and corresponding endpoint data, not a claim that the derivative-dependent change is a point canonical transformation.
 
-The comparison of the four topologies was carried out under one and the same
-engine, the same sector decomposition, and the same rank-verification conventions.
-$\Sthree$ doubles as a cross-check of the method, passing the null check of the
-scalar-axis projection (all axes zero for the isotropic $\Sthree$).
+\stepcounter{equation}\begin{equation}\tag{CB-03}\label{eq:CB-03}
+\begin{aligned}L_0&=c\left[-\frac{6q\dot q^2}{N}+6\chi Nq-6Nq\eta^2+\frac23Nq^3V^2\right],\\ B_{\rm end}&=-2cq^3V+6\theta\mathcal V_{\Sigma}q^2\eta,\\ (p_\eta,p_V)&=(0,0),\qquad(\eta,V)=(0,0).\end{aligned}
+\end{equation}
 
-\subsection{Reproducibility notes}
-\label{app:native:repro}
+In the common-scale family the last four conditions are four second-class constraints. In the endpoint-retaining representative the primaries become $P_\eta-\partial_\eta B=0$, $P_V-\partial_VB=0$, and $P_q=p_q+\partial_qB$. Transforming constraints and Hamiltonian by the same substitution preserves the Poisson algebra and Dirac two-form. The conclusion is not extended to variable $\theta$, spin sources or degenerate coframes.
 
-The main formulas and decisions in the paper are reproducible by the independent
-witness scripts under \code{script/scripts/paper07/}.
 
-\begin{table}[H]
-\centering
-\begingroup
-\renewcommand{\arraystretch}{1.3}
-\centering
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{ll}
-\toprule
-Witness & Corresponding sections \\
-\midrule
-\code{rank_defect_activation_witness.py} &
-\S\ref{sec:rankdefect:mechanism}--\ref{sec:rankdefect:frame},
-\ref{app:native:engine}--\ref{app:native:frame}; *1 \\
-\code{spectral_completion_witness.py} &
-\S\ref{sec:spectral}, \ref{app:spectral} \\
-\code{torsion_auxiliary_field_promotion_witness.py} &
-\S\ref{sec:torsion}, \ref{app:torsion} \\
-\code{finite_fate_branch_witness.py} &
-\S\ref{sec:finite}, \ref{app:finite} \\
-\code{harmonic_kernel_correspondence.py} &
-\S\ref{sec:harmonic}, \ref{app:harmonic} \\
-\code{route_comparison_s3_branch_a_witness.py} &
-\S\ref{sec:dbr:control}, \ref{app:route} \\
-\code{s3_normalization_factor_witness.py} &
-\S\ref{sec:setup:structure}, \ref{app:conventions:s3} \\
-\bottomrule
-\end{tabular}%
-}
-\endgroup
-\caption{Independent witness scripts and the sections they reproduce. (*1: formal identity as notation
-check, DBR closure audit as primary evidence)}
-\label{tab:witness}
-\end{table}
+\subsection{Direct checks in inhomogeneous blocks}
+
+\stepcounter{equation}\begin{equation}\tag{CB-04}\label{eq:CB-04}
+B_{\rm EH}=\tfrac12\epsilon_{abcd}e^a\wedge e^b\wedge K^{cd},
+\qquad B_{\rm NY}=e^a\wedge T_a,\qquad
+dB_{\rm NY}=T^a\wedge T_a-e^a\wedge e^b\wedge R_{ab}.
+\end{equation}
+
+Coupling coefficients are suppressed in (CB-04). The EH current may be expressed in contortion coordinates while the NY current is expanded in raw connection perturbations; they must be put in the same connection variables before combination. At quadratic order we retain products of the two quadratures and, where required, the mean second-order Cartan contribution paired with the background.
+
+For a nonzero flat mode the complete chains with 40 configurations including six Lorentz directions, 34 after Lorentz gauge fixing, and 10 metric configurations were compared directly. Nil base modes and Sol Gowdy modes include direct checks of all 24 Cartan components, the auxiliary quadratic form and endpoint currents. At $j=3/2$ on $S^3$, all right-index Cartan components and the quadratic endpoint identity were checked. For central Nil and general Sol orbits the Cartan solution respects the tensor/orbit closure; these checks are distinct from computing additional complete Dirac chains or full quadratic endpoint matrices.

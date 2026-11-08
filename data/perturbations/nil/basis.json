@@ -1,0 +1,436 @@
+{
+  "checks": [
+    {
+      "name": "tensor Frobenius normalization",
+      "passed": true
+    },
+    {
+      "name": "vector normalization",
+      "passed": true
+    },
+    {
+      "name": "tensor and dual momentum canonical",
+      "passed": true
+    },
+    {
+      "name": "vector weights",
+      "passed": true
+    },
+    {
+      "name": "tensor weights",
+      "passed": true
+    },
+    {
+      "name": "oscillator rotation relation X",
+      "passed": true
+    },
+    {
+      "name": "oscillator rotation relation Y",
+      "passed": true
+    },
+    {
+      "name": "Heisenberg relation on guard interior",
+      "passed": true
+    },
+    {
+      "name": "truncation defect explicitly nonzero at upper edge",
+      "passed": true
+    },
+    {
+      "name": "deck oscillator argument reindex",
+      "passed": true
+    },
+    {
+      "name": "deck y phase reindex",
+      "passed": true
+    },
+    {
+      "name": "conjugation preserves oscillator argument",
+      "passed": true
+    },
+    {
+      "name": "grading is not a global rotation Killing field",
+      "passed": true
+    },
+    {
+      "name": "nonLRS scalar ladder coupling",
+      "passed": true
+    }
+  ],
+  "tensor_transform": [
+    [
+      "1/2",
+      "0",
+      "sqrt(2)/2",
+      "0",
+      "0",
+      "1/2"
+    ],
+    [
+      "-1/2",
+      "0",
+      "sqrt(2)/2",
+      "0",
+      "0",
+      "-1/2"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "I/2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-I/2"
+    ],
+    [
+      "0",
+      "1/2",
+      "0",
+      "0",
+      "1/2",
+      "0"
+    ],
+    [
+      "0",
+      "I/2",
+      "0",
+      "0",
+      "-I/2",
+      "0"
+    ]
+  ],
+  "vector_transform": [
+    [
+      "sqrt(2)/2",
+      "0",
+      "sqrt(2)/2"
+    ],
+    [
+      "sqrt(2)*I/2",
+      "0",
+      "-sqrt(2)*I/2"
+    ],
+    [
+      "0",
+      "1",
+      "0"
+    ]
+  ],
+  "spins": [
+    2,
+    1,
+    0,
+    0,
+    -1,
+    -2
+  ],
+  "vector_spins": [
+    1,
+    0,
+    -1
+  ],
+  "blocks": {
+    "-2": {
+      "metric_slots": [
+        [
+          5,
+          0
+        ]
+      ],
+      "multiplier_slots": []
+    },
+    "-1": {
+      "metric_slots": [
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "multiplier_slots": [
+        [
+          3,
+          0
+        ]
+      ]
+    },
+    "0": {
+      "metric_slots": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "multiplier_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ]
+    },
+    "1": {
+      "metric_slots": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "multiplier_slots": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    "2": {
+      "metric_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "multiplier_slots": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    "3": {
+      "metric_slots": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "multiplier_slots": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    }
+  },
+  "Heisenberg_upper_edge_defect": [
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-8*I*b**2"
+    ]
+  ],
+  "rotation_deck_residual": [
+    [
+      "0"
+    ],
+    [
+      "P"
+    ],
+    [
+      "-P*x - x**2/2 + (P + x)**2/2"
+    ]
+  ],
+  "nonLRS_n0_to_n2": "sqrt(2)*b**2/(2*g2) - sqrt(2)*b**2/(2*g1)",
+  "scalar_basis": "P=2pi, mu=m/P !=0; Phi_(m,r,n)=sqrt(P) exp(i mu z) sum_(k in Z) exp(i(r+k m)y) f_n(x+(r+k m)/mu), where f_n is the real unit-L2 Hermite function of frequency abs(mu). r=0,...,abs(m)-1. Haar measure is normalized by P^4.",
+  "real_field": "conjugate(Phi_m,r,n)=Phi_-m,(-r mod abs(m)),n. Tensor conjugation also reverses spin. Use L=n+sign(m)*spin, invariant under this conjugation.",
+  "closure_argument": "[iN,X]=-Y and [iN,Y]=X. The diagonal tensor action plus iN makes gradient, symmetrized gradient, divergence, curvature variation and ADM maps equivariant when g and pi have equal horizontal axes. All tensor spins are bounded, so a fixed L has finitely many slots. This grading is an algebraic operator on each Schrödinger representation, not a descended rotation isometry.",
+  "boundary": "The displayed finite oscillator matrices are only a guard implementation. A second-order operator acting on n<=L+2 reaches at most L+4; retain that entire range before projecting. Never impose a finite-dimensional Heisenberg commutator at the guard edge.",
+  "nonLRS_boundary": "If g1!=g2, the scalar operator contains nonzero n<->n+2 links for arbitrarily high n. The present finite grading no longer closes; this is not a theorem excluding every possible alternative basis."
+}

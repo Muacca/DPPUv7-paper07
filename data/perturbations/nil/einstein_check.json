@@ -1,0 +1,47 @@
+{
+  "checks": [
+    {
+      "name": "Einstein spatial (0, 0)",
+      "passed": true
+    },
+    {
+      "name": "Einstein spatial (1, 1)",
+      "passed": true
+    },
+    {
+      "name": "Einstein spatial (2, 2)",
+      "passed": true
+    },
+    {
+      "name": "Einstein spatial (0, 1)",
+      "passed": true
+    },
+    {
+      "name": "Einstein spatial (0, 2)",
+      "passed": true
+    },
+    {
+      "name": "Einstein spatial (1, 2)",
+      "passed": true
+    },
+    {
+      "name": "Hamiltonian Einstein identity",
+      "passed": true
+    },
+    {
+      "name": "momentum Einstein identity 0",
+      "passed": true
+    },
+    {
+      "name": "momentum Einstein identity 1",
+      "passed": true
+    },
+    {
+      "name": "momentum Einstein identity 2",
+      "passed": true
+    }
+  ],
+  "L": 2,
+  "frequency": "mu=b^2>0 arbitrary",
+  "scope": "All ten four-dimensional Einstein components, with every tensor component in the closed block and all lapse/shift time jets. Spatial Einstein equations vanish on ADM evolution; temporal components equal the original constraints."
+}

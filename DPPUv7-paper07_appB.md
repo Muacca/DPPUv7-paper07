@@ -1,64 +1,51 @@
-# DPPUv7-paper07 — Appendix B: Native Local Action and DBR Computational Checks
+# 付録B. 全contortion・Euler式・端点
 
-[← Appendix A](DPPUv7-paper07_appA.md) | [Appendix C →](DPPUv7-paper07_appC.md)
-
----
-
-## Appendix B. Native local action and DBR computational checks
-
-### B.1 Reduced action ingredients
-
-homogeneous 背景 ansatz（[Section 2.3](DPPUv7-paper07_sec02.md)）の下で、first-order EC+NY 作用は有限自由度の reduced Lagrangian に落ちる。独立変数は scale factors $q_a(t)$、lapse $N(t)$、homogeneous 接続成分、torsion ansatz scalars $(\eta, V)$ である。摂動解析では、この reduced 系を scalar / spin-1 / spin-2 sector にブロック分解した二次作用を用いる。
-
-### B.2 Symbolic Dirac–Bergmann engine
-
-制約解析は symbolic 計算エンジンで実行した。手続きは標準の Dirac–Bergmann アルゴリズム [10–12] に忠実である:
-
-1. Legendre 変換と primary constraints の抽出。
-2. consistency 条件による secondary constraints の生成（閉包まで反復）。
-3. first/second class の分類と、second class 対への Dirac bracket 構成。
-4. 閉包後の Routh 型消去による reduced スペクトルの提示（DBR の順序）。
-
-エンジンの判定は特定の topology の期待値を事前に固定しない。実装上は各 topology の local builder から scalar-axis DBR 閉包を走らせ、primary preservation、secondary generation、constraint Poisson matrix rank、first/second class split から activation entry を読む。構造定数と構造行列の不定記号レベルの関係は formal identity として別に確認し、DBR activation としての物理的意味は axis-by-axis closure audit で確認する。
-
-**§4.3 proof skeleton との対応.** scalar-axis 摂動 $\boldsymbol\beta\in\mathbb R^3$ に対する secondary activation 写像を $\mathcal A_{\rm DBR}$ と書く。class-A Milnor frame では、構造写像の formal identity として
+式(CB-01)。
 
 $$
-\mathcal A_{\rm form} = n
+\begin{aligned}K_{ab}&=K_{ab,c}e^c,\qquad K_{ab,c}=-K_{ba,c},\qquad s_a=\eta_{aa},\\
+R_{\rm EC}&=R_{\rm LC}+\nabla_aJ^a+R_K,\qquad J^a=2s_a\sum_bs_bK_{ab,b},\\
+R_K&=\sum_{a,b,e}s_as_bs_e(K_{ae,a}K_{eb,b}-K_{ae,b}K_{eb,a}).\end{aligned}
 $$
 
-が成り立つ。この恒等式は記法・構造写像の確認であり、DBR closure を代替しない。`rank_defect_activation_witness.py` は、同梱の DBR 制約閉包エンジン（`dppu.dirac`）を呼び、四 topology × 三 scalar axis について $\mathcal A_{\rm DBR}$ の entry を DBR closure から計算する。その結果、engine-derived activation matrix は $\mathrm{rank}(\mathcal A_{\rm DBR})=\mathrm{rank}(n)$ を満たし、 $\dim\ker(\mathcal A_{\rm DBR})=d_{\rm zero}$ を与える。
+a<b、c=0,…,3を独立な24座標として固定する。二次形式R_KのHessianはdet=2³²、rank=24で、KからTへの24×24線形写像も可逆である。このdetは座標規格化に依存するが、非退化性は依存しない。第2節のCartan方程式の内部積による証明が一般の非退化coframeでの一意性を与え、この成分計算は独立な代数対照となる。
 
-### B.3 Rank verification conventions
+shiftを含む一般のcoframeでも式(CB-01)はtensor恒等式である。spatial sliceに境界はなく、発散の積分は時間端点の法線currentのみとなる。LC GHYとこのcurrent、定数NYを対応する境界代表で処理すると、S₀=S_ADM+∫√−g R_K/(2κ²)を得る。K方程式は点ごとにK=0を与える。
 
-制約行列・kinetic Hessian の rank 判定には以下の冗長化を課す:
+式(CB-02)。
 
-- **二重経路**: symbolic rank と数値 rank の一致を要求する。
-- **二点 generic 検査**: 数値 rank は 2 つの generic な背景点で評価し、一致を要求する（単一点の偶然退化を排除）。
-- **mod- $p$ 検査**: 大型 symbolic 行列には素数 modulus での rank 計算を併用し、桁落ちによる偽 rank を排除する。
+$$
+\begin{aligned}\omega&=K+W(e,\partial e),\quad W=\omega_{\rm LC},\\
+E_K(S')&=E_\omega(S),\\
+E_e(S')&=E_e(S)+E_\omega(S)\frac{\partial W}{\partial e}-\partial_\mu\left(E_\omega(S)\frac{\partial W}{\partial(\partial_\mu e)}\right).\end{aligned}
+$$
 
-### B.4 Frame-invariance check protocol
+添字の縮約を省略して書いたEuler chain ruleである。完全な接続方程式を課せば追加項が消えるため、coframe方程式もLC Einstein方程式へ対応する。接続shellを使う前にEuler式の一部だけを捨てることは正当化されない。
 
-[Section 4.4](DPPUv7-paper07_sec04.md) の frame 不変性は、まず $n\mapsto RnR^{\mathsf T}$ の合同変換で $\mathrm{rank}(n)$ と $\dim\ker n$ が保存される解析的議論に基づく。数値検証は次の二重経路で補強した: (a) ランダム SO(3) 回転（20 回転すべてで $\dim\ker n$ 保存）、(b) 回転後の構造定数（テンソル変換）からの $n$ の再構成と kernel 次元の再計算。`rank_defect_activation_witness.py` でも有理直交行列 $R$ による $\mathrm{rank}(RnR^{\mathsf T})=\mathrm{rank}(n)$ を確認する。
+変分の端点1形式には、式(CB-02)の部分積分によるE_ω比例項が加わる。それは接続shellへの引戻しで消える。さらに境界代表の差はδB_endであり、δ²B_end=0から還元二形式が一致する。これは微分依存の変数変換をpoint正準変換とみなす主張ではなく、解空間への引戻しと対応する端点データについての主張である。
 
-### B.5 同一プロトコル下の比較手続き
+式(CB-03)。
 
-四 topology の比較はすべて同一のエンジン・同一の sector 分解・同一の rank 検証規約の下で行った。 $S^3$ は手法の cross-check を兼ね、scalar-axis 射影の null 検査（等方 $S^3$ で全軸 0）を通過している。
+$$
+\begin{aligned}L_0&=c\left[-\frac{6q\dot q^2}{N}+6\chi Nq-6Nq\eta^2+\frac23Nq^3V^2\right],\\
+B_{\rm end}&=-2cq^3V+6\theta\mathcal V_{\Sigma}q^2\eta,\\
+(p_\eta,p_V)&=(0,0),\qquad(\eta,V)=(0,0).\end{aligned}
+$$
 
-### B.6 Reproducibility notes
+共通scale族では最後の四条件が四つの第二級拘束となる。端点を保持する代表ではprimaryはP_η−∂_ηB=0、P_V−∂_VB=0へ、q momentumもP_q=p_q+∂_qBへ移る。拘束とHamiltonianを同じ置換で移せばPoisson代数・Dirac二形式は変わらない。θが定数でなくなる場合やspin source、退化coframeにはこの結論を拡張しない。
 
-論文内の主要式・判定は `script/scripts/paper07/` 配下の独立 witness スクリプトで再現可能である。
+## 非斉次blockでの直接対照
 
-| witness | 対応節 |
-|---|---|
-| `rank_defect_activation_witness.py` | §4.3–4.4, B.2–B.4（formal identity は notation check、主証拠は `dppu.dirac` の DBR closure audit） |
-| `spectral_completion_witness.py` | §5, D |
-| `torsion_auxiliary_field_promotion_witness.py` | §8, G |
-| `finite_fate_branch_witness.py` | §7, F |
-| `harmonic_kernel_correspondence.py` | §6, E |
-| `route_comparison_s3_branch_a_witness.py` | §3.3, C |
-| `s3_normalization_factor_witness.py` | §2.2, A.3 |
+式(CB-04)。
 
----
+$$
+B_{\rm EH}=\tfrac12\epsilon_{abcd}e^a\wedge e^b\wedge K^{cd},
+\qquad B_{\rm NY}=e^a\wedge T_a,\qquad
+dB_{\rm NY}=T^a\wedge T_a-e^a\wedge e^b\wedge R_{ab}.
+$$
 
-[← Appendix A](DPPUv7-paper07_appA.md) | [Appendix C →](DPPUv7-paper07_appC.md)
+式(CB-04)では結合係数を除いたcurrentを表示した。EH currentはcontortion座標、NY currentは生の接続摂動で展開する場合があるため、両者を足す前に同じ接続へ代入する。二次摂動ではcos/sin間の積と、背景との積を通じる必要な平均二次Cartan項を保持する。
+
+flat非零modeではLorentz六方向を含む40配置変数の連鎖、Lorentz固定34変数、計量10変数を直接比較した。Nil baseとSol Gowdyでは全24成分Cartan、補助二次形式、端点currentを直接検算した。S³のj=3/2では全右添字のCartanと二次端点恒等式を確認した。Nil centralとSol orbitではtensor/orbit閉包を保つCartan解を確認したが、追加の全Dirac連鎖・全二次端点行列を計算した範囲とは区別する。
+
+[論文の入口](README_ja.md) / [参考文献](REFERENCES.md)

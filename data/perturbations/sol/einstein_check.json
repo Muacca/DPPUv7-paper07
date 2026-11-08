@@ -1,0 +1,49 @@
+{
+  "checks": [
+    {
+      "name": "background Ricci in rational F representation",
+      "passed": true
+    },
+    {
+      "name": "spatial Einstein (0, 0)",
+      "passed": true
+    },
+    {
+      "name": "spatial Einstein (1, 1)",
+      "passed": true
+    },
+    {
+      "name": "spatial Einstein (2, 2)",
+      "passed": true
+    },
+    {
+      "name": "spatial Einstein (0, 1)",
+      "passed": true
+    },
+    {
+      "name": "spatial Einstein (0, 2)",
+      "passed": true
+    },
+    {
+      "name": "spatial Einstein (1, 2)",
+      "passed": true
+    },
+    {
+      "name": "Einstein Hamiltonian constraint identity",
+      "passed": true
+    },
+    {
+      "name": "Einstein momentum constraint identity 0",
+      "passed": true
+    },
+    {
+      "name": "Einstein momentum constraint identity 1",
+      "passed": true
+    },
+    {
+      "name": "Einstein momentum constraint identity 2",
+      "passed": true
+    }
+  ],
+  "scope": "Exact differential identities for all xi and arbitrary nonzero real k,l, before spatial discretization. All metric components and lapse/shift time jets included. ADM evolution implies G_ij=0 and G_00=-C_H/(2t), G_0i=-C_i/(2t); all ten components vanish on the full constraints."
+}

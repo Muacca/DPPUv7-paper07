@@ -1,104 +1,79 @@
-# DPPUv7-paper07 — Section 7: Finite Fate of the Zero Kernel
+# 7. コンパクト条件と局所可積分性
 
-[← Section 6](DPPUv7-paper07_sec06.md) | [Section 8 →](DPPUv7-paper07_sec08.md)
+## Flat torusの四条件と既知定理
 
----
+Paper06の斉次体積速度h、tracefree shear Σに平均零のTT場γを加え、元の拘束を二次まで展開して空間積分する。時間並進と三つの空間並進に対する条件は次となる。
 
-## 7. Finite fate of the zero kernel
+式(W-03)。
 
-二次オーダーで $d_{\rm zero}$ 本の非伝播 kernel 方向が見つかった後の自然な問いは、「これらは有限変形でも flat な方向（moduli）か、それとも有限振幅で壁に遮られるか」である。本節はこの問いに **finite Palatini branch / homogeneous minisuperspace のスコープ内で**答える。**本節は補助的結果であり、Theorem 1（二次定理）の一部ではない。**
+$$
+\begin{aligned}6h^2&=\mathrm{tr}(\Sigma^2)+\frac14\left\langle\dot\gamma_{ij}^2+q_0^{-2}(\partial_a\gamma_{ij})^2\right\rangle,\\
+0&=\left\langle\dot\gamma_{ij}\partial_a\gamma_{ij}\right\rangle\quad(a=1,2,3).\end{aligned}
+$$
 
-### 7.1 Classification: exact moduli versus curvature walls
+固定flat torusにはこの四つ以外のKIDがない。境界のないCMC Cauchy面上の滑らかな周期線形真空データについて、AMM1982 Theorem 3.3を適用すると、W-03は背景を通る局所的な厳密真空解族の接方向となるための必要十分条件である。付録Dに関数空間、KID、定理の錐との規格化対応を示す。
 
-kernel 方向に沿った有限変形 $\beta\mapsto$ 有限値 に対し、background-adapted な static Palatini branch を再構成し、reduced energy density $\Delta(\beta)$ の有限展開（4 次まで symbolic）を検証した。結果は次の二分類である。
+十分性の根拠は既知定理であり、平均条件の有限検算だけではない。高次補正に新しい空間harmonicを許す。二端点境界値問題、全時間の正則性、非線形安定性までは述べない。LC接続で持ち上げると同じ非退化EC＋定数完全NYの局所解族となる。
 
-- **exact modulus**: $\Delta(\beta)=0$ が展開全次数で厳密に成立（flat 方向が有限変形でも持続）。
-- **curvature wall**: $\Delta(\beta)$ に曲率由来の非零項（tadpole を含む）が発生し、stationary な有限変形 branch が存在しない。
+γ=0では斉次錐T-01へ戻る。h=Σ=0のpure-wave方向は正energyにより排除されるが、体積速度を持つ混合方向には非自明な接方向がある。standing wave A cos x cos tはE=A²、並進charge零でh²=A²/24。traveling wave A cos(x−t)はE=2A²、Pₓ=−A²で、反対向きの波などによる相殺が必要となる。
 
-**式レベルの要点（finite Palatini branch / homogeneous minisuperspace）.**
+![fig02_compact_constraint](LaTeX/figures/fig02_compact_constraint.png)
 
-- **$T^3$**: 空間スカラー曲率は恒等的に消える。したがって任意の kernel 方向で $\Delta(\beta)\equiv0$（exact flat homogeneous branch）。
-- **$Nil^3$ $\beta_-$**: Milnor frame で接ベクトル $(\tfrac12,-\tfrac12,0)$ に沿った branch では $\Delta(\beta_-)=0$（4 次まで残差 0; exact modulus）。closed-form branch 式は [Appendix F](DPPUv7-paper07_appF.md) §F.3。
-- **$Nil^3$ $\beta_+/u$**: 接ベクトル $(-\tfrac12,-\tfrac12,1)$ 方向では reduced energy に曲率由来の線形項（tadpole）が残り、curvature wall。
-- **$Sol^3$ $\beta_x$**: 接ベクトル $(\tfrac13,-\tfrac16,-\tfrac16)$ 方向では非零項が残り、stationary branch absent（curvature wall）。
+W-03のenergy条件。並進chargeの三条件も満たすと、明示したflat torusの仮定内で局所可積分性の必要十分条件となる。
 
-**Table 4** Modulus/wall split（finite Palatini branch / homogeneous minisuperspace scoped）.
+## 定在波の明示二次補正
 
-| topology | $d_{\rm zero}$ | exact moduli | curvature wall | 備考 |
-|---|---:|---:|---:|---|
-| $T^3$ | 3 | 3 | 0 | exact flat homogeneous moduli |
-| $Nil^3$ | 2 | 1（ $\beta_-$ ） | 1（ $\beta_+/u$ ） | $\beta_-$ は exact modulus（4 次まで残差 0）、 $\beta_+$ は tadpole 付き wall |
-| $Sol^3$ | 1 | 0 | 1（ $\beta_x$ ） | stationary branch absent |
-| $S^3$ | 0 | 0 | 0 | $d_{\rm zero}=0$ endpoint（対象なし） |
+q₀=1、周期2πで、次の計量の指数をε(A₁,B₁,P₁)+ε²(A₂,B₂,P₂)と展開する。
 
-**Figure 5** Modulus/wall split across four topologies. 二次 kernel 次元 $d_{\rm zero}$ と finite Palatini branch における exact modulus / curvature wall の対応を示す。 $d_{\rm zero}$ は rank-defect data として保持され、finite moduli 数と一般には一致しない（一致するのは $T^3$ のみ）。*Scope*: wall の確認は finite Palatini branch / homogeneous minisuperspace 内に限定；full nonlinear lift theorem ではない。
+式(W-04)。
 
-```mermaid
-flowchart LR
-  DZ["Quadratic kernel dimension d_zero<br/>rank-defect data (Theorem 1)"]
+$$
+\begin{aligned}
+ds^2&=e^{2\mathcal A}(-dt^2+dx^2)+e^{2\mathcal B+2\mathcal P}dy^2+e^{2\mathcal B-2\mathcal P}dz^2,\\
+A_1&=B_1=ht,\qquad P_1=\frac a2\cos x\cos t,\qquad h^2=\frac{a^2}{24},\\
+A_2&=\frac{h^2t^2}{2}+\frac{a^2}{32}(1-\cos2t-\cos2x),\\
+B_2&=-h^2t^2-\frac{a^2}{64}\cos2x\cos2t,\\
+P_2&=\frac{ha}{2}(\sin t-t\cos t)\cos x.
+\end{aligned}
+$$
 
-  subgraph T3["T^3 — d_zero = 3"]
-    T3M["3 exact moduli<br/>Delta(beta) = 0 to all orders"]
-    T3W["0 curvature walls"]
-    T3M --- T3W
-  end
+膨張・収縮の両符号で全Ricci成分の一次・二次係数が消える。零mode・元の波数・二倍波数を残しており、二次式自体を有限振幅の厳密解とは呼ばない。非平行な二つの定在波についてはh²=(a²+b²)/24とし、生成する13波数の全sourceと補正を付録Dの方法で構成する。時間多項式・共鳴項も保持し、固定有限時間でO(ε³)の残差を得る。
 
-  subgraph NIL["Nil^3 — d_zero = 2"]
-    NILM["1 exact modulus: beta_-"]
-    NILW["1 curvature wall: beta_+/u<br/>tadpole term blocks stationary branch"]
-    NILM --- NILW
-  end
+## Nilのcentral条件
 
-  subgraph SOL["Sol^3 — d_zero = 1"]
-    SOLM["0 exact moduli"]
-    SOLW["1 curvature wall: beta_x<br/>stationary branch absent"]
-    SOLM --- SOLW
-  end
+BF-01の各曲がった背景はCMCで、 $`K_{ij}K^{ij}>0`$ である。KID lapseはコンパクト積分恒等式から零となる。固定商へ降りる空間Killing場を数えるとNilはcentralの1本、Solは0、S³ Taubは4本となる。Nilのm=0 sectorではcentral chargeが恒等的に零であるが、m≠0では次の条件が非自明となる。
 
-  subgraph S3["S^3 — d_zero = 0"]
-    S3N["endpoint: no kernel directions<br/>classification not applicable"]
-  end
+式(K-01)。
 
-  DZ --> T3
-  DZ --> NIL
-  DZ --> SOL
-  DZ --> S3
+$$
+\mathcal Q_Z=-2\sum_{m>0,r,L}\mu\thinspace\mathrm{Im}(\Pi^\dagger Q)=0,
+\qquad \mu=\frac{m}{2\pi}.
+$$
 
-  SPLIT["Key split: finite moduli count != d_zero in general<br/>match only for T^3 (3 = 3); Nil^3 has 2 kernel dirs but 1 modulus"]
+実場の共役sectorは寄与を相殺せず加算する。条件は全blockの和に課し、各blockのchargeを個別に零とする必要はない。L=2でQ=(1,0)、Π=(i,0)なら線形拘束を満たしてもcharge=2μとなる。charge零の非自明な線形例もあるが、十分性定理の適用や二次Einstein補正はここでは示していない。
 
-  NIL -.-> SPLIT
-  SOL -.-> SPLIT
+## SolのKIDと周期再構成
 
-  style DZ fill:#ffffff,stroke:#000000
-  style T3 fill:#ffffff,stroke:#000000
-  style S3 fill:#ffffff,stroke:#000000
-  style NIL fill:#ffffff,stroke:#000000
-  style SOL fill:#ffffff,stroke:#000000
-  style T3M fill:#e8f4e8,stroke:#000000
-  style T3W fill:#f0f0f0,stroke:#000000
-  style NILM fill:#e8f4e8,stroke:#000000
-  style NILW fill:#f8e8e8,stroke:#000000
-  style SOLW fill:#f8e8e8,stroke:#000000
-  style SOLM fill:#f0f0f0,stroke:#000000
-  style S3N fill:#f0f0f0,stroke:#000000
-  style SPLIT fill:#f8f4e8,stroke:#000000
-```
+固定Sol商には大域KIDがないため、flat T³の四条件やNilのcentral条件を一般orbitに追加しない。fiber非依存Gowdy表示の周期再構成にはKG-03の二次の平均補正 $`\langle\delta p_P^{(2)}\rangle`$ が寄与する。その補正を零に固定した一次場だけのsource条件を、一般fiber依存系に共通するKID obstructionとみなさない。非線形の積は零modeや他orbitを生成し、その持ち上げは別問題である。
 
-### 7.2 Minisuperspace DBR closure
+## S³ Taubの四条件
 
-この分類の整合性を、lapse・Hamiltonian constraint・DeWitt metric を含む lever-complete な homogeneous minisuperspace ansatz の DBR 閉包で検証した。結果: (i) Hamiltonian constraint を含めた閉包は成立し、(ii) trace-free tangent 方向の DeWitt norm は正（minisuperspace no-ghost）、(iii) homogeneous anisotropy の configuration 自由度は 2 である（検証データは [Appendix F](DPPUv7-paper07_appF.md)）。
+式(K-02)。
 
-### 7.3 Mandatory caveats
+$$
+\mathcal Q_X=\int_{S^3}p^{ij}\mathcal L_Xh_{ij}\thinspace d\mu=0,
+\qquad X\in\mathfrak{su}(2)\oplus\mathfrak u(1).
+$$
 
-- **finite moduli 数は一般に $d_{\rm zero}$ と等しくない。** 一致するのは $T^3$（3=3）のみであり、 $Nil^3$ では $d_{\rm zero}=2$ に対し exact modulus は 1 である。 $d_{\rm zero}$ は rank-defect data（二次 kernel の次元）として保持され、finite modulus count とは別の量である。
-- **wall の確認は finite Palatini branch 内で確立されており**、full nonlinear lift theorem・mass theorem ではない。time-dependent な full DBR 力学や非均質 sector への拡張は行っていない。
-- **minisuperspace no-ghost は full field-theory no-ghost ではない**（後者の解析済みスコープは [Section 5](DPPUv7-paper07_sec05.md)）。
-- branch 再構成における energy-density 展開による分類と停留点判定は異なる検査であり、[Appendix F](DPPUv7-paper07_appF.md) で区別して提示する。
+左SU(2)の三条件は係数の左添字に作用する。軸U(1)では右添字の微分に加えtensor frameの回転を含める。j=0とj=1の随伴kernelはこれらのKIDに対応する。局所線形拘束と四つの二次必要条件を満たすj=3/2の有限時間例を得るが、任意データの非線形持ち上げ、全j一様評価、horizon近傍の安定性までは示さない。
 
-### 7.4 Torsion non-contamination (corollary)
+## 条件の適用範囲
 
-torsion modes（EH/AX/VT/MX）はこの modulus/wall split を変えない。これは torsion auxiliary shell が trivial であることの系であり（独立な力学検証ではない）、その精密化は [Section 8](DPPUv7-paper07_sec08.md) で行う。
+| 背景 | 大域KID数 | 本稿での結論 |
+| --- | --- | --- |
+| 固定flat T³ | 4 | 仮定内で局所可積分性に必要十分 |
+| Nil LRS | 1 | central chargeの二次必要条件 |
+| 固定Sol | 0 | KID障害なし。十分性は未適用 |
+| S³ Taub | 4 | 四つの二次必要条件 |
 
----
-
-[← Section 6](DPPUv7-paper07_sec06.md) | [Section 8 →](DPPUv7-paper07_sec08.md)
+[論文の入口](README_ja.md) / [参考文献](REFERENCES.md)

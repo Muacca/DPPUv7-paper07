@@ -1,0 +1,554 @@
+{
+  "checks": [
+    {
+      "name": "j=0 derivative skew adjoint 0",
+      "passed": true
+    },
+    {
+      "name": "j=0 real field intertwiner 0",
+      "passed": true
+    },
+    {
+      "name": "j=0 structure 00",
+      "passed": true
+    },
+    {
+      "name": "j=0 structure 01",
+      "passed": true
+    },
+    {
+      "name": "j=0 structure 02",
+      "passed": true
+    },
+    {
+      "name": "j=0 derivative skew adjoint 1",
+      "passed": true
+    },
+    {
+      "name": "j=0 real field intertwiner 1",
+      "passed": true
+    },
+    {
+      "name": "j=0 structure 10",
+      "passed": true
+    },
+    {
+      "name": "j=0 structure 11",
+      "passed": true
+    },
+    {
+      "name": "j=0 structure 12",
+      "passed": true
+    },
+    {
+      "name": "j=0 derivative skew adjoint 2",
+      "passed": true
+    },
+    {
+      "name": "j=0 real field intertwiner 2",
+      "passed": true
+    },
+    {
+      "name": "j=0 structure 20",
+      "passed": true
+    },
+    {
+      "name": "j=0 structure 21",
+      "passed": true
+    },
+    {
+      "name": "j=0 structure 22",
+      "passed": true
+    },
+    {
+      "name": "j=0 Casimir",
+      "passed": true
+    },
+    {
+      "name": "j=0 real structure square",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 derivative skew adjoint 0",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 real field intertwiner 0",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 structure 00",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 structure 01",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 structure 02",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 derivative skew adjoint 1",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 real field intertwiner 1",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 structure 10",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 structure 11",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 structure 12",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 derivative skew adjoint 2",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 real field intertwiner 2",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 structure 20",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 structure 21",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 structure 22",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 Casimir",
+      "passed": true
+    },
+    {
+      "name": "j=1/2 real structure square",
+      "passed": true
+    },
+    {
+      "name": "j=1 derivative skew adjoint 0",
+      "passed": true
+    },
+    {
+      "name": "j=1 real field intertwiner 0",
+      "passed": true
+    },
+    {
+      "name": "j=1 structure 00",
+      "passed": true
+    },
+    {
+      "name": "j=1 structure 01",
+      "passed": true
+    },
+    {
+      "name": "j=1 structure 02",
+      "passed": true
+    },
+    {
+      "name": "j=1 derivative skew adjoint 1",
+      "passed": true
+    },
+    {
+      "name": "j=1 real field intertwiner 1",
+      "passed": true
+    },
+    {
+      "name": "j=1 structure 10",
+      "passed": true
+    },
+    {
+      "name": "j=1 structure 11",
+      "passed": true
+    },
+    {
+      "name": "j=1 structure 12",
+      "passed": true
+    },
+    {
+      "name": "j=1 derivative skew adjoint 2",
+      "passed": true
+    },
+    {
+      "name": "j=1 real field intertwiner 2",
+      "passed": true
+    },
+    {
+      "name": "j=1 structure 20",
+      "passed": true
+    },
+    {
+      "name": "j=1 structure 21",
+      "passed": true
+    },
+    {
+      "name": "j=1 structure 22",
+      "passed": true
+    },
+    {
+      "name": "j=1 Casimir",
+      "passed": true
+    },
+    {
+      "name": "j=1 real structure square",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 derivative skew adjoint 0",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 real field intertwiner 0",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 structure 00",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 structure 01",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 structure 02",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 derivative skew adjoint 1",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 real field intertwiner 1",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 structure 10",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 structure 11",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 structure 12",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 derivative skew adjoint 2",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 real field intertwiner 2",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 structure 20",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 structure 21",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 structure 22",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 Casimir",
+      "passed": true
+    },
+    {
+      "name": "j=3/2 real structure square",
+      "passed": true
+    }
+  ],
+  "results": {
+    "0": {
+      "generators": [
+        [
+          [
+            "0"
+          ]
+        ],
+        [
+          [
+            "0"
+          ]
+        ],
+        [
+          [
+            "0"
+          ]
+        ]
+      ],
+      "conjugation_intertwiner": [
+        [
+          "1"
+        ]
+      ],
+      "labels": [
+        "0"
+      ],
+      "scalar_harmonics": 1,
+      "full_real_coefficient_dimension": 1
+    },
+    "1/2": {
+      "generators": [
+        [
+          [
+            "0",
+            "I"
+          ],
+          [
+            "I",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "-1"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ],
+        [
+          [
+            "-I",
+            "0"
+          ],
+          [
+            "0",
+            "I"
+          ]
+        ]
+      ],
+      "conjugation_intertwiner": [
+        [
+          "0",
+          "-1"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "labels": [
+        "-1/2",
+        "1/2"
+      ],
+      "scalar_harmonics": 4,
+      "full_real_coefficient_dimension": 4
+    },
+    "1": {
+      "generators": [
+        [
+          [
+            "0",
+            "sqrt(2)*I",
+            "0"
+          ],
+          [
+            "sqrt(2)*I",
+            "0",
+            "sqrt(2)*I"
+          ],
+          [
+            "0",
+            "sqrt(2)*I",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "-sqrt(2)",
+            "0"
+          ],
+          [
+            "sqrt(2)",
+            "0",
+            "-sqrt(2)"
+          ],
+          [
+            "0",
+            "sqrt(2)",
+            "0"
+          ]
+        ],
+        [
+          [
+            "-2*I",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "2*I"
+          ]
+        ]
+      ],
+      "conjugation_intertwiner": [
+        [
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ]
+      ],
+      "labels": [
+        "-1",
+        "0",
+        "1"
+      ],
+      "scalar_harmonics": 9,
+      "full_real_coefficient_dimension": 9
+    },
+    "3/2": {
+      "generators": [
+        [
+          [
+            "0",
+            "sqrt(3)*I",
+            "0",
+            "0"
+          ],
+          [
+            "sqrt(3)*I",
+            "0",
+            "2*I",
+            "0"
+          ],
+          [
+            "0",
+            "2*I",
+            "0",
+            "sqrt(3)*I"
+          ],
+          [
+            "0",
+            "0",
+            "sqrt(3)*I",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "-sqrt(3)",
+            "0",
+            "0"
+          ],
+          [
+            "sqrt(3)",
+            "0",
+            "-2",
+            "0"
+          ],
+          [
+            "0",
+            "2",
+            "0",
+            "-sqrt(3)"
+          ],
+          [
+            "0",
+            "0",
+            "sqrt(3)",
+            "0"
+          ]
+        ],
+        [
+          [
+            "-3*I",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-I",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "I",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "3*I"
+          ]
+        ]
+      ],
+      "conjugation_intertwiner": [
+        [
+          "0",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "labels": [
+        "-3/2",
+        "-1/2",
+        "1/2",
+        "3/2"
+      ],
+      "scalar_harmonics": 16,
+      "full_real_coefficient_dimension": 16
+    }
+  },
+  "conventions": "sigma=-omega/2, [E_a,E_b]=-2 epsilon_abc E_c; E acts on a fixed left Wigner index through D_a=2i J_a on the right coefficient vector. Y_mn=sqrt(2j+1) D^j_mn, normalized Haar measure. Y_mn*=(-1)^(m-n)Y_-m,-n. A full fixed-j scalar coefficient set has (2j+1)^2 real dimensions; half-integer j is retained.",
+  "closure": "Background frame coefficients depend only on time. Every derivative, constraint and gauge map is a finite tensor expression in these D_a and frame structure constants, so all right indices and tensor components at fixed j and left index close. The full left multiplicity is restored with the stated reality condition."
+}

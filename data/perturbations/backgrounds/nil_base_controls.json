@@ -1,0 +1,202 @@
+{
+  "checks": [
+    {
+      "name": "fiber shifts vanish after full reconstruction",
+      "passed": true
+    },
+    {
+      "name": "base shift vanishes for nonzero mode",
+      "passed": true
+    },
+    {
+      "name": "lapse agrees with conformal-base reconstruction",
+      "passed": true
+    },
+    {
+      "name": "full linearized Ricci 00",
+      "passed": true
+    },
+    {
+      "name": "full linearized Ricci 01",
+      "passed": true
+    },
+    {
+      "name": "full linearized Ricci 02",
+      "passed": true
+    },
+    {
+      "name": "full linearized Ricci 03",
+      "passed": true
+    },
+    {
+      "name": "full linearized Ricci 11",
+      "passed": true
+    },
+    {
+      "name": "full linearized Ricci 12",
+      "passed": true
+    },
+    {
+      "name": "full linearized Ricci 13",
+      "passed": true
+    },
+    {
+      "name": "full linearized Ricci 22",
+      "passed": true
+    },
+    {
+      "name": "full linearized Ricci 23",
+      "passed": true
+    },
+    {
+      "name": "full linearized Ricci 33",
+      "passed": true
+    },
+    {
+      "name": "first coupled wave equation",
+      "passed": true
+    },
+    {
+      "name": "second coupled wave equation",
+      "passed": true
+    },
+    {
+      "name": "algebraic horizontal frame alignment orthogonal",
+      "passed": true
+    },
+    {
+      "name": "alignment preserves Nil structure",
+      "passed": true
+    },
+    {
+      "name": "alignment maps the given covector to k direction",
+      "passed": true
+    }
+  ],
+  "reconstructed_metric": [
+    [
+      "(-18*u**4 - 18)*(P*(1 - 3*u**4)/(2*u**4 + 2) + 9*I*PiQ/(8*k))",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "P*(1 - 3*u**4) + 9*I*PiQ*(u**4 + 1)/(4*k)",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "P*(-u**4 - 1)",
+      "16*Q*u**2/(9*u**4 + 9)"
+    ],
+    [
+      "0",
+      "0",
+      "16*Q*u**2/(9*u**4 + 9)",
+      "16*P*u**2/(9*u**4 + 9)"
+    ]
+  ],
+  "reconstructed_lapse_shift": [
+    [
+      "P*(1 - 3*u**4)/(2*u**4 + 2) + 9*I*PiQ/(8*k)"
+    ],
+    [
+      "0"
+    ],
+    [
+      "0"
+    ],
+    [
+      "0"
+    ]
+  ],
+  "Ricci_on_reduced_dynamics": [
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "field_evolution": [
+    [
+      "0",
+      "0",
+      "9/(4*u)",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "81*(u**4 + 1)**2/(64*u**3)"
+    ],
+    [
+      "-4*u*(9*k**2*u**8 + 18*k**2*u**4 + 9*k**2 + 32*u**2)/(9*(u**4 + 1)**2)",
+      "128*I*k*u**3/(9*(u**4 + 1)**2)",
+      "0",
+      "0"
+    ],
+    [
+      "-128*I*k*u**3/(9*(u**4 + 1)**2)",
+      "-64*k**2*u**3/(9*(u**4 + 1)**2)",
+      "0",
+      "0"
+    ]
+  ],
+  "physical_variables": [
+    [
+      "P"
+    ],
+    [
+      "Q"
+    ],
+    [
+      "PiP"
+    ],
+    [
+      "PiQ"
+    ]
+  ],
+  "KID_necessary_condition": "The only global KID is Z=partial_z. For the entire central-invariant sector L_Z g=L_Z pi=0, so the exact integrated momentum map integral pi^{ij} L_Z g_ij and its quadratic Taub coefficient vanish identically. No general sufficiency theorem or explicit nonlinear lift is claimed.",
+  "alignment": [
+    [
+      "n1/sqrt(n1**2 + n2**2)",
+      "n2/sqrt(n1**2 + n2**2)",
+      "0"
+    ],
+    [
+      "-n2/sqrt(n1**2 + n2**2)",
+      "n1/sqrt(n1**2 + n2**2)",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "1"
+    ]
+  ],
+  "lattice_statement": "n1,n2 remain the original integer lattice labels. This is a tensor/frame basis change for each covector, not a quotient rotation or identification of distinct modes.",
+  "verdict": "NIL_FOUR_DIMENSIONAL_AND_GLOBAL_CONTROLS_PASSED"
+}

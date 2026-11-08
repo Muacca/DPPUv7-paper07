@@ -1,167 +1,57 @@
-# DPPUv7 paper07 Scripts Directory
+# Paper07 scientific supplement — v2
 
--> [Japanese](README_ja.md)
+The package derives the specified formulas, coefficients and finite-time examples. The paper gives the hypotheses, constructions and proofs; passing finite checks alone is not a theorem of nonlinear existence or general stability.
 
-**Paper**: "Dirac-before-Routh Constrained Spectra in Bianchi Class-A Einstein–Cartan–Nieh–Yan Cosmologies" (paper07)
+## Commands
 
-Python packages and proof witness scripts for the paper07 Lorentzian EC+NY DBR constrained-spectrum analysis over the four Bianchi class-A backgrounds `T3`, `Nil3`, `Sol3`, and `S3`. The witnesses support rank-defect realization, scoped $k>0$ spectral completion, harmonic kernel correspondence, finite Palatini branch classification, torsion auxiliary/field-promotion checks, route comparison, and $S^3$ normalization invariance documented in the Japanese Markdown draft and Appendix B reproducibility notes.
+From the repository root, Python 3.11+:
 
-Witness scripts use `script/dppu` .
-
----
-
-## Directory Structure
-
-```text
-script/
-|-- docs/                      # Technical documentation and conventions
-|-- dppu/                      # Main Python package (DPPUv7)
-|   |-- action/                # EC action, Lagrangian, reduced-sector helpers
-|   |-- analysis/              # Dirac constraint analysis helpers
-|   |-- curvature/             # Riemann, Ricci, spatial Lie-frame curvature
-|   |-- dirac/                 # DBR/RBD constraint-closure engines
-|   |-- engine/                # Metric, LC/EC connection, contortion, pipeline
-|   |-- forms/                 # Exterior algebra and Nieh-Yan form
-|   |-- kk/                    # Kaluza-Klein photon effective theory
-|   |-- scanning/              # Parameter scan and diagnostics loader
-|   |-- spectral/              # Harmonic bases, Hessians, Sol3 compact-edge spectrum
-|   |-- topology/              # Class-A structure matrix and topology data
-|   |-- torsion/               # Torsion modes, ansatz, Nieh-Yan density
-|   `-- utils/                 # Common utilities and tee logging
-|-- run_paper07.sh             # Batch runner for all paper07 witnesses
-`-- scripts/                   # Execution scripts
-    |-- paper07/               # paper07 proof witness scripts
-    `-- visualize/             # Figure generation scripts
+```sh
+python -m pip install -r script/requirements.txt
+python -B script/paper07.py recompute --output results_base_new
+python -B script/perturbations.py recompute --model all --output results_models_new
+python -B script/perturbations.py export --input results_models_new --output selected_data_new
+python -B script/paper07.py render --data data/revised --output figures_base_new
+python -B script/perturbations.py render --data data/perturbations --output figures_models_new
 ```
 
-### `docs/` - Documentation
+Every output directory must be new. `recompute` generates scientific results, `export` selects publication data, and `render` reads saved numeric arrays without importing symbolic model producers. Both renderers verify data hashes; together they produce the five PNG/PDF figure pairs. Replacing `data/perturbations` with `selected_data_new` renders a fresh computation.
 
-- [DPPUv7 Engine CONVENTIONS](docs/CONVENTIONS.md)
-- [DPPUv7 SymPy guideline](docs/SymPy_guideline.md)
-- [DPPUv7 LOGGING](docs/LOGGING.md)
+Models can be run separately:
 
----
-
-## Package Overview (`dppu/`)
-
-| Module | Role | Key Classes / Functions |
-|--------|------|-------------------------|
-| [`action`](dppu/action/README.md) | EC action, reduced sector, auxiliary shell | `reduced_sector`, `derive_static_branch_function`, `solve_auxiliary_shell` |
-| [`analysis`](dppu/analysis/README.md) | Dirac–Bergmann and constraint helpers | `dirac` |
-| [`curvature`](dppu/curvature/README.md) | Curvature tensors and spatial Lie-frame curvature | `RiemannTensor`, `spatial_lie` |
-| [`dirac`](dppu/dirac/README.md) | DBR/RBD constraint closure and route comparison | `build_scalar_axis_projection`, `dirac_standard`, `routh_eliminate` |
-| [`engine`](dppu/engine/README.md) | Metric, LC/EC connection, contortion, pipeline | `metric`, `levi_civita`, `ec_connection`, `contortion` |
-| [`forms`](dppu/forms/README.md) | Exterior differential form algebra | `Form`, `wedge` |
-| [`kk`](dppu/kk/README.md) | KK photon effective theory | `extractor` |
-| [`scanning`](dppu/scanning/README.md) | Parameter scan and result loader | `parameter_scan`, `scan_results_loader` |
-| [`spectral`](dppu/spectral/README.md) | Harmonic bases, reduced Hessians, Sol3 compact edge | `closure_matrix`, `scalar_axis_hessian_audits`, `compute_tables` |
-| [`topology`](dppu/topology/README.md) | Class-A structure constants and invariants | `class_a`, `lz_invariants` |
-| [`torsion`](dppu/torsion/README.md) | Torsion modes and Nieh-Yan variants | `Mode`, `construct_torsion_tensor` |
-| [`utils`](dppu/utils/README.md) | Common utilities and tee logging | `setup_log`, `teardown_log`, `tee_logger` |
-
-Shared witness helpers live in `scripts/paper07/paper07_common.py`.
-
----
-
-## Script Overview (`scripts/`)
-
-### `paper07/` - Proof Witness Scripts
-
-| Script | Description |
-|--------|-------------|
-| `rank_defect_activation_witness.py` | Runs the `dppu.dirac` scalar-axis DBR closure engine and verifies $\mathrm{rank}(\mathcal A_{\rm DBR})=\mathrm{rank}(n)$, $d_{\rm zero}=3-\mathrm{rank}(n)$, and SO(3) frame rank invariance across four topologies and three scalar axes (Section 4, Appendix B). The formal $A=n$ identity is reported only as a notation check. |
-| `spectral_completion_witness.py` | Checks H1–H3 positivity for $T^3$, $S^3$, $Nil^3$ (toroidal + Heisenberg towers), $Sol^3$ bulk AM–GM, and the `dppu.spectral.sol3_compact_edge` A-dual-orbit modified-Mathieu compact-edge $\lambda_1>0$ witness (Section 5, Appendix D). |
-| `torsion_auxiliary_field_promotion_witness.py` | Verifies exact degree- $\le 2$ auxiliary shell and absence of quadratic derivative couplings under field promotion for AX/VT/MX across four topologies (Section 8, Appendix G). |
-| `finite_fate_branch_witness.py` | Re-runs the `dppu.action.finite_reduction` Palatini symbolic series and checks exact-modulus / curvature-wall classification, tangent span, $T^3$ flat identity, and DeWitt trace-free norm (Section 7, Appendix F). |
-| `harmonic_kernel_correspondence.py` | Uses `dppu.spectral` and `dppu.dirac` to verify closed 1-form space $=\ker n$ and the DBR-closure constraint-surface reduced Hessian kernel contact (Section 6, Appendix E). The old $H=n^Tn$ minimal model is not used. |
-| `route_comparison_s3_branch_a_witness.py` | Recomputes DBR_KEEP_ALL and RBD Routh variant Nphys-by- $l$ / commutators from the same Branch-A local Lagrangian in `dppu.dirac` (Section 3, Appendix C). It also computes the $l=0$ RBD surviving scalar-pair $H_{PP}=-3/8$ directly from the Hamiltonian. Intermediate CSVs are not used as evidence. |
-| `s3_normalization_factor_witness.py` | Under $C\to sC$, $\mathrm{rank}(n)$ and $\dim\ker n$ invariant; curvature and eigenvalue scale as $s^2$ (Section 2, Appendix A). |
-
-### `dppu/` Engine Usage
-
-The witnesses reconstruct the needed quantities locally from `script/dppu`: DBR/RBD route calculations from `dppu.dirac`, harmonic/reduced-Hessian/Sol3 compact-edge calculations from `dppu.spectral`, and finite Palatini branch plus torsion auxiliary checks from `dppu.action`.
-
-#### `paper07/` Execution Matrix
-
-Each witness writes to `../data/<script_name>_YYYYMMDD_HHMMSS.log` when run from `script/`. Set `DPPU_LOG_DIR` to override the log directory (`run_paper07.sh` sets this automatically).
-
-| Script | Command from `script/` | Expected verdict |
-|--------|------------------------|------------------|
-| `rank_defect_activation_witness.py` | `python scripts/paper07/rank_defect_activation_witness.py` | `overall_verdict=PASS_RANK_DEFECT_ACTIVATION_WITNESS` |
-| `spectral_completion_witness.py` | `python scripts/paper07/spectral_completion_witness.py` | `overall_verdict=PASS_SPECTRAL_COMPLETION_WITNESS` |
-| `torsion_auxiliary_field_promotion_witness.py` | `python scripts/paper07/torsion_auxiliary_field_promotion_witness.py` | `overall_verdict=PASS_TORSION_AUXILIARY_FIELD_PROMOTION_WITNESS` |
-| `finite_fate_branch_witness.py` | `python scripts/paper07/finite_fate_branch_witness.py` | `overall_verdict=PASS_FINITE_FATE_BRANCH_WITNESS` |
-| `harmonic_kernel_correspondence.py` | `python scripts/paper07/harmonic_kernel_correspondence.py` | `overall_verdict=PASS_HARMONIC_KERNEL_CORRESPONDENCE` |
-| `route_comparison_s3_branch_a_witness.py` | `python scripts/paper07/route_comparison_s3_branch_a_witness.py` | `overall_verdict=PASS_ROUTE_COMPARISON_S3_BRANCH_A_WITNESS` |
-| `s3_normalization_factor_witness.py` | `python scripts/paper07/s3_normalization_factor_witness.py` | `overall_verdict=PASS_S3_NORMALIZATION_FACTOR_WITNESS` |
-
-Batch run (proposal order):
-
-```bash
-bash run_paper07.sh
-# optional: bash run_paper07.sh --output-dir /path/to/data
+```sh
+python -B script/perturbations.py recompute --model sol --output sol_new
+python -B script/perturbations.py recompute --model lorenz --canonical-input sol_new/reduction_core.json --output lorenz_new
 ```
 
----
+With `--model all`, the Lorenz calculation uses the freshly computed Sol canonical map. A standalone Lorenz run without `--canonical-input` reads the shipped map. The fixed `data/initial/sol_profile.json` is checked against its manifest and used unchanged. For standalone model outputs, collect the six named subdirectories before using `export`.
 
-### `visualize/` - Figures
+The model driver sets the SymPy Python ground backend, one BLAS/OpenMP thread and a fixed Python hash seed for its subprocesses. The original formula command also supports setting `SYMPY_GROUND_TYPES=python` explicitly. No other repository, work folder, network access, credentials or external audit tools are needed.
 
-Figure scripts do not create execution logs. Each script writes to a fixed path under `../LaTeX/figures/`.
+The complete model run generates roughly 0.6 GB, primarily four Sol trajectories and their quadrature fields. These can require substantially more RAM than their file size while JSON is parsed. Runtime depends on symbolic backend and hardware; progress is printed per producer. The distributed selected data are much smaller. Intermediate Nil oscillator buffers and full Sol trajectories are generated on demand, not included as reader-facing saved artifacts. Do not interrupt a run and reuse its output path: keep the partial directory and choose a new one.
 
-| File | Description | Output |
-|------|-------------|--------|
-| `fig04_spectral_completion_map.py` | Four-panel scoped $k>0$ spectral completion map: $T^3$ Fourier, $S^3$ TT harmonics, $Nil^3$ toroidal + Heisenberg tower, $Sol^3$ bulk/edge split (Figure 4, Section 5) | `../LaTeX/figures/fig04_spectral_completion_map.svg` |
+## Models and authority
 
----
+| Model | Definitions and outputs | Manuscript |
+| --- | --- | --- |
+| `paper07.py` | Full contortion form, homogeneous regular constraints, scalar controls, torus quadratic action, geometric comparisons | Sections 2–5; Appendices A–E and I |
+| `flat` | Four KIDs and AMM cone normalization; explicit single/two-wave corrections; 40/34/10 configuration connection comparison | Sections 4, 6–7; Appendices B–D |
+| `backgrounds` | Exact Nil/Sol/Taub vacua and quotients; Nil base and Sol Gowdy reductions, endpoint controls, examples | Appendices F–H |
+| `nil` | Central-nonzero tensor/oscillator closure; five explicit grades, L=2 Einstein reconstruction and example | Appendices F–H |
+| `sol` | Infinite-orbit differential operators, right inverse, canonical embedding, independent Einstein and Cartan checks | Appendices F–G |
+| `taub` | Four low Wigner blocks; j=3/2 reconstruction, Cartan/endpoints, KIDs and example | Appendices F–H |
+| `lorenz` | Expanded reduced fourth-order operator (SG-05), independent Lorenz system, common initial maps, four trajectories, comparisons and actual dense-polynomial residuals | Appendix H |
 
-## Quick Start
+The underlying `paper07_results` modules use signature (−,+,+,+), epsilon_0123=+1 and geometric torsion T=de+omega wedge e. The structure equation, fixed quotient, physical spherical radius and doubled off-diagonal canonical momenta are in Appendix A. Auxiliary connection comparisons use the same complete NY current and corresponding endpoint representatives.
 
-```bash
-# From the script directory
-cd script
+`quadratic_dirac` accepts constant-coefficient quadratic finite-dimensional actions; it is not a nonlinear Dirac solver. The curved producers build the full linear ADM constraints from the displayed background and tensor basis. Formal differential adjoints in the Sol reduction use the common smooth core in Appendix F, not a claimed closed self-adjoint extension.
 
-pip install -r requirements.txt
+## Reading the data
 
-# Run all witnesses
-bash run_paper07.sh
+Symbolic expressions use SymPy strings; matrices are row-major nested lists. Sol differential operators are lists of coefficient matrices multiplying successive derivatives on the **right**: sum A_j(t,xi) d_xi^j. Composition and adjoints differentiate coefficients. The coefficient symbols F, K, M represent exp(t²)/sqrt(t), k0 exp(−xi), l0 exp(xi). Saved names keep the code symbols: `exp_2P0` in `backgrounds/nil_base.json` is ζ = exp(2P̄) of (NG-02), and `L` in `backgrounds/sol_gowdy_example.json` is the Sol period L_Sol. The real/complex phases and component ordering are part of each result and Appendices A, G–H.
 
-# Or run one witness
-python scripts/paper07/rank_defect_activation_witness.py
+Model JSON files retain exact algebraic checks, coefficients and scope. The finite checks support the paper's derivations; the AMM sufficiency claim comes from the cited theorem. Read [the scope table](../data/perturbations/SCOPE.md) with the outputs. In particular, a small four-dimensional Einstein component residual does not certify convergence of the reduced fourth-order system or a whole-line solution.
 
-# Regenerate Figure 4
-python scripts/visualize/fig04_spectral_completion_map.py
-```
+`dense_residual.py` differentiates SciPy's actual seventh-degree DOP853 interpolant and stores the implementation source and SciPy version used. It does not replace time derivatives by the ODE right-hand side. This use of SciPy's private dense-output class was tested with SciPy 1.16 (`requirements.txt` bounds it to 1.16.x); review compatibility before using a later SciPy.
 
-PowerShell:
-
-```powershell
-Set-Location script
-pip install -r requirements.txt
-bash run_paper07.sh
-python scripts/visualize/fig04_spectral_completion_map.py
-```
-
----
-
-## Paper07 Reproducibility Map
-
-| Paper location | Supporting script |
-|----------------|-------------------|
-| Section 2, Appendix A: $S^3$ normalization and scale invariance | `scripts/paper07/s3_normalization_factor_witness.py` |
-| Section 3, Appendix C: DBR vs RBD negative control | `scripts/paper07/route_comparison_s3_branch_a_witness.py` |
-| Section 4, Appendix B: rank-defect activation and frame invariance | `scripts/paper07/rank_defect_activation_witness.py` |
-| Section 5, Appendix D: H1/H2/H3 spectral completion | `scripts/paper07/spectral_completion_witness.py` |
-| Section 6, Appendix E: harmonic 1-form / Hessian kernel | `scripts/paper07/harmonic_kernel_correspondence.py` |
-| Section 7, Appendix F: finite modulus/wall split | `scripts/paper07/finite_fate_branch_witness.py` |
-| Section 8, Appendix G: torsion auxiliary and field promotion | `scripts/paper07/torsion_auxiliary_field_promotion_witness.py` |
-| Appendix B §B.6: batch reproducibility | `run_paper07.sh` + all `scripts/paper07/*_witness.py` logs |
-
-## Scope Notes
-
-- All physical claims in the draft are under the **DBR (Dirac-before-Routh)** protocol unless explicitly marked as route comparison.
-- H1–H3 spectral results are scoped to **analyzed harmonic sectors**; they are not full field-theory PDE spectral theorems.
-- $Sol^3$ compact-edge positivity is a **representative numeric** witness, not an all-Anosov closed-form theorem.
-- Finite modulus/wall classification is scoped to **finite Palatini branch / homogeneous minisuperspace**; finite moduli count is generally not equal to $d_{\rm zero}$.
-- Torsion robustness applies to **NY-MAIN route** and **AX/VT/MX ansatz scalars** only; it is not a full 24-component torsion field-theory theorem.
-- RBD route discrepancy is a **route-level artifact**, not a claim that RBD always fails or that an extra scalar is a physical ghost.
-- Witness scripts reconstruct definitions from the paper and `dppu` locally.
+The v1 `dppu` API and output schemas are superseded. Formula data are in `data/revised`; the perturbation models have a separate manifest in `data/perturbations`. See [the comparison guide](legacy_comparison.md).

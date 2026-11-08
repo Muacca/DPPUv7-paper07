@@ -1,525 +1,74 @@
-%==============================================================================
-% Dirac-before-Routh Constrained Spectra in Bianchi Class-A
-% Einstein-Cartan-Nieh-Yan Cosmologies:
-% Rank-Defect Kernels, Spectral Robustness, and Torsion-Sector Closure
-%==============================================================================
-\documentclass[12pt,a4paper]{article}
-
-%------------------------------------------------------------------------------
-% Packages
-%------------------------------------------------------------------------------
-
-% Fonts / encoding
+\documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{textcomp}
-\usepackage[final]{microtype}
-
-% Math
-\usepackage{amsmath,amssymb,amsfonts,amsthm}
-\usepackage{mathtools}
-\usepackage{bm}
-
-% Graphics and figures
-\usepackage{graphicx}
-\usepackage{float}
-\usepackage{subcaption}
-
-% Tables
-\usepackage{booktabs}
-\usepackage{tabularx}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{longtable}
-\usepackage{xurl}
-
-\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
-\newcommand{\code}[1]{\path{#1}}
-\newcolumntype{L}{>{\raggedright\arraybackslash}X}
-\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
-
-% Layout and formatting
-\usepackage[margin=2.5cm]{geometry}
-\usepackage{setspace}
-\onehalfspacing
-
-% Misc (xcolor before hyperref)
-\usepackage{xcolor}
-\usepackage{enumitem}
-
-% Citations (compress numeric ranges)
-\usepackage[numbers,sort&compress]{natbib}
-
-% References and links
-\definecolor{linkblue}{RGB}{0,0,180}
-\usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue]{hyperref}
-\usepackage{cleveref}
-
-% Code listings
-\usepackage{listings}
-\lstset{
-  basicstyle=\ttfamily\small,
-  breaklines=true,
-  frame=single,
-  language=Python
-}
-
-% Section break
-\usepackage{titlesec}
-\newcommand{\sectionbreak}{\clearpage}
-
-%------------------------------------------------------------------------------
-% Theorem environments
-%------------------------------------------------------------------------------
-\newtheorem{theorem}{Theorem}
-\newtheorem{proposition}{Proposition}
-\newtheorem{lemma}{Lemma}
-\newtheorem{corollary}{Corollary}
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}
-\theoremstyle{remark}
-\newtheorem{remark}{Remark}
-
-%------------------------------------------------------------------------------
-% Custom commands
-%------------------------------------------------------------------------------
-% Math shortcuts
-\newcommand{\dd}{\mathrm{d}}
-\newcommand{\Sthree}{S^{3}}
-\newcommand{\Tthree}{T^{3}}
-\newcommand{\Nilthree}{\mathrm{Nil}^{3}}
-\newcommand{\Solthree}{\mathrm{Sol}^{3}}
-\newcommand{\kap}{\kappa}
-\newcommand{\rank}{\operatorname{rank}}
-\newcommand{\dzero}{d_{\mathrm{zero}}}
-\newcommand{\vol}{\mathrm{vol}}
-\newcommand{\Aop}{\mathcal{A}}
-
-% Torsion / Nieh-Yan
-\newcommand{\thetaNY}{\theta_{\mathrm{NY}}}
-\newcommand{\QNY}{Q_{\mathrm{NY}}}
-\newcommand{\Laux}{\mathcal{L}_{\mathrm{aux}}}
-
-% Branch labels
-\newcommand{\EH}{\mathrm{EH}}
-\newcommand{\AX}{\mathrm{AX}}
-\newcommand{\VT}{\mathrm{VT}}
-\newcommand{\MX}{\mathrm{MX}}
-
-% Operators
-\newcommand{\tr}{\mathrm{tr}}
-\newcommand{\Tr}{\mathrm{Tr}}
-
-%------------------------------------------------------------------------------
-% Title and author
-%------------------------------------------------------------------------------
-\title{Dirac-before-Routh Constrained Spectra\\
-in Bianchi Class-A\\
-Einstein--Cartan--Nieh--Yan Cosmologies:\\
-Rank-Defect Kernels, Spectral Robustness,\\
-and Torsion-Sector Closure}
-
-\author{Muacca}
-
-\date{}
-
-%==============================================================================
-\begin{document}
-%==============================================================================
-
-\maketitle
-\begin{center}
-Version: v1\\
-First release: 2026-06-14
-\end{center}
-
-%------------------------------------------------------------------------------
-% Abstract
-%------------------------------------------------------------------------------
-\begin{abstract}
-We analyse the Lorentzian first-order Einstein--Cartan plus Nieh--Yan (EC+NY)
-system on Bianchi class-A backgrounds using a Dirac-before-Routh (DBR)
-constraint-reduction protocol.  The rank defect of the Bianchi class-A
-structure matrix is a mathematically known invariant; our result is that this
-defect is realised, in the DBR-standard quadratic constrained perturbation
-spectrum, as a residual non-propagating scalar kernel.  Across the four
-backgrounds $\Tthree$, $\Nilthree$, $\Solthree$, and $\Sthree$, the
-propagating tensor sector contains two positive-kinetic transverse-traceless
-(TT) graviton degrees of freedom, and the dimension of the scalar kernel is
-\begin{equation*}
-  \dzero = \dim\ker n = 3-\rank(n).
-\end{equation*}
-This classification is established through the DBR constraint algebra, a
-frame-invariance check, scalar/tensor spectral analysis, and a scoped $k>0$
-spectral completion over the analysed harmonic sectors.  Reversing the order
-of operations -- eliminating the auxiliary variables before Dirac closure --
-produces a Dirac-inequivalent extra scalar mode in the verified $\Sthree$
-scalar sector; in light of this control result, all subsequent physical claims
-are made within the DBR protocol.  We further classify the finite deformations
-of the zero kernel into exact moduli and curvature walls within a finite
-Palatini branch, and we show that the torsion ansatz scalars remain an exact
-auxiliary under the NY-MAIN route, acquiring no kinetic or gradient terms even
-under field promotion, so that the torsion sector does not affect the above
-hierarchy of results.  All results are established within the explicitly stated
-quadratic, harmonic-sector, and homogeneous scopes.
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[margin=25mm]{geometry}
+\usepackage{graphicx,booktabs,tabularx,array}
+\usepackage[section]{placeins}
+\usepackage{xcolor,xurl}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\setlength{\parskip}{.35em}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[2]
+\hypersetup{pdftitle={Lorentzian Einstein-Cartan Reduction on Compact Homogeneous Geometries: Constraints and Inhomogeneous Perturbations},pdfauthor={Muacca},pdfsubject={Version 2, revised 2026-11-08}}
+\title{Lorentzian Einstein--Cartan Reduction on Compact Homogeneous Geometries: Constraints and Inhomogeneous Perturbations}
+\author{Muacca}\date{Version 2\\Revised: 2026-11-08\\First release: 2026-06-14}
+\begin{document}\maketitle\begin{abstract}
+We study inhomogeneous constraints in source-free Lorentzian Einstein--Cartan theory with constant complete Nieh--Yan coupling on fixed compact geometries. The regular homogeneous metric counts remain 5, 3, 2 and 2 pairs on the torus, Nil, Sol and the three-sphere, with symmetric-background exceptions treated separately. For nonzero flat-torus modes, connection-retaining and metric reductions agree in the action and reduced two-form. Under the stated compact CMC hypotheses, the Arms--Marsden--Moncrief theorem makes the four Taub conditions necessary and sufficient for local integrability; explicit standing-wave and nonparallel two-wave corrections satisfy the local vacuum equations through second order. On selected time-dependent curved vacuum backgrounds, we construct closed tensor blocks on LRS Nil, infinite dual-orbit systems on Sol, and low Wigner blocks on Taub, with gauges, canonical reductions and reconstruction. Background-dependent quadratic KID conditions are distinguished from nonlinear lifting. Finite-time examples include an independent Lorenz evolution on one Sol orbit, with interior spatial, window and time convergence comparisons. Convergence in the reduced fourth-order form, whole-line error bounds, general stability and curved-background lifting sufficiency are not established.
 \end{abstract}
-
-%------------------------------------------------------------------------------
-% Main text
-%------------------------------------------------------------------------------
-\input{sections/sec01}   % Introduction
-\input{sections/sec02}   % Lorentzian EC+NY setup and Bianchi class-A backgrounds
-\input{sections/sec03}   % DBR reduction protocol and route justification
-\input{sections/sec04}   % Rank-defect realization in the DBR constrained spectrum
-\input{sections/sec05}   % Robustness I: scoped k>0 spectral completion
-\input{sections/sec06}   % Harmonic one-form realization of the zero kernel
-\input{sections/sec07}   % Finite fate of the zero kernel
-\input{sections/sec08}   % Torsion/Nieh-Yan sector robustness
-\input{sections/sec09}   % Discussion and outlook
-
-%------------------------------------------------------------------------------
-% Acknowledgments
-%------------------------------------------------------------------------------
+\input{sections/sec01}
+\input{sections/sec02}
+\input{sections/sec03}
+\input{sections/sec04}
+\input{sections/sec05}
+\input{sections/sec06}
+\input{sections/sec07}
+\input{sections/sec08}
 \section*{Acknowledgments}
+The author acknowledges Claude Opus 4.8, Gemini 3.1 Pro, Grok 4.3, and GPT-5.5 Thinking via ChatGPT for assistance during preparation of the original manuscript in June 2026. For this revision, OpenAI Codex assisted with symbolic derivations, implementation, Japanese--English exposition and deterministic figure-generation code. The calculations and figures are reproducible from the supplied mathematical definitions and data. The author takes responsibility for the content and remaining errors.
 
-The author acknowledges the use of the following AI tools during manuscript
-preparation: Claude Opus~4.8 (Anthropic; accessed 2026-06),
-Gemini~3.1 Pro (Google; accessed 2026-06), Grok~4.3 (xAI; accessed 2026-06),
-and GPT-5.5 Thinking via ChatGPT (OpenAI; accessed 2026-06).
-These tools were used for language editing (including Japanese--English
-translation), outlining and improving exposition, drafting and reviewing
-auxiliary code (scripts and pseudocode) that was subsequently tested and
-validated by the author, and proposing candidate consistency checks and
-alternative derivations to be independently verified by the author.
+This work was developed within the informal collaborative project \textbf{DPPU} (\textbf{D}onut-like topology, \textbf{P}lanck-scale compactness, \textbf{P}recession dynamics, \textbf{U}niverse).
+\section*{Availability and contact}
+The manuscript and supplement are available at \url{https://github.com/Muacca/DPPUv7-paper07}. The existing Zenodo record is \href{https://doi.org/10.5281/zenodo.20678646}{doi:10.5281/zenodo.20678646}; cite the edition and date of the artifact actually obtained. The supplement uses the MIT License. Contact: \href{mailto:muacca@dmwp.jp}{muacca@dmwp.jp}.
 
-The AI tools did not determine the scientific claims of this work and were not
-used to generate or modify research data or evidentiary figures.  The author
-takes full responsibility for the content and for any remaining errors.
-
-This work was developed within the informal collaborative project
-\textbf{DPPU} (\textbf{D}onut-like topology, \textbf{P}lanck-scale
-compactness, \textbf{P}recession dynamics, \textbf{U}niverse).
-
-%------------------------------------------------------------------------------
-% Availability and Contact
-%------------------------------------------------------------------------------
-\section*{Availability and Contact}
-
-\paragraph{Code and Data Availability}
-The code and supplemental data associated with this work are available at:
-
-\begin{itemize}
-  \item Zenodo: \texttt{10.5281/zenodo.20678646}
-  \item GitHub: \texttt{https://github.com/Muacca/DPPUv7-paper07}
-\end{itemize}
-
-They are released under the MIT License.
-
-\paragraph{Citation}
-If you use these materials, please cite the associated manuscript and Zenodo
-record:
-
-\begin{quote}
-\small
-Muacca, ``Dirac-before-Routh Constrained Spectra in Bianchi Class-A
-Einstein--Cartan--Nieh--Yan Cosmologies:
-Rank-Defect Kernels, Spectral Robustness, and Torsion-Sector Closure''
-\end{quote}
-
-\paragraph{Contact}
-For questions, bug reports, or collaboration inquiries:
-
-\begin{itemize}
-  \item Email: \texttt{muacca@dmwp.jp}
-  \item GitHub Issues: \texttt{https://github.com/Muacca/DPPUv7-paper07/issues}
-\end{itemize}
-
-%------------------------------------------------------------------------------
-% Appendices
-%------------------------------------------------------------------------------
 \appendix
-% Appendix-style numbering for floats (Table A.1, Figure B.1, ...)
-\numberwithin{table}{section}
-\numberwithin{figure}{section}
-
-\input{appendices/appA}  % Conventions
-\input{appendices/appB}  % Native local action and DBR computational checks
-\input{appendices/appC}  % RBD route comparison and route-dependent discrepancy
-\input{appendices/appD}  % Endpoint and spectral evidence
-\input{appendices/appE}  % Harmonic form and Hessian kernel realization
-\input{appendices/appF}  % Finite-fate branch data
-\input{appendices/appG}  % Torsion auxiliary exactness and field-promotion verification
-
-%------------------------------------------------------------------------------
-% References
-%------------------------------------------------------------------------------
-\bibliographystyle{unsrt}
-
-\begin{thebibliography}{99}
-
-\bibitem{ref1}
-Muacca,
-``Topology-Dependent Phase Classification of Effective Potentials
-in Einstein--Cartan + Nieh--Yan Minisuperspace,''
-Zenodo.\ \texttt{10.5281/zenodo.18213677} (2026).
-
-\bibitem{ref2}
-Muacca,
-``Structural Robustness of Isotropic $\Sthree$ Vacua in
-Einstein--Cartan Minisuperspace via Chiral Equilibrium and Weyl Stability,''
-Zenodo.\ \texttt{10.5281/zenodo.18815498} (2026).
-
-\bibitem{ref3}
-Muacca,
-``Unified Geometric Landau EFT of Homogeneous $\Sthree\times S^{1}$
-Minisuperspace in Einstein--Cartan + Nieh--Yan Theory,''
-Zenodo.\ \texttt{10.5281/zenodo.19144481} (2026).
-
-\bibitem{ref4}
-Muacca,
-``Homogeneous Three-Topology Comparison and Mode Dictionary
-in Einstein--Cartan + Nieh--Yan Theory: Geometric Structure of EC--Weyl
-Coupling,''
-Zenodo.\ \texttt{10.5281/zenodo.19425147} (2026).
-
-\bibitem{ref5}
-Muacca,
-``Euclidean Geometric Response Dictionary and Selection Rules
-for Four Thurston Geometries,''
-Zenodo.\ \texttt{10.5281/zenodo.19775695} (2026).
-
-\bibitem{ref6}
-Muacca,
-``Lorentzian Einstein--Cartan Minisuperspace with Nieh--Yan Torsion:
-Hamiltonian Branches, Pontryagin Diagnostics,
-and Weyl-Source Obstructions,''
-Zenodo.\ \texttt{10.5281/zenodo.20084722} (2026).
-
-\bibitem{ref7}
-Muacca,
-``Reduced-Sector $\chi$-Universality in Lorentzian EC+NY Minisuperspace:
-Topology-Robust Admissibility, P-Channel Diagnostics,
-and Reduced Vacuum Orbits,''
-Zenodo.\ \texttt{10.5281/zenodo.20228881} (2026).
-
-\bibitem{ref8}
-F.~W.~Hehl, P.~von der Heyde, G.~D.~Kerlick, and J.~M.~Nester,
-``General relativity with spin and torsion: Foundations and prospects,''
-Rev.\ Mod.\ Phys.\ \textbf{48}, 393--416 (1976),
-doi:10.1103/RevModPhys.48.393.
-
-\bibitem{ref9}
-H.~T.~Nieh and M.~L.~Yan,
-``An identity in Riemann--Cartan geometry,''
-J.\ Math.\ Phys.\ \textbf{23}, 373--374 (1982),
-doi:10.1063/1.525379.
-
-\bibitem{ref10}
-P.~A.~M.~Dirac,
-\emph{Lectures on Quantum Mechanics}
-(Belfer Graduate School of Science, Yeshiva University, New York, 1964).
-
-\bibitem{ref11}
-J.~L.~Anderson and P.~G.~Bergmann,
-``Constraints in covariant field theories,''
-Phys.\ Rev.\ \textbf{83}, 1018--1025 (1951),
-doi:10.1103/PhysRev.83.1018.
-
-\bibitem{ref12}
-M.~Henneaux and C.~Teitelboim,
-\emph{Quantization of Gauge Systems}
-(Princeton University Press, Princeton, NJ, 1992).
-
-\bibitem{ref13}
-J.~M.~Pons,
-``Substituting fields within the action: Consistency issues and some
-applications,''
-J.\ Math.\ Phys.\ \textbf{51}, 122903 (2010),
-arXiv:0909.4151, doi:10.1063/1.3525242.
-
-\bibitem{ref14}
-L.~Bianchi,
-``Sugli spazi a tre dimensioni che ammettono un gruppo continuo di movimenti,''
-Mem.\ Mat.\ Fis.\ Soc.\ Ital.\ Sci.\ \textbf{11}, 267 (1898).
-
-\bibitem{ref15}
-G.~F.~R.~Ellis and M.~A.~H.~MacCallum,
-``A class of homogeneous cosmological models,''
-Commun.\ Math.\ Phys.\ \textbf{12}, 108--141 (1969),
-doi:10.1007/BF01645908.
-
-\bibitem{ref16}
-J.~Milnor,
-``Curvatures of left invariant metrics on Lie groups,''
-Adv.\ Math.\ \textbf{21}, 293--329 (1976),
-doi:10.1016/S0001-8708(76)80002-3.
-
-\bibitem{ref17}
-W.~P.~Thurston,
-\emph{Three-Dimensional Geometry and Topology, Volume 1},
-edited by S.~Levy
-(Princeton University Press, Princeton, NJ, 1997).
-
-\bibitem{ref18}
-P.~Scott,
-``The geometries of 3-manifolds,''
-Bull.\ London Math.\ Soc.\ \textbf{15}, 401--487 (1983),
-doi:10.1112/blms/15.5.401.
-
-\bibitem{ref19}
-A.~Ashtekar and J.~Samuel,
-``Bianchi cosmologies: the role of spatial topology,''
-Class.\ Quantum Grav.\ \textbf{8}, 2191--2215 (1991),
-doi:10.1088/0264-9381/8/12/005.
-
-\bibitem{ref20}
-C.~G.~Torre,
-``Cosmology, cohomology and compactification,''
-Class.\ Quantum Grav.\ \textbf{21}, L73 (2004),
-arXiv:gr-qc/0402105, doi:10.1088/0264-9381/21/11/L01.
-
-\bibitem{ref21}
-M.~A.~H.~MacCallum and A.~H.~Taub,
-``Variational principles and spatially-homogeneous universes, including
-rotation,''
-Commun.\ Math.\ Phys.\ \textbf{25}, 173--189 (1972),
-doi:10.1007/BF01877589.
-
-\bibitem{ref22}
-R.~S.~Palais,
-``The principle of symmetric criticality,''
-Commun.\ Math.\ Phys.\ \textbf{69}, 19--30 (1979),
-doi:10.1007/BF01941322.
-
-\bibitem{ref23}
-N.~Dadhich and J.~M.~Pons,
-``On the equivalence of the Einstein--Hilbert and the Einstein--Palatini
-formulations of general relativity for an arbitrary connection,''
-Gen.\ Rel.\ Grav.\ \textbf{44}, 2337--2352 (2012),
-arXiv:1010.0869, doi:10.1007/s10714-012-1393-9.
-
-\bibitem{ref24}
-T.~Koike, M.~Tanimoto, and A.~Hosoya,
-``Compact homogeneous universes,''
-J.\ Math.\ Phys.\ \textbf{35}, 4855--4888 (1994),
-arXiv:gr-qc/9405052, doi:10.1063/1.530819.
-
-\bibitem{ref25}
-M.~Tanimoto, T.~Koike, and A.~Hosoya,
-``Dynamics of compact homogeneous universes,''
-J.\ Math.\ Phys.\ \textbf{38}, 350--368 (1997),
-arXiv:gr-qc/9604056, doi:10.1063/1.531853.
-
-\bibitem{ref26}
-M.~Tanimoto, T.~Koike, and A.~Hosoya,
-``Hamiltonian structures for compact homogeneous universes,''
-J.\ Math.\ Phys.\ \textbf{38}, 6560--6577 (1997),
-arXiv:gr-qc/9705052;
-related: ``Canonical structure of locally homogeneous systems on compact
-closed 3-manifolds of types $E^{3}$, Nil and Sol,''
-Prog.\ Theor.\ Phys.\ \textbf{99}, 173 (1998), arXiv:gr-qc/9712069.
-
-\bibitem{ref27}
-T.~S.~Pereira, C.~Pitrou, and J.-P.~Uzan,
-``Theory of cosmological perturbations in an anisotropic universe,''
-JCAP \textbf{09} (2007) 006,
-arXiv:0707.0736, doi:10.1088/1475-7516/2007/09/006.
-
-\bibitem{ref28}
-M.~A.~Rubin and C.~R.~Ord\'o\~nez,
-``Eigenvalues and degeneracies for $n$-dimensional tensor spherical
-harmonics,''
-J.\ Math.\ Phys.\ \textbf{25}, 2888 (1984),
-doi:10.1063/1.526034.
-
-\bibitem{ref29}
-L.~Lindblom, N.~W.~Taylor, and F.~Zhang,
-``Scalar, vector and tensor harmonics on the three-sphere,''
-Gen.\ Rel.\ Grav.\ \textbf{49}, 139 (2017),
-arXiv:1709.08020, doi:10.1007/s10714-017-2303-y.
-
-\bibitem{ref30}
-H.-J.~Yo and J.~M.~Nester,
-``Hamiltonian analysis of Poincar\'e gauge theory scalar modes,''
-Int.\ J.\ Mod.\ Phys.\ D \textbf{8}, 459--479 (1999),
-arXiv:gr-qc/9902032, doi:10.1142/S021827189900033X.
-
-\bibitem{ref31}
-H.-J.~Yo and J.~M.~Nester,
-``Hamiltonian analysis of Poincar\'e gauge theory: Higher spin modes,''
-Int.\ J.\ Mod.\ Phys.\ D \textbf{11}, 747--780 (2002),
-doi:10.1142/S0218271802001998.
-
-\bibitem{ref32}
-M.~Blagojevi\'c and I.~A.~Nikoli\'c,
-``Hamiltonian structure of the Poincar\'e gauge theory and the problem of
-gauge symmetries,''
-Phys.\ Rev.\ D \textbf{62}, 024021 (2000),
-arXiv:hep-th/0006031.
-
-\bibitem{ref33}
-G.~Date, R.~K.~Kaul, and S.~Sengupta,
-``Topological interpretation of Barbero--Immirzi parameter,''
-Phys.\ Rev.\ D \textbf{79}, 044008 (2009),
-arXiv:0811.4496, doi:10.1103/PhysRevD.79.044008.
-
-\bibitem{ref34}
-S.~Mercuri,
-``From the Einstein--Cartan to the Ashtekar--Barbero canonical constraints,
-passing through the Nieh--Yan functional,''
-Phys.\ Rev.\ D \textbf{77}, 024036 (2008),
-arXiv:0708.0037.
-
-\bibitem{ref35}
-R.~K.~Kaul and S.~Sengupta,
-``Topological parameters in gravity,''
-Phys.\ Rev.\ D \textbf{85}, 024026 (2012),
-arXiv:1106.3027.
-
-\bibitem{ref36}
-M.~Li, H.~Rao, and D.~Zhao,
-``A simple parity violating gravity model without ghost instability,''
-JCAP \textbf{11} (2020) 023,
-arXiv:2007.08038.
-
-\bibitem{ref37}
-M.~Li and H.~Rao,
-``Ghost instability in the teleparallel gravity model with parity
-violations,''
-Phys.\ Lett.\ B \textbf{834}, 137395 (2022),
-arXiv:2201.02357.
-
-\bibitem{ref38}
-H.~Kesten,
-``Symmetric random walks on groups,''
-Trans.\ Amer.\ Math.\ Soc.\ \textbf{92}, 336--354 (1959),
-doi:10.1090/S0002-9947-1959-0109367-6.
-
-\bibitem{ref39}
-R.~Brooks,
-``The fundamental group and the spectrum of the Laplacian,''
-Comment.\ Math.\ Helv.\ \textbf{56}, 581--598 (1981),
-doi:10.1007/BF02566228.
-
-\bibitem{ref40}
-A.~V.~Bolsinov, H.~R.~Dullin, and A.~P.~Veselov,
-``Spectra of Sol-manifolds: arithmetic and quantum monodromy,''
-Commun.\ Math.\ Phys.\ \textbf{264}, 583--611 (2006),
-arXiv:math-ph/0503046, doi:10.1007/s00220-006-1543-6.
-
-\bibitem{ref41}
-K.~Nomizu,
-``On the cohomology of compact homogeneous spaces of nilpotent Lie groups,''
-Ann.\ of Math.\ (2) \textbf{59}, 531--538 (1954),
-doi:10.2307/1969716.
-
-\bibitem{ref42}
-A.~Hattori,
-``Spectral sequence in the de Rham cohomology of fibre bundles,''
-J.\ Fac.\ Sci.\ Univ.\ Tokyo Sect.\ I \textbf{8}, 289--331 (1960).
-
-\end{thebibliography}
-
-%==============================================================================
-\end{document}
-%==============================================================================
+\input{appendices/appA}
+\input{appendices/appB}
+\input{appendices/appC}
+\input{appendices/appD}
+\input{appendices/appE}
+\input{appendices/appF}
+\input{appendices/appG}
+\input{appendices/appH}
+\input{appendices/appI}
+\begin{thebibliography}{99}\footnotesize\raggedright
+\setlength{\itemsep}{1pt}\setlength{\parsep}{0pt}
+\bibitem{paper1} Muacca. Geometry-Dependent Classification of Reduced Potentials in Einstein--Cartan Gravity. v3 (2026). \href{https://doi.org/10.5281/zenodo.18213677}{doi:10.5281/zenodo.18213677}.
+\bibitem{paper2} Muacca. Curvature Identities and Restricted Potential Bounds in Einstein--Cartan--Nieh--Yan Minisuperspace with Irreducible EC-Weyl Corrections. v2 (2026). \href{https://doi.org/10.5281/zenodo.18815498}{doi:10.5281/zenodo.18815498}.
+\bibitem{paper3} Muacca. Spin-0, Spin-1 and Spin-2 Deformations of $S^3\times S^1$ in Einstein--Cartan--Nieh--Yan Theory. v3 (2026). \href{https://doi.org/10.5281/zenodo.19144481}{doi:10.5281/zenodo.19144481}.
+\bibitem{paper3ec} Muacca. Curvature Components and Restricted Torsion Variations in Einstein--Cartan Minisuperspace. v4 (2026). \href{https://doi.org/10.5281/zenodo.19425147}{doi:10.5281/zenodo.19425147}.
+\bibitem{paper4} Muacca. Kaluza--Klein Quadratic Forms and Torsion Boundary Data on Four Compact Geometries. v2 (2026). \href{https://doi.org/10.5281/zenodo.19775695}{doi:10.5281/zenodo.19775695}.
+\bibitem{paper5} Muacca. Lorentzian Einstein--Cartan Reduction: Boundary Terms, Curvature Identities, and Homogeneous Variations. v2 (2026). \href{https://doi.org/10.5281/zenodo.20084722}{doi:10.5281/zenodo.20084722}.
+\bibitem{paper6} Muacca. Lorentzian Einstein--Cartan Reduction on Four Homogeneous Geometries: Curvature, Boundary Terms, and Reduced Orbits. v2 (2026). \href{https://github.com/Muacca/DPPUv7-paper06}{Repository}; \href{https://doi.org/10.5281/zenodo.20228881}{doi:10.5281/zenodo.20228881}.
+\bibitem{Hehl1976} F. W. Hehl, P. von der Heyde, G. D. Kerlick and J. M. Nester. General relativity with spin and torsion: Foundations and prospects. Rev. Mod. Phys. \textbf{48}, 393--416 (1976). \href{https://doi.org/10.1103/RevModPhys.48.393}{doi:10.1103/RevModPhys.48.393}.
+\bibitem{NiehYan1982} H. T. Nieh and M. L. Yan. An identity in Riemann--Cartan geometry. J. Math. Phys. \textbf{23}, 373--374 (1982). \href{https://doi.org/10.1063/1.525379}{doi:10.1063/1.525379}.
+\bibitem{GH1977} G. W. Gibbons and S. W. Hawking. Action integrals and partition functions in quantum gravity. Phys. Rev. D \textbf{15}, 2752--2756 (1977). \href{https://doi.org/10.1103/PhysRevD.15.2752}{doi:10.1103/PhysRevD.15.2752}.
+\bibitem{HH1996} S. W. Hawking and G. T. Horowitz. The gravitational Hamiltonian, action, entropy and surface terms. Class. Quantum Grav. \textbf{13}, 1487--1498 (1996). \href{https://doi.org/10.1088/0264-9381/13/6/017}{doi:10.1088/0264-9381/13/6/017}.
+\bibitem{Dirac1964} P. A. M. Dirac. \emph{Lectures on Quantum Mechanics}. Belfer Graduate School of Science, Yeshiva University (1964).
+\bibitem{Pons2010} J. M. Pons. Substituting fields within the action: Consistency issues and some applications. J. Math. Phys. \textbf{51}, 122903 (2010). \href{https://arxiv.org/abs/0909.4151}{arXiv:0909.4151}.
+\bibitem{Milnor1976} J. Milnor. Curvatures of left invariant metrics on Lie groups. Advances in Mathematics \textbf{21}(3), 293--329 (1976). \href{https://doi.org/10.1016/S0001-8708(76)80002-3}{doi:10.1016/S0001-8708(76)80002-3}.
+\bibitem{Torre2004} C. G. Torre. Cosmology, cohomology and compactification. Class. Quantum Grav. \textbf{21}, L73 (2004). \href{https://arxiv.org/abs/gr-qc/0402105}{arXiv:gr-qc/0402105}.
+\bibitem{Kasner1921} E. Kasner. Geometrical Theorems on Einstein's Cosmological Equations. American Journal of Mathematics \textbf{43}(4), 217--221 (1921). \href{https://doi.org/10.2307/2370192}{doi:10.2307/2370192}.
+\bibitem{BrillDeser1973} D. R. Brill and S. Deser. Instability of closed spaces in general relativity. Commun. Math. Phys. \textbf{32}(4), 291--304 (1973). \href{https://doi.org/10.1007/BF01645610}{doi:10.1007/BF01645610}.
+\bibitem{ArmsMarsdenMoncrief1982} J. M. Arms, J. E. Marsden and V. Moncrief. The structure of the space of solutions of Einstein's equations II: Several Killing fields and the Einstein--Yang--Mills equations. Annals of Physics \textbf{144}(1), 81--106 (1982). \href{https://doi.org/10.1016/0003-4916(82)90105-1}{doi:10.1016/0003-4916(82)90105-1}.
+\bibitem{Nomizu1954} K. Nomizu. On the cohomology of compact homogeneous spaces of nilpotent Lie groups. Ann. of Math. \textbf{59}, 531--538 (1954). \href{https://doi.org/10.2307/1969716}{doi:10.2307/1969716}.
+\bibitem{Hattori1960} A. Hattori. Spectral sequence in the de Rham cohomology of fibre bundles. J. Fac. Sci. Univ. Tokyo Sect. I \textbf{8}, 289--331 (1960).
+\bibitem{Allen1995} B. Allen. Maximally symmetric spin-two bitensors on $S^3$ and $H^3$. Phys. Rev. D \textbf{51}, 5491--5497 (1995). \href{https://arxiv.org/abs/gr-qc/9411023}{arXiv:gr-qc/9411023}.
+\bibitem{Andriot2018} D. Andriot and D. Tsimpis. Laplacian spectrum on a nilmanifold, truncations and effective theories. JHEP \textbf{09} (2018) 096. \href{https://arxiv.org/abs/1806.05156}{arXiv:1806.05156}.
+\bibitem{Bolsinov2006} A. V. Bolsinov, H. R. Dullin and A. P. Veselov. Spectra of Sol-manifolds: Arithmetic and quantum monodromy. Commun. Math. Phys. \textbf{264}, 583--611 (2006). \href{https://arxiv.org/abs/math-ph/0503046}{arXiv:math-ph/0503046}.
+\bibitem{Tanimoto2004} M. Tanimoto. Harmonic Analysis of Linear Fields on the Nilgeometric Cosmological Model. J. Math. Phys. \textbf{45}, 4896--4919 (2004); erratum \textbf{46}, 019902 (2005). \href{https://arxiv.org/abs/gr-qc/0402058v2}{arXiv:gr-qc/0402058v2}.
+\bibitem{Rendall2012} A. D. Rendall. Dynamics of solutions of the Einstein equations with twisted Gowdy symmetry. J. Geom. Phys. \textbf{62}(3), 569--577 (2012). \href{https://doi.org/10.1016/j.geomphys.2011.04.016}{doi:10.1016/j.geomphys.2011.04.016}; \href{https://arxiv.org/abs/1011.2317v1}{arXiv:1011.2317v1}.
+\bibitem{BeyerHennig2012} F. Beyer and J. Hennig. Smooth Gowdy symmetric generalized Taub--NUT solutions. Class. Quantum Grav. \textbf{29}, 245017 (2012). \href{https://arxiv.org/abs/1106.2377v2}{arXiv:1106.2377v2}.
+\bibitem{Andersson2021} L. Andersson, J. Joudioux, M. A. Oancea and A. Raj. Propagation of polarized gravitational waves. Phys. Rev. D \textbf{103}, 044053 (2021). \href{https://arxiv.org/abs/2012.08363}{arXiv:2012.08363}.
+\end{thebibliography}\end{document}

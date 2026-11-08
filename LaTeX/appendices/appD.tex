@@ -1,117 +1,73 @@
-%==============================================================================
-% Appendix D: Endpoint and spectral evidence
-%==============================================================================
-\section{Endpoint and spectral evidence}
-\label{app:spectral}
+\section{Fourier action and integrated constraints}
 
-This appendix collects the spectral evidence of
-Sections~\ref{sec:rankdefect}--\ref{sec:spectral}.  The terminology is unified as
-the ``$k>0$ spectral completion over the analysed harmonic sectors.''  The
-verification criteria H1/H2/H3 correspond to the operational definitions at the
-start of Section~\ref{sec:spectral}.
+\stepcounter{equation}\begin{equation}\tag{WD-01}\label{eq:WD-01}
+\Gamma^{i(1)}{}_{jk}=\tfrac12(\partial_jh_{ik}+\partial_kh_{ij}-\partial_ih_{jk}),\quad R^{[1]}=\partial_i\partial_jh_{ij}-\partial^2h_{ii}.
+\end{equation}
 
-\subsection{Endpoint evidence}
-\label{app:spectral:endpoint}
+The second coefficient of the integrated $\sqrt g R$ Gamma--Gamma form gives the spatial term of (W-01). The first lapse perturbation multiplies $R^{[1]}$. With the wavevector along $z$, $R^{[1]}=k^2(h_{11}+h_{22})$; the shift enters through $v$, retaining all constraints. The momentum equations are proportional to $p_{13}=p_{23}=p_{33}=0$ and the linear Hamiltonian condition to $h_{11}+h_{22}=0$. These four secondaries and four primaries mutually Poisson commute.
 
-\begin{itemize}
-  \item \textbf{$\Tthree$ (full-$k$)}: in the Fourier sector the TT spatial
-        operator $=|k|^{2}$ is confirmed symbolically.  The $k=0$ locus is
-        separated (flat degeneracy; the all-three-axis scalar-axis zero modes are
-        a homogeneous-level result).
-  \item \textbf{$\Sthree$ ($l$-symbolic)}: the absence of the scalar-sector zero
-        mode is confirmed symbolically for all $l$ (not a finite sample); the
-        spin-2 TT has eigenvalue $(l-1)(l+3)$ for all $l\ge2$ with positive
-        definite kinetic Hessian.  The cases $l=0,1$ are endpoint
-        classifications (gauge/non-dynamical).
-\end{itemize}
+For $k\ne0$, quotienting gauge directions and taking $h_{11}=-h_{22}=A$, $h_{12}=B$ gives (W-02). For any nonzero lattice wavevector the same algebra holds in an orthonormal polarization basis. The basis rotation need not be a lattice automorphism: the original wavevector and polarization tensors are restored.
 
-\subsection{Scalar full-spectral evidence ($\Nilthree$/$\Solthree$)}
-\label{app:spectral:scalar}
+\stepcounter{equation}\begin{equation}\tag{WD-02}\label{eq:WD-02}
+\begin{aligned}R+K^2-K_{ij}K^{ij}&=0,\qquad D_j(K^{ij}-g^{ij}K)=0,\\ K^{[1]}&=hI+\Sigma+\tfrac12\dot\gamma,\qquad\left\langle R^{[2]}\right\rangle=-\tfrac1{4q_0^2}\left\langle(\partial_a\gamma_{ij})^2\right\rangle.\end{aligned}
+\end{equation}
 
-For the scalar modes of the non-commutative harmonic sectors, the effective
-zero-mode count $d(M)$ is evaluated by the matrix harmonic closure:
-\begin{itemize}
-  \item $\Nilthree$: all non-commutative modes have a positive gap ($d(M)=0$)
-        $\Rightarrow$ the homogeneous-representative kernel count
-        ($\dim\ker n=2$) agrees with the full-spectral count (consistent).
-  \item $\Solthree$: the bulk has a positive gap ($d(M)=0$); the lowest-level
-        truncation-edge term is not counted as a theorem zero (scope-restricted).
-\end{itemize}
+Zero-mean TT fields have vanishing averaged cross terms with constant $h,\Sigma$. The linear curvature of the second-order metric correction integrates to zero as a divergence, and because the background $K$ vanishes, the second-order correction to $K$ does not enter the quadratic constraint linearly. The averaged Hamiltonian constraint is therefore $6h^2-\mathrm{tr}\Sigma^2-\langle\dot\gamma^2\rangle/4-\langle(\partial\gamma)^2\rangle/(4q_0^2)=0$.
 
-\subsection{TT / spin-1 full-spectral evidence ($\Nilthree$/$\Solthree$)}
-\label{app:spectral:tt}
+\stepcounter{equation}\begin{equation}\tag{WD-03}\label{eq:WD-03}
+\mathcal J[\xi]=\int_\Sigma\pi^{ij}\mathcal L_\xi g_{ij},\quad \xi=\partial_a:\qquad \mathcal J^{[2]}[\partial_a]\ \propto\ \left\langle\dot\gamma_{ij}\partial_a\gamma_{ij}\right\rangle.
+\end{equation}
 
-Extending the same matrix harmonic closure to the spin-2 / spin-1 sectors:
-\begin{itemize}
-  \item TT: $d(M)=2$ (both topologies) -- full-spectral consistency of the
-        propagating 2 TT.
-  \item spin-1: $d(M)=0$ (both topologies) -- no physical degrees of freedom in
-        the transverse vector.
-\end{itemize}
+Because background $\pi=0$ and $g$ is constant, linear terms in the second-order fields vanish, leaving (WD-03). Cross terms with constant mean metric or shear integrate to zero by periodicity. This gives the three momentum conditions in (W-03). The homogeneous linear equations keep $h,\Sigma$ constant, while the wave equation and periodic integration conserve wave energy and momentum.
 
-\subsection{Spectral towers (breakdown of the $k>0$ completion)}
-\label{app:spectral:towers}
+The integrated conditions are the compact linearization-stability conditions \cite{BrillDeser1973,ArmsMarsdenMoncrief1982}. Positive TT energy excludes pure-wave directions but permits mixed directions with volume velocity. We next state their sufficiency on the fixed flat torus and give explicit second-order corrections.
 
-\begin{table}[H]
-\centering
-\footnotesize
-\begingroup
-\renewcommand{\arraystretch}{1.3}
-\begin{tabularx}{\linewidth}{llLY}
-\toprule
-Topology & Sector & Operator / spectrum & Grade \\
-\midrule
-$\Tthree$ & Fourier $k\ne0$ & $|k|^{2}$ & closed form (endpoint control) \\
-$\Sthree$ & $l\ge2$ TT & $(l-1)(l+3)$ & closed form (endpoint control) \\
-$\Nilthree$ & toroidal ($k=0$) & $4\pi^{2}(m^{2}+n^{2})$ & closed form \\
-$\Nilthree$ & Heisenberg ($k\ne0$) & $2\pi|k|(2N+1)$ & closed form / analytic \\
-$\Solthree$ & boost bulk ($pq\ne0$) & $\inf V=2|pq|>0$ &
-analytic bound (all labels) \\
-$\Solthree$ & compact edge &
-two-sided confining modified Mathieu; discrete, $\lambda_{1}>0$~\cite{ref40} &
-closed form / analytic (discreteness, positivity) $+$ representative numerics
-(explicit $\lambda_{1}$, representative $A$) \\
-$\Solthree$ & non-compact subline ($pq=0$) &
-gapless continuum $=$ signature of amenability~\cite{ref38,ref39} &
-interpretive line (separated from the main line; not counted in the theorem
-list) \\
-\bottomrule
-\end{tabularx}
-\endgroup
-\caption{Spectral towers across the four topologies.}
-\label{tab:towers}
-\end{table}
 
-\subsection{Spectral verification summary}
-\label{app:spectral:summary}
+\subsection{Application of the known theorem on the fixed flat torus}
 
-\begin{table}[H]
-\centering
-\footnotesize
-\begingroup
-\renewcommand{\arraystretch}{1.3}
-\begin{tabularx}{\linewidth}{lYYYY}
-\toprule
-Criterion & $\Tthree$ & $\Sthree$ & $\Nilthree$ & $\Solthree$ \\
-\midrule
-Propagation & closed form & closed form & closed form / analytic &
-analytic bound (bulk) $+$ representative numerics (edge) \\
-No-ghost & closed form & closed form & closed form / analytic &
-analytic bound (bulk; edge TT sign positive) \\
-Non-contamination & closed form & closed form & closed form / analytic &
-analytic bound (bulk; edge carrier separated) \\
-\bottomrule
-\end{tabularx}
-\endgroup
-\caption{Spectral verification summary.}
-\label{tab:spectral_summary}
-\end{table}
+\stepcounter{equation}\begin{equation}\tag{WD-04}\label{eq:WD-04}
+\partial_i\partial_j\nu-\delta_{ij}\Delta\nu=0,\qquad
+\partial_iX_j+\partial_jX_i=0,\qquad
+\det(\mathcal S_k^\dagger\mathcal S_k)=32(k^2)^5\quad(k\ne0).
+\end{equation}
 
-\subsection{Independent spectral witness}
-\label{app:spectral:witness}
+In units $q_0=1$, (WD-04) describes the adjoint kernel. Taking the trace and using periodicity makes $\nu$ constant; the periodic Killing equation makes $X$ constant. These exhaust the four KIDs. Coordinate-linear rotations and boosts do not descend to the fixed lattice. The last identity checks the combined four-column symbol at nonzero wavevector.
 
-\code{script/scripts/paper07/spectral_completion_witness.py} reads no external
-spectral table; it constructs the formulas of Section~\ref{sec:spectral}
-in-script ($\Tthree$: $|k|^{2}$, $\Sthree$: $(l-1)(l+3)$, $\Nilthree$ two towers,
-$\Solthree$ bulk gap $\inf V=2|pq|$ and the representative finite-difference
-edge) and decides the H1--H3 positivity conditions.
+\stepcounter{equation}\begin{equation}\tag{WD-05}\label{eq:WD-05}
+\begin{aligned}
+\delta g&=C+2t(hI+\Sigma)+\gamma, &\delta\pi&=\Sigma-2hI+\tfrac12\dot\gamma,\\
+\beta&=\mathrm{tr}(\delta\pi)=-6h,&\omega^{\rm TT}&=\Sigma+\tfrac12\dot\gamma,\\
+\langle(\omega^{\rm TT})^2\rangle-\beta^2/6
++\tfrac14\langle(\partial\gamma)^2\rangle
+&=\mathrm{tr}\Sigma^2-6h^2+\tfrac14\langle\dot\gamma^2+(\partial\gamma)^2\rangle.
+\end{aligned}
+\end{equation}
+
+$C$ and $\Sigma$ are constant, $\Sigma$ is tracefree and $\gamma$ is mean-zero TT. Equation (WD-05) identifies the Hamiltonian cone, Eq. (3.5) of Arms--Marsden--Moncrief, with the energy condition in (W-03); their momentum cones, Eq. (3.1), agree with (WD-03). Their Section 3 treats exactly a flat $g_0$ with $\pi_0=0$, and their introduction includes the flat spacetime $T^3\times\mathbb R$ with four Killing fields. We apply their Theorem 3.3 (Section 3, p. 96) to smooth periodic data on a compact boundaryless CMC slice. Curves may be interpreted, conservatively, in $H^s\times H^{s-1}$ for integer $s\ge5$, without claiming minimal regularity. The four conditions then characterize tangents to exact constraint-data curves. Local Cauchy development and the LC lift give EC vacuum families \cite{ArmsMarsdenMoncrief1982}.
+
+This concerns a local initial-value family on a common time interval, not a two-time boundary-value problem, all-time regularity or an exact family closed in a finite Fourier space. Higher-order corrections may contain new harmonics.
+
+\subsection{Explicit second-order corrections and two-wave closure}
+
+For the standing wave (W-04), expanding each exponent as $\epsilon A_1+\epsilon^2A_2$, and similarly for $B,P$, makes the first and second coefficients of all ten Ricci components vanish, for either sign of $h$. This is a local substitution check through second order, not an exact finite-amplitude solution.
+
+\stepcounter{equation}\begin{equation}\tag{WD-06}\label{eq:WD-06}
+\begin{aligned}
+f&=a\cos x\cos t,\quad g=b\cos y\cos t,\quad h^2=(a^2+b^2)/24,\\
+H_{\mu\nu}&=\mathrm{diag}(-6ht,\,2ht+g,\,2ht+f,\,2ht-f-g),\\
+\mathcal K&=\{(0,0),(\pm1,0),(0,\pm1),(\pm2,0),(0,\pm2),(\pm1,\pm1)\}.
+\end{aligned}
+\end{equation}
+
+\stepcounter{equation}\begin{equation}\tag{WD-07}\label{eq:WD-07}
+\begin{aligned}
+\ddot{\bar Q}_{\mu\nu,n}+|n|^2\bar Q_{\mu\nu,n}&=-2G^{[2]}_{\mu\nu,n}[H],\\
+-\dot{\bar Q}_{0\nu}+\partial_i\bar Q_{i\nu}&=0,\\
+\psi&=-\tfrac7{16}(a^2\cos2x+b^2\cos2y)-ab\cos x\cos y,\\
+\Delta\psi&=-2G^{[2]}_{00}[H](0),\\
+\bar Q_{ij}(0)&=\delta_{ij}\psi,\qquad \bar Q_{00}(0)=\bar Q_{0i}(0)=0,\\
+\dot{\bar Q}_{ij}(0)=\dot{\bar Q}_{00}(0)&=0,\qquad \dot{\bar Q}_{0i}(0)=\partial_i\psi.
+\end{aligned}
+\end{equation}
+
+Write $g=\eta+\epsilon H+\epsilon^2Q$, with bars denoting trace reversal by $\eta$. Source conservation and the initial conditions in (WD-07) preserve the second-order harmonic condition. Keeping all thirteen wavevectors, integration of the forced oscillators constructs $Q$ satisfying the local Einstein equations and reality through second order. The public \texttt{two\_waves.json} supplies the source and correction coefficients. Removing the zero wavevector does not give the same construction.

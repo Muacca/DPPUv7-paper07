@@ -1,0 +1,198 @@
+[
+  {
+    "name": "full contortion Hessian invertible",
+    "passed": true
+  },
+  {
+    "name": "torsion coordinates invertible",
+    "passed": true
+  },
+  {
+    "name": "scalar is exact quadratic",
+    "passed": true
+  },
+  {
+    "name": "complete NY exterior identity",
+    "passed": true
+  },
+  {
+    "name": "epsilon action equals twice scalar",
+    "passed": true
+  },
+  {
+    "name": "boundary Q geometric sign",
+    "passed": true
+  },
+  {
+    "name": "vector divergence and torsion square",
+    "passed": true
+  },
+  {
+    "name": "momentum 0 preserves scalar",
+    "passed": true
+  },
+  {
+    "name": "momentum 1 preserves scalar",
+    "passed": true
+  },
+  {
+    "name": "momentum 2 preserves scalar",
+    "passed": true
+  },
+  {
+    "name": "momentum algebra 01",
+    "passed": true
+  },
+  {
+    "name": "momentum algebra 12",
+    "passed": true
+  },
+  {
+    "name": "momentum algebra 20",
+    "passed": true
+  },
+  {
+    "name": "T3 constraint shell",
+    "passed": true
+  },
+  {
+    "name": "T3 regular Jacobian",
+    "passed": true
+  },
+  {
+    "name": "T3 regular nonzero minor",
+    "passed": true
+  },
+  {
+    "name": "Nil constraint shell",
+    "passed": true
+  },
+  {
+    "name": "Nil regular Jacobian",
+    "passed": true
+  },
+  {
+    "name": "Nil regular nonzero minor",
+    "passed": true
+  },
+  {
+    "name": "Sol constraint shell",
+    "passed": true
+  },
+  {
+    "name": "Sol regular Jacobian",
+    "passed": true
+  },
+  {
+    "name": "Sol regular nonzero minor",
+    "passed": true
+  },
+  {
+    "name": "S3 constraint shell",
+    "passed": true
+  },
+  {
+    "name": "S3 regular Jacobian",
+    "passed": true
+  },
+  {
+    "name": "S3 regular nonzero minor",
+    "passed": true
+  },
+  {
+    "name": "scalar route agreement 0",
+    "passed": true
+  },
+  {
+    "name": "scalar route agreement 1",
+    "passed": true
+  },
+  {
+    "name": "legacy correction resolves discrepancy",
+    "passed": true
+  },
+  {
+    "name": "Fourier mode count 0",
+    "passed": true
+  },
+  {
+    "name": "Fourier mode count 1",
+    "passed": true
+  },
+  {
+    "name": "Fourier mode count 2",
+    "passed": true
+  },
+  {
+    "name": "symbolic nonzero Fourier closure",
+    "passed": true
+  },
+  {
+    "name": "TT kinetic positive",
+    "passed": true
+  },
+  {
+    "name": "tracefree Ricci T3",
+    "passed": true
+  },
+  {
+    "name": "tracefree Ricci Nil",
+    "passed": true
+  },
+  {
+    "name": "tracefree Ricci Sol",
+    "passed": true
+  },
+  {
+    "name": "tracefree Ricci S3",
+    "passed": true
+  },
+  {
+    "name": "volume preserving torus_shape",
+    "passed": true
+  },
+  {
+    "name": "finite-path LC torsion torus_shape",
+    "passed": true
+  },
+  {
+    "name": "volume preserving nil_flat",
+    "passed": true
+  },
+  {
+    "name": "finite-path LC torsion nil_flat",
+    "passed": true
+  },
+  {
+    "name": "volume preserving nil_vertical",
+    "passed": true
+  },
+  {
+    "name": "finite-path LC torsion nil_vertical",
+    "passed": true
+  },
+  {
+    "name": "volume preserving sol_base",
+    "passed": true
+  },
+  {
+    "name": "finite-path LC torsion sol_base",
+    "passed": true
+  },
+  {
+    "name": "volume preserving sol_isometry",
+    "passed": true
+  },
+  {
+    "name": "finite-path LC torsion sol_isometry",
+    "passed": true
+  },
+  {
+    "name": "rotating flat frame curvature",
+    "passed": true
+  },
+  {
+    "name": "rotating flat frame Ricci",
+    "passed": true
+  }
+]

@@ -1,0 +1,221 @@
+{
+  "checks": [
+    {
+      "name": "oriented area-one fiber lattice",
+      "passed": true
+    },
+    {
+      "name": "orthogonal eigen-coordinate choice",
+      "passed": true
+    },
+    {
+      "name": "fixed monodromy intertwines lattice",
+      "passed": true
+    },
+    {
+      "name": "dual lattice phases integral",
+      "passed": true
+    },
+    {
+      "name": "arithmetic orbit invariant",
+      "passed": true
+    },
+    {
+      "name": "product invariant and normalization",
+      "passed": true
+    },
+    {
+      "name": "orbit sum deck reindex",
+      "passed": true
+    },
+    {
+      "name": "fiber wavevector deck reindex",
+      "passed": true
+    },
+    {
+      "name": "X2 orbit intertwiner",
+      "passed": true
+    },
+    {
+      "name": "X3 orbit intertwiner",
+      "passed": true
+    },
+    {
+      "name": "Sol bracket X1 X2",
+      "passed": true
+    },
+    {
+      "name": "Sol bracket X1 X3",
+      "passed": true
+    },
+    {
+      "name": "Sol bracket X2 X3",
+      "passed": true
+    },
+    {
+      "name": "anti-adjoint generator 0",
+      "passed": true
+    },
+    {
+      "name": "anti-adjoint generator 1",
+      "passed": true
+    },
+    {
+      "name": "anti-adjoint generator 2",
+      "passed": true
+    },
+    {
+      "name": "Hermite norm n=0",
+      "passed": true
+    },
+    {
+      "name": "quotient and conjugacy controls n=0",
+      "passed": true
+    },
+    {
+      "name": "Hermite norm n=1",
+      "passed": true
+    },
+    {
+      "name": "quotient and conjugacy controls n=1",
+      "passed": true
+    },
+    {
+      "name": "Hermite norm n=3",
+      "passed": true
+    },
+    {
+      "name": "quotient and conjugacy controls n=3",
+      "passed": true
+    },
+    {
+      "name": "Hermite norm n=6",
+      "passed": true
+    },
+    {
+      "name": "quotient and conjugacy controls n=6",
+      "passed": true
+    },
+    {
+      "name": "nonzero exponential coupling n=0",
+      "passed": true
+    },
+    {
+      "name": "nonzero exponential coupling n=1",
+      "passed": true
+    },
+    {
+      "name": "nonzero exponential coupling n=2",
+      "passed": true
+    },
+    {
+      "name": "nonzero exponential coupling n=3",
+      "passed": true
+    },
+    {
+      "name": "nonzero exponential coupling n=4",
+      "passed": true
+    },
+    {
+      "name": "nonzero exponential coupling n=5",
+      "passed": true
+    },
+    {
+      "name": "nonzero exponential coupling n=6",
+      "passed": true
+    },
+    {
+      "name": "nonzero exponential coupling n=7",
+      "passed": true
+    },
+    {
+      "name": "nonzero exponential coupling n=8",
+      "passed": true
+    }
+  ],
+  "exact_checks": 16,
+  "numerical_checks": 17,
+  "lattice": [
+    [
+      "1/sqrt(1 + (1/2 + sqrt(5)/2)**2)",
+      "(-sqrt(5)/2 - 1/2)/sqrt(1 + (1/2 + sqrt(5)/2)**2)"
+    ],
+    [
+      "(1/2 + sqrt(5)/2)/sqrt(1 + (1/2 + sqrt(5)/2)**2)",
+      "1/sqrt(1 + (1/2 + sqrt(5)/2)**2)"
+    ]
+  ],
+  "A": [
+    [
+      "2",
+      "1"
+    ],
+    [
+      "1",
+      "1"
+    ]
+  ],
+  "lambda_": "sqrt(5)/2 + 3/2",
+  "base_length": "log(sqrt(5)/2 + 3/2)",
+  "representative": [
+    1,
+    0
+  ],
+  "dual_wavevector": [
+    [
+      "2*pi/sqrt(1 + (1/2 + sqrt(5)/2)**2)"
+    ],
+    [
+      "2*pi*(1/2 + sqrt(5)/2)/sqrt(1 + (1/2 + sqrt(5)/2)**2)"
+    ]
+  ],
+  "orbit_invariant": "a**2 - a*b - b**2",
+  "arithmetic_product": "4*sqrt(5)*pi**2*(a**2 - a*b - b**2)/5",
+  "operators": [
+    [
+      [
+        [
+          "0"
+        ]
+      ],
+      [
+        [
+          "1"
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          "I*k/w"
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          "I*l*w"
+        ]
+      ]
+    ]
+  ],
+  "max_quotient_error": 1.978137362219371e-14,
+  "exp_couplings_n0": [
+    1.2840254166877414,
+    0.9079430793557847,
+    0.4539715396778922,
+    0.18533310499274752,
+    0.06552514765936518,
+    0.02072087106224458,
+    0.005981600242815244,
+    0.001598649909518372,
+    0.0003996624773795662
+  ],
+  "basis": "U_q f = sqrt(L) sum_j f(x+j L) exp(i[(lambda^-j k)y+(lambda^j l)z]); f is a function on R. With normalized quotient Haar measure dx dy dz/L, U_q is isometric from L2(R). Fixed Hermite functions give an orthonormal basis for this orbit.",
+  "domain": "Smooth invariant core: intersection over all integers a,b>=0 of {f: exp(a abs(xi)) derivative^b f in L2(R)}. Compactly supported smooth functions and Hermite functions lie in it. No periodic or quasiperiodic condition is imposed on f on R.",
+  "conjugacy": "U_-q conjugate(f)=conjugate(U_q f). Positive-eigenvalue monodromy never identifies q and -q for q!=0. One complete real sector uses both entire orbits.",
+  "closure": "All invariant frame tensors descend unchanged. D1=d/dxi, D2=i k exp(-xi), D3=i l exp(xi) act within the same orbit. All homogeneous-coefficient gravity operators preserve an orbit but generally couple infinitely many fixed Hermite functions.",
+  "arithmetic": "For nonzero integer (a,b), a^2-a*b-b^2 is nonzero since sqrt(5) is irrational. Both eigen-direction wavevector components are nonzero. Representative changes correspond to translation of f by an integer multiple of L.",
+  "no_finite_Hermite_closure": "exp(xi) psi_0 has coefficient exp(1/4) 2^(-n/2)/sqrt(n!) for every n>=0. A finite scalar Hermite cutoff is not an exact gravity block. This does not classify every possible tensor-dependent basis.",
+  "reference": "Bolsinov-Dullin-Veselov, arXiv:math-ph/0503046v1, section 5, equation 19 and Theorem 2; convention and lattice derived here."
+}

@@ -1,0 +1,135 @@
+{
+  "checks": [
+    {
+      "name": "solved connection Lorentz transformation 010",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 011",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 012",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 013",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 020",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 021",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 022",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 023",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 030",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 031",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 032",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 033",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 120",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 121",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 122",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 123",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 130",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 131",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 132",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 133",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 230",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 231",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 232",
+      "passed": true
+    },
+    {
+      "name": "solved connection Lorentz transformation 233",
+      "passed": true
+    },
+    {
+      "name": "zero-mode has six pairs False",
+      "passed": true
+    },
+    {
+      "name": "zero-mode has six pairs True",
+      "passed": true
+    }
+  ],
+  "zero_mode_controls": {
+    "fixed": {
+      "n": 34,
+      "primary": 34,
+      "generations": [
+        34,
+        18
+      ],
+      "total": 52,
+      "second_class": 48,
+      "first_class": 4,
+      "pairs": "6"
+    },
+    "unfixed": {
+      "n": 40,
+      "primary": 40,
+      "generations": [
+        40,
+        12
+      ],
+      "total": 52,
+      "second_class": 36,
+      "first_class": 16,
+      "pairs": "6"
+    }
+  },
+  "scope": "zero-mode is only a quadratic control; no claim of nonlinear regularity at the static torus"
+}

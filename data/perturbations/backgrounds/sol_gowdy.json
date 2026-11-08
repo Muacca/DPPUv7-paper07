@@ -1,0 +1,219 @@
+{
+  "checks": [
+    {
+      "name": "unrestricted Gowdy spatial scalar",
+      "passed": true
+    },
+    {
+      "name": "full ADM kinetic contraction",
+      "passed": true
+    },
+    {
+      "name": "Legendre pa",
+      "passed": true
+    },
+    {
+      "name": "Legendre pR",
+      "passed": true
+    },
+    {
+      "name": "Legendre pP",
+      "passed": true
+    },
+    {
+      "name": "Legendre pQ",
+      "passed": true
+    },
+    {
+      "name": "Hamiltonian kinetic Legendre",
+      "passed": true
+    },
+    {
+      "name": "linear scalar/momentum first class",
+      "passed": true
+    },
+    {
+      "name": "nonzero-mode gauge fixing invertible",
+      "passed": true
+    },
+    {
+      "name": "solve scalar constraint",
+      "passed": true
+    },
+    {
+      "name": "solve momentum constraint",
+      "passed": true
+    },
+    {
+      "name": "pulled reduced two-form canonical",
+      "passed": true
+    },
+    {
+      "name": "reduced Legendre transform",
+      "passed": true
+    },
+    {
+      "name": "twist cross term is spatial derivative",
+      "passed": true
+    },
+    {
+      "name": "Sol full linear Ricci 00",
+      "passed": true
+    },
+    {
+      "name": "Sol full linear Ricci 01",
+      "passed": true
+    },
+    {
+      "name": "Sol full linear Ricci 02",
+      "passed": true
+    },
+    {
+      "name": "Sol full linear Ricci 03",
+      "passed": true
+    },
+    {
+      "name": "Sol full linear Ricci 11",
+      "passed": true
+    },
+    {
+      "name": "Sol full linear Ricci 12",
+      "passed": true
+    },
+    {
+      "name": "Sol full linear Ricci 13",
+      "passed": true
+    },
+    {
+      "name": "Sol full linear Ricci 22",
+      "passed": true
+    },
+    {
+      "name": "Sol full linear Ricci 23",
+      "passed": true
+    },
+    {
+      "name": "Sol full linear Ricci 33",
+      "passed": true
+    },
+    {
+      "name": "ell time and space constraints compatible",
+      "passed": true
+    }
+  ],
+  "spatial_scalar": "(-exp(2*P(x))*Derivative(Q(x), x)**2/2 - Derivative(P(x), x)**2/2 + 2*Derivative(R(x), x)*Derivative(a(x), x)/R(x) - 2*Derivative(R(x), (x, 2))/R(x) + Derivative(R(x), x)**2/(2*R(x)**2))*exp(-2*a(x))",
+  "ADM_kinetic": "(R*(vP**2 + vQ**2*exp(2*P))/2 - 2*vR*va - vR**2/(2*R))*exp(a)/N",
+  "canonical_H_kinetic": "(-pR*pa/2 + pa**2/(8*R) + (pP**2 + pQ**2*exp(-2*P))/(2*R))*exp(-a)",
+  "linear_constraints": [
+    "delta_pR + delta_pa*(t - 1/(4*t)) + 2*I*k*p*t + rho*(-2*k**2 + 2 - 1/(2*t**2))",
+    "-2*I*A*k + 2*delta_pP - I*delta_pa*k + I*k*rho*(-2*t - 1/(2*t))"
+  ],
+  "gauge_fixing": [
+    "delta R=0",
+    "delta pa=0; nonzero modes only"
+  ],
+  "gauge_bracket": [
+    [
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "-2*I*k"
+    ]
+  ],
+  "gauge_determinant": "-2*I*k",
+  "constraint_solution": {
+    "rho": 0,
+    "delta_pa": 0,
+    "A": "-I*delta_pP/k",
+    "delta_pR": "-2*I*k*p*t"
+  },
+  "reduced_action": "t*(-k**2*p**2 + pd**2 - r**2*(k**2 + 4) + rd**2)/2",
+  "reduced_H": "t*(k**2*p**2 + r**2*(k**2 + 4))/2 + (delta_pP**2 + delta_pr**2)/(2*t)",
+  "reduced_Omega": [
+    [
+      "0",
+      "0",
+      "-1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-1"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "0",
+      "0"
+    ]
+  ],
+  "linear_Ricci": [
+    [
+      "-(k**2*t*ell(t) + t*Derivative(ell(t), (t, 2)) - Derivative(ell(t), t))/(4*t)",
+      "-(-I*k*ell(t) + 4*t*Derivative(p(t), t))/(4*t)",
+      "0",
+      "0"
+    ],
+    [
+      "-(-I*k*ell(t) + 4*t*Derivative(p(t), t))/(4*t)",
+      "(k**2*t*ell(t) - 8*I*k*t*p(t) + t*Derivative(ell(t), (t, 2)) + Derivative(ell(t), t))/(4*t)",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "sqrt(t)*(k**2*t*p(t) + t*Derivative(p(t), (t, 2)) + Derivative(p(t), t))*exp(-t**2)/2",
+      "sqrt(t)*(k**2*t*r(t) + 4*t*r(t) + t*Derivative(r(t), (t, 2)) + Derivative(r(t), t))*exp(-t**2)/2"
+    ],
+    [
+      "0",
+      "0",
+      "sqrt(t)*(k**2*t*r(t) + 4*t*r(t) + t*Derivative(r(t), (t, 2)) + Derivative(r(t), t))*exp(-t**2)/2",
+      "-sqrt(t)*(k**2*t*p(t) + t*Derivative(p(t), (t, 2)) + Derivative(p(t), t))*exp(-t**2)/2"
+    ]
+  ],
+  "Ricci_residual": [
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "mode_equations": [
+    "p_tt+p_t/t+k^2 p=0",
+    "r_tt+r_t/t+(k^2+4)r=0"
+  ],
+  "mode_scope": "k=2*pi*n/L, n!=0; one real cosine or sine quadrature has two pairs; both real quadratures have four",
+  "normalization": "EH coefficient and reference spatial volume factored out; areal time t",
+  "verdict": "SOL_RESTRICTED_GOWDY_TWO_FIELDS_REDUCED"
+}

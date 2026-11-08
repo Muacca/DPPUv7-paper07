@@ -1,94 +1,37 @@
-%==============================================================================
-% Appendix A: Conventions
-%==============================================================================
-\section{Conventions}
-\label{app:conventions}
+\section{Fixed quotients and the convention dictionary}
 
-\subsection{Signature, Hodge, and $\epsilon$ conventions}
-\label{app:conventions:signature}
+On $T^3$, $x,y,z$ have period $2\pi$ and $\sigma=(dx,dy,dz)$. On Nil use $\sigma=(dx,dy,dz-xdy)$ with the following lattice generators.
 
-\begin{itemize}
-  \item Metric signature: $(-,+,+,+)$ (Lorentzian).
-  \item Internal indices $I,J,\dots\in\{0,1,2,3\}$; spatial frame indices
-        $a,b,\dots\in\{1,2,3\}$.
-  \item Levi-Civita symbol: $\epsilon_{0123}=+1$; in three spatial dimensions
-        $\epsilon_{123}=+1$.
-  \item The Hodge dual is defined in the Lorentzian convention, with the
-        four-form orientation $e^{0}\wedge e^{1}\wedge e^{2}\wedge e^{3}$ taken
-        positive.
-  \item Curvature/torsion:
-        $R^{IJ}=\dd\omega^{IJ}+\omega^{I}{}_{K}\wedge\omega^{KJ}$,
-        $T^{I}=\dd e^{I}+\omega^{I}{}_{J}\wedge e^{J}$.
-\end{itemize}
-
-\subsection{Structure matrix sign convention}
-\label{app:conventions:structure}
-
-For the structure equation
-$\dd\sigma^{i}=-\tfrac12 C^{i}{}_{jk}\sigma^{j}\wedge\sigma^{k}$, we define
-\begin{equation}
-  n^{ij}=\tfrac12\,\epsilon^{ikl}\,C^{j}{}_{kl}
-\end{equation}
-(symmetric in class A).  The signs of the diagonal values in the Milnor frame
-are fixed to the convention of Table~\ref{tab:bianchi} ($\Nilthree$:
-$\mathrm{diag}(1,0,0)$, $\Solthree$: $\mathrm{diag}(1,-1,0)$, $\Sthree$:
-$\mathrm{diag}(1,1,1)$).  $\rank(n)$ and $\dim\ker n$ do not depend on the
-normalisation (scale) of the diagonal values.
-
-\subsection{$\Sthree$ normalisation: the $C=\epsilon$ frame}
-\label{app:conventions:s3}
-
-The $\Sthree$ structure constants are fixed throughout the paper to
-\begin{equation}
-  C^{i}{}_{jk}=\epsilon^{i}{}_{jk}\qquad(|C|=1;\ C=\epsilon\ \text{frame}).
+\stepcounter{equation}\begin{equation}\tag{QA-01}\label{eq:QA-01}
+(x,y,z)\sim(x+2\pi,y,z+2\pi y)\sim(x,y+2\pi,z)\sim(x,y,z+4\pi^2).
 \end{equation}
 
-\paragraph{Scaling and invariants.}
-Under an overall scaling of the structure constants $C\to sC$ ($s>0$) one has
-$n\to sn$, but
-\begin{equation}
-  \rank(n),\qquad \dim\ker n,\qquad \dzero=3-\rank(n)
+Each generator preserves the coframe, and the fundamental volume is $(2\pi)^4$. The central Fourier factor is $e^{imz/(2\pi)}$, $m\in\mathbb Z$. The dual fields $X=\partial_x$, $Y=\partial_y+x\partial_z$, $Z=\partial_z$ give $-(X^2+Y^2+Z^2)$. The $m=0$ sector is the base torus; $m\ne0$ gives an oscillator with frequency $|m|/(2\pi)$ plus the central constant $m^2/(4\pi^2)$. Twisted periodicity gives $|m|$ independent states for each signed $m$.
+
+For Sol take $\sigma=(dx,e^xdy,e^{-x}dz)$, $A=\left(\begin{smallmatrix}2&1\\1&1\end{smallmatrix}\right)$ and $\lambda=(3+\sqrt5)/2$. Choose a unit-area fiber lattice in eigenvector coordinates of $A$ and identify $(x,y,z)$ with $(x+\log\lambda,\lambda^{-1}y,\lambda z)$. Then $n_{23}=n_{32}=1$ and the reference volume is $\log\lambda$. Fiber Fourier covectors are grouped into dual-lattice orbits under $A$.
+
+For simply connected $S^3=SU(2)$ use the unit round coframe satisfying $d\sigma^i=2\sigma^j\wedge\sigma^k$ cyclically. The metric $q^2\sum_i(\sigma^i)^2$ has sectional curvature $q^{-2}$, scalar curvature $6q^{-2}$ and volume $2\pi^2q^3$. A structure matrix defined with a negative structure equation changes sign when converted to the present convention. Axis changes must act consistently, including orientation, on metric, connection and torsion.
+
+\stepcounter{equation}\begin{equation}\tag{QA-02}\label{eq:QA-02}
+C^i{}_{jk}=\frac{a}{r}\epsilon_{ijk}\quad\Longrightarrow\quad q=\frac{2r}{|a|},\quad R=\frac{3a^2}{2r^2},\quad {\rm Vol}=\frac{16\pi^2r^3}{|a|^3}.
 \end{equation}
-are invariant.  By contrast, the \emph{numerical} values of the curvature and the
-eigenvalues are scale-dependent.  Representative formulas:
-\begin{equation}
-  R\,q^{2} \;\mapsto\; s^{2}\,(R\,q^{2})\qquad(\text{isotropic point}),
+
+Equation (QA-02) converts an orthonormal-frame structure magnitude $a/r$ to physical radius. Thus $a=1$ gives $q=2r$, $a=2$ gives $q=r$, and $a=4$ gives $q=r/2$. Curvature must not be converted while volume or wave numbers are left unchanged. The present calculation uses geometric torsion $T$ directly. The supplementary comparison guide gives implementation conversions.
+
+\stepcounter{equation}\begin{equation}\tag{QA-03}\label{eq:QA-03}
+\mathcal N=\frac14[abcd]T^e{}_{ab}T_{ecd}-\frac12[abcd]R_{abcd},\qquad[0123]=+1.
 \end{equation}
-\begin{equation}
-  \lambda_{\Sthree}(l)=(l-1)(l+3)\;\mapsto\; s^{2}\,(l-1)(l+3)
-  \qquad(\text{TT sector; }l\ge2).
+
+The alternating symbol here is not the epsilon tensor with indices raised by the Lorentz metric. Both terms of complete NY use the same connection and agree with the exterior derivative in (A-01).
+
+
+\subsection{Perturbation normalizations and symbols}
+
+In the inhomogeneous calculations a common positive action factor is suppressed and integration uses fixed Haar measure. Symmetric metric components are ordered $(11,22,33,12,13,23)$, with conjugate momentum $\delta\pi^{ii}$ on the diagonal and $2\delta\pi^{ij}$ off the diagonal. Thus $J$ is the standard canonical matrix. A dagger includes complex conjugation and the formal spatial adjoint.
+
+\stepcounter{equation}\begin{equation}\tag{QA-04}\label{eq:QA-04}
+z=(h,p),\qquad J=\begin{pmatrix}0&I\\-I&0\end{pmatrix},\qquad
+\Omega=-J,\qquad [X_i,X_j]=C^k{}_{ij}X_k.
 \end{equation}
-Every place where we write $R\,q^{2}=6$ and TT eigenvalue $(l-1)(l+3)$ refers to
-the value in the $C=\epsilon$ ($s=1$) frame.  The script
-\code{script/scripts/paper07/s3_normalization_factor_witness.py} independently
-confirms the rank invariance and the $s^{2}$ scaling of the curvature and
-eigenvalues.
 
-\paragraph{Correspondence with paper~VI.}
-The $\Sthree$ numerics of paper~VI~\cite{ref7} (e.g.\ $\chi=4$,
-$C_{\mathrm{topology}}=-36$, $V_{3}=2\pi^{2}$) are based on a different
-structure-constant normalisation.  The two are related by a scaling of the
-structure constants, with an explicit factor-16 conversion entering the
-second-order curvature quantities.  We do not quote the $\Sthree$ values of
-paper~VI without the explicit conversion; the factor conversion is confined to
-this appendix.
-
-\subsection{Harmonic conventions}
-\label{app:conventions:harmonic}
-
-\begin{itemize}
-  \item $\Tthree$: Fourier modes $e^{ik\cdot x}$, $k\in 2\pi\mathbb{Z}^{3}/L$.
-  \item $\Sthree$: the scalar/vector/tensor harmonics follow the convention
-        of~\cite{ref28,ref29}; the TT tensor-harmonic eigenvalues are written as
-        $(l-1)(l+3)$ ($l\ge2$) in the $C=\epsilon$ frame.
-  \item $\Nilthree$/$\Solthree$: the toroidal $\cup$ Heisenberg sector and the
-        boost sector, respectively, are collected in
-        Appendix~\ref{app:spectral}.
-\end{itemize}
-
-\subsection{Diagnostic exclusions}
-\label{app:conventions:diagnostic}
-
-This paper does not introduce Pontryagin-type diagnostics ($P_{\mathrm{form}}$,
-$P_{\mathrm{int}}$, etc.~\cite{ref5,ref6,ref7}).  A minimal definition of the NY
-boundary three-form appears only in Appendix~\ref{app:torsion} (for precision).
+On Nil, $m$ is the central Fourier integer, $r$ a lattice copy, $n$ the oscillator index and $L$ the tensor grade. On $S^3$, $j,m,n$ are Wigner labels, independent of the background Taub parameter fixed to zero. On Sol, $x$ is the base coordinate and $\xi$ the unfolded real coordinate. The Nil period is also denoted $P_0=2\pi$ to distinguish it from the Gowdy field $P$; the LRS background value of $P$ in (NG-02) is $\bar P$ and $\zeta=e^{2\bar P}$. The Sol period is $L_{\rm Sol}=\log\lambda$, distinct from the Lagrangians $L_0$ and $L^{[2]}$ and from the Nil grade $L$.

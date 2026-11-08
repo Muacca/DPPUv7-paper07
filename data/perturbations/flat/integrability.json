@@ -1,0 +1,156 @@
+{
+  "checks": [
+    {
+      "name": "KID symbol Gram matrix",
+      "passed": true
+    },
+    {
+      "name": "KID symbol injective at every nonzero covector",
+      "passed": true
+    },
+    {
+      "name": "zero Fourier symbol has all four constant KIDs",
+      "passed": true
+    },
+    {
+      "name": "AMM beta equals minus six mean expansion",
+      "passed": true
+    },
+    {
+      "name": "AMM tracefree momentum equals shear",
+      "passed": true
+    },
+    {
+      "name": "AMM homogeneous cone normalization",
+      "passed": true
+    },
+    {
+      "name": "AMM Hamiltonian Taub cone equals minus W-03 residual",
+      "passed": true
+    },
+    {
+      "name": "periodic constant metric variations do not enter kinetic cone",
+      "passed": true
+    },
+    {
+      "name": "full mixed kinetic polynomial",
+      "passed": true
+    }
+  ],
+  "kid_symbol": [
+    [
+      "k2**2 + k3**2",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-k1*k2",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-k1*k3",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-k1*k2",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "k1**2 + k3**2",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-k2*k3",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-k1*k3",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-k2*k3",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "k1**2 + k2**2",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "2*k1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "k2",
+      "k1",
+      "0"
+    ],
+    [
+      "0",
+      "k3",
+      "0",
+      "k1"
+    ],
+    [
+      "0",
+      "k2",
+      "k1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "2*k2",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "k3",
+      "k2"
+    ],
+    [
+      "0",
+      "k3",
+      "0",
+      "k1"
+    ],
+    [
+      "0",
+      "0",
+      "k3",
+      "k2"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "2*k3"
+    ]
+  ],
+  "kid_gram_determinant": "32*(k1**2 + k2**2 + k3**2)**5",
+  "constant_kid_dimension": 4,
+  "AMM_beta": "-6*h",
+  "AMM_cone": "Egrad/4 + Ekin/4 + a**2 + b**2 - 6*h**2 + 2*u**2 + 2*v**2 + 2*w**2 + (-a - b)**2",
+  "verdict": "W03_NECESSARY_AND_SUFFICIENT_FOR_LOCAL_INTEGRABILITY_SCOPED",
+  "proof_kind": "application_of_AMM1982_Theorem_3_3_with_explicit_KID_and_normalization_map"
+}

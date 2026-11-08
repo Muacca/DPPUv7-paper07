@@ -1,131 +1,87 @@
-%==============================================================================
-% Appendix F: Finite-fate branch data
-%==============================================================================
-\section{Finite-fate branch data}
-\label{app:finite}
+\section{Vacuum backgrounds, fixed quotients and harmonic bases}
 
-This appendix collects the finite-deformation branch data of
-Section~\ref{sec:finite}.  The scope is the finite Palatini branch / homogeneous
-minisuperspace.
+\subsection{Background construction and descent to the quotients}
 
-\subsection{Branch parametrisation and tangent alignment}
-\label{app:finite:param}
+The Nil background in (BF-01) is Tanimoto\textquotesingle s homogeneous vacuum solution with $b=1$, Kasner exponents $(2/3,2/3,-1/3)$ and literature time $u^3$. Sol is the twisted Gowdy solution $P=2x,Q=0,R=t$. The biaxial Taub background uses $\ell=1,m=0$ and the conversion $\sigma=-\omega/2$. Direct substitution gives zero for the full Ricci tensor, both ADM constraints and the metric/momentum evolution residuals at the stated lapse. Time reparametrization does not change the lattice \cite{Tanimoto2004,Rendall2012,BeyerHennig2012}.
 
-For each kernel direction we reconstruct a background-adapted static Palatini
-branch with the finite-deformation parameter $\beta$ (and an auxiliary direction
-$u$ where needed).  In each case we confirmed that the tangent vector of the
-branch is aligned with the kernel direction of the quadratic analysis (tangent
-alignment).
-
-\subsection{Energy-density expansion versus stationarity}
-\label{app:finite:expansion}
-
-\begin{itemize}
-  \item \textbf{Energy-density expansion}: evaluation of the reduced energy
-        density $\Delta(\beta)$ after solving the auxiliary-field equations
-        (auxiliary shell).  This is the main verification of this appendix.
-  \item \textbf{Stationarity decision}: a decision of whether the
-        finite-deformation point is a stationary point of the field equations.
-\end{itemize}
-
-These are distinct checks; we do not reread the result of the energy-density
-expansion (the value of $\Delta$) as a theorem of the stationarity decision (the
-existence of a stationary branch).
-
-\subsection{Branch classification summary}
-\label{app:finite:beta}
-
-\paragraph{Branch directions (Milnor frame; tangent alignment confirmed).}
-
-\begin{table}[H]
-\centering
-\begingroup
-\renewcommand{\arraystretch}{1.4}
-\begin{tabular}{lll}
-\toprule
-Label & Tangent vector $\bm{\beta}$ & Classification \\
-\midrule
-$\Tthree$ $e_{a}$ & $e_{1},e_{2},e_{3}$ & exact modulus \\
-$\Nilthree$ $\beta_{-}$ & $(\tfrac12,-\tfrac12,0)$ & exact modulus \\
-$\Nilthree$ $\beta_{+}/u$ & $(-\tfrac12,-\tfrac12,1)$ & curvature wall \\
-$\Solthree$ $\beta_{x}$ & $(\tfrac13,-\tfrac16,-\tfrac16)$ & curvature wall \\
-\bottomrule
-\end{tabular}
-\endgroup
-\caption{Finite-deformation branch directions and their classification.}
-\label{tab:branch_directions}
-\end{table}
-
-\paragraph{Closed-form branch formula for $\beta_{-}$ (basis of the exact
-modulus).}
-On the background-adapted static Palatini branch the scale factors can be written
-\begin{equation}
-  q_{1}(s)=q_{0}\,e^{s/2},\qquad
-  q_{2}(s)=q_{0}\,e^{-s/2},\qquad
-  q_{3}(s)=q_{0},
+\stepcounter{equation}\begin{equation}\tag{BF-02}\label{eq:BF-02}
+\begin{aligned}
+\pi_{\rm Nil}^{ij}&=\mathrm{diag}(-4/(9A),-4/(9A),-u^2),\\
+\pi_{\rm Sol}^{ij}&=\mathrm{diag}(-1/F,-t-1/(4t),-t-1/(4t)),\\
+\pi^{ij}&=\sqrt{\det G}\,(K^{ij}-G^{ij}K),\qquad K_{ij}=\dot G_{ij}/(2N).
+\end{aligned}
 \end{equation}
-($s$ is the finite-deformation parameter along $\beta_{-}$ and $q_{0}$ a
-reference scale).  The reduced EH density $\Delta(s)$ obtained after solving the
-connection fluctuations by the field equations vanishes identically at all orders
-in $s$ (consistent with the residual $0$ up to fourth order).  For $\beta_{+}/u$
-the first-order coefficient (tadpole) of $\Delta$ is non-zero, and for
-$\beta_{x}$ one of the linear/quadratic coefficients is non-zero.
 
-\begin{table}[H]
-\centering
-\begingroup
-\renewcommand{\arraystretch}{1.3}
-\begin{tabularx}{\linewidth}{lLY}
-\toprule
-Object & Check & Result \\
-\midrule
-$\Tthree$ (3 directions) & $\Delta(\beta)$ symbolic up to fourth order &
-identically $0$ (exact flat moduli) \\
-$\Nilthree$ $\beta_{-}$ &
-above $+$ linear-system rank check (rank $=$ aug rank $=18$, uniquely solvable) &
-residual $0$ at all orders (exact modulus) \\
-$\Nilthree$ $\beta_{+}/u$ & as above &
-curvature-induced non-zero term $+$ tadpole (curvature wall; no stationary finite
-branch) \\
-$\Solthree$ $\beta_{x}$ & as above &
-non-zero (curvature wall; stationary branch absent) \\
-$\Sthree$ & --- & not applicable ($\dzero=0$) \\
-\bottomrule
-\end{tabularx}
-\endgroup
-\caption{Energy-density expansion results by branch direction.}
-\label{tab:branch_results}
-\end{table}
+The three Nil deck generators preserve the coframe in (QA-01). The Sol gluing preserves $(e^xdy,e^{-x}dz)$, and the $S^3$ coframe is global. Consequently the time-only $G,N$ descend to the fixed quotients. Positivity on the closed intervals follows directly from (BF-01).
 
-\code{script/scripts/paper07/finite_fate_branch_witness.py} independently
-reproduces the above directions and classification, within the finite Palatini
-branch / homogeneous minisuperspace scope.  The result is based on the final
-branch construction.
+\subsection{Central-nonzero Nil basis and tensor grade}
 
-\subsection{Minisuperspace closure verification}
-\label{app:finite:closure}
+\stepcounter{equation}\begin{equation}\tag{NF-01}\label{eq:NF-01}
+\begin{aligned}
+\mu&=m/P_0,\quad m\in\mathbb Z\setminus\{0\},\quad 0\le r<|m|,\quad P_0=2\pi,\\
+\Phi_{m,r,n}&=\sqrt{P_0}\,e^{i\mu z}\sum_{k\in\mathbb Z}
+ e^{i(r+km)y}f_n\!\left(x+\frac{r+km}{\mu}\right),\\
+f_n(v)&=\frac{(|\mu|/\pi)^{1/4}}{\sqrt{2^nn!}}
+ H_n(\sqrt{|\mu|}v)e^{-|\mu|v^2/2}.
+\end{aligned}
+\end{equation}
 
-DBR closure of the lever-complete ansatz (log-scale variables $l_{a}$, conjugate
-momenta $p_{a}$, lapse $N$):
-\begin{itemize}
-  \item closure including the Hamiltonian constraint holds (lapse elimination
-        after closure);
-  \item the trace-free tangent norm of the DeWitt metric is positive
-        (minisuperspace no-ghost);
-  \item the configuration degrees of freedom of the homogeneous anisotropy
-        $=2$.
-\end{itemize}
+Use normalized measure $dx\,dy\,dz/P_0^4$. The lattice shift in $x$ reindexes the sum, and the $y,z$ periods give integer phases, so (NF-01) descends to the quotient. Distinct $r,m$ are orthogonal. Unfolding the sum of $x$ intervals to the real line reduces normalization to that of $f_n$.
 
-\subsection{Scope and limitations (finite-fate sector)}
-\label{app:finite:scope}
+\stepcounter{equation}\begin{equation}\tag{NF-02}\label{eq:NF-02}
+\begin{aligned}
+(X-iY)\Phi_n&=\sqrt{2\mu n}\,\Phi_{n-1},&
+(X+iY)\Phi_n&=-\sqrt{2\mu(n+1)}\,\Phi_{n+1},&Z\Phi_n&=i\mu\Phi_n\quad(m>0),\\
+\theta^\pm&=(\sigma^1\pm i\sigma^2)/\sqrt2,&\theta^0&=\sigma^3,& L&=n+\mathrm{sign}(m)s.
+\end{aligned}
+\end{equation}
 
-\begin{itemize}
-  \item The walls are established within the finite Palatini branch.  This is not
-        called a full nonlinear lift/mass theorem.
-  \item The energy-density-expansion classification is not identified with a
-        Hamiltonian-constraint theorem / stationarity decision.
-  \item The finite moduli count ($\Tthree$:3, $\Nilthree$:1, $\Solthree$:0) is
-        not identified with $\dzero$ (3, 2, 1).
-  \item The minisuperspace no-ghost is not reread as a full field-theory
-        no-ghost.
-\end{itemize}
+The symmetric tensor basis is $\theta^+\theta^+$, $(\theta^+\theta^0+\theta^0\theta^+)/\sqrt2$, $(\theta^+\theta^-+\theta^-\theta^+)/\sqrt2$, $\theta^0\theta^0$ and the two negative-spin partners, with spins $2,1,0,0,-1,-2$. For $m>0$ only components with $n=L-s\ge0$ exist. The LRS background has spin zero; ladder moves and tensor-spin moves preserve $L$. Applying the same rule to metric, momentum, lapse, shift and Cartan tensors closes a finite block. Complex conjugation gives $m<0$, with $r\mapsto-r\bmod|m|$ and $s\mapsto-s$.
+
+The spin is a local rotation grading, not an additional global rotation KID of the quotient. Non-LRS coefficients couple $n$ to $n\pm2$ and destroy this finite-grade closure; this does not exclude other non-LRS analyses. At $m=0$ the usual base Fourier basis applies.
+
+\subsection{Fixed Sol lattice and unfolding}
+
+\stepcounter{equation}\begin{equation}\tag{SF-01}\label{eq:SF-01}
+\begin{aligned}
+\varphi&=(1+\sqrt5)/2,\quad\lambda=\varphi^2,\quad L_{\rm Sol}=\log\lambda,\\
+S&=\frac1{\sqrt{1+\varphi^2}}\begin{pmatrix}1&-\varphi\\\varphi&1\end{pmatrix},\quad
+D=\mathrm{diag}(\lambda^{-1},\lambda),\quad SA=DS,\\
+q&=2\pi S(n_1,n_2)^T=(k_0,l_0)^T,\qquad q_j=(D^T)^jq,\\
+k_0l_0&=\frac{4\pi^2}{\sqrt5}(n_1^2-n_1n_2-n_2^2)\ne0\quad(n\ne0).
+\end{aligned}
+\end{equation}
+
+The fiber lattice is $S\mathbb Z^2$ with area one. The integer quadratic form in (SF-01) cannot vanish for a nonzero integer pair, so every nonzero dual orbit has both fiber components. Continuous covectors on a fiber axis are not modes of this fixed quotient.
+
+\stepcounter{equation}\begin{equation}\tag{SF-02}\label{eq:SF-02}
+\begin{aligned}
+U_qf&=\sqrt{L_{\rm Sol}}\sum_{j\in\mathbb Z}f(x+jL_{\rm Sol})
+ e^{i(\lambda^{-j}k_0y+\lambda^jl_0z)},\\
+D_1&=\partial_\xi,\quad D_2=iK,\quad D_3=iM,
+\qquad K=k_0e^{-\xi},\quad M=l_0e^\xi,\\
+\mathcal D&=\{f:e^{a|\xi|}\partial_\xi^bf\in L^2(\mathbb R) \text{for all integers }a,b\ge0\}.
+\end{aligned}
+\end{equation}
+
+For normalized measure $dx\,dy\,dz/L_{\rm Sol}$, $U$ is an isometry from $L^2(\mathbb R)$ onto the orbit space, by deck reindexing and fiber orthogonality. All coefficients, derivatives and formal adjoints are treated on $\mathcal D$, with zero boundary terms. Smooth compactly supported functions and Hermite functions belong to this core. This does not specify a closed operator extension or prove wellposedness.
+
+\stepcounter{equation}\begin{equation}\tag{SF-03}\label{eq:SF-03}
+[D_1,D_2]=-D_2,\quad[D_1,D_3]=D_3,\quad
+e^\xi\psi_0= e^{1/4}\sum_{n=0}^{\infty}\frac{\psi_n}{2^{n/2}\sqrt{n!}}.
+\end{equation}
+
+Every coefficient in (SF-03) is nonzero, so no finite Hermite truncation is exactly closed. The infinite orbit is closed under all tensor components, constraints, gauge and evolution. Its conjugate orbit completes a real field. Fiber-zero modes instead use periodic base Fourier functions and form a distinct sector.
+
+\subsection{Wigner blocks and reality on the three-sphere}
+
+\stepcounter{equation}\begin{equation}\tag{TF-01}\label{eq:TF-01}
+\begin{aligned}
+Y^j_{mn}&=\sqrt{2j+1}\,D^j_{mn},\quad d=2j+1,\quad
+\overline{Y^j_{mn}}=(-1)^{m-n}Y^j_{-m,-n},\\
+D_a&=2iJ_a,\quad[D_a,D_b]=-2\epsilon_{abc}D_c,\quad
+\sum_aD_a^2=-4j(j+1)I.
+\end{aligned}
+\end{equation}
+
+Normalize Haar measure by the volume. Expand each of the six metric coefficients in the background coframe over all right indices. The left index supplies multiplicity; a complete real block at fixed $j$ contains $d^2$ real scalar components. Tensor coefficients obey the corresponding conjugation condition in (TF-01). We classify only $j=0,1/2,1,3/2$ explicitly and use $j=3/2$ for complete reconstruction.

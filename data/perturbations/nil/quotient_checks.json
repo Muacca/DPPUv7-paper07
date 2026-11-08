@@ -1,0 +1,225 @@
+{
+  "checks": [
+    {
+      "name": "deck/reality/ladder and tail -2,0,0",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode -2,0,0",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail -2,0,1",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode -2,0,1",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail -2,0,2",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode -2,0,2",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail -2,0,4",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode -2,0,4",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail -2,1,0",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode -2,1,0",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail -2,1,1",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode -2,1,1",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail -2,1,2",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode -2,1,2",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail -2,1,4",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode -2,1,4",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail -1,0,0",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode -1,0,0",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail -1,0,1",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode -1,0,1",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail -1,0,2",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode -1,0,2",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail -1,0,4",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode -1,0,4",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail 1,0,0",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode 1,0,0",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail 1,0,1",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode 1,0,1",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail 1,0,2",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode 1,0,2",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail 1,0,4",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode 1,0,4",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail 2,0,0",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode 2,0,0",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail 2,0,1",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode 2,0,1",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail 2,0,2",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode 2,0,2",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail 2,0,4",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode 2,0,4",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail 2,1,0",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode 2,1,0",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail 2,1,1",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode 2,1,1",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail 2,1,2",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode 2,1,2",
+      "passed": true
+    },
+    {
+      "name": "deck/reality/ladder and tail 2,1,4",
+      "passed": true
+    },
+    {
+      "name": "normalized Haar mode 2,1,4",
+      "passed": true
+    }
+  ],
+  "max_mode_identity_error": 1.4895204919483639e-15,
+  "max_normalization_error": 4.440892098500626e-16,
+  "mode_errors": {
+    "-2,0,0": 5.551115123125783e-16,
+    "-2,0,1": 5.551115123125783e-16,
+    "-2,0,2": 1.3877787807814457e-16,
+    "-2,0,4": 4.002966042486721e-16,
+    "-2,1,0": 2.482534153247273e-16,
+    "-2,1,1": 9.155133597044475e-16,
+    "-2,1,2": 5.551115123125783e-16,
+    "-2,1,4": 6.661338147750939e-16,
+    "-1,0,0": 2.7755575615628914e-16,
+    "-1,0,1": 4.002966042486721e-16,
+    "-1,0,2": 4.710277376051325e-16,
+    "-1,0,4": 8.95090418262362e-16,
+    "1,0,0": 2.7755575615628914e-16,
+    "1,0,1": 4.002966042486721e-16,
+    "1,0,2": 4.710277376051325e-16,
+    "1,0,4": 1.0053497077208614e-15,
+    "2,0,0": 5.551115123125783e-16,
+    "2,0,1": 5.551115123125783e-16,
+    "2,0,2": 3.1401849173675503e-16,
+    "2,0,4": 1.4895204919483639e-15,
+    "2,1,0": 2.482534153247273e-16,
+    "2,1,1": 9.305364597889227e-16,
+    "2,1,2": 9.036560719766055e-16,
+    "2,1,4": 1.1102230246251565e-15
+  },
+  "scope": "Numerical control of the analytic deck/reindex, conjugation, ladder and normalization derivations. Summation cut 10 compared with 14. Not a numerical proof of all oscillator levels or all central indices."
+}

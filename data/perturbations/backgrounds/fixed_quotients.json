@@ -1,0 +1,194 @@
+{
+  "checks": [
+    {
+      "name": "Nil deck 0 preserves coframe",
+      "passed": true
+    },
+    {
+      "name": "Nil deck 1 preserves coframe",
+      "passed": true
+    },
+    {
+      "name": "Nil deck 2 preserves coframe",
+      "passed": true
+    },
+    {
+      "name": "Nil only central continuous Killing direction descends",
+      "passed": true
+    },
+    {
+      "name": "Sol base deck preserves coframe",
+      "passed": true
+    },
+    {
+      "name": "Sol no continuous Killing direction descends for lambda!=1",
+      "passed": true
+    },
+    {
+      "name": "fixed hyperbolic monodromy determinant",
+      "passed": true
+    },
+    {
+      "name": "fixed expanding eigenvalue",
+      "passed": true
+    },
+    {
+      "name": "Nil coordinate Ricci 00",
+      "passed": true
+    },
+    {
+      "name": "Nil coordinate Ricci 01",
+      "passed": true
+    },
+    {
+      "name": "Nil coordinate Ricci 02",
+      "passed": true
+    },
+    {
+      "name": "Nil coordinate Ricci 03",
+      "passed": true
+    },
+    {
+      "name": "Nil coordinate Ricci 11",
+      "passed": true
+    },
+    {
+      "name": "Nil coordinate Ricci 12",
+      "passed": true
+    },
+    {
+      "name": "Nil coordinate Ricci 13",
+      "passed": true
+    },
+    {
+      "name": "Nil coordinate Ricci 22",
+      "passed": true
+    },
+    {
+      "name": "Nil coordinate Ricci 23",
+      "passed": true
+    },
+    {
+      "name": "Nil coordinate Ricci 33",
+      "passed": true
+    },
+    {
+      "name": "Sol coordinate Ricci 00",
+      "passed": true
+    },
+    {
+      "name": "Sol coordinate Ricci 01",
+      "passed": true
+    },
+    {
+      "name": "Sol coordinate Ricci 02",
+      "passed": true
+    },
+    {
+      "name": "Sol coordinate Ricci 03",
+      "passed": true
+    },
+    {
+      "name": "Sol coordinate Ricci 11",
+      "passed": true
+    },
+    {
+      "name": "Sol coordinate Ricci 12",
+      "passed": true
+    },
+    {
+      "name": "Sol coordinate Ricci 13",
+      "passed": true
+    },
+    {
+      "name": "Sol coordinate Ricci 22",
+      "passed": true
+    },
+    {
+      "name": "Sol coordinate Ricci 23",
+      "passed": true
+    },
+    {
+      "name": "Sol coordinate Ricci 33",
+      "passed": true
+    }
+  ],
+  "Nil_descending_killing": "{(0, 0, c, 0)}",
+  "Sol_descending_killing": "{(0, 0, 0)}",
+  "KID": {
+    "Nil": {
+      "K_squared": "(8*u**8 + (u**4 - 1)**2)/(9*u**2*(u**4 + 1)**3)",
+      "nonzero_principal_K": "2*u**3/(3*(u**4 + 1)**(3/2))",
+      "argument": "CMC KID trace: integrate N(-Delta+KijKij)N=0; on the selected interval KijKij>0, hence lapse N=0",
+      "global_dimension": 1
+    },
+    "Sol": {
+      "K_squared": "((4*t**2 - 1)**2 + 8)*exp(-t**2)/(16*t**(3/2))",
+      "nonzero_principal_K": "exp(-t**2/2)/(2*t**(3/4))",
+      "argument": "CMC KID trace: integrate N(-Delta+KijKij)N=0; on the selected interval KijKij>0, hence lapse N=0",
+      "global_dimension": 0
+    },
+    "S3": {
+      "K_squared": "2*tau**2*(-(tau**2 - 1)**2 - 2)/((tau**2 - 1)*(tau**2 + 1)**3)",
+      "nonzero_principal_K": "tau/(sqrt(-1/(tau**2 - 1))*(tau**2 + 1)**(3/2))",
+      "argument": "CMC KID trace: integrate N(-Delta+KijKij)N=0; on the selected interval KijKij>0, hence lapse N=0",
+      "global_dimension": 4
+    }
+  },
+  "coordinate_Ricci": {
+    "Nil": [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "Sol": [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "scope": "S3 uses the known full SU(2)xU(1) spatial isometry algebra of biaxial Taub; no S3 perturbation computed",
+  "verdict": "FIXED_QUOTIENTS_AND_CMC_KID_BOUNDARIES_VERIFIED"
+}

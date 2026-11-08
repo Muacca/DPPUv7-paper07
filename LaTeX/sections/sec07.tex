@@ -1,118 +1,70 @@
-%==============================================================================
-% Section 7: Finite fate of the zero kernel
-%==============================================================================
-\section{Finite fate of the zero kernel}
-\label{sec:finite}
+\section{Compact conditions and local integrability}
 
-After finding $\dzero$ non-propagating kernel directions at quadratic order, the
-natural question is whether these are flat directions (moduli) under finite
-deformation, or are blocked by walls at finite amplitude.  This section answers
-that question \emph{within the finite Palatini branch / homogeneous
-minisuperspace scope}.  \emph{This section is a supporting result and is not part
-of Theorem~\ref{thm:rankdefect} (the quadratic theorem).}
+\subsection{Four flat-torus conditions and the existing theorem}
 
-\subsection{Classification: exact moduli versus curvature walls}
-\label{sec:finite:classification}
+Add a zero-mean TT field $\gamma$ to the homogeneous volume velocity $h$ and tracefree shear $\Sigma$ of Paper06, and spatially integrate the original constraints to second order. Time translation and three spatial translations give
 
-For a finite deformation $\beta\mapsto\text{finite value}$ along a kernel
-direction, we reconstruct a background-adapted static Palatini branch and verify
-the finite expansion (symbolic, up to fourth order) of the reduced energy
-density $\Delta(\beta)$.  The result is the following dichotomy:
+\stepcounter{equation}\begin{equation}\tag{W-03}\label{eq:W-03}
+\begin{aligned}6h^2&=\mathrm{tr}(\Sigma^2)+\frac14\left\langle\dot\gamma_{ij}^2+q_0^{-2}(\partial_a\gamma_{ij})^2\right\rangle,\\ 0&=\left\langle\dot\gamma_{ij}\partial_a\gamma_{ij}\right\rangle\quad(a=1,2,3).\end{aligned}
+\end{equation}
 
-\begin{itemize}
-  \item \textbf{Exact modulus}: $\Delta(\beta)=0$ holds exactly at all orders of
-        the expansion (a flat direction persisting under finite deformation).
-  \item \textbf{Curvature wall}: $\Delta(\beta)$ develops a curvature-induced
-        non-zero term (including a tadpole), and no stationary finite-deformation
-        branch exists.
-\end{itemize}
+There are no further KIDs on the fixed flat torus. For smooth periodic linearized vacuum data on its boundaryless CMC Cauchy slice, Theorem 3.3 of Arms, Marsden and Moncrief makes (W-03) necessary and sufficient for tangency to a local exact vacuum family \cite{ArmsMarsdenMoncrief1982}. Appendix D specifies function spaces, KIDs and normalization of the theorem's cones.
 
-\paragraph{Key points at the level of formulas (finite Palatini branch /
-homogeneous minisuperspace).}
-\begin{itemize}
-  \item \textbf{$\Tthree$}: the spatial scalar curvature vanishes identically.
-        Hence $\Delta(\beta)\equiv0$ for any kernel direction (exact flat
-        homogeneous branch).
-  \item \textbf{$\Nilthree$ $\beta_{-}$}: along the tangent vector
-        $(\tfrac12,-\tfrac12,0)$ in the Milnor frame, $\Delta(\beta_{-})=0$
-        (residual $0$ up to fourth order; exact modulus).  The closed-form branch
-        formula is in Appendix~\ref{app:finite:beta}.
-  \item \textbf{$\Nilthree$ $\beta_{+}/u$}: along $(-\tfrac12,-\tfrac12,1)$ a
-        curvature-induced linear term (tadpole) remains in the reduced energy; a
-        curvature wall.
-  \item \textbf{$\Solthree$ $\beta_{x}$}: along $(\tfrac13,-\tfrac16,-\tfrac16)$
-        a non-zero term remains; no stationary branch (curvature wall).
-\end{itemize}
+Sufficiency comes from the existing theorem, not from a finite check of averages. Higher-order corrections may introduce new spatial harmonics. The statement does not address two-endpoint boundary data, global-in-time regularity or nonlinear stability. Lifting by the LC connection gives a local family in the same nondegenerate EC theory with constant complete NY coupling.
 
-\begin{table}[H]
-\centering
-\begingroup
-\renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\linewidth}{lrrrY}
-\toprule
-Topology & $\dzero$ & Exact moduli & Curvature wall & Remarks \\
-\midrule
-$\Tthree$ & 3 & 3 & 0 & exact flat homogeneous moduli \\
-$\Nilthree$ & 2 & 1 ($\beta_{-}$) & 1 ($\beta_{+}/u$) &
-$\beta_{-}$ exact modulus (residual $0$ to fourth order); $\beta_{+}$ wall with
-tadpole \\
-$\Solthree$ & 1 & 0 & 1 ($\beta_{x}$) & stationary branch absent \\
-$\Sthree$ & 0 & 0 & 0 & $\dzero=0$ endpoint (not applicable) \\
-\bottomrule
-\end{tabularx}
-\endgroup
-\caption{Modulus/wall split (finite Palatini branch / homogeneous minisuperspace
-scoped).}
-\label{tab:modulus}
-\end{table}
+At $\gamma=0$ one recovers the homogeneous cone (T-01). Positive energy excludes pure-wave directions with $h=\Sigma=0$, while mixed directions with volume velocity can be nontrivial. A standing wave $A\cos x\cos t$ has $E=A^2$, zero translation charges and $h^2=A^2/24$. A traveling wave $A\cos(x-t)$ has $E=2A^2$, $P_x=-A^2$ and needs compensating momentum.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.95\textwidth]{figures/fig05_Modulus_wall-split.png}
-  \caption{Modulus/wall split across the four topologies.  The correspondence
-    between the quadratic kernel dimension $\dzero$ and the exact moduli /
-    curvature walls on the finite Palatini branch is shown.  $\dzero$ is
-    preserved as rank-defect data and does not in general equal the finite moduli
-    count (they agree only for $\Tthree$).  \emph{Scope}: the wall checks are
-    restricted to the finite Palatini branch / homogeneous minisuperspace; this
-    is not a full nonlinear lift theorem.}
-  \label{fig:modulus}
+\begin{figure}[htbp]\centering\includegraphics[width=.92\textwidth]{figures/fig02_compact_constraint.pdf}
+\caption{Energy section of (W-03). Together with the three translation conditions it is necessary and sufficient for local integrability under the stated flat-torus hypotheses.}\label{fig:fig02_compact_constraint}
 \end{figure}
 
-\subsection{Minisuperspace DBR closure}
-\label{sec:finite:minisuperspace}
+\subsection{Explicit second-order standing-wave corrections}
 
-The consistency of this classification was verified with the DBR closure of a
-lever-complete homogeneous minisuperspace ansatz including the lapse, the
-Hamiltonian constraint, and the DeWitt metric.  The results: (i) the closure
-including the Hamiltonian constraint holds; (ii) the DeWitt norm of the
-trace-free tangent directions is positive (minisuperspace no-ghost); and (iii)
-the configuration degrees of freedom of the homogeneous anisotropy are $2$
-(verification data in Appendix~\ref{app:finite}).
+For $q_0=1$ and periods $2\pi$, expand the exponents of the following metric as $\varepsilon(A_1,B_1,P_1)+\varepsilon^2(A_2,B_2,P_2)$.
 
-\subsection{Mandatory caveats}
-\label{sec:finite:caveats}
+\stepcounter{equation}\begin{equation}\tag{W-04}\label{eq:W-04}
+\begin{aligned}
+ds^2&=e^{2\mathcal A}(-dt^2+dx^2)+e^{2\mathcal B+2\mathcal P}dy^2+e^{2\mathcal B-2\mathcal P}dz^2,\\
+A_1&=B_1=ht,\qquad P_1=\frac a2\cos x\cos t,\qquad h^2=\frac{a^2}{24},\\
+A_2&=\frac{h^2t^2}{2}+\frac{a^2}{32}(1-\cos2t-\cos2x),\\
+B_2&=-h^2t^2-\frac{a^2}{64}\cos2x\cos2t,\\
+P_2&=\frac{ha}{2}(\sin t-t\cos t)\cos x.
+\end{aligned}
+\end{equation}
 
-\begin{itemize}
-  \item \textbf{The finite moduli count is not in general equal to $\dzero$.}
-        They agree only for $\Tthree$ (3$=$3); for $\Nilthree$ the exact modulus
-        is $1$ against $\dzero=2$.  $\dzero$ is preserved as rank-defect data
-        (the dimension of the quadratic kernel) and is a different quantity from
-        the finite modulus count.
-  \item \textbf{The wall checks are established within the finite Palatini
-        branch}, and are not a full nonlinear lift theorem or mass theorem.  No
-        extension to the time-dependent full DBR dynamics or to the inhomogeneous
-        sector is made.
-  \item \textbf{The minisuperspace no-ghost is not a full field-theory no-ghost}
-        (the analysed scope of the latter is Section~\ref{sec:spectral}).
-  \item The energy-density-expansion classification and the stationarity decision
-        in the branch reconstruction are distinct checks, presented separately in
-        Appendix~\ref{app:finite}.
-\end{itemize}
+For either sign of $h$, every first- and second-order Ricci coefficient vanishes. Zero, original and doubled wavevectors are retained; the truncated expression is not an exact finite-amplitude solution. For two nonparallel standing waves, $h^2=(a^2+b^2)/24$ and Appendix D constructs sources and corrections in all thirteen generated wavevectors. Polynomial and resonant time terms are retained, giving $O(\varepsilon^3)$ residuals on fixed finite intervals.
 
-\subsection{Torsion non-contamination (corollary)}
-\label{sec:finite:torsion}
+\subsection{The central condition on Nil}
 
-The torsion modes (EH/AX/VT/MX) do not change this modulus/wall split.  This is
-a corollary of the triviality of the torsion auxiliary shell (not an independent
-dynamical check); its precise statement is in Section~\ref{sec:torsion}.
+The curved backgrounds (BF-01) are CMC with $K_{ij}K^{ij}>0$. A compact integral identity forces the KID lapse to vanish. Spatial Killing fields descending to the fixed quotient give one central KID on Nil, none on Sol and four on Taub $S^3$. The central charge vanishes identically in the Nil $m=0$ sector but is nontrivial for $m\ne0$:
+
+\stepcounter{equation}\begin{equation}\tag{K-01}\label{eq:K-01}
+\mathcal Q_Z=-2\sum_{m>0,r,L}\mu\thinspace\mathrm{Im}(\Pi^\dagger Q)=0,
+\qquad \mu=\frac{m}{2\pi}.
+\end{equation}
+
+Conjugate sectors add rather than cancel. The condition applies to the sum over blocks; individual charges need not vanish. For $L=2$, $Q=(1,0)$, $\Pi=(i,0)$ satisfies linear constraints but has charge $2\mu$. Nontrivial zero-charge linear examples also exist, without establishing nonlinear lifting sufficiency or second-order Einstein corrections here.
+
+\subsection{KIDs and periodic reconstruction on Sol}
+
+The fixed Sol quotient has no global KID, so neither the four flat-torus conditions nor the Nil central condition is added to a general orbit. Periodic reconstruction in the fiber-independent Gowdy representation involves the second-order mean correction $\langle\delta p_P^{(2)}\rangle$ of (KG-03). Fixing that correction to zero leaves a source condition on the first-order fields, not a common KID obstruction of the general fiber-dependent system. Nonlinear products generate zero modes and other orbits; their lifting is a separate problem.
+
+\subsection{Four conditions on Taub three-spheres}
+
+\stepcounter{equation}\begin{equation}\tag{K-02}\label{eq:K-02}
+\mathcal Q_X=\int_{S^3}p^{ij}\mathcal L_Xh_{ij}\,d\mu=0,
+\qquad X\in\mathfrak{su}(2)\oplus\mathfrak u(1).
+\end{equation}
+
+The three left $SU(2)$ conditions act on left coefficient indices. The axial $U(1)$ condition includes tensor-frame rotation as well as the right derivative. The adjoint kernels at $j=0,1$ correspond to these KIDs. A finite-time $j=3/2$ example satisfies local linear constraints and all four quadratic necessary conditions, without proving nonlinear lifting for arbitrary data, all-$j$ estimates or horizon stability.
+
+
+\subsection{Domains of the conditions}
+
+\begin{center}\small\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}\toprule
+Background & Global KIDs & Conclusion here\\\midrule
+Fixed flat $T^3$ & 4 & Necessary and sufficient for local integrability under the stated hypotheses\\
+Nil LRS & 1 & Quadratic necessary central-charge condition\\
+Fixed Sol & 0 & No KID obstruction; lifting sufficiency not established here\\
+$S^3$ Taub & 4 & Four quadratic necessary conditions\\
+\bottomrule\end{tabularx}\end{center}

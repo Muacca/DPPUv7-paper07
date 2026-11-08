@@ -1,110 +1,174 @@
-%==============================================================================
-% Appendix G: Torsion auxiliary exactness and field-promotion verification
-%==============================================================================
-\section{Torsion auxiliary exactness and field-promotion verification}
-\label{app:torsion}
+\section{Constraint operators, reduction and reconstruction}
 
-This appendix collects the verification details of Section~\ref{sec:torsion}.
-The scope is the NY-MAIN route and the $\AX/\VT/\MX$ torsion ansatz scalars.
+\subsection{Common construction}
 
-\subsection{Polynomial-degree verification (exact degree-2)}
-\label{app:torsion:degree}
-
-Organising the reduced torsion Lagrangian into the form of
-Section~\ref{sec:torsion:shell},
-\begin{equation}
-  \Laux= a_{\eta}\,\eta^{2} + a_{V}\,V^{2} + b_{V}\,\dot{\vol}\,V
-        + \text{(boundary)},
+\stepcounter{equation}\begin{equation}\tag{RG-01}\label{eq:RG-01}
+\begin{aligned}
+\mathcal H[N]&=\int N\left[\frac{\pi^{ij}\pi_{ij}-\pi^2/2}{\sqrt g}-\sqrt g\,R\right],\\
+\mathcal H[X]&=\int\pi^{ij}\mathcal L_Xg_{ij},\qquad
+Cz=\delta(\mathcal H_\perp,\mathcal H_i),\qquad
+H=\delta^2\mathcal H[N],\\
+S^{[2]}&=\int dt\,[p^\dagger\dot h-\tfrac12z^\dagger Hz-\alpha^\dagger Cz].
+\end{aligned}
 \end{equation}
-we expanded it symbolically as a polynomial in $(\eta,V)$ up to degree
-$D_{\max}=4$.  Since all coefficients of degree $\ge3$ are identically $0$
-(residual zero), it is exactly at most quadratic in $(\eta,V)$.
 
-The Euler--Lagrange equations give algebraically $\eta^{\ast}=0$, $V^{\ast}=0$
-(the linear term in $V$ separates to the boundary as
-$2\,\dd_{t}(\vol\cdot V)$), an \emph{exact auxiliary shell} with no truncation.
-The auxiliary Hessian (the torsion mass datum) is non-negative, consistent with
-the stability of the shell.
+Complex sectors are paired with their conjugates to give a real action. The Hamiltonian row of $C$ includes the background lapse because its multiplier is $\delta N/N$. Vary (RG-01) in the fixed frame, retaining its structure constants in Lie and covariant derivatives. For example, $\delta\Gamma=G^{-1}(\nabla h+\nabla h-\nabla h)/2$ and $\delta\mathrm{Ric}=\nabla\delta\Gamma-\nabla\delta\Gamma$ generate the spatial Hessian. These formulas define the public matrices reproducibly.
 
-\subsection{Field-promotion derivative-coupling classification}
-\label{app:torsion:promotion}
-
-For the promotion $\eta(t)\to\eta(x)$, $V(t)\to V(x)$, we classified the
-derivative couplings arising in the EC+NY action by sector (EC/NY) $\times$
-topology (4) $\times$ mode (AX/VT/MX) $\times$ derivative type
-(time/spatial/mixed) $\times$ degree (128 cells in total).  The results:
-
-\begin{table}[H]
-\centering
-\begingroup
-\renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\linewidth}{lLY}
-\toprule
-Derivative type & Quadratic (kinetic/gradient) & Linear \\
-\midrule
-Time ($\dot\eta,\dot V$) & \textbf{absent (all cells)} &
-boundary-type current only: EC $2\,\vol\cdot\dot V$ / NY
-$6\,\vol^{2/3}\,\dot\eta$ \\
-Spatial ($\partial_{i}\eta,\partial_{i}V$) & \textbf{absent (all cells)} &
-\textbf{even a linear term absent (all cells)} \\
-Mixed & absent & absent \\
-\bottomrule
-\end{tabularx}
-\endgroup
-\caption{Field-promotion derivative-coupling classification.}
-\label{tab:coupling}
-\end{table}
-
-No quadratic derivative coupling appears at all.
-
-\paragraph{Structural reason.}
-With $\Gamma=\Gamma_{\mathrm{LC}}+K(\eta,V)$ and
-$R[\Gamma]=\dd\Gamma+\Gamma\wedge\Gamma$: if $K$ is algebraic in $\eta,V$ then
-$dK$ is first order in the field derivative, and in the scalar contraction of
-$\Delta R$ the quadratic derivative couplings cancel structurally
-(Section~\ref{sec:torsion:promotion}).  At the level of the Riemann components
-(24 components) individual derivative terms fire, but they cancel under the scalar
-contraction, as confirmed by a symbolic computation of the component sum.
-
-\paragraph{Cross-check.}
-The same classification procedure applied to a free-scalar toy Lagrangian was
-confirmed to detect the kinetic term correctly.  Reproduction:
-\code{script/scripts/paper07/torsion_auxiliary_field_promotion_witness.py}
-(no claim about a full 24-component torsion field theory).
-
-\subsection{Minimal definition of the NY boundary three-form (precision)}
-\label{app:torsion:ny}
-
-The NY four-form, in our convention, has a boundary three-form $\QNY$ satisfying
-\begin{equation}
-  \dd\QNY=e_{I}\wedge e_{J}\wedge R^{IJ}-T^{I}\wedge T_{I}
+\stepcounter{equation}\begin{equation}\tag{RG-02}\label{eq:RG-02}
+\begin{aligned}
+CJC^\dagger&=0,\quad \dot C+CJH=BC,\quad
+CE=GE=0,\quad E^\dagger\Omega E=\Omega_r,\\
+H_r&=E^\dagger HE-E^\dagger\Omega\dot E,\quad
+\dot z=JHz+JC^\dagger\alpha,\\
+\alpha&=-(GJC^\dagger)^{-1}(\dot GE+GJHE)y,\qquad z=Ey.
+\end{aligned}
 \end{equation}
-(this identity is confirmed to have residual zero under our convention).  The
-NY-side time-linear current $6\,\vol^{2/3}\dot\eta$ of
-\ref{app:torsion:promotion} equals the time derivative of the $\QNY$ primitive,
-consistent with its boundary nature.  $\QNY$ is used only within this minimal
-definition and is not introduced as an object of the main text (the physics of
-boundary charge is outside the scope of this paper).
 
-\subsection{Corollary (finite-fate invariance)}
-\label{app:torsion:corollary}
+Select independent constraint rows at constant rank and impose $G$. The time derivative of $E$ in (RG-02) is essential on an evolving background, even when its contribution vanishes in a particular gauge. An independent four-dimensional Einstein variation checks the reconstructed spatial equations and time components proportional to constraints. The public coefficients expand and check this derivation.
 
-Since $\Laux|_{\mathrm{shell}}=0$ on the auxiliary shell, the modulus/wall
-decision of Appendix~\ref{app:finite} is invariant under all of EH/AX/VT/MX (a
-corollary; not an independent dynamical check).
+\subsection{Nonzero base modes on Nil}
 
-\subsection{Scope and limitations (torsion sector)}
-\label{app:torsion:scope}
+\stepcounter{equation}\begin{equation}\tag{NG-01}\label{eq:NG-01}
+\begin{aligned}
+Gz=0:&\quad h_{12}=h_{13}=0,\quad h_{22}/A+h_{33}/B_0=0,
+\quad2A\delta\pi^{11}+2\pi^{11}_0h_{11}=0,\\
+P&=h_{33}/B_0,\quad Q=h_{23}/B_0,\quad B_0=16u^2/(9A),\\
+\Pi_P&=-A\delta\pi^{22}+B_0\delta\pi^{33}
++(A\pi^{22}_0+B_0\pi^{33}_0)P,\\
+\Pi_Q&=B_0p_{23}+2B_0\pi^{22}_0Q.
+\end{aligned}
+\end{equation}
 
-\begin{itemize}
-  \item This decision is for the field promotion of the $\AX/\VT/\MX$ ansatz
-        scalars, not a $(\partial T)^{2}$-absence theorem for a full 24-component
-        torsion field theory.
-  \item A linear boundary current is not called a kinetic/propagating mode.
-  \item The exact-degree-2 / exact-shell claim is restricted to the NY-MAIN route
-        (no automatic extension to other routes).
-  \item No torsional-charge theorem / quantised charge / localisation is claimed.
-  \item The homogeneous auxiliary persistence (\ref{app:torsion:degree}) and the
-        field-promotion verification (\ref{app:torsion:promotion}) are separate
-        layers; the latter does not reprove the former (it is an extension).
-\end{itemize}
+\stepcounter{equation}\begin{equation}\tag{NG-02}\label{eq:NG-02}
+\begin{aligned}
+P_{uu}+u^{-1}P_u+9(k^2+2\zeta)P-18ik\zeta Q&=0,\\
+Q_{uu}+(u^{-1}+2\bar P_u)Q_u+9k^2Q+18ikP&=0,\\
+\bar P=\log\frac{4u}{3(1+u^4)},\quad \zeta=e^{2\bar P},\quad R=4u/3,&\qquad k\ne0.
+\end{aligned}
+\end{equation}
+
+These expressions align the base wavevector with one axis; the corresponding polarization rotation is restored for a general integer base direction. The chosen constraint minor is $-128ik^3u^5(1+u^4)/9$ and the gauge minor is $256ik^3u/81$, nonzero throughout the interval. Substitution of (NG-01) in (RG-02) gives (N-01) and then (NG-02). Off-diagonal spatial terms mix the cosine and sine quadratures. The interval bound $k^2-2\zeta\ge1/9$ does not define a time-independent conserved energy.
+
+\subsection{Central-nonzero Nil blocks}
+
+Expand (RG-01) in the basis (NF-02), including only multipliers present at each grade. Solve selected independent momentum columns from the constraints and fix their conjugate metric columns by gauge. Every existing constraint row has full rank. With $b=\sqrt\mu>0$, explicit minors at $L=-1,0,1,2$ are as follows; $L=-2$ has no constraint row.
+
+\stepcounter{equation}\begin{equation}\tag{NG-03}\label{eq:NG-03}
+\begin{aligned}
+M_{-1}&=2b(1+u^4),\qquad M_0=-256b^3u^5/9,\\
+M_1&=-\frac{512b^3u^3[9b^2u^2(1+u^4)^2+12u^4+4]}{81(1+u^4)},\\
+M_2&=-2048b^3u^5(1+u^4)/9.
+\end{aligned}
+\end{equation}
+
+For general $L\ge2$ there are six metric components and four multipliers. Finite closure identifies an adjoint kernel with a KID in the same central-nonzero sector, whereas the only quotient KID is the central-zero field $Z$. Thus all four constraints are independent, leaving two complex pairs. This structural argument is distinct from explicit matrices at five grades. The lower-end reduction comes from absent $n<0$ components, not a KID rank defect.
+
+\stepcounter{equation}\begin{equation}\tag{NG-04}\label{eq:NG-04}
+H_{r,-2}=-2\begin{pmatrix}
+\dfrac{81\mu^2A^2-144\mu u^2+64}{72uA^2}&\dfrac{2(u^4-1)}{uA}\\[4pt]
+\dfrac{2(u^4-1)}{uA}&\dfrac{9A^2}{2u}
+\end{pmatrix}.
+\end{equation}
+
+Equation (NG-04) gives the one-pair lowest endpoint explicitly. Its sign in a time-dependent gauge does not by itself classify ghosts or instability. At $L=2$ the reduction, gauge multipliers and all ten Einstein components were independently compared; this four-dimensional check is not claimed uniformly for every grade.
+
+\subsection{Fiber-zero Gowdy sector on Sol}
+
+\stepcounter{equation}\begin{equation}\tag{SG-01}\label{eq:SG-01}
+\begin{aligned}
+ds^2&=-N^2dt^2+e^{2a}(dx+\beta dt)^2
++R[e^P(dy+Qdz)^2+e^{-P}dz^2],\\
+R&=t+\rho,\quad P=2x+p,\quad Q=e^{-2x}r,\quad e^{2a_0}=F,\quad k=2\pi n/L_{\rm Sol},\\
+C_H&=\delta p_R+(t-1/(4t))\delta p_a
++(2-1/(2t^2)-2k^2)\rho+2tikp,\\
+C_x&=-2ik\delta a+ik(-2t-1/(2t))\rho+2\delta p_P-ik\delta p_a.
+\end{aligned}
+\end{equation}
+
+For $n\ne0$, the gauge $\rho=\delta p_a=0$ has determinant $-2ik$. Eliminating $\delta a=\delta p_P/(ik)$ and $\delta p_R=-2tikp$ gives (SO-01). The two equations are $\ddot p+t^{-1}\dot p+k^2p=0$ and $\ddot r+t^{-1}\dot r+(k^2+4)r=0$. The auxiliary metric variable obeys $\ell=4t\dot p/(ik)$ and $\dot\ell=4iktp$.
+
+\subsection{Differential right inverse for a general nonzero Sol orbit}
+
+The following are differential identities on the entire orbit, not inverses of a finite truncation. Transform $h,p$ by $U=\mathrm{diag}(1,1,1,i,i,1)$ and the constraint rows by $\mathrm{diag}(1,1,-i,-i)$ to obtain real coefficients. Primes denote $\xi$ derivatives. Write the momentum part of $C=(C_q,C_p)$ as $C_pp=r$.
+
+\stepcounter{equation}\begin{equation}\tag{SG-02}\label{eq:SG-02}
+\begin{aligned}
+r_0&=A_0p_{11}+p_{22}+p_{33},\quad A_0=F(4t^2-1)/(2t),\\
+r_1&=-2Fp'_{11}+2t(p_{22}-p_{33})+F(Kp_{12}+Mp_{13}),\\
+r_2&=-t(p'_{12}+p_{12}+2Kp_{22}+Mp_{23}),\\
+r_3&=-t(p'_{13}-p_{13}+2Mp_{33}+Kp_{23}).
+\end{aligned}
+\end{equation}
+
+\stepcounter{equation}\begin{equation}\tag{SG-03}\label{eq:SG-03}
+\begin{aligned}
+f&=p_{11},\quad b=Kp_{12}-Mp_{13},\quad V=K^2+M^2,\quad d_0=2-FV/(2t),\\
+a&=\frac{-b'-(K^2-M^2)r_0+A_0(K^2-M^2)f-Vr_1/(2t)-FVf'/t-Kr_2/t+Mr_3/t}{d_0},\\
+p_{22}&=(r_0-A_0f)/2+r_1/(4t)+Ff'/(2t)-Fa/(4t),\\
+p_{33}&=(r_0-A_0f)/2-r_1/(4t)-Ff'/(2t)+Fa/(4t),\\
+p_{12}&=(a+b)/(2K),\quad p_{13}=(a-b)/(2M),\\
+p_{23}&=(-r_2/t-p'_{12}-p_{12}-2Kp_{22})/M.
+\end{aligned}
+\end{equation}
+
+Using (SF-01), $F/t\ge e$ and $V\ge2|k_0l_0|$ gives $d_0\le2-4\pi^2e/\sqrt5<0$ for every nonzero lattice orbit on $1\le t\le2$. Define $E_p$ by setting $r=0$, and $R_p$ by setting $f=b=0$. With $TQ=(Q_1,0,0,KQ_2,-MQ_2,0)$, one obtains the complete splitting below.
+
+\stepcounter{equation}\begin{equation}\tag{SG-04}\label{eq:SG-04}
+\begin{aligned}
+C_pE_p&=0,\quad C_pR_p=I,\quad T^\dagger E_p=I,\quad T^\dagger R_p=0,\\
+E_pT^\dagger+R_pC_p&=I,\qquad Gz=R_p^\dagger h=0,\\
+E&=\begin{pmatrix}T&0\\-R_pC_qT&E_p\end{pmatrix},\quad
+Q=E_p^\dagger h,\quad\Pi=(p_{11},Kp_{12}-Mp_{13}),\\
+GJC^\dagger&=I,\quad GJG^\dagger=0,\quad E^\dagger\Omega E=\Omega_r.
+\end{aligned}
+\end{equation}
+
+The gauge is equivalent to $h_{22}=h_{33}=h_{23}=0$ and $h_{12}/K+h_{13}/M=0$. Here $E^\dagger\Omega\dot E$ vanishes exactly, but $\dot E$ remains in reconstruction. If $R$ is the reconstruction discrepancy, constraint and gauge preservation give $CR=GR=0$, while the reduced equation gives $E^\dagger\Omega R=0$. The complete splitting (SG-04) places $R$ in the range of $E$; nondegeneracy of $\Omega_r$ gives $R=0$. This proof does not require brute-force cancellation of every expanded reconstruction entry.
+
+\stepcounter{equation}\begin{equation}\tag{SG-05}\label{eq:SG-05}
+H_r=\sum_{a=0}^4 A_a(t,\xi)\partial_\xi^a,
+\qquad H_r^\dagger=H_r,\qquad\mathrm{rank}\,A_4=1,\qquad(J_rA_4)^2=0.
+\end{equation}
+
+The public supplement expands all coefficients in (SG-05) and checks the highest-order rank and nilpotence. These facts alone do not imply hyperbolicity or stability.
+
+\subsection{Low-label ranks and reconstruction on the three-sphere}
+
+Per fixed left index, the constraint ranks at $j=0,1/2,1,3/2$ are $3,8,11,16$. Rational polynomial root counts, endpoints and denominators certify nonzero minors throughout $\tau\in[1/4,1/2]$. Restoring left multiplicity and reality gives the complete-block counts in the text. At $j=0$ the two-form on the $\ell,m$ parameter variations is $\left(\begin{smallmatrix}0&-64\\64&0\end{smallmatrix}\right)$; time displacement is pure gauge.
+
+\stepcounter{equation}\begin{equation}\tag{TG-01}\label{eq:TG-01}
+\begin{aligned}
+T_q&=\mathrm{diag}(1,1,1,i,1,i)\otimes\mathrm{diag}(1,\sqrt3,\sqrt3,1),\\
+Gz=0:&\quad h_{11}=h_{22}=h_{33}=h_{13}=0\quad\text{for all right indices},\\
+\det M&=\frac{2^{52}\tau^4(\tau-1)^4(\tau+1)^4
+(\tau^4-6\tau^2+33)^2(3\tau^4+14\tau^2+3)^2}{81(1+\tau^2)^4}.
+\end{aligned}
+\end{equation}
+
+Equation (TG-01) gives the constant basis transformation and the selected minor at $j=3/2$; momenta transform by the inverse adjoint. With $w=(1,\sqrt3,\sqrt3,1)$, the eight free pairs are $h_{12}/(iw),h_{23}/(iw)$ and $-iwp_{12},-iwp_{23}$. Constructing $E$ and the multipliers by (RG-02), independent four-dimensional variation gives $\delta G_{ij}=0$, $\delta G_{00}=-NC_H/(2\sqrt g)$ and $\delta G_{0i}=-NC_i/(2\sqrt g)$. Including all left indices gives 32 real pairs.
+
+\subsection{KIDs and quadratic necessary conditions}
+
+\stepcounter{equation}\begin{equation}\tag{KG-01}\label{eq:KG-01}
+\int_\Sigma\left(|D\nu|^2+K_{ij}K^{ij}\nu^2\right)dV=0
+\quad\Longrightarrow\quad\nu=0.
+\end{equation}
+
+The selected backgrounds are CMC with $K_{ij}K^{ij}>0$, so (KG-01) applies to the KID lapse. The remaining spatial Killing fields must descend to the fixed quotient: one central field $Z$ on Nil, none on Sol, and four from $SU(2)\times U(1)$ on Taub. The central-nonzero Nil charge is (K-01); the conjugate $-m$ contribution adds with the same sign. The condition is imposed on the sum over blocks and allows inter-block cancellation. At $m=0$, $Z$ acts trivially.
+
+\stepcounter{equation}\begin{equation}\tag{KG-02}\label{eq:KG-02}
+L_a=-D_a^T,\qquad B_3=I_6\otimes D_3+S_3\otimes I_d,\qquad
+(S_3h)_{ij}=-C^l{}_{3i}h_{lj}-C^l{}_{3j}h_{il}.
+\end{equation}
+
+The three left charges on $S^3$ are $\mathrm{Re}\sum\bar p L_ah$, and the axial charge is $\mathrm{Re}\sum\bar p B_3h$. Both terms in (KG-02) are required: the right scalar derivative alone omits the coframe spin. These are quadratic necessary conditions from (K-02).
+
+\stepcounter{equation}\begin{equation}\tag{KG-03}\label{eq:KG-03}
+\begin{aligned}
+\left\langle2\delta p_P+\varepsilon\left[\delta p_P p_x+\delta p_r(r_x-2r)\right]\right\rangle&=0,\\
+\langle\delta p_P^{(1)}\rangle=0,\qquad
+2\langle\delta p_P^{(2)}\rangle+\left\langle\delta p_P^{(1)}p_x+\delta p_r(r_x-2r)\right\rangle&=0.
+\end{aligned}
+\end{equation}
+
+Periodic metric reconstruction in Sol Gowdy requires the $x$-mean $\langle\cdot\rangle$ of $\Pi_PP_x+\Pi_QQ_x$ to vanish, where $\Pi_P,\Pi_Q$ are the momenta of $P,Q$ in (SG-01). With $p,r$ and their momenta $\delta p_P,\delta p_r$ of order $\varepsilon$, this mean equals $\varepsilon$ times the first line of (KG-03). The second line expands $\delta p_P=\delta p_P^{(1)}+\varepsilon\delta p_P^{(2)}+O(\varepsilon^2)$ and fixes the homogeneous second-order correction by first-order fields. It is not a KID charge of a general orbit. On the three curved backgrounds neither vanishing charges nor absence of KIDs is used to conclude nonlinear lifting sufficiency.

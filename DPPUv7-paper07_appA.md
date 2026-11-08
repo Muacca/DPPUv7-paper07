@@ -1,69 +1,47 @@
-# DPPUv7-paper07 — Appendix A: Conventions
+# 付録A. 固定商と規約の辞書
 
-[← Section 9](DPPUv7-paper07_sec09.md) | [Appendix B →](DPPUv7-paper07_appB.md)
+T³の座標x,y,zは周期2πとし、σ=(dx,dy,dz)を用いる。Nilではσ=(dx,dy,dz−xdy)とし、次の三つの格子生成元を固定する。
 
----
-
-## Appendix A. Conventions
-
-### A.1 Signature, Hodge, and $\epsilon$ conventions
-
-- metric signature: $(-,+,+,+)$（Lorentzian）。
-- internal indices $I,J,\dots\in\{0,1,2,3\}$、空間 frame indices $a,b,\dots\in\{1,2,3\}$。
-- Levi-Civita 記号: $\epsilon_{0123}=+1$。空間 3 次元では $\epsilon_{123}=+1$。
-- Hodge dual は Lorentzian 規約で定義し、4-form の向きは $e^0\wedge e^1\wedge e^2\wedge e^3$ を正とする。
-- curvature/torsion: $R^{IJ}=d\omega^{IJ}+\omega^I{}_K\wedge\omega^{KJ}$, $T^I=de^I+\omega^I{}_J\wedge e^J$。
-
-### A.2 Structure matrix sign convention
-
-構造方程式 $d\sigma^i=-\tfrac12 C^i{}_{jk}\sigma^j\wedge\sigma^k$ に対し、
+式(QA-01)。
 
 $$
-n^{ij}=\tfrac12\,\epsilon^{ikl}\,C^{j}{}_{kl}
+(x,y,z)\sim(x+2\pi,y,z+2\pi y)\sim(x,y+2\pi,z)\sim(x,y,z+4\pi^2).
 $$
 
-と定義する（class A で対称）。Milnor frame での対角値の符号は Table 1 の規約（ $Nil^3$: $\mathrm{diag}(1,0,0)$、 $Sol^3$: $\mathrm{diag}(1,-1,0)$、 $S^3$: $\mathrm{diag}(1,1,1)$ ）に固定する。 $\mathrm{rank}(n)$ と $\dim\ker n$ は対角値の正規化（スケール）に依存しない。
+各生成元はcoframeを保ち、基本領域の体積は(2π)⁴である。central Fourier因子はexp(imz/(2π))、mは整数である。双対場X=∂x、Y=∂y+x∂z、Z=∂zから−(X²+Y²+Z²)を作ると、m=0はbase torus、m≠0は周波数|m|/(2π)のoscillatorとcentral定数m²/(4π²)になる。twisted periodicityは符号付きmごとに|m|個の独立状態を与える。
 
-### A.3 $S^3$ normalization: $C=\epsilon$ frame
+Solではσ=(dx,eˣdy,e⁻ˣdz)、A=((2,1),(1,1))、λ=(3+√5)/2とする。Aの固有座標で面積1のfiber格子を取り、(x,y,z)と(x+log λ,λ⁻¹y,λz)を同定する。構造行列はn₂₃=n₃₂=1、参照体積はlog λである。fiber Fourier波数はdual latticeのA作用のorbitとしてまとめる。
 
-$S^3$ の構造定数は本稿全体で
+S³はsimply connected SU(2)で、dσⁱ=2σʲ∧σᵏ（循環）を満たす単位round coframeを用いる。q²Σσⁱ²の断面曲率は1/q²、scalar曲率は6/q²、体積は2π²q³である。構造方程式を負号で定義する場合は、nの符号を反転して本稿の規約へ換算する。一般の軸変換は向きを含めた同じ行列をmetric・接続・torsionにも作用させる。
 
-$$
-C^i{}_{jk}=\epsilon^{i}{}_{jk}\qquad(|C|=1;\ C=\epsilon\ \text{frame})
-$$
-
-に固定する。
-
-**スケール変換と不変量.** 構造定数の全体スケール $C\to sC$（ $s>0$）の下で $n\to sn$ となるが、
+式(QA-02)。
 
 $$
-\mathrm{rank}(n),\qquad \dim\ker n,\qquad d_{\rm zero}=3-\mathrm{rank}(n)
+C^i{}_{jk}=\frac{a}{r}\epsilon_{ijk}\quad\Longrightarrow\quad q=\frac{2r}{|a|},\quad R=\frac{3a^2}{2r^2},\quad {\rm Vol}=\frac{16\pi^2r^3}{|a|^3}.
 $$
 
-は不変である。一方、曲率と固有値の**数値**はスケール依存である。代表式:
+式(QA-02)は物理正規直交frameでの構造係数の大きさをa/rとする換算である。a=1ならq=2r、a=2ならq=r、a=4ならq=r/2となる。曲率だけを換算して体積や波数を据え置かない。本稿では幾何学的torsion Tを直接使用する。実装間の換算は計算補足の比較ガイドに示す。
+
+式(QA-03)。
 
 $$
-R\,q^2 \;\mapsto\; s^2\,(R\,q^2)\qquad(\text{等方点}),
+\mathcal N=\frac14[abcd]T^e{}_{ab}T_{ecd}-\frac12[abcd]R_{abcd},\qquad[0123]=+1.
 $$
 
+この交代記号は、Lorentz計量で添字を上げたepsilonテンソルではない。完全NYの両項を同一の接続から作り、式(A-01)の外微分と照合する。
+
+## 摂動の規格化と記号
+
+以下の非斉次計算では正の全体作用係数を除き、固定Haar測度で積分する。対称metricの順序は(11,22,33,12,13,23)、共役運動量は対角で $`\delta\pi^{ii}`$ 、非対角で $`2\delta\pi^{ij}`$ とする。この規約でJは標準正準行列となる。daggerは複素共役と、空間積分に関する形式随伴を含む。
+
+式(QA-04)。
+
 $$
-\lambda_{S^3}(l)=(l-1)(l+3)\;\mapsto\; s^2\,(l-1)(l+3)\qquad(\text{TT sector; }l\ge2).
+z=(h,p),\qquad J=\begin{pmatrix}0&I\\
+-I&0\end{pmatrix},\qquad
+\Omega=-J,\qquad [X_i,X_j]=C^k{}_{ij}X_k.
 $$
 
-本稿で $R\,q^2=6$、TT 固有値 $(l-1)(l+3)$ と書く箇所はすべて $C=\epsilon$（ $s=1$）frame の値である。`script/scripts/paper07/s3_normalization_factor_witness.py` で rank 不変と曲率・固有値の $s^2$ スケーリングを独立に確認できる。
+Nilのmはcentral Fourier整数、rは格子コピー、nはoscillator次数、Lはtensor gradeである。S³のj,m,nはWignerラベルであり、背景のTaub parameter m=0とは独立である。Solでは元のbase座標をx、unfolding後の実数座標をξとする。以下でPは文脈によりNil周期2πまたはGowdy場を表す。混同を避けるため周期はP₀とも記す。NG-02のLRS背景値は $`\bar P`$ 、 $`\zeta=e^{2\bar P}`$ と記す。Solの周期は $`L_{\rm Sol}=\log\lambda`$ と記し、作用の $`L_0`$ 、 $`L^{[2]}`$ やNilのgrade Lと区別する。
 
-**paper06 との対応**: paper06 [7] の $S^3$ 数値（例: $\chi=4$, $C_{\rm topology}=-36$, $V_3=2\pi^2$ ）は異なる構造定数正規化に基づく。両者は構造定数のスケール変換で関係づき、二次の曲率量には factor 16 の明示変換が入る。本稿では paper06 の $S^3$ 値を明示変換なしに引用しない。factor 変換は本 appendix に閉じ込める。
-
-### A.4 Harmonic conventions
-
-- $T^3$: Fourier モード $e^{ik\cdot x}$, $k\in 2\pi\mathbb Z^3/L$。
-- $S^3$: scalar/vector/tensor harmonics は [28,29] の規約に従い、TT tensor harmonics の固有値は $C=\epsilon$ frame で $(l-1)(l+3)$（ $l\ge2$ ）と表す。文献 [28,29] の半径・正規化との対応は Appendix A.4 の規約に従う。
-- $Nil^3$/ $Sol^3$: それぞれ toroidal ∪ Heisenberg sector、boost sector の取り方を [Appendix D](DPPUv7-paper07_appD.md) にまとめる。
-
-### A.5 Diagnostic exclusions
-
-本稿は Pontryagin 型 diagnostic（ $P_{\rm form}$, $P_{\rm int}$ 等 [5–7]）を導入しない。NY boundary 3-form の最小定義は [Appendix G](DPPUv7-paper07_appG.md) にのみ現れる（precision 目的）。
-
----
-
-[← Section 9](DPPUv7-paper07_sec09.md) | [Appendix B →](DPPUv7-paper07_appB.md)
+[論文の入口](README_ja.md) / [参考文献](REFERENCES.md)

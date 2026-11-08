@@ -1,123 +1,47 @@
-%==============================================================================
-% Appendix C: RBD route comparison and route-dependent discrepancy
-%==============================================================================
-\section{RBD route comparison and route-dependent discrepancy}
-\label{app:route}
+\section{Constraint ranks and route controls}
 
-This appendix gives the details of the control experiment of
-Section~\ref{sec:dbr}.  Here ``Palatini reduction non-commutativity'' is a
-route-level descriptive term, not a claim of a general theorem.
+A constant symmetric $n$ can be diagonalized by $SO(3)$. The $A_k$ in (H-03) represent the adjoint structure algebra; the Jacobi identity yields the momentum Poisson algebra. Both $T$ and $P$ are invariant under this action, giving $\{J,F\}=0$. In the six coordinates and their conjugates these statements are directly checkable polynomial identities.
 
-\subsection{The RBD route}
-\label{app:route:rbd}
+\stepcounter{equation}\begin{equation}\tag{CC-01}\label{eq:CC-01}
+\begin{aligned}g&=\mathrm{diag}(1,2,3),\quad c=1,\quad M=\pi g,\\ M_{T^3}&=\mathrm{diag}(1,1,0),\quad M_{\rm Nil}=\sqrt3 I,\\ M_{\rm Sol}&=\frac{5\sqrt3}{3}I,\quad M_{S^3}=\mathrm{diag}(4\sqrt2,0,0).\end{aligned}
+\end{equation}
 
-The RBD (Routh-before-Dirac) route solves the auxiliary components of the spatial
-connection (spatial-$\omega$) by their field equations and substitutes them into
-the action, and then performs the constraint analysis with the remaining
-variables.  This substitution has not passed the verification of the
-auxiliary-variable condition (algebraic solvability free of derivatives), and so
-incurs the non-commutativity risk warned of by the generality~\cite{ref13}.
+All representatives satisfy $F=J=0$. For $T^3$ the minor is $\partial F/\partial p_{33}=-6$. For the others take the required initial rows of $(F,J_1,J_2,J_3)$ and columns of $(p_{11},p_{23},p_{13},p_{12})$. Their determinants are $9\sqrt3$, $50\sqrt3$, and $-64\sqrt2$ for Nil, Sol and $S^3$, respectively; the Sol value uses the diagonalized $n=\mathrm{diag}(0,1,-1)$. Thus the constraint Jacobian ranks are $1/3/4/4$.
 
-\subsection{Direct route recomputation}
-\label{app:route:model}
+The spans of the $A_k$ have dimensions $0/2/3/3$, bounding the ranks of $J$. Near the nonzero minors, these maximal ranks and the independence of $dF$ persist, defining the regular strata of (H-04). Counts are not extended uniformly to points where minors vanish, such as symmetry-enhanced configurations.
 
-Our negative control is not a toy model.  It uses the bundled DBR/RBD
-constraint-dynamics engine (\code{dppu.dirac}) and recomputes the route variants
-from the same $\Sthree$ Branch-A
-local first-order Lagrangian.  The reproducibility script
-\code{script/scripts/paper07/route_comparison_s3_branch_a_witness.py} does not
-use intermediate CSV files as evidence.  It directly executes:
-\begin{itemize}
-  \item \textbf{DBR\_KEEP\_ALL}: keep the independent connection through Dirac
-        closure;
-  \item \textbf{RBD\_SPATIAL\_OMEGA\_ROUTH}: Routh-eliminate spatial
-        $\omega$ first, then run scalar projection and Dirac closure;
-  \item \textbf{RBD\_FULL\_K\_ROUTH}: Routh-eliminate full $K$ first, then run
-        scalar projection and Dirac closure.
-\end{itemize}
+\subsection{Closure for quadratic actions}
 
-\begin{table}[H]
-\centering
-\begingroup
-\small
-\renewcommand{\arraystretch}{1.35}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\centering\arraybackslash}p{0.15\linewidth}>{\centering\arraybackslash}p{0.19\linewidth}>{\centering\arraybackslash}p{0.14\linewidth}>{\raggedleft\arraybackslash}p{0.12\linewidth}@{}}
-\toprule
-Route & $N_{\rm phys}$ at $l=0/1/\ge2$ & $l=0$ pair & $H_{PP}$ at $l=0$ & Status \\
-\midrule
-\texttt{DBR\_KEEP\_ALL} & $0/0/0$ & none & n/a & computed \\
-\begin{tabular}[t]{@{}l@{}}\texttt{RBD\_SPATIAL}\\\texttt{OMEGA\_ROUTH}\end{tabular} &
-$1/1/2$ & $(s_{l0},P_{s,l0})$ & $-3/8$ & computed \\
-\begin{tabular}[t]{@{}l@{}}\texttt{RBD\_FULL\_K}\\\texttt{ROUTH}\end{tabular} &
-$1/1/2$ & $(s_{l0},P_{s,l0})$ & $-3/8$ & computed \\
-\bottomrule
-\end{tabular}
-\endgroup
-\caption{Direct route recomputation in the $\Sthree$ Branch-A scalar sector.}
-\label{tab:route_direct}
-\end{table}
+\stepcounter{equation}\begin{equation}\tag{CC-02}\label{eq:CC-02}
+M_{A b}=\{\Phi_A,\phi_b\},\quad u^AM_{Ab}=0\quad\Longrightarrow\quad u^A\{\Phi_A,H_c\}\simeq0.
+\end{equation}
 
-The primary evidence for route non-commutativity is the mismatch in
-$N_{\rm phys}$.  The $l=0$ value $H_{PP}=-3/8$ is a diagnostic that the RBD
-extra scalar branch is not a benign rewriting.  Since RBD is not the adopted
-route, this negative sign is not used as a physical ghost or physical
-instability claim.
+Here $\phi$ denotes the original primaries and $\Phi$ all independent constraints available at the current stage. Add only new independent linear constraints from the left nullspace of $M$, iterating until none remain. For constant-coefficient quadratic actions this linear-algebra procedure is exact. It is not used to replace nonlinear constraints by linear-coefficient ranks. If the final Poisson rank is $s$ and there are $m$ independent constraints, their first- and second-class counts are $m-s$ and $s$.
 
-\subsection{Comparison setup and result}
-\label{app:route:result}
+\begin{center}\small\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}\toprule
+Control & Connection: FC/SC/pairs & Eliminated: FC/SC/pairs\\\midrule
+Complete torus quadratic & 1 / 4 / 1 & 1 / 0 / 1\\
+Complete sphere quadratic & 0 / 8 / 0 & 0 / 4 / 0\\
+\bottomrule\end{tabularx}\end{center}
 
-The control experiment was carried out on the $\Sthree$ background, Branch-A
-scalar sector.  The direct recomputation of \ref{app:route:model} reproduces the
-order-of-operations dependence in the DBR/RBD engine.
-\begin{itemize}
-  \item \textbf{DBR side}: after the Dirac closure, the physical scalar degrees
-        of freedom are $0$ at all harmonic levels (the kernel is absent for
-        $\Sthree$; $\dzero=0$).
-  \item \textbf{RBD side}: spatial-$\omega$ Routh and full-$K$ Routh both give
-        $N_{\rm phys}=1/1/2$, so they do not commute with DBR.
-  \item \textbf{Same-Lagrangian internal demonstration}: at $l=0$ the comparison
-        starts from the same Branch-A local first-order Lagrangian and
-        reproduces DBR:0 / RBD:1 together with $H_{PP}=-3/8$ (by symbolic
-        computation, with no numerical error).  This establishes that the
-        discrepancy arises from the route itself, not from an implementation or
-        normalisation difference.
-  \item \textbf{Scope restriction}: for $l\ge1$ the RBD extra count is recorded
-        as a route-level artefact involving Lorentz-gauge breaking by the
-        elimination-first frame.  The negative-kinetic diagnostic is claimed
-        only at $l=0$.
-\end{itemize}
+For the eliminated sphere block, $H=-p_u^2/24-6\ell u$ and $p_\ell=0$ give $u=0$, then $p_u=0$, then $\ell=0$. On the torus the lapse primary is first class and the quadratic action retains a scalar pair. Section 5 treats the condition from the original nonlinear constraint.
 
-\subsection{Route comparison labels}
-\label{app:route:labels}
 
-\begin{table}[H]
-\centering
-\begingroup
-\renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\linewidth}{lLL}
-\toprule
-Label & Content & Treatment \\
-\midrule
-RBD scalar discrepancy & RBD's extra scalar mode ($H_{PP}=-3/8$ at $l=0$) &
-not a physical instability (route-level); not used for physical claims \\
-RBD higher-level artefact & extra RBD counts for $l\ge1$ &
-recorded as elimination-first gauge breaking; no sign claim promoted \\
-DBR standard & standard route with Dirac closure first &
-the basis of all claims of this paper \\
-\bottomrule
-\end{tabularx}
-\endgroup
-\caption{Route comparison labels.}
-\label{tab:route_labels}
-\end{table}
+\subsection{Scalar controls from the complete action}
 
-\subsection{Scope and limitations (route sector)}
-\label{app:route:scope}
+Set $c=1$, $n=2kI$ and write the independent scalar connection as $\omega^0{}_i=b e^i$, $\omega^j{}_k=a e^i$ cyclically. Here $k=0$ is the torus and $k=1$ the round-sphere reference.
 
-\begin{itemize}
-  \item We do not use the output of the RBD route as the basis of any physical
-        claim, positive or negative.  We therefore do not treat the RBD extra
-        mode as a physical ghost / physical instability.
-  \item We do not claim the generality that ``RBD always fails.''  It is treated
-        only as a control experiment on a verified sector.
-\end{itemize}
+\stepcounter{equation}\begin{equation}\tag{D-02}\label{eq:D-02}
+L_{\rm P}=6Nq^3b^2-12q^2\dot q\,b+12kNq^2a-6Nq^3a^2,\quad a=k/q,\quad b=\dot q/(Nq).
+\end{equation}
+
+\stepcounter{equation}\begin{equation}\tag{D-03}\label{eq:D-03}
+\begin{aligned}L_{\rm met}&=6k^2Nq-6q\dot q^2/N,\\ q&=1+\varepsilon u,\quad N=1+\varepsilon\ell,\quad a=k+\varepsilon A,\quad b=\varepsilon B,\\ L^{[1]}&=6k^2(\ell+u),\\ L_{\rm P}^{[2]}&=-6A^2-12kAu+6B^2-12B\dot u+6k^2\ell u-6k^2u^2,\\ L_{\rm met}^{[2]}&=-6\dot u^2+6k^2\ell u.\end{aligned}
+\end{equation}
+
+Substitution of the quadratic connection equations $A=-ku$, $B=\dot u$ gives the same metric action. The sphere has a nonzero first variation; the zero-pair agreement is an off-shell algebraic control. The torus quadratic scalar action retains one pair, while the original lapse equation requires $\dot u^2=0$, the pure-scale section of the cone in Section 5.
+
+
+\subsection{Counts at symmetric Taub points and nonzero modes}
+
+At the Taub point (BF-01), the homogeneous momentum and total ranks are two and three, leaving three pairs in the linear quotient. This is a different stratum from the regular representative (CC-01), with ranks three and four. Appendix G gives the $j=0,1$ KID exceptions and nonzero minors valid on the whole interval. The 40/34/10-configuration flat comparison in Section 4 counts one real Fourier quadrature, separately from the regular homogeneous count (H-04).

@@ -1,0 +1,13 @@
+{
+  "description": "Derived formulas; geometric spectra are distinct from physical mode spectra",
+  "schema": 1,
+  "sha256": {
+    "action.json": "60038e705147a555028aff0f3ec008622a68b778cf6ece3e38e062e41f75720a",
+    "checks.json": "c06ad2d24586e67457fea6ecdf0dc65fc44ff44b9b6db320d8751de6c5b24e56",
+    "figures.json": "30fd201c4d8ea5c0eb6b98b5dc92e716c5d12f0c4ee5dfd2d6ef22e5042a3b33",
+    "geometry.json": "880bc2d7632d49f35b1f7366a29a864f952516e8148a7c453a7c113d6f3ee5c2",
+    "homogeneous.json": "82749e60b6a5b93cf99a1fc20b9016b08e4115c97febe3545d08aae3aea74629",
+    "routes.json": "9041cbca69b13a1721c926469b79ca180ca27f6aa64636f6249e0587adb7a3a2",
+    "torus.json": "de8466d214555a53e71093416149ebd44e91db005bc860f482f395139974083b"
+  }
+}

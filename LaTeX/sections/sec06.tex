@@ -1,79 +1,96 @@
-%==============================================================================
-% Section 6: Harmonic one-form realization of the zero kernel
-%==============================================================================
-\section{Harmonic one-form realisation of the zero kernel}
-\label{sec:harmonic}
+\section{Constraint reduction of inhomogeneous perturbations}
 
-In this section we show how the scalar kernel of
-Theorem~\ref{thm:rankdefect} is realised as a geometric object.  The claim is
-within the left-invariant (representative) scope.
+\subsection{Constraints, time dependence and real-field conventions}
 
-\subsection{Left-invariant harmonic one-forms and $\ker n$}
-\label{sec:harmonic:lemma}
+In each block the six metric components, lapse and three shifts are retained before variation. Conjugate sectors are restored for real fields; independent off-diagonal momenta are $p_{ij}=2\pi^{ij}$. With $z=(h,p)$, $\Omega=-J$, gauge matrix $G$ and embedding $E$, the common reduction is
 
-\begin{lemma}[Harmonic one-form $\Leftrightarrow\ker n$]
-\label{lem:harmonic}
-On the left-invariant coframe $\{\sigma^{i}\}$ of a Bianchi class-A geometry,
-the space of left-invariant harmonic one-forms coincides with $\ker n$.
-\end{lemma}
-
-\begin{proof}
-For a left-invariant one-form $\xi=\xi_{i}\,\sigma^{i}$ ($\xi_{i}$ constant), the
-structure equations give
-\begin{equation}
-  \dd\xi = -\tfrac12\,\xi_{i}\,C^{i}{}_{jk}\,\sigma^{j}\wedge\sigma^{k},
+\stepcounter{equation}\begin{equation}\tag{R-01}\label{eq:R-01}
+\begin{aligned}
+CJC^\dagger&=0,\qquad(\dot C+CJH)\ker C=0,\qquad CE=GE=0,\\
+E^\dagger\Omega E&=\Omega_r,\qquad H_r=E^\dagger HE-E^\dagger\Omega\dot E,\\
+\dot y&=J_rH_ry,\qquad z=Ey.
+\end{aligned}
 \end{equation}
-and since $C^{i}{}_{jk}=\epsilon_{jkl}n^{li}$ in class A,
-\begin{equation}
-  \dd\xi=0
-  \quad\Longleftrightarrow\quad
-  n\,\xi=0
-  \quad\Longleftrightarrow\quad
-  \xi\in\ker n.
+
+The adjoint includes spatial integration by parts when needed. Derivatives of time-dependent constraints and embeddings are retained. Lapse and shift are reconstructed together with the reduced fields. Appendices F--G give bases, closure, gauges, nonzero minors and reconstruction.
+
+\subsection{The fixed flat torus}
+
+The background $N_0=1$, $g_0=q_0^2I$ is an exact vacuum. For counting set $c=q_0=1$, express the nonzero wavevector along $z$, and use unit-mean-square real harmonics: cosine for metric and lapse and sine for shift.
+
+\stepcounter{equation}\begin{equation}\tag{W-01}\label{eq:W-01}
+\begin{aligned}v_{ij}&=\dot h_{ij}-k(\beta_i\delta_{j3}+\beta_j\delta_{i3}),\\ L^{[2]}_k&=\tfrac14\bigl[\mathrm{tr}(v^2)-(\mathrm{tr}v)^2\bigr]+\mathcal R^{[2]}(h)+\alpha k^2(h_{11}+h_{22}),\\ \mathcal R^{[2]}&=\delta^{ij}(\Gamma^{k(1)}{}_{i\ell}\Gamma^{\ell(1)}{}_{jk}-\Gamma^{k(1)}{}_{ij}\Gamma^{\ell(1)}{}_{k\ell}).\end{aligned}
 \end{equation}
-Moreover, for a left-invariant metric the co-closed condition
-$\dd{\star}\xi=0$ is satisfied automatically by unimodularity (class A).  Hence
-the harmonic one-forms are isomorphic to $\ker n$, of dimension $\dzero$.  On the
-compact quotient they provide representatives of the de Rham $H^{1}$, realising
-the geometric content of the coincidence with $b_{1}$
-(Section~\ref{sec:rankdefect:b1})~\cite{ref41,ref42}.
-\end{proof}
 
-The agreement of the nullspaces of the exterior-derivative operator $d_{1}$ (on
-left-invariant one-forms) and of $n$ is verifiable with
-\code{script/scripts/paper07/harmonic_kernel_correspondence.py}.
+The four primary and four secondary constraints are first class. The secondaries are proportional to $p_{13}=p_{23}=p_{33}=0$ and $h_{11}+h_{22}=0$, leaving two pairs in the gauge quotient. The polarization-frame rotation need not be a lattice automorphism. No division by nonzero $k$ is continued to $k=0$; the original quadratic action there retains six metric pairs.
 
-\subsection{Map to the Hessian kernel}
-\label{sec:harmonic:hessian}
-
-Define the map from the scalar-axis perturbations $\beta_{a}$ to the
-left-invariant one-form directions by
-\begin{equation}
-  \Phi:\ \beta_{a} \longmapsto \beta_{a}\,\sigma^{a}
+\stepcounter{equation}\begin{equation}\tag{W-02}\label{eq:W-02}
+\begin{aligned}h_{11}&=A,\quad h_{22}=-A,\quad h_{12}=B,\quad h_{i3}=0,\\ L^{[2]}_{\rm TT}&=\tfrac12\bigl(\dot A^2+\dot B^2-k^2(A^2+B^2)\bigr),\\ S^{[2]}_{\rm TT}&=\frac{\mathcal V_{\Sigma}q_0^3}{8\kappa^2}\int d\tau\,\left\langle\dot\gamma_{ij}\dot\gamma_{ij}-q_0^{-2}\partial_a\gamma_{ij}\partial_a\gamma_{ij}\right\rangle.\end{aligned}
 \end{equation}
-(no sum; Milnor frame).
 
-\begin{proposition}[Hessian kernel $\leftrightarrow$ harmonic basis]
-\label{prop:hessian}
-The kernel of the scalar-axis Hessian of the reduced quadratic action is in
-one-to-one correspondence with $\Phi(\ker n)$.  The map $\Phi$ preserves the
-subspace (of dimension $\dzero$), not the axis names.
-\end{proposition}
+$\gamma$ is a zero-mean TT field. The two polarizations in one real quadrature have positive kinetic terms and $\omega^2=|k|^2/q_0^2$ on the static torus. A complete real $\pm k$ block has four pairs. This count is distinct from the integrated conditions for exact families in Section 7.
 
-\begin{proof}[Proof sketch]
-For $\beta\in\ker n$, Lemma~\ref{lem:harmonic} makes $\Phi(\beta)$ harmonic.  By
-the activation rank of Section~\ref{sec:rankdefect:mechanism}, the $\beta$
-direction does not activate a secondary constraint, and no kinetic pairing arises
-in the scalar-axis Hessian.  Conversely, each direction of the Hessian kernel is
-realised as a frame stretching along the basis $\xi^{(\alpha)}$ of $\ker n$
-(Appendix~\ref{app:harmonic}).
-\end{proof}
+\subsection{Nil: zero and nonzero central sectors}
 
-\subsection{Scope}
-\label{sec:harmonic:scope}
+Central index $m=0$ is inhomogeneous when $(n_1,n_2)\ne0$. On the LRS background the covector is aligned to $(k,0)$ in the tensor frame, with $k^2=n_1^2+n_2^2$; this does not rotate or reidentify the lattice. Put $R=4u/3$ and $\zeta=16u^2/[9(1+u^4)^2]$.
 
-This realisation is a correspondence at the left-invariant (homogeneous
-representative) level, not a full Hodge-theoretic statement including the
-inhomogeneous modes.  That no additional zero arises in the inhomogeneous sectors
-is independently guaranteed by the non-contamination criterion of
-Section~\ref{sec:spectral}.
+\stepcounter{equation}\begin{equation}\tag{N-01}\label{eq:N-01}
+L^{[2]}=\left\langle\frac R6(P_u^2+\zeta Q_u^2)
+-\frac{3R}{2}\bigl[P_x^2+\zeta(Q_x^2-4PQ_x+2P^2)\bigr]\right\rangle.
+\end{equation}
+
+The derivative coupling mixes cosine and sine. The real block $P\propto\cos$, $Q\propto\sin$ and its complement each have two pairs, giving four in the complete real opposite-wavevector block. On the chosen interval $\zeta\le4/9$ and $k^2\ge1$ make both kinetic and potential forms positive. The Hamiltonian is time dependent, so this is not conserved energy or an all-time stability result.
+
+For $m\ne0$, Hermite--theta scalar functions are combined with all tensor spins $s$. LRS coefficients and ladder rules preserve $L=n+\mathrm{sgn}(m)s$, giving finite blocks including lapse, shift, constraints and gauge transformations. The Heisenberg representation remains infinite dimensional, and no rotational Killing field on the fixed quotient is assumed.
+
+\begin{center}\small\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}\toprule
+Grade $L$ & Complex metric & Constraint rank & Complex pairs\\\midrule
+$-2$ & 1 & 0 & 1\\
+$-1$ & 2 & 1 & 1\\
+0 & 4 & 3 & 1\\
+1 & 5 & 4 & 1\\
+$\ge2$ & 6 & 4 & 2\\
+\bottomrule\end{tabularx}\end{center}
+
+The table fixes $m>0$ and one lattice copy $r$. Real fields including $-m$ double these counts, and all copies multiply them by $m$. At the edge, tensor and multiplier slots with $n<0$ do not exist; the remaining constraints have full row rank. Closure and the absence of nonzero-central KIDs give the generic $L\ge2$ count. Explicit matrices are provided for $L=-2,-1,0,1,2$, with an independent four-dimensional check at $L=2$. Non-LRS coefficients retain $n\leftrightarrow n+2$ couplings and do not close in this finite grading.
+
+\subsection{Sol: the Gowdy sector and nonzero dual orbits}
+
+In the fiber-independent sector, $P=2x+p$ and $Q=e^{-2x}r$ make $p,r$ periodic with $L_{\rm Sol}=\log[(3+\sqrt5)/2]$. For $k=2\pi n/L_{\rm Sol}\ne0$, one real quadrature has reduced action
+
+\stepcounter{equation}\begin{equation}\tag{SO-01}\label{eq:SO-01}
+L_k^{[2]}=\frac t2\left[\dot p^2+\dot r^2-k^2p^2-(k^2+4)r^2\right].
+\end{equation}
+
+There are two propagating fields and four pairs in the complete real block. The coefficient $k^2+4$ belongs to the chosen areal time and variables, not a conserved physical frequency. A general nonzero fiber sector retains an entire dual-lattice monodromy orbit, whose coefficient is a function on the real line.
+
+\stepcounter{equation}\begin{equation}\tag{SO-02}\label{eq:SO-02}
+D_1=\partial_\xi,\qquad D_2=iK,\qquad D_3=iM,
+\qquad K=k_0e^{-\xi},\quad M=l_0e^\xi.
+\end{equation}
+
+All metric, lapse, shift, constraint and gauge operators preserve the same infinite orbit. Exponential multiplication couples infinitely many fixed Hermite coefficients. The differential right inverse in Appendix G has a denominator bounded away from zero on every nonzero orbit of the fixed lattice and reduces the system to two complex canonical field pairs. Including the conjugate orbit gives four real canonical field pairs. These count species in an infinite-dimensional orbit, not a finite total of two pairs.
+
+\subsection{Taub on the three-sphere: complete Wigner blocks}
+
+Expand invariant-frame components in Wigner functions, retaining all right indices at fixed $j$. Restoring left multiplicity and the real-field condition gives the following counts. The label $j$ is not the round-sphere TT harmonic label.
+
+\begin{center}\small\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}\toprule
+$j$ & Real constraint rank & Real pairs & KID deficiency\\\midrule
+0 & 3 & 3 & Axial $U(1)$\\
+$1/2$ & 16 & 8 & None\\
+1 & 33 & 21 & Left $SU(2)$\\
+$3/2$ & 64 & 32 & None\\
+\bottomrule\end{tabularx}\end{center}
+
+The $j=0,1$ values are linear gauge quotients at symmetric backgrounds, with quadratic KID conditions still to be imposed. Their mechanism differs from absent slots at the Nil edge. At $j=3/2$ there are two fields with sixteen real Wigner components each, hence 32 pairs. Reconstruction with the gauge, time-dependent embedding and multipliers satisfies all four-dimensional linear vacuum components. The table covers only the four computed labels, not a uniform all-$j$ classification.
+
+\subsection{Finite-time examples and an independent Sol comparison}
+
+For the initial data in Appendix H, the Sol Gowdy Bessel evaluation, first- and second-order Nil base evolutions, and reconstructed ADM evolutions for $S^3$, $j=3/2$ and Nil $m=1,r=0,L=2$ agree. These are nontrivial linear examples, not nonlinear lifts on the curved backgrounds.
+
+For Sol orbit $(1,0)$ we evolved an independently derived four-dimensional Lorenz system from the same initial ADM data. On $1\le t\le2$, $|\xi-\xi_0|\le4$, reduced-field $L^2$ differences were $3.26\times10^{-8}$ for 1023 to 1535 nodes, $2.77\times10^{-10}$ for the window comparison, and $3.94\times10^{-9}$ for time refinement. Actual derivatives of the time interpolant give a maximum ten-component Einstein $L^2$ residual of $3.83\times10^{-11}$ at twenty sampled times.
+
+In contrast, substituting the reconstructed reduced variables into the reduced fourth-order system (SG-05) gives a maximum normalized strong residual (SH-05) of $1.54\times10^{-3}$ in the same test. Evaluated at the saved times of the four trajectories, it lies between $9.6\times10^{-4}$ and $4.5\times10^{-3}$; it does not decrease from 1023 to 1535 nodes and grows with the looser time tolerance, so convergence in this form is not established. The residual norms are different. Appendix H specifies finite-window Dirichlet conditions, interior characteristic margin and window controls. This example is not a whole-line error bound or a general stability result.
+
+Figure~\ref{fig:fig05_sol_interior} in Appendix H shows the reconstructed interior profiles.

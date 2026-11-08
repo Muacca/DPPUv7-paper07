@@ -1,87 +1,65 @@
-# DPPUv7-paper07 — Section 2: Lorentzian EC+NY Setup and Bianchi Class-A Backgrounds
+# 2. 作用・幾何・境界
 
-[← Section 1 (Introduction / References)](DPPUv7-paper07_sec01.md) | [Section 3 →](DPPUv7-paper07_sec03.md)
+signatureは $`(-,+,+,+)`$ 、向きは正の $`e^{0123}`$ 、 $`\epsilon_{0123}=+1`$ とする。coframeは非退化で空間sliceはspacelike、独立接続はmetric-compatibleなLorentz接続である。NY結合θは定数、κ²は正とし、物質・spin source・宇宙項・曲率二乗項を含めない。
 
----
-
-## 2. Lorentzian EC+NY setup and Bianchi class-A backgrounds
-
-### 2.1 First-order action ingredients
-
-基本変数は tetrad 1-form $e^I$ と Lorentz 接続 1-form $\omega^{IJ}$ であり、両者を独立変数として扱う（first-order / Palatini 型）。作用は Einstein–Cartan 項 [8] と Nieh–Yan 項 [9] からなる:
+式(A-01)。
 
 $$
-S[e,\omega]
-=\frac{1}{2\kappa^2}\int \epsilon_{IJKL}\, e^I\wedge e^J\wedge R^{KL}[\omega]
-+\frac{\theta_{\rm NY}}{\kappa^2}\int \left( T^I\wedge T_I - e_I\wedge e_J\wedge R^{IJ} \right),
+\begin{aligned}T^a&=de^a+\omega^a{}_b\wedge e^b,\qquad R^a{}_b=d\omega^a{}_b+\omega^a{}_c\wedge\omega^c{}_b,\\
+Q&=e^a\wedge T_a,\qquad dQ=T^a\wedge T_a-e^a\wedge e^b\wedge R_{ab},\\
+S&=\frac1{4\kappa^2}\int\epsilon_{abcd}e^a\wedge e^b\wedge R^{cd}+\theta\int dQ+S_{\partial}.\end{aligned}
 $$
 
-ここで $R^{IJ}[\omega]=d\omega^{IJ}+\omega^{I}{}_K\wedge\omega^{KJ}$、 $T^I=de^I+\omega^I{}_J\wedge e^J$ である。signature・Hodge/ $\epsilon$ 規約は [Appendix A](DPPUv7-paper07_appA.md) に固定する。
+全ての反対称添字を和するとepsilon外積は $`2R_{\rm EC}e^{0123}`$ に等しい。したがって最初の項は $`R_{\rm EC}/(2\kappa^2)`$ となる。この規格化を正準運動量とkinetic係数にも一貫して用いる。
 
-**NY 項の取り扱い**: 本稿では NY 項を exact 4-form として扱う route（以下 NY-MAIN route）を採用する。**本稿の NY-MAIN route と LZ-native AX/VT/MX torsion ansatz scalars の検査済み reduced/native-action gate では**、背景上の NY 項は exact boundary term としてのみ寄与する。reduced 系では exact auxiliary shell をなし、場 $\eta(x), V(x)$ への昇格でも検査済み native-action 判定において二次 kinetic/gradient 項は生じない（[Section 8](DPPUv7-paper07_sec08.md)）。NY 項の topological 性は正準解析で既知である [33–35]。**この bulk 無関与の主張は上記スコープ内に限定**し、full torsion field theory や一般の NY 作用に自動拡張しない。
-
-### 2.2 Bianchi class-A backgrounds and the structure matrix
-
-空間断面は 3 次元 unimodular Lie 群 $G$ の left-invariant 構造を持つ。left-invariant 1-forms $\sigma^i$（ $i=1,2,3$ ）は
+式(G-01)。
 
 $$
-d\sigma^i=-\tfrac12\,C^i{}_{jk}\,\sigma^j\wedge\sigma^k
+d\sigma^i=\frac12 n_{ij}\epsilon_{jkl}\sigma^k\wedge\sigma^l,\quad n^T=n,\quad \mathcal V_{\Sigma}=\int_{\Sigma}\sigma^{123},\quad g=g_{ij}(t)\sigma^i\sigma^j.
 $$
 
-を満たす。class A（unimodular）条件は $C^j{}_{ij}=0$ であり [15]、このとき構造定数は対称な**構造行列** $n^{ij}$ で表される:
+nは固定したclass Aの構造行列で、gは任意の正定値対称行列である。一定SO(3)回転はnのrankを保つ。本稿の固定商と参照規格化は次表のとおりで、球面のqは物理半径である。商の具体的同定は付録Aに示す。
+
+| 幾何 | nの固有値 | 参照体積 | R q² |
+| --- | --- | --- | --- |
+| T³ | (0,0,0) | $`(2\pi)^3`$ | 0 |
+| Nil | (0,0,-1) | $`(2\pi)^4`$ | $`-1/2`$ |
+| Sol | (0,1,-1) | $`\log((3+\sqrt5)/2)`$ | $`-2`$ |
+| S³ | (2,2,2) | $`2\pi^2`$ | 6 |
+
+## 全接続方程式
+
+式(A-02)。
 
 $$
-C^i{}_{jk}=\epsilon_{jkl}\,n^{li},
-\qquad
-n^{ij}=\tfrac12\,\epsilon^{ikl}\,C^{j}{}_{kl},
-\qquad n^{ij}=n^{ji}.
+\epsilon_{abcd}e^c\wedge T^d=0\quad\Longrightarrow\quad T^a=0,\qquad \omega=\omega_{\rm LC}[e].
 $$
 
-Milnor frame [16] により $n^{ij}=\mathrm{diag}(n_1,n_2,n_3)$ と対角化でき、その rank/signature が class-A 型を分類する。本稿で扱う四 topology を Table 1 にまとめる。compact な空間断面を持つ Bianchi モデルは class A に限られる [19,20]。
+定数完全NYはこのbulk方程式に寄与しない。epsilonを逆変換するとeᵃ∧Tᵇ−eᵇ∧Tᵃ=0となる。t=ΣᵃιₐTᵃと置いて内部積を取ればTᵇ=−eᵇ∧t、さらにt=−3tを得るためt=T=0である。AX/VT/MXへの制限を使わない証明である。付録Bには全24成分による代数的対照を与える。
 
-**Table 1** Four Bianchi class-A backgrounds.
+K=ω−ωLCとすると、EC scalarはLC scalar、Kの代数的二次形式、発散に分かれる。発散を端点項へ移すとKは可逆な補助場となる。ωLCがcoframe微分に依存するため、単なるpoint変換として正準同値を仮定せず、Euler chain ruleと端点1形式を使う。
 
-| topology | Bianchi type | $n$ (Milnor frame) | $\mathrm{rank}(n)$ | $d_{\rm zero}=3-\mathrm{rank}(n)$ | $b_1$ | $R\,q^2$（等方点） |
-|---|---|---|---:|---:|---:|---:|
-| $T^3$ | I | $\mathrm{diag}(0,0,0)$ | 0 | 3 | 3 | $0$ |
-| $Nil^3$ | II | $\mathrm{diag}(1,0,0)$ | 1 | 2 | 2 | $-1/2$ |
-| $Sol^3$ | VI₀ | $\mathrm{diag}(1,-1,0)$ | 2 | 1 | 1 | $-2$ |
-| $S^3$ | IX | $\mathrm{diag}(1,1,1)$ | 3 | 0 | 0 | $6$ |
+## 境界代表
 
-ここで $b_1$ は対応する compact 商の first Betti number（標準的な値 [18]）、 $R\,q^2$ は等方点での無次元化された空間スカラー曲率である。 $S^3$ の構造定数正規化は $C=\epsilon$（ $|C|=1$ ）に固定する（[Appendix A](DPPUv7-paper07_appA.md); paper06 [7] の正規化との明示変換もそこに記す）。 $\mathrm{rank}(n)$ と $d_{\rm zero}$ は構造定数の全体スケール $C\to sC$ に対して不変だが、 $R\,q^2$ や TT 固有値などの**数値**は $s$ に依存する（式は Appendix A.3）。
+時間両端のspacelike sliceでは、外向き法線の符号とε_n=−1を含むLC GHY項を加える。主線のbulk代表S₀は、さらにcontortion発散とNY currentを端点から差し引いたもので、固定誘導計量に対する変分に用いる。currentを保持した代表は、端点currentの変分を固定する対応データで比較する。境界sourceを導入しない。
 
-Table 1 の $d_{\rm zero}$ は構造行列の rank-defect による代数的予測である。これが制約スペクトルの kernel として実現されることが本稿の主結果である（[Section 4](DPPUv7-paper07_sec04.md)）。abelianization との関係 $\dim(\mathfrak g/[\mathfrak g,\mathfrak g])=\dim\ker n$ も既知の代数的事実であり、幾何学的 cross-check としてのみ用いる。
-
-### 2.3 Background ansatz and perturbation sectors
-
-背景は homogeneous な対角 ansatz
+式(A-03)。
 
 $$
-e^0=N(t)\,dt,\qquad e^a=q_a(t)\,\sigma^a \quad (a=1,2,3;\ \text{和なし})
+\begin{aligned}S_{\rm GHY}&=\kappa^{-2}\sum_{i,f}\epsilon_n\int_{\Sigma}\sqrt h\thinspace K_{\partial},\qquad \epsilon_n=-1,\\
+S_{\rm keep}&=S_0+[B_{\rm end}]_i^f,\quad \Theta_{\rm keep}=\Theta_0+\delta B_{\rm end},\quad \Omega_{\rm keep}=\Omega_0.\end{aligned}
 $$
 
-をとり、接続 $\omega^{IJ}$ は独立な homogeneous 成分を持つ（具体的な成分リストと reduced action は [Appendix B](DPPUv7-paper07_appB.md)）。摂動は背景 frame に関して
+共通scale・二振幅族では、幾何学的torsionをTⁱ=(V/3)e⁰ⁱ+(2η/q)eʲᵏとする。D=N⁻¹d/dt、H=Dq/qとおくと、以下の発散と端点関数になる。HVだけを全微分として削除してはならない。
 
-- **scalar（diagonal/axis）sector**: 対角 metric 摂動 $\beta_a$ と対応する接続摂動、
-- **spin-1（transverse vector）sector**,
-- **spin-2（TT）sector**: transverse-traceless 摂動 $h_{ab}^{\rm TT}$,
+式(A-04)。
 
-に分解する。homogeneous モード（ $k=0$ ）の解析が [Section 4](DPPUv7-paper07_sec04.md) の中心であり、非均質モードは topology ごとの harmonic 展開（ $T^3$: Fourier、 $S^3$: hyperspherical harmonics [28,29]、 $Nil^3$: toroidal ∪ Heisenberg sector、 $Sol^3$: boost sector）で扱う（[Section 5](DPPUv7-paper07_sec05.md), [Appendix D](DPPUv7-paper07_appD.md)）。
+$$
+\begin{aligned}R_{\rm EC}-R_{\rm LC}&=-6\eta^2/q^2+2V^2/3-2DV-6HV,\\
+B_{\rm end}&=-\mathcal V_{\Sigma}q^3V/\kappa^2+6\theta\mathcal V_{\Sigma}q^2\eta,\\
+P_i&=p_i+\partial_iB_{\rm end}.\end{aligned}
+$$
 
-### 2.4 Torsion ansatz scalars
+この代表で端点のq、η、Vを固定すればδB_end=0となる。lapseやscale速度を固定する必要はない。滑らかな完全接続shellでは端点でもη=V=0である。発散の除去はkinetic項の存在を変更せず、時間線形のcurrentは伝播モードではない。
 
-homogeneous 背景上の torsion は、本稿で用いる ansatz の範囲で次の scalar modes に整理される:
-
-- **AX（axial）**: $T^{a}{}\_{bc}\supset \eta\,\epsilon_{abc}$ を与える axial scalar $\eta(t)$、
-- **VT（vector/trace）**: trace part を与える scalar $V(t)$、
-- **MX（mixed）**: 両者の混合 branch。
-
-これらは paper05/06 [6,7] の branch 分類（EH/AX/VT/MX）と同一の系統である。[Section 8](DPPUv7-paper07_sec08.md) ではこれらを場 $\eta(x), V(x)$ に昇格させた際の微分結合を分類する。本稿の torsion に関する主張はすべて **AX/VT/MX ansatz scalars の範囲内**であり、full 24 成分 torsion 場理論への一般化は主張しない。
-
-### 2.5 Notation summary
-
-以降、 $q^2$ は等方 scale 因子の二乗（ $q_1=q_2=q_3=q$ の等方点）、 $\kappa^2=8\pi G$、 $\mathrm{vol}$ は空間 cell の comoving 体積を表す。制約解析の記号（primary/secondary constraints, first/second class, Dirac bracket）は標準的な定義 [10–12] に従う。
-
----
-
-[← Section 1](DPPUv7-paper07_sec01.md) | [Section 3 →](DPPUv7-paper07_sec03.md)
+[論文の入口](README_ja.md) / [参考文献](REFERENCES.md)

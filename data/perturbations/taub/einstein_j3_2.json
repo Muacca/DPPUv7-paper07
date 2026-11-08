@@ -1,0 +1,47 @@
+{
+  "checks": [
+    {
+      "name": "spatial Einstein 00 on full ADM evolution",
+      "passed": true
+    },
+    {
+      "name": "spatial Einstein 11 on full ADM evolution",
+      "passed": true
+    },
+    {
+      "name": "spatial Einstein 22 on full ADM evolution",
+      "passed": true
+    },
+    {
+      "name": "spatial Einstein 01 on full ADM evolution",
+      "passed": true
+    },
+    {
+      "name": "spatial Einstein 02 on full ADM evolution",
+      "passed": true
+    },
+    {
+      "name": "spatial Einstein 12 on full ADM evolution",
+      "passed": true
+    },
+    {
+      "name": "Einstein 00 equals Hamiltonian constraint",
+      "passed": true
+    },
+    {
+      "name": "Einstein 01 equals momentum constraint",
+      "passed": true
+    },
+    {
+      "name": "Einstein 02 equals momentum constraint",
+      "passed": true
+    },
+    {
+      "name": "Einstein 03 equals momentum constraint",
+      "passed": true
+    }
+  ],
+  "j": "3/2",
+  "Einstein_constraint_relation": "G00=-N^2 C_H/(2 N sqrt(g)); G0i=-N C_i/(2 sqrt(g)); Gij=0 on the full linear ADM evolution, before setting constraints to zero. All lapse/shift time jets retained and cancel appropriately.",
+  "scope": "Exact rational-time matrix identities for the complete right-index and metric block; the independent spectator left multiplicity is unchanged."
+}

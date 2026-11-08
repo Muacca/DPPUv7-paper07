@@ -1,72 +1,92 @@
-%==============================================================================
-% Appendix E: Harmonic form and Hessian kernel realization
-%==============================================================================
-\section{Harmonic form and Hessian kernel realisation}
-\label{app:harmonic}
+\section{Geometric comparisons}
 
-This appendix collects the verification tables for the correspondence of
-Section~\ref{sec:harmonic}.
+This appendix collects geometric data used to interpret the constraint counts and wave analysis. Closed forms and fixed quotients follow Paper04, the frame comparison follows Paper06, finite Nil metrics are distinguished by the integral harmonic forms of Paper03EC, and the Sol isometric path follows Paper04 \cite{paper3ec,paper4,paper6}. The formulas are assembled using the same lattices, radii and action normalization.
 
-\subsection{Lemma~\ref{lem:harmonic} and Proposition~\ref{prop:hessian}}
-\label{app:harmonic:checks}
+\subsection{Closed one-forms and frame representations}
 
-For Lemma~\ref{lem:harmonic} ($\mathrm{nullspace}(d_{1})=\ker n$) and
-Proposition~\ref{prop:hessian} (the map $\Phi:\beta_{a}\mapsto\beta_{a}\sigma^{a}$
-relating the Hessian kernel and the harmonic basis), we confirmed the following
-for each topology:
-\begin{enumerate}
-  \item \textbf{Closed condition}: for a left-invariant one-form
-        $\xi=\xi_{i}\sigma^{i}$, $\dd\xi=0\Leftrightarrow n\xi=0$, with agreement
-        of the exterior-derivative matrix $d_{1}$ and $n$,
-        $\mathrm{nullspace}(d_{1})=\mathrm{nullspace}(n)$.
-  \item \textbf{Co-closed condition}: under class A (unimodular), a
-        left-invariant one-form is automatically co-closed ($\dd\star\xi=0$).
-  \item \textbf{Hessian kernel dimension}: the kernel dimension of the
-        scalar-axis Hessian $=\dim\ker n$ (a subspace decision, not an axis-name
-        decision).
-  \item \textbf{Correspondence of $\Phi$}: one-to-one (up to a change of basis)
-        between the basis of $\ker n$ and the Hessian kernel directions.
-  \item \textbf{Dimension agreement}:
-        $\dim\{\text{harmonic one-forms}\}=\dzero=b_{1}$ ($\Tthree$:3,
-        $\Nilthree$:2, $\Solthree$:1, $\Sthree$:0).
-\end{enumerate}
+\stepcounter{equation}\begin{equation}\tag{G-02}\label{eq:G-02}
+\alpha=v_i\sigma^i,\quad v_i\ \text{constant}:\qquad d\alpha=0\ \Longleftrightarrow\ nv=0.
+\end{equation}
 
-Reproduction:
-\code{script/scripts/paper07/harmonic_kernel_correspondence.py}.
+In the specified invariant coframes the constant closed-one-form dimension is $3-\mathrm{rank}\,n$. These forms are also coclosed on the compact unimodular quotient. Invariant forms compute degree-one cohomology for standard Nil and completely solvable Sol; together with $T^3,S^3$ this gives $b_1=3/2/1/0$ \cite{Nomizu1954,Hattori1960}. This identification does not extend to constant-component forms in an arbitrary frame.
 
-\subsection{Per-topology kernel directions (Milnor frame)}
-\label{app:harmonic:directions}
+The first Betti numbers can also be checked from the lattice abelianizations. On Nil, the commutator of the $x,y$ generators is the central generator, leaving a two-dimensional real abelianization. On Sol one keeps the base generator and the fiber coinvariants under $A-I$; since $A$ has no eigenvalue one, the real fiber contribution vanishes and $b_1=1$. Together with $b_1(T^3)=3$ and simple connectivity of $S^3$, the closed forms in the specified coframes represent all of $H^1$ for these four quotients.
 
-\begin{table}[H]
-\centering
-\begingroup
-\renewcommand{\arraystretch}{1.4}
-\begin{tabularx}{\linewidth}{llLY}
-\toprule
-Topology & $n$ & Basis of $\ker n$ & Harmonic one-forms \\
-\midrule
-$\Tthree$ & $\mathrm{diag}(0,0,0)$ & $e_{1},e_{2},e_{3}$ &
-$\sigma^{1},\sigma^{2},\sigma^{3}$ \\
-$\Nilthree$ & $\mathrm{diag}(1,0,0)$ & $e_{2},e_{3}$ &
-$\sigma^{2},\sigma^{3}$ (the fibre direction $\sigma^{1}$ is non-harmonic) \\
-$\Solthree$ & $\mathrm{diag}(1,-1,0)$ & $e_{3}$ &
-$\sigma^{3}$ (single singular axis) \\
-$\Sthree$ & $\mathrm{diag}(1,1,1)$ & $\{0\}$ & none \\
-\bottomrule
-\end{tabularx}
-\endgroup
-\caption{Per-topology kernel directions and harmonic one-forms (Milnor frame).}
-\label{tab:kernel_directions}
-\end{table}
+The flat-torus example of Paper06, Section 7 and Appendix A, takes the following form in the present convention.
 
-The axis names depend on the Milnor frame convention; only the dimension is
-frame-invariant (Section~\ref{sec:rankdefect:frame}).
+\stepcounter{equation}\begin{equation}\tag{G-03}\label{eq:G-03}
+\begin{aligned}\sigma^1&=\cos(\nu z)\,dx+\sin(\nu z)\,dy,\\ \sigma^2&=-\sin(\nu z)\,dx+\cos(\nu z)\,dy,\qquad \sigma^3=dz,\quad \nu\in\mathbb Z\setminus\{0\},\\ \sum_i(\sigma^i)^2&=dx^2+dy^2+dz^2,\qquad n=\mathrm{diag}(-\nu,-\nu,0).\end{aligned}
+\end{equation}
 
-\subsection{Scope note}
-\label{app:harmonic:scope}
+On the same flat torus with $2\pi$ periods, the coordinate frame has rank zero and (G-03) has rank two. Their constant closed-form dimensions are three and one, while $b_1=3$ is unchanged. The forms $dx,dy$ acquire spatially dependent coefficients in the rotated frame. This separates a local frame gauge transformation of the same fields from different constant-component truncations. Rank invariance under constant $SO(3)$ conjugacy remains valid.
 
-This correspondence is a realisation at the left-invariant representative level.
-The de Rham $H^{1}$ representativeness on the compact quotient relies on standard
-theory~\cite{ref18}, and that no additional zero arises in the inhomogeneous
-sectors is independently guaranteed by the non-contamination criterion of
-Section~\ref{sec:spectral}.
+\subsection{Finite metric paths on fixed quotients}
+
+\stepcounter{equation}\begin{equation}\tag{G-04}\label{eq:G-04}
+g=q_0^2\,\mathrm{diag}(e^{2\beta_1},e^{2\beta_2},e^{2\beta_3}),\qquad \sum_i\beta_i=0.
+\end{equation}
+
+\stepcounter{equation}\begin{equation}\tag{GE-03}\label{eq:GE-03}
+\begin{aligned}e&=E\sigma,\quad E=q_0\,\mathrm{diag}(e^{\beta_i}),\quad m=EnE^T/\det E,\\ \omega^0{}_i&=0,\qquad\omega^i{}_j=\epsilon_{kij}\left[\tfrac12(\mathrm{tr}m)\delta_{k\ell}-m_{k\ell}\right]e^\ell,\\ S(s)-S(0)&=c q_0^3\Delta\tau\,[R(s)-R(0)].\end{aligned}
+\end{equation}
+
+In (GE-03), $s$ is a finite parameter labeling static metrics, not a time-dependent field. The lattice and volume $q_0^3\mathcal V_\Sigma$ are fixed, and the LC connection is specified along every path. Torsion and the NY current vanish, as does extrinsic curvature at the time endpoints, so the action difference over a proper-time interval $\Delta\tau$ is proportional to the scalar-curvature difference. Solving the connection equation is distinct from solving the metric vacuum equation.
+
+\begin{center}\small\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}\toprule
+Path & $(\beta_1,\beta_2,\beta_3)$ &  $q_0^2 R$\\\midrule
+$T^3$ shape & $(s/2,-s/2,0)$ & 0\\
+Nil flat & $(s/2,-s/2,0)$ & $-1/2$\\
+Nil vertical & $(-s/2,-s/2,s)$ & $-e^{4s}/2$\\
+Sol base & $(s/3,-s/6,-s/6)$ & $-2e^{-2s/3}$\\
+Sol isometric & $(0,s,-s)$ & $-2$\\
+\bottomrule\end{tabularx}\end{center}
+
+The Sol paths use the coframe with $n_{23}=n_{32}=1$. The Nil-vertical and Sol-base derivatives are nonzero for every finite $s$, so their path curvature is not a mass at an extremum. Nil flat has constant scalar curvature but a nonzero full shape gradient and is not a vacuum modulus. The Sol-isometric path is generated by base translation descending to the fixed mapping torus.
+
+\stepcounter{equation}\begin{equation}\tag{GE-01}\label{eq:GE-01}
+\delta g=2q^2B,\quad B^T=B,\quad\mathrm{tr}B=0:\qquad \delta R=-\frac2{q^2}\mathrm{tr}(XB).
+\end{equation}
+
+Equation (GE-01) follows directly by differentiating the scalar-curvature formula. Since $X\ne0$ for Nil and Sol, stationarity fails in the full shape space. The DeWitt norm is positive on tracefree $B$, but does not turn a nonstationary path Hessian into a physical mass.
+
+\stepcounter{equation}\begin{equation}\tag{G-05}\label{eq:G-05}
+\left(\left\langle\frac{dx}{2\pi},\frac{dx}{2\pi}\right\rangle,\left\langle\frac{dy}{2\pi},\frac{dy}{2\pi}\right\rangle\right)=\frac{\mathcal V_{\Sigma}q_0}{4\pi^2}(e^{-s},e^s).
+\end{equation}
+
+For Nil flat, $dx/(2\pi),dy/(2\pi)$ form an integral harmonic basis. The shortest nonzero integral squared norm is the common coefficient in (G-05) times $e^{-|s|}$, distinguishing compact metrics with different $|s|$. A discrete identification can relate $s$ and $-s$. This distinguishes finite metrics on the fixed quotient without claiming vacuum stationarity or a complete moduli classification.
+
+\stepcounter{equation}\begin{equation}\tag{GE-02}\label{eq:GE-02}
+f_s(x,y,z)=(x+s,y,z),\qquad f_s^*\sigma=(\sigma^1,e^s\sigma^2,e^{-s}\sigma^3).
+\end{equation}
+
+The map $f_s$ commutes with the fiber translations and monodromy identification of Sol, so it descends to the fixed compact quotient. The Sol-isometric path is $f_s^*g_0$ and does not define a new modulus. This contrasts with the integral harmonic-lattice invariant along Nil flat.
+
+\begin{figure}[htbp]\centering\includegraphics[width=.92\textwidth]{figures/fig03_finite_paths.pdf}
+\caption{Scalar curvatures of finite paths on fixed quotients, providing geometric comparisons for the metric constraints in the main text.}\label{fig:fig03_finite_paths}
+\end{figure}
+
+\subsection{Reference geometric operators}
+
+The following are geometric operators on the specified static Riemannian metrics. Their operators and background conditions are recorded separately from the physical torus modes derived from the action in Sections 6--7.
+
+\stepcounter{equation}\begin{equation}\tag{S-01}\label{eq:S-01}
+\lambda_{\rm rough,TT}(S^3)=\frac{\ell(\ell+2)-2}{q^2},\qquad \ell\ge2,\qquad d_\ell=2(\ell-1)(\ell+3).
+\end{equation}
+
+Equation (S-01) is the rough-Laplacian spectrum on rank-two TT tensors of the round $S^3$ \cite{Allen1995}. It is neither the scalar Laplacian nor the Lichnerowicz operator. The static sphere is off shell in the present model, so these eigenvalues are not assigned physical vacuum frequencies.
+
+\stepcounter{equation}\begin{equation}\tag{S-02}\label{eq:S-02}
+\begin{aligned}\lambda_{\rm tor}(\mathrm{Nil})&=(m^2+n^2)/q^2,\quad(m,n)\in\mathbb Z^2,\\ \lambda_{k,j}(\mathrm{Nil})&=q^{-2}\left[\frac{k^2}{4\pi^2}+\frac{|k|}{2\pi}(2j+1)\right],\quad k\ne0,\quad j\ge0.\end{aligned}
+\end{equation}
+
+The Nil formula is the scalar Laplacian on the lattice of Appendix A. Each signed $k$ has multiplicity $|k|$, with coincident eigenvalues from distinct labels combined separately. The eigenvalue includes both the central $k^2$ term and the horizontal oscillator contribution \cite{Andriot2018}.
+
+\stepcounter{equation}\begin{equation}\tag{S-03}\label{eq:S-03}
+L_{p_y,p_z}=q^{-2}\left[-\frac{d^2}{dx^2}+p_y^2e^{-2x}+p_z^2e^{2x}\right],\qquad L_{p_y,p_z}\ge\frac{2|p_yp_z|}{q^2}.
+\end{equation}
+
+For Sol, (S-03) applies to each nonzero dual-lattice orbit, with domain determined by the monodromy orbit identification \cite{Bolsinov2006}. The bound follows from the arithmetic--geometric mean inequality for the potential and nonnegativity of the kinetic term. The zero orbit is a separate base-circle sector. These scalar operators provide reference comparisons; the coupled gravitational operators on the selected vacuum backgrounds are treated in Section 6 and Appendices F--H.
+
+\begin{figure}[htbp]\centering\includegraphics[width=.92\textwidth]{figures/fig04_geometric_operators.pdf}
+\caption{The spherical TT rough Laplacian and Nil scalar Laplacian, in the radius and lattice conventions used here.}\label{fig:fig04_geometric_operators}
+\end{figure}

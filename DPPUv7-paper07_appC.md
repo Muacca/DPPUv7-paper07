@@ -1,57 +1,60 @@
-# DPPUv7-paper07 — Appendix C: Route Comparison and Route-Dependent Discrepancy
+# 付録C. 拘束rankとroute対照の詳細
 
-[← Appendix B](DPPUv7-paper07_appB.md) | [Appendix D →](DPPUv7-paper07_appD.md)
+一定の対称nはSO(3)で対角化できる。式(H-03)の行列Aは構造代数のadjoint作用であり、Jacobi恒等式からmomentumのPoisson代数が従う。TとPはこの作用で不変なので{J,F}=0となる。六座標とその共役を用いれば、これらは多項式恒等式として直接検算できる。
 
----
+式(CC-01)。
 
-## Appendix C. RBD route comparison and route-dependent discrepancy
+$$
+\begin{aligned}g&=\mathrm{diag}(1,2,3),\quad c=1,\quad M=\pi g,\\
+M_{T^3}&=\mathrm{diag}(1,1,0),\quad M_{\rm Nil}=\sqrt3 I,\\
+M_{\rm Sol}&=\frac{5\sqrt3}{3}I,\quad M_{S^3}=\mathrm{diag}(4\sqrt2,0,0).\end{aligned}
+$$
 
-本 appendix では [Section 3](DPPUv7-paper07_sec03.md) の対照実験の詳細を示す。ここでの "Palatini reduction non-commutativity" は route-level の記述用語であり、一般定理の主張ではない。
+全てF=J=0を満たす。T³のminorはdF/dp₃₃=−6である。他の代表では行(F,J₁,J₂,J₃)の必要な先頭部分、列(p₁₁,p₂₃,p₁₃,p₁₂)の必要な先頭部分を取ると、Nilでは9√3、Solでは50√3、S³では−64√2となる。Solの値は対角化した $`n=\mathrm{diag}(0,1,-1)`$ で評価する。従って拘束Jacobianのrankは1/3/4/4である。
 
-### C.1 The RBD route
+Aの線形包の次元は0/2/3/3で、Jのrankの上限を与える。非零minorの近傍ではこの最大rankとdFの独立性が保持され、式(H-04)の正則層となる。Σの等方化や対称性増大などでminorが消える点へ一律に計数を延長しない。
 
-RBD（Routh-before-Dirac）route は、空間接続の補助成分（spatial-omega）をその場の方程式で解いて作用に代入してから、残った変数で制約解析を行う手続きである。この代入は auxiliary variable の条件（微分を含まない代数的可解性）の検証を経ておらず、一般論 [13] が警告する非可換性のリスクを負う。
+## 二次作用のclosure
 
-### C.2 Direct route recomputation
+式(CC-02)。
 
-本稿の negative control は toy model ではなく、同梱の DBR/RBD 制約力学エンジン（`dppu.dirac`）を用い、同一の $S^3$ Branch-A local first-order Lagrangian から route variants を再計算するものである。再現スクリプト `script/scripts/paper07/route_comparison_s3_branch_a_witness.py` は中間 CSV を証拠として読まず、以下を直接実行する。
+$$
+M_{A b}=\lbrace \Phi_A,\phi_b\rbrace ,\quad u^AM_{Ab}=0\quad\Longrightarrow\quad u^A\lbrace \Phi_A,H_c\rbrace \simeq0.
+$$
 
-- **DBR_KEEP_ALL**: 独立接続を保持したまま Dirac 閉包を行う。
-- **RBD_SPATIAL_OMEGA_ROUTH**: spatial-omega を先に Routh 消去し、その後に scalar projection と Dirac 閉包を行う。
-- **RBD_FULL_K_ROUTH**: full- $K$ を先に Routh 消去し、その後に scalar projection と Dirac 閉包を行う。
+φは元のprimary、Φはその段階までの全独立拘束である。Mの左nullspaceから新しい独立線形拘束だけを追加し、追加がなくなるまで反復する。定数係数二次作用ではこの線形代数手順がexactである。非線形拘束を線形係数rankへ落とす用途には使わない。最終Poisson行列rankをs、独立拘束総数をmとすれば第一級はm−s、第二級はsとなる。
 
-結果は次の通りである。
+| 対照 | 接続：第一級/第二級/pair | 消去後：第一級/第二級/pair |
+| --- | --- | --- |
+| 完全作用torus二次 | 1 / 4 / 1 | 1 / 0 / 1 |
+| 完全作用sphere二次 | 0 / 8 / 0 | 0 / 4 / 0 |
 
-| route | $N_{\rm phys}$ at $l=0/1/\ge2$ | $l=0$ surviving pair | $H_{PP}$ at $l=0$ | status |
-|---|---:|---|---:|---|
-| DBR_KEEP_ALL | $0/0/0$ | none | n/a | computed |
-| RBD_SPATIAL_OMEGA_ROUTH | $1/1/2$ | $(s_{l0},P_{s,l0})$ | $-3/8$ | computed |
-| RBD_FULL_K_ROUTH | $1/1/2$ | $(s_{l0},P_{s,l0})$ | $-3/8$ | computed |
+sphereの消去後はH=−p_u²/24−6ℓu、p_ℓ=0からu=0、p_u=0、ℓ=0を得る。torusではlapse primaryが第一級となり、二次作用にはscalar pairが残る。元の非線形拘束による条件は第5節で扱う。
 
-したがって route 非可換性の主証拠は $N_{\rm phys}$ の不一致であり、 $l=0$ の $H_{PP}=-3/8$ は RBD 側の余分 scalar branch が benign な再表現でないことを示す診断である。ただし、RBD は採用しない route なので、この負符号を physical ghost / physical instability の主張には用いない。
+## 完全作用からのscalar対照
 
-### C.3 Comparison setup and result
+c=1、n=2kIとし、独立接続をω⁰ᵢ=b eⁱ、ωʲₖ=a eⁱで表示する。k=0はtorus、k=1はround sphereの参照である。
 
-対照実験は $S^3$ 背景・Branch-A scalar sector で実施した。§C.2 の直接再計算は、この sector の操作順依存性を DBR/RBD エンジン上で再現するものである。
+式(D-02)。
 
-- **DBR 側**: Dirac 閉包後、物理的 scalar 自由度は全 harmonic レベルで 0（kernel は $S^3$ では不在; $d_{\rm zero}=0$ ）。
-- **RBD 側**: spatial-omega Routh と full- $K$ Routh はともに $N_{\rm phys}=1/1/2$ を返し、DBR と非可換である。
-- **同一 Lagrangian 内部実証**: $l=0$ では同一の Branch-A local first-order Lagrangian から出発して、DBR: 0 / RBD: 1 の不一致と $H_{PP}=-3/8$ が厳密に（数値誤差なしの symbolic 計算で）再現される。これにより不一致が実装差や正規化差でなく route 自体に起因することが確定する。
-- **スコープ限定**: $l\ge1$ の RBD extra count は、Routh 先行が Lorentz gauge 構造を壊す route-level artifact として記録する。負 kinetic 符号の診断は $l=0$ に限定する。
+$$
+L_{\rm P}=6Nq^3b^2-12q^2\dot q\thinspace b+12kNq^2a-6Nq^3a^2,\quad a=k/q,\quad b=\dot q/(Nq).
+$$
 
-### C.4 Route comparison labels
+式(D-03)。
 
-| label | 内容 | 扱い |
-|---|---|---|
-| RBD scalar discrepancy | RBD の余分 scalar モード（ $l=0$ で $H_{PP}=-3/8$ ） | 物理的 instability ではない（route-level）。物理主張に不使用 |
-| RBD higher-level artifact | $l\ge1$ での RBD extra count | Routh 先行による Lorentz gauge 構造破壊を含むため符号診断は主張しない |
-| DBR standard | Dirac 閉包先行の標準 route | 本稿の全主張の基盤 |
+$$
+\begin{aligned}L_{\rm met}&=6k^2Nq-6q\dot q^2/N,\\
+q&=1+\varepsilon u,\quad N=1+\varepsilon\ell,\quad a=k+\varepsilon A,\quad b=\varepsilon B,\\
+L^{[1]}&=6k^2(\ell+u),\\
+L_{\rm P}^{[2]}&=-6A^2-12kAu+6B^2-12B\dot u+6k^2\ell u-6k^2u^2,\\
+L_{\rm met}^{[2]}&=-6\dot u^2+6k^2\ell u.\end{aligned}
+$$
 
-### C.5 Scope and limitations (route sector)
+二次接続方程式A=−ku、B=dot uを代入すると同じmetric作用になる。sphereでは一次変分が非零で、両経路のpair数0はoff-shellな代数的対照である。torusの二次scalar作用には1対が残るが、元のlapse方程式はdot u²=0を要求する。これは第5節の混合錐のpure-scale切断に対応する。
 
-- 本稿ではRBD route の出力をポジティブ・ネガティブいずれの物理的主張の根拠としても使用しない。従ってRBD の余分モードを physical ghost / physical instability とは扱わない。
-- 本稿では「RBD は常に失敗する」という一般性を主張しない。検証済み sector の対照実験としてのみ扱う。
+## 対称Taub点と非零modeの計数
 
----
+BF-01のS³ Taub点ではmomentum rank 2、全rank 3であり、斉次線形商は3対である。正則代表CC-01のrank 3、4とは別の層である。j=0とj=1のKIDによる例外、および区間全体の非零minorは付録Gに示す。flat非零modeの40/34/10配置変数の比較は第4節の一つの実Fourier成分を単位とし、斉次正則層のH-04とは別の計数である。
 
-[← Appendix B](DPPUv7-paper07_appB.md) | [Appendix D →](DPPUv7-paper07_appD.md)
+[論文の入口](README_ja.md) / [参考文献](REFERENCES.md)

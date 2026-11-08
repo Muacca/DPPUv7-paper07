@@ -1,56 +1,89 @@
-# DPPUv7-paper07 — Appendix D: Endpoint and Spectral Evidence
+# 付録D. Fourier作用と積分拘束の導出
 
-[← Appendix C](DPPUv7-paper07_appC.md) | [Appendix E →](DPPUv7-paper07_appE.md)
+式(WD-01)。
 
----
+$$
+\Gamma^{i(1)}{}_{jk}=\tfrac12(\partial_jh_{ik}+\partial_kh_{ij}-\partial_ih_{jk}),\quad R^{[1]}=\partial_i\partial_jh_{ij}-\partial^2h_{ii}.
+$$
 
-## Appendix D. Endpoint and spectral evidence
+√gRを部分積分したΓΓ形式の二次係数が式(W-01)の空間項となる。lapseの一次摂動はR^[1]と掛け合わさる。Fourier方向をzに取ればR^[1]=k²(h₁₁+h₂₂)、shiftはvを通して入り、欠落するconstraintはない。momentum方程式はp₁₃=p₂₃=p₃₃=0、Hamiltonianの線形条件はh₁₁+h₂₂=0に比例する。これらの四secondaryと四primaryは互いにPoisson可換である。
 
-本 appendix では [Section 4](DPPUv7-paper07_sec04.md)–[5](DPPUv7-paper07_sec05.md) の spectral evidence をまとめる。表記は「解析対象 harmonic sector における $k>0$ スペクトル完成」で統一する。検証基準 H1/H2/H3 は §5 冒頭の operational definition に対応する。
+k≠0でgauge方向を商に取り、h₁₁=−h₂₂=A、h₁₂=Bとすると式(W-02)が従う。任意方向の非零格子波数では局所の直交基底で同じ代数となる。基底回転をtorusの格子自己同型と仮定する必要はなく、元のwavevectorと偏極tensorをそのまま戻す。
 
-### D.1 Endpoint evidence
+式(WD-02)。
 
-- **$T^3$（full- $k$）**: Fourier sector で TT spatial operator $=|k|^2$ を symbolic に確認。 $k=0$ locus は分離（flat degeneracy; scalar-axis zero-mode 全 3 軸は homogeneous レベルの結果）。
-- **$S^3$（ $l$-symbolic）**: scalar sector の zero-mode 不在を全 $l$ で symbolic に確認（有限サンプルでない）。spin-2 TT は全 $l\ge2$ で固有値 $(l-1)(l+3)$、kinetic Hessian 正定値。 $l=0,1$ は endpoint 分類（gauge/non-dynamical）。
+$$
+\begin{aligned}R+K^2-K_{ij}K^{ij}&=0,\qquad D_j(K^{ij}-g^{ij}K)=0,\\
+K^{[1]}&=hI+\Sigma+\tfrac12\dot\gamma,\qquad\left\langle R^{[2]}\right\rangle=-\tfrac1{4q_0^2}\left\langle(\partial_a\gamma_{ij})^2\right\rangle.\end{aligned}
+$$
 
-### D.2 Scalar full-spectral evidence（ $Nil^3$/ $Sol^3$）
+zero-mean TTと空間一定のh、Σは空間平均で交差しない。二次補正metricに作用するR^[1]は全発散なので積分が零で、背景K=0では二次補正Kも二次拘束へ線形には入らない。従ってHamiltonian拘束の平均は6h²−trΣ²−〈dotγ²〉/4−〈(∂γ)²〉/(4q₀²)=0となる。
 
-非可換 harmonic sector の scalar モードについて、行列調和（matrix harmonic）閉包により有効 zero-mode 数 $d(M)$ を評価:
+式(WD-03)。
 
-- $Nil^3$: 非可換モードはすべて正 gap（ $d(M)=0$ ）→ homogeneous 代表の kernel 勘定（ $\dim\ker n=2$ ）が完全な full-spectral 勘定に一致（整合）。
-- $Sol^3$: bulk は正 gap（ $d(M)=0$ ）、最下 level の truncation edge 項は定理 zero として数えない（スコープ限定）。
+$$
+\mathcal J[\xi]=\int_\Sigma\pi^{ij}\mathcal L_\xi g_{ij},\quad \xi=\partial_a:\qquad \mathcal J^{[2]}[\partial_a]\ \propto\ \left\langle\dot\gamma_{ij}\partial_a\gamma_{ij}\right\rangle.
+$$
 
-### D.3 TT / spin-1 full-spectral evidence（ $Nil^3$/ $Sol^3$）
+背景π=0、g一定なので二次補正fieldの線形寄与が消え、平均momentumの残りは式(WD-03)となる。一定のmean metric・shearとのcross termは周期性で零である。これが式(W-03)の三つのmomentum条件である。h、Σは斉次線形方程式で一定であり、wave方程式と周期積分からenergy・momentumも一定となる。
 
-同じ matrix harmonic 閉包を spin-2 / spin-1 sector に拡張:
+この積分条件はコンパクト背景のlinearization-stability条件である。正のTT energyは純粋波動方向を排除するが、体積速度との混合方向を許す。続いて固定flat torusでの十分性と、明示的な二次補正を示す。
 
-- TT: $d(M)=2$（両 topology）— 伝播 2 TT の full-spectral 整合。
-- spin-1: $d(M)=0$（両 topology）— transverse vector に物理自由度なし。
+## 固定flat torusへの既知定理の適用
 
-### D.4 Spectral towers（ $k>0$ スペクトル完成の内訳）
+式(WD-04)。
 
-| topology | sector | operator / spectrum | grade |
-|---|---|---|---|
-| $T^3$ | Fourier $k\ne0$ | $\|k\|^2$ | 閉形式（endpoint control） |
-| $S^3$ | $l\ge2$ TT | $(l-1)(l+3)$ | 閉形式（endpoint control） |
-| $Nil^3$ | toroidal（ $k=0$） | $4\pi^2(m^2+n^2)$ | 閉形式 |
-| $Nil^3$ | Heisenberg（ $k\ne0$） | $2\pi\|k\|(2N+1)$ | 閉形式/解析的 |
-| $Sol^3$ | boost bulk（ $pq\ne0$） | $\inf V=2\|pq\|>0$ | 解析的 bound（全ラベル） |
-| $Sol^3$ | compact edge | 両側 confining modified Mathieu; 離散・ $\lambda_1>0$ [40] | 閉形式/解析的（離散性・正値性）＋ 代表的数値（具体 $\lambda_1$, 代表 $A$ ） |
-| $Sol^3$ | 非コンパクト副線（ $pq=0$） | gapless continuum＝amenability の署名 [38,39] | 解釈線（主線と分離; 定理列に不算入） |
+$$
+\partial_i\partial_j\nu-\delta_{ij}\Delta\nu=0,\qquad
+\partial_iX_j+\partial_jX_i=0,\qquad
+\det(\mathcal S_k^\dagger\mathcal S_k)=32(k^2)^5\quad(k\ne0).
+$$
 
-### D.5 Spectral verification summary
+q₀=1の単位では随伴kernelはWD-04で与えられる。traceと周期性からνは定数、周期Killing方程式からXも定数であり、KIDは四本で尽きる。回転・boostの座標一次関数は固定格子に降下しない。最後の式は両symbolを合わせた四列行列についての非零mode対照である。
 
-| 検証基準 | $T^3$ | $S^3$ | $Nil^3$ | $Sol^3$ |
-|---|---|---|---|---|
-| 伝播 | 閉形式 | 閉形式 | 閉形式/解析的 | 解析的 bound（bulk）+ 代表的数値（edge） |
-| no-ghost | 閉形式 | 閉形式 | 閉形式/解析的 | 解析的 bound（bulk; edge TT 符号 positive） |
-| 非混入 | 閉形式 | 閉形式 | 閉形式/解析的 | 解析的 bound（bulk; edge carrier 分離） |
+式(WD-05)。
 
-### D.6 Independent spectral witness
+$$
+\begin{aligned}
+\delta g&=C+2t(hI+\Sigma)+\gamma, &\delta\pi&=\Sigma-2hI+\tfrac12\dot\gamma,\\
+\beta&=\mathrm{tr}(\delta\pi)=-6h,&\omega^{\rm TT}&=\Sigma+\tfrac12\dot\gamma,\\
+\langle(\omega^{\rm TT})^2\rangle-\beta^2/6
++\tfrac14\langle(\partial\gamma)^2\rangle
+&=\mathrm{tr}\Sigma^2-6h^2+\tfrac14\langle\dot\gamma^2+(\partial\gamma)^2\rangle.
+\end{aligned}
+$$
 
-`script/scripts/paper07/spectral_completion_witness.py` は外部 spectral table を読まず、§5 の式（ $T^3$: $|k|^2$、 $S^3$: $(l-1)(l+3)$、 $Nil^3$ 二系列、 $Sol^3$ bulk gap $\inf V=2|pq|$ と代表 finite-difference edge）をスクリプト内で構成し H1–H3 の正性条件を判定する。
+CとΣは一定、Σはtracefree、γは平均零TTである。WD-05はArms–Marsden–MoncriefのHamiltonian錐（同論文の式(3.5)）をW-03のenergy条件へ移す。三つのmomentum錐（同論文の式(3.1)）もWD-03と一致する。同論文の第3節は平坦な $`g_0`$ と $`\pi_0=0`$ の場合そのものを扱い、序論はKilling場4本の平坦時空 $`T^3\times\mathbb R`$ を含むと明記している。同論文第3節のTheorem 3.3（p.96）を、境界のないコンパクトCMC初期面の滑らかな周期データに適用する。例えば整数s≥5のHˢ×Hˢ⁻¹で曲線を解釈でき、最低正則性は主張しない。これにより四条件を満たす線形データは厳密拘束データ曲線の接方向となる。局所Cauchy発展とLC持ち上げからEC真空解族を得る。
 
----
+これは同じ局所時間区間での初期値問題の結果であり、二時刻境界値問題、全時間正則性、有限Fourier空間だけで閉じる厳密族を意味しない。高次補正には新しいharmonicを許す。
 
-[← Appendix C](DPPUv7-paper07_appC.md) | [Appendix E →](DPPUv7-paper07_appE.md)
+## 明示二次補正と二波の閉包
+
+W-04の単一定在波について、指数をεA₁+ε²A₂等と展開すると全10 Ricci成分の一次・二次係数が零となる。hの両符号で成立する。A₂,B₂,P₂を式に代入する局所検算であり、有限振幅で残差が厳密零という主張ではない。
+
+式(WD-06)。
+
+$$
+\begin{aligned}
+f&=a\cos x\cos t,\quad g=b\cos y\cos t,\quad h^2=(a^2+b^2)/24,\\
+H_{\mu\nu}&=\mathrm{diag}(-6ht,\thinspace 2ht+g,\thinspace 2ht+f,\thinspace 2ht-f-g),\\
+\mathcal K&=\lbrace (0,0),(\pm1,0),(0,\pm1),(\pm2,0),(0,\pm2),(\pm1,\pm1)\rbrace .
+\end{aligned}
+$$
+
+式(WD-07)。
+
+$$
+\begin{aligned}
+\ddot{\bar Q}_{\mu\nu,n}+|n|^2\bar Q_{\mu\nu,n}&=-2G^{[2]}_{\mu\nu,n}[H],\\
+-\dot{\bar Q}_{0\nu}+\partial_i\bar Q_{i\nu}&=0,\\
+\psi&=-\tfrac7{16}(a^2\cos2x+b^2\cos2y)-ab\cos x\cos y,\\
+\Delta\psi&=-2G^{[2]}_{00}[H]{}(0),\\
+\bar Q_{ij}(0)&=\delta_{ij}\psi,\qquad \bar Q_{00}(0)=\bar Q_{0i}(0)=0,\\
+\dot{\bar Q}_{ij}(0)=\dot{\bar Q}_{00}(0)&=0,\qquad \dot{\bar Q}_{0i}(0)=\partial_i\psi.
+\end{aligned}
+$$
+
+g=η+εH+ε²Qとし、barはηによるtrace reverseを表す。source保存とWD-07の初期条件により二次harmonic条件が保存される。13波数を全て保持すれば、強制oscillatorの積分でQを構成でき、局所Einstein成分・実場条件が二次まで成立する。公開補足のtwo_waves.jsonはsourceと補正係数を与える。斉次波数を除いた切断では同じ構成にならない。
+
+[論文の入口](README_ja.md) / [参考文献](REFERENCES.md)

@@ -1,0 +1,26 @@
+{
+  "flat_integrability": "Known theorem applied under compact boundaryless CMC and sufficient regularity hypotheses; Appendix D.",
+  "second_order": "Explicit finite-order corrections; distinct from the theorem proving local exact-family existence.",
+  "curved_reduction": "Selected backgrounds and sectors in Appendices F-G; no universal curved physical spectrum.",
+  "sol_lorenz_interior_supported": true,
+  "sol_reduced_fourth_order_convergence_established": false,
+  "whole_line_error_guarantee": false,
+  "curved_nonlinear_lifting_sufficiency_established": false,
+  "max_reduced_comparisons": [
+    3.2645146475836454e-08,
+    2.768181348374886e-10,
+    3.935948160621962e-09
+  ],
+  "max_dense_residual": {
+    "wave_residual_L2": 5.863148253074957e-10,
+    "Einstein_L2": 3.825461477144943e-11,
+    "lorenz_L2": 9.485296479322741e-15,
+    "ADM_constraint_L2": 2.461671513555139e-12,
+    "rho_red": 0.00153876767182266
+  },
+  "limitations": [
+    "Finite-time interior numerical evidence is not a whole-line theorem.",
+    "Convergence of the reduced fourth-order system (SG-05) under the Lorenz evolution is not established.",
+    "Finite low-label checks are not an all-j or non-LRS classification."
+  ]
+}

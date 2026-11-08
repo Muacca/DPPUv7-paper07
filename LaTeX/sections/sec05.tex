@@ -1,178 +1,57 @@
-%==============================================================================
-% Section 5: Robustness I -- scoped k>0 spectral completion
-%==============================================================================
-\section{Robustness I: scoped $k>0$ spectral completion}
-\label{sec:spectral}
+\section{Regular homogeneous constraints and the static torus}
 
-In this section we show that the classification of Theorem~\ref{thm:rankdefect}
-is unchanged for the inhomogeneous modes, as a \emph{$k>0$ spectral completion
-over the analysed harmonic sectors}.  The verification is organised by the
-following operational definitions:
-
-\begin{itemize}
-  \item \textbf{H1 (propagation)}: at the analysed labels the TT propagation
-        operator is positive (for $k>0$ the two TT modes propagate with positive
-        dispersion).
-  \item \textbf{H2 (no-ghost)}: the TT kinetic Hessian is positive definite at
-        all labels.
-  \item \textbf{H3 (non-contamination)}: the analysed $k>0$ sectors introduce no
-        additional normalisable physical zero into
-        $\dzero=3-\rank(n)$.
-\end{itemize}
-
-H1--H3 are not a full field-theory spectral theorem; they are a robustness
-criterion restricted to the analysed harmonic sectors.
-
-\subsection{Endpoint controls: $\Tthree$ and $\Sthree$}
-\label{sec:spectral:endpoint}
-
-The two ends of the four-topology ladder ($\dzero=3$ and $0$) have known
-spectra, and serve as cross-checks of the method.
-
-\begin{itemize}
-  \item \textbf{$\Tthree$ (proof-like derivation of H1--H3)}.  In the abelian
-        Fourier expansion the TT spatial operator is as below, so for $k\ne0$
-        one has $\lambda_{\Tthree}>0$ (H1).  The kinetic block is positive
-        definite (H2).  The $k=0$ locus is separated as a flat-degeneracy
-        endpoint/gauge locus and is not included in the $k>0$ claim of H3:
-        \begin{equation}
-          \lambda_{\Tthree}(\bm{k})=|\bm{k}|^{2}.
-        \end{equation}
-  \item \textbf{$\Sthree$ (similarly)}.  By the tensor
-        harmonics~\cite{ref28,ref29} the TT eigenvalues are as below, so
-        $\lambda_{\Sthree}>0$ for $l\ge2$ (H1--H2).  The scalar zero is absent
-        for all $l$ ($l$-symbolic; H3).  The cases $l=0,1$ are classified as
-        endpoint/gauge/non-dynamical (Appendix~\ref{app:conventions}):
-        \begin{equation}
-          \lambda_{\Sthree}(l)=(l-1)(l+3)\qquad(C=\epsilon\ \text{frame}).
-        \end{equation}
-\end{itemize}
-
-\subsection{$\Nilthree$: closed-form spectral completion}
-\label{sec:spectral:nil}
-
-On $\Nilthree$ (a compact quotient of the Heisenberg group), the analysed
-harmonic sectors decompose into \emph{two towers}:
-
-\begin{itemize}
-  \item \textbf{toroidal sector} ($k=0$):
-        \begin{equation}
-          \lambda_{\mathrm{tor}}(m,n)=4\pi^{2}(m^{2}+n^{2}),\qquad
-          (m,n)\ne(0,0)\ \Rightarrow\ \lambda_{\mathrm{tor}}>0.
-        \end{equation}
-  \item \textbf{Heisenberg sector} ($k\ne0$): by non-commutativity this forms a
-        Landau-type tower, positive ($2\pi|k|>0$) even at the lowest rung $N=0$:
-        \begin{equation}
-          \lambda_{\mathrm{Heis}}(k,N)=2\pi|k|\,(2N+1),\qquad
-          N=0,1,2,\dots
-        \end{equation}
-\end{itemize}
-
-H1--H2 hold in both towers, and the positive gap implies H3 (no additional
-physical zero).  This is consistent with the matrix harmonic closure (TT:
-$d(M)=2$, spin-1: $d(M)=0$; Appendix~\ref{app:spectral}).  We call this result a
-``closed-form spectral completion over the analysed harmonic sectors.''
-
-\subsection{$\Solthree$: bulk gap and the compact edge}
-\label{sec:spectral:sol}
-
-The non-commutative sector of $\Solthree$ is labelled by boost-type harmonics,
-and the reduced spatial operator reduces to the one-dimensional Schr\"odinger
-form
-\begin{equation}
-  -\frac{\dd^{2}}{\dd w^{2}}+V(w),\qquad
-  V(w)=q^{2}e^{2w/R}+p^{2}e^{-2w/R},
+\stepcounter{equation}\begin{equation}\tag{H-03}\label{eq:H-03}
+\begin{aligned}(A_k)^i{}_j&=n_{iz}\epsilon_{zkj},\qquad \mathcal L_\beta g=\beta^k(A_k^Tg+gA_k),\\ J_k&=\mathrm{tr}\bigl[\pi(A_k^Tg+gA_k)\bigr],\\ \{J_i,F\}&=0,\qquad \{J_i,J_j\}=-\epsilon_{ijk}n_kJ_k\quad(n=\mathrm{diag}(n_1,n_2,n_3)).\end{aligned}
 \end{equation}
-($p,q$ are labels).  We treat the \emph{bulk} and the \emph{compact edge}
-separately.
 
-\begin{itemize}
-  \item \textbf{Bulk ($pq\ne0$)}: by the arithmetic--geometric-mean inequality
-        \begin{equation}
-          V(w)\ge 2|pq|,\qquad
-          \text{with equality at } |q\,e^{w/R}|=|p\,e^{-w/R}|.
-        \end{equation}
-        Hence $\inf V=2|pq|>0$ (analytic bound, all labels) and H1--H3 hold.
-  \item \textbf{Compact edge (representative numerics)}: the physical
-        $\Solthree$ is a torus bundle with hyperbolic gluing
-        $A\in SL(2,\mathbb{Z})$ (an Anosov mapping torus), and each sector
-        becomes a two-sided confining modified-Mathieu type~\cite{ref40}.  For a
-        representative gluing parameter, a finite-difference Sturm--Liouville
-        witness confirms the lowest eigenvalue $\lambda_{1}>0$.  This is not an
-        all-Anosov closed-form theorem; it is kept at the level of
-        representative numerics
-        (\code{script/scripts/paper07/spectral_completion_witness.py}).
-\end{itemize}
+The symplectic form is $\Omega=\sum_{ij}\delta\pi^{ij}\wedge\delta g_{ij}$. After removing the lapse and shift primary multiplier pairs, $F$ and the independent $J_k$ generate first-class constraints. Internal Lorentz directions have already been quotiented in the metric description after solving torsion. Discrete quotient automorphisms are not subtracted as continuous gauge directions.
 
-For $pq=0$ there is a gapless continuum with $\inf V=0$ (non-compact;
-a signature of amenability~\cite{ref38,ref39}); this is not called a normalisable
-zero and is separate from the compact edge.
-
-\subsection{No-ghost across all labels}
-\label{sec:spectral:noghost}
-
-The TT kinetic Hessian is given, for all topologies, in the form
-\begin{equation}
-  K=\mathrm{diag}\!\left(\frac{2q^{3}}{N}\right),
+\stepcounter{equation}\begin{equation}\tag{H-04}\label{eq:H-04}
+r=\mathrm{rank}\,dJ,\qquad \mathrm{rank}\,d(F,J)=r+1,\qquad N_{\rm hom}=6-r-1.
 \end{equation}
-label-independent ($\partial K/\partial k=0$) and positive definite.  Hence
-the no-ghost property extends to all analysed labels.  The minisuperspace
-no-ghost is treated as an independent verification in
-Section~\ref{sec:finite}.
 
-\subsection{Non-contamination of $\dzero$}
-\label{sec:spectral:noncontam}
+Equation (H-04) is a local count on the regular open stratum of the constraint surface. Appendix C gives constraint-satisfying representatives and nonzero minors. The span of the $A_k$ bounds the number of independent $J_k$, and the representative minors attain that bound. Degenerate strata require a separate regularity check.
 
-Since the bulk gap is positive in all analysed harmonic sectors, the $k>0$
-spectral completion introduces no additional physical zero into
-$\dzero=3-\rank(n)$.  The homogeneous count of $\dzero$ and the
-full-spectral statement about physical degrees of freedom are propositions at
-different levels; what this section shows is that the former is unchanged by the
-latter.
+\begin{center}\small\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}\toprule
+Geometry & $\mathrm{rank}\,dJ$ & $\mathrm{rank}\,d(F,J)$\\\midrule
+$T^3$ & 0 & 1\\
+Nil & 2 & 3\\
+Sol & 3 & 4\\
+$S^3$ & 3 & 4\\
+\bottomrule\end{tabularx}\end{center}
 
-\subsection{NY-inhomogeneous note}
-\label{sec:spectral:ny}
+The counts $5/3/2/2$ concern the finite-dimensional system of all symmetric homogeneous metrics on the specified fixed quotients. They are not graviton polarizations per spacetime point, Teichm\"uller dimensions for arbitrary lattices, or zero-frequency counts at each background. Their objects and values differ from the $3/2/1/0$ closed-one-form dimensions.
 
-The $O(\delta^{2})$ density of the NY term does not contribute to the rank in
-the bulk, even in the analysed spectral sectors.  This fact is detailed in
-Section~\ref{sec:torsion}.
-
-\subsection{Evidence tiers}
-\label{sec:spectral:tiers}
-
-\begin{center}
-\renewcommand{\arraystretch}{1.3}
-\begin{tabularx}{\linewidth}{lLY}
-\toprule
-Tier & Meaning & Instances in this section \\
-\midrule
-Closed form & Closed form / symbolic, all labels &
-$\Tthree$ full-$k$, $\Sthree$ $l$-symbolic, $\Nilthree$ tower \\
-Analytic bound & Analytic, all labels (incl.\ non-closed-form bound) &
-$\Solthree$ bulk gap $2|pq|$ \\
-Representative numerics & Numerical, representative label &
-$\Solthree$ compact edge $\lambda_{1}$ (representative) \\
-\bottomrule
-\end{tabularx}
-\end{center}
-
-The full spectral-verification table is collected in
-Appendix~\ref{app:spectral}.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.95\textwidth]{figures/fig04_spectral_completion_map.png}
-  \caption{Scoped $k>0$ spectral completion map.  The analysed harmonic sectors
-    of the four topologies and the verification criteria (propagation,
-    no-ghost, non-contamination) are shown.
-    \textbf{(a) $\Tthree$}: abelian Fourier sector, $|k|^{2}$ dispersion.
-    \textbf{(b) $\Sthree$}: $l$-symbolic tensor harmonics, $(l-1)(l+3)$.
-    \textbf{(c) $\Nilthree$}: sum of the toroidal sector and the Heisenberg
-    Landau tower $2\pi|k|(2N{+}1)$.
-    \textbf{(d) $\Solthree$}: boost Schr\"odinger potential $V(w)$, with the
-    compact main line (modified Mathieu, discrete $\lambda_{1}>0$) and the
-    non-compact subline ($pq=0$ gapless continuum) shown separately.
-    \emph{Scope}: this figure is restricted to the analysed harmonic sectors and
-    is not a full PDE theorem for arbitrary inhomogeneous perturbations.}
-  \label{fig:spectral}
+\begin{figure}[htbp]\centering\includegraphics[width=.92\textwidth]{figures/fig01_distinct_counts.pdf}
+\caption{Constant closed-one-form dimensions in the specified coframes and homogeneous pair counts on regular constraint strata. The static torus is not on the latter regular stratum.}\label{fig:fig01_distinct_counts}
 \end{figure}
+
+\subsection{The singular static torus}
+
+The homogeneous mixed cone and exact family of Paper06, Section 5 and Appendix D, are placed here on the singular stratum of the Hamiltonian constraint $F$ \cite{paper6}. Sections 6--7 add nonzero Fourier components to this setting.
+
+At $n=0$, $\pi=0$, $F$ is quadratic in momenta and $dF=0$. The quadratic action alone retains six metric pairs because its lapse equation vanishes. The second-order coefficient of the original nonlinear Hamiltonian constraint instead imposes the following condition, where $h$ is the first-order mean expansion and $\Sigma$ is tracefree.
+
+\stepcounter{equation}\begin{equation}\tag{T-01}\label{eq:T-01}
+K=\varepsilon(hI+\Sigma)+O(\varepsilon^2),\qquad \mathrm{tr}\Sigma=0,\qquad \mathrm{tr}(\Sigma^2)=6h^2.
+\end{equation}
+
+This cone is not a vector space. Its pure-scale slice requires $h=0$, while nontrivial simultaneous shape and volume directions exist. Replacing $p_q^2=0$ by $p_q=0$ changes its differential and gauge generator and is not an equivalent regularization.
+
+\stepcounter{equation}\begin{equation}\tag{T-02}\label{eq:T-02}
+\begin{aligned}g_{ii}(\tau,\varepsilon)&=q_0^2(1+3\varepsilon h\tau)^{2p_i},\quad p_i=\frac13+\frac{\sigma_i}{3h},\\ \sum_i\sigma_i&=0,\quad\sum_i\sigma_i^2=6h^2,\quad\sum_ip_i=\sum_ip_i^2=1.\end{aligned}
+\end{equation}
+
+For $h\ne0$, (T-02) is an exact vacuum solution on $1+3\varepsilon h\tau>0$, and its derivative in $\varepsilon$ realizes the cone direction. A general symmetric $\Sigma$ is recovered by a constant orthogonal matrix representation. If $h=0$, then $\Sigma=0$ and constant metric deformations remain. This explicit homogeneous construction is distinct from the theorem application for spatially dependent waves in Section 7.
+
+The static flat-torus metric family is locally six-dimensional $\mathrm{SPD}(3)$, or five-dimensional at fixed volume, with residual discrete lattice identifications. Its pulled-back symplectic form vanishes because $\pi=0$; this does not make the whole family gauge.
+
+
+The closed-one-form dimensions of Paper04 and frame comparisons of Paper06 serve as geometric data specifying the homogeneous truncation \cite{paper4,paper6}. Obtaining a reduced metric kernel from those dimensions would additionally require a map to perturbation fields compatible with constraints and gauge quotient. Appendix E collects the preceding geometric results in the present normalization.
+
+
+\subsection{Linear rank exceptions at Taub points}
+
+At the $S^3$ Taub background (BF-01), the homogeneous momentum rank is two and the full constraint rank is three. Axial $U(1)$ symmetry lowers these from the generic ranks three and four, giving a three-pair linear gauge quotient. This does not replace the two-pair regular-stratum result (H-04). Quadratic KID conditions remain, so the linear quotient is not identified with a smooth nonlinear physical phase space.
+
+The $\ell,m$ tangent directions of the Taub family span one nondegenerate linear pair, while background time displacement is pure gauge. Further KID exceptions occur at low inhomogeneous labels and are counted with their representation multiplicities in Section 6.

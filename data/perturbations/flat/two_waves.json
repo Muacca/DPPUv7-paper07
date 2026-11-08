@@ -1,0 +1,2201 @@
+{
+  "checks": [
+    {
+      "name": "first-order Ricci zero",
+      "passed": true
+    },
+    {
+      "name": "first-order harmonic gauge",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-2, 0) nu=0",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-2, 0) nu=1",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-2, 0) nu=2",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-2, 0) nu=3",
+      "passed": true
+    },
+    {
+      "name": "zero initial momentum source k=(-2, 0)",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-2, 0) 00",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-2, 0) 01",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-2, 0) 02",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-2, 0) 03",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-2, 0) 11",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-2, 0) 12",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-2, 0) 13",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-2, 0) 22",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-2, 0) 23",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-2, 0) 33",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-2, 0) nu=0",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-2, 0) nu=1",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-2, 0) nu=2",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-2, 0) nu=3",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-1, -1) nu=0",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-1, -1) nu=1",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-1, -1) nu=2",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-1, -1) nu=3",
+      "passed": true
+    },
+    {
+      "name": "zero initial momentum source k=(-1, -1)",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, -1) 00",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, -1) 01",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, -1) 02",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, -1) 03",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, -1) 11",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, -1) 12",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, -1) 13",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, -1) 22",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, -1) 23",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, -1) 33",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-1, -1) nu=0",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-1, -1) nu=1",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-1, -1) nu=2",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-1, -1) nu=3",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-1, 0) nu=0",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-1, 0) nu=1",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-1, 0) nu=2",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-1, 0) nu=3",
+      "passed": true
+    },
+    {
+      "name": "zero initial momentum source k=(-1, 0)",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 0) 00",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 0) 01",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 0) 02",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 0) 03",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 0) 11",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 0) 12",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 0) 13",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 0) 22",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 0) 23",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 0) 33",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-1, 0) nu=0",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-1, 0) nu=1",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-1, 0) nu=2",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-1, 0) nu=3",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-1, 1) nu=0",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-1, 1) nu=1",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-1, 1) nu=2",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(-1, 1) nu=3",
+      "passed": true
+    },
+    {
+      "name": "zero initial momentum source k=(-1, 1)",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 1) 00",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 1) 01",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 1) 02",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 1) 03",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 1) 11",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 1) 12",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 1) 13",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 1) 22",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 1) 23",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(-1, 1) 33",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-1, 1) nu=0",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-1, 1) nu=1",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-1, 1) nu=2",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(-1, 1) nu=3",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, -2) nu=0",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, -2) nu=1",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, -2) nu=2",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, -2) nu=3",
+      "passed": true
+    },
+    {
+      "name": "zero initial momentum source k=(0, -2)",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -2) 00",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -2) 01",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -2) 02",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -2) 03",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -2) 11",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -2) 12",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -2) 13",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -2) 22",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -2) 23",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -2) 33",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, -2) nu=0",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, -2) nu=1",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, -2) nu=2",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, -2) nu=3",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, -1) nu=0",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, -1) nu=1",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, -1) nu=2",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, -1) nu=3",
+      "passed": true
+    },
+    {
+      "name": "zero initial momentum source k=(0, -1)",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -1) 00",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -1) 01",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -1) 02",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -1) 03",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -1) 11",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -1) 12",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -1) 13",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -1) 22",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -1) 23",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, -1) 33",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, -1) nu=0",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, -1) nu=1",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, -1) nu=2",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, -1) nu=3",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, 0) nu=0",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, 0) nu=1",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, 0) nu=2",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, 0) nu=3",
+      "passed": true
+    },
+    {
+      "name": "integrated energy source vanishes",
+      "passed": true
+    },
+    {
+      "name": "three integrated momentum sources vanish",
+      "passed": true
+    },
+    {
+      "name": "zero initial momentum source k=(0, 0)",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 0) 00",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 0) 01",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 0) 02",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 0) 03",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 0) 11",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 0) 12",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 0) 13",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 0) 22",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 0) 23",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 0) 33",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, 0) nu=0",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, 0) nu=1",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, 0) nu=2",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, 0) nu=3",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, 1) nu=0",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, 1) nu=1",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, 1) nu=2",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, 1) nu=3",
+      "passed": true
+    },
+    {
+      "name": "zero initial momentum source k=(0, 1)",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 1) 00",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 1) 01",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 1) 02",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 1) 03",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 1) 11",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 1) 12",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 1) 13",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 1) 22",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 1) 23",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 1) 33",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, 1) nu=0",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, 1) nu=1",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, 1) nu=2",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, 1) nu=3",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, 2) nu=0",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, 2) nu=1",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, 2) nu=2",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(0, 2) nu=3",
+      "passed": true
+    },
+    {
+      "name": "zero initial momentum source k=(0, 2)",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 2) 00",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 2) 01",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 2) 02",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 2) 03",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 2) 11",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 2) 12",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 2) 13",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 2) 22",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 2) 23",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(0, 2) 33",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, 2) nu=0",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, 2) nu=1",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, 2) nu=2",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(0, 2) nu=3",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(1, -1) nu=0",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(1, -1) nu=1",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(1, -1) nu=2",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(1, -1) nu=3",
+      "passed": true
+    },
+    {
+      "name": "zero initial momentum source k=(1, -1)",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, -1) 00",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, -1) 01",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, -1) 02",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, -1) 03",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, -1) 11",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, -1) 12",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, -1) 13",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, -1) 22",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, -1) 23",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, -1) 33",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(1, -1) nu=0",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(1, -1) nu=1",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(1, -1) nu=2",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(1, -1) nu=3",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(1, 0) nu=0",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(1, 0) nu=1",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(1, 0) nu=2",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(1, 0) nu=3",
+      "passed": true
+    },
+    {
+      "name": "zero initial momentum source k=(1, 0)",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 0) 00",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 0) 01",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 0) 02",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 0) 03",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 0) 11",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 0) 12",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 0) 13",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 0) 22",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 0) 23",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 0) 33",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(1, 0) nu=0",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(1, 0) nu=1",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(1, 0) nu=2",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(1, 0) nu=3",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(1, 1) nu=0",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(1, 1) nu=1",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(1, 1) nu=2",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(1, 1) nu=3",
+      "passed": true
+    },
+    {
+      "name": "zero initial momentum source k=(1, 1)",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 1) 00",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 1) 01",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 1) 02",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 1) 03",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 1) 11",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 1) 12",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 1) 13",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 1) 22",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 1) 23",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(1, 1) 33",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(1, 1) nu=0",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(1, 1) nu=1",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(1, 1) nu=2",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(1, 1) nu=3",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(2, 0) nu=0",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(2, 0) nu=1",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(2, 0) nu=2",
+      "passed": true
+    },
+    {
+      "name": "source conservation k=(2, 0) nu=3",
+      "passed": true
+    },
+    {
+      "name": "zero initial momentum source k=(2, 0)",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(2, 0) 00",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(2, 0) 01",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(2, 0) 02",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(2, 0) 03",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(2, 0) 11",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(2, 0) 12",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(2, 0) 13",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(2, 0) 22",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(2, 0) 23",
+      "passed": true
+    },
+    {
+      "name": "second-order reduced Einstein equation k=(2, 0) 33",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(2, 0) nu=0",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(2, 0) nu=1",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(2, 0) nu=2",
+      "passed": true
+    },
+    {
+      "name": "second-order harmonic gauge k=(2, 0) nu=3",
+      "passed": true
+    },
+    {
+      "name": "reality pairing (-2, 0)",
+      "passed": true
+    },
+    {
+      "name": "reality pairing (-1, -1)",
+      "passed": true
+    },
+    {
+      "name": "reality pairing (-1, 0)",
+      "passed": true
+    },
+    {
+      "name": "reality pairing (-1, 1)",
+      "passed": true
+    },
+    {
+      "name": "reality pairing (0, -2)",
+      "passed": true
+    },
+    {
+      "name": "reality pairing (0, -1)",
+      "passed": true
+    },
+    {
+      "name": "reality pairing (0, 0)",
+      "passed": true
+    },
+    {
+      "name": "reality pairing (0, 1)",
+      "passed": true
+    },
+    {
+      "name": "reality pairing (0, 2)",
+      "passed": true
+    },
+    {
+      "name": "reality pairing (1, -1)",
+      "passed": true
+    },
+    {
+      "name": "reality pairing (1, 0)",
+      "passed": true
+    },
+    {
+      "name": "reality pairing (1, 1)",
+      "passed": true
+    },
+    {
+      "name": "reality pairing (2, 0)",
+      "passed": true
+    }
+  ],
+  "parameters": "h^2=(a^2+b^2)/24; q0=1; periods 2pi",
+  "metric_first": [
+    [
+      "-6*h*t",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "b*cos(t)*cos(y) + 2*h*t",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "a*cos(t)*cos(x) + 2*h*t",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-a*cos(t)*cos(x) - b*cos(t)*cos(y) + 2*h*t"
+    ]
+  ],
+  "second_order_wavevectors": [
+    [
+      -2,
+      0
+    ],
+    [
+      -1,
+      -1
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      -1,
+      1
+    ],
+    [
+      0,
+      -2
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      -1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "initial_psi_modes": {
+    "(-2, 0)": "-7*a**2/32",
+    "(-1, -1)": "-a*b/4",
+    "(-1, 0)": "0",
+    "(-1, 1)": "-a*b/4",
+    "(0, -2)": "-7*b**2/32",
+    "(0, -1)": "0",
+    "(0, 0)": "0",
+    "(0, 1)": "0",
+    "(0, 2)": "-7*b**2/32",
+    "(1, -1)": "-a*b/4",
+    "(1, 0)": "0",
+    "(1, 1)": "-a*b/4",
+    "(2, 0)": "-7*a**2/32"
+  },
+  "modes": {
+    "(-2, 0)": {
+      "source": [
+        [
+          "-3*a**2*exp(2*I*t)/32 - a**2/4 - 3*a**2*exp(-2*I*t)/32",
+          "3*a**2*exp(2*I*t)/32 - 3*a**2*exp(-2*I*t)/32",
+          "0",
+          "0"
+        ],
+        [
+          "3*a**2*exp(2*I*t)/32 - 3*a**2*exp(-2*I*t)/32",
+          "-3*a**2*exp(2*I*t)/32 - 3*a**2*exp(-2*I*t)/32",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "a**2/16",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "a**2/16"
+        ]
+      ],
+      "trace_reversed_second": [
+        [
+          "-3*I*a**2*t*exp(2*I*t)/64 + 3*I*a**2*t*exp(-2*I*t)/64 - a**2*exp(2*I*t)/16 + a**2/8 - a**2*exp(-2*I*t)/16",
+          "3*I*a**2*t*exp(2*I*t)/64 + 3*I*a**2*t*exp(-2*I*t)/64 + 11*a**2*exp(2*I*t)/128 - 11*a**2*exp(-2*I*t)/128",
+          "0",
+          "0"
+        ],
+        [
+          "3*I*a**2*t*exp(2*I*t)/64 + 3*I*a**2*t*exp(-2*I*t)/64 + 11*a**2*exp(2*I*t)/128 - 11*a**2*exp(-2*I*t)/128",
+          "-3*I*a**2*t*exp(2*I*t)/64 + 3*I*a**2*t*exp(-2*I*t)/64 - 7*a**2*exp(2*I*t)/64 - 7*a**2*exp(-2*I*t)/64",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-3*a**2*exp(2*I*t)/32 - a**2/32 - 3*a**2*exp(-2*I*t)/32",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-3*a**2*exp(2*I*t)/32 - a**2/32 - 3*a**2*exp(-2*I*t)/32"
+        ]
+      ],
+      "metric_second": [
+        [
+          "-3*I*a**2*t*exp(2*I*t)/64 + 3*I*a**2*t*exp(-2*I*t)/64 - 23*a**2*exp(2*I*t)/128 + a**2/32 - 23*a**2*exp(-2*I*t)/128",
+          "3*I*a**2*t*exp(2*I*t)/64 + 3*I*a**2*t*exp(-2*I*t)/64 + 11*a**2*exp(2*I*t)/128 - 11*a**2*exp(-2*I*t)/128",
+          "0",
+          "0"
+        ],
+        [
+          "3*I*a**2*t*exp(2*I*t)/64 + 3*I*a**2*t*exp(-2*I*t)/64 + 11*a**2*exp(2*I*t)/128 - 11*a**2*exp(-2*I*t)/128",
+          "-3*I*a**2*t*exp(2*I*t)/64 + 3*I*a**2*t*exp(-2*I*t)/64 + a**2*exp(2*I*t)/128 + 3*a**2/32 + a**2*exp(-2*I*t)/128",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "3*a**2*exp(2*I*t)/128 + a**2/16 + 3*a**2*exp(-2*I*t)/128",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "3*a**2*exp(2*I*t)/128 + a**2/16 + 3*a**2*exp(-2*I*t)/128"
+        ]
+      ]
+    },
+    "(-1, -1)": {
+      "source": [
+        [
+          "-3*a*b*exp(2*I*t)/64 - 5*a*b/32 - 3*a*b*exp(-2*I*t)/64",
+          "3*a*b*exp(2*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "3*a*b*exp(2*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "3*a*b*exp(2*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b/32 - 7*a*b*exp(-2*I*t)/64",
+          "a*b*exp(2*I*t)/64 + a*b/32 + a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "3*a*b*exp(2*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "a*b*exp(2*I*t)/64 + a*b/32 + a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b/32 - 7*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "5*a*b*exp(2*I*t)/64 + 3*a*b/32 + 5*a*b*exp(-2*I*t)/64"
+        ]
+      ],
+      "trace_reversed_second": [
+        [
+          "-3*a*b*exp(2*I*t)/64 - a*b*exp(sqrt(2)*I*t)/32 + 5*a*b/32 - a*b*exp(-sqrt(2)*I*t)/32 - 3*a*b*exp(-2*I*t)/64",
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b*exp(sqrt(2)*I*t)/32 + a*b/32 - a*b*exp(-sqrt(2)*I*t)/32 - 7*a*b*exp(-2*I*t)/64",
+          "a*b*exp(2*I*t)/64 - a*b/32 + a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "a*b*exp(2*I*t)/64 - a*b/32 + a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b*exp(sqrt(2)*I*t)/32 + a*b/32 - a*b*exp(-sqrt(2)*I*t)/32 - 7*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "5*a*b*exp(2*I*t)/64 - 5*a*b*exp(sqrt(2)*I*t)/32 - 3*a*b/32 - 5*a*b*exp(-sqrt(2)*I*t)/32 + 5*a*b*exp(-2*I*t)/64"
+        ]
+      ],
+      "metric_second": [
+        [
+          "-3*a*b*exp(2*I*t)/32 - a*b*exp(sqrt(2)*I*t)/8 + a*b/16 - a*b*exp(-sqrt(2)*I*t)/8 - 3*a*b*exp(-2*I*t)/32",
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/16 + a*b*exp(sqrt(2)*I*t)/16 + a*b/8 + a*b*exp(-sqrt(2)*I*t)/16 - a*b*exp(-2*I*t)/16",
+          "a*b*exp(2*I*t)/64 - a*b/32 + a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "a*b*exp(2*I*t)/64 - a*b/32 + a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/16 + a*b*exp(sqrt(2)*I*t)/16 + a*b/8 + a*b*exp(-sqrt(2)*I*t)/16 - a*b*exp(-2*I*t)/16",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "a*b*exp(2*I*t)/8 - a*b*exp(sqrt(2)*I*t)/16 - a*b*exp(-sqrt(2)*I*t)/16 + a*b*exp(-2*I*t)/8"
+        ]
+      ]
+    },
+    "(-1, 0)": {
+      "source": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "a*h*t*exp(I*t)/2 + a*h*t*exp(-I*t)/2 - I*a*h*exp(I*t)/2 + I*a*h*exp(-I*t)/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-a*h*t*exp(I*t)/2 - a*h*t*exp(-I*t)/2 + I*a*h*exp(I*t)/2 - I*a*h*exp(-I*t)/2"
+        ]
+      ],
+      "trace_reversed_second": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "I*a*h*t**2*exp(I*t)/4 - I*a*h*t**2*exp(-I*t)/4 + a*h*t*exp(I*t)/4 + a*h*t*exp(-I*t)/4 + I*a*h*exp(I*t)/4 - I*a*h*exp(-I*t)/4",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-I*a*h*t**2*exp(I*t)/4 + I*a*h*t**2*exp(-I*t)/4 - a*h*t*exp(I*t)/4 - a*h*t*exp(-I*t)/4 - I*a*h*exp(I*t)/4 + I*a*h*exp(-I*t)/4"
+        ]
+      ],
+      "metric_second": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "I*a*h*t**2*exp(I*t)/4 - I*a*h*t**2*exp(-I*t)/4 + a*h*t*exp(I*t)/4 + a*h*t*exp(-I*t)/4 + I*a*h*exp(I*t)/4 - I*a*h*exp(-I*t)/4",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-I*a*h*t**2*exp(I*t)/4 + I*a*h*t**2*exp(-I*t)/4 - a*h*t*exp(I*t)/4 - a*h*t*exp(-I*t)/4 - I*a*h*exp(I*t)/4 + I*a*h*exp(-I*t)/4"
+        ]
+      ]
+    },
+    "(-1, 1)": {
+      "source": [
+        [
+          "-3*a*b*exp(2*I*t)/64 - 5*a*b/32 - 3*a*b*exp(-2*I*t)/64",
+          "3*a*b*exp(2*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "-3*a*b*exp(2*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "3*a*b*exp(2*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b/32 - 7*a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/64 - a*b/32 - a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "-3*a*b*exp(2*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/64 - a*b/32 - a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b/32 - 7*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "5*a*b*exp(2*I*t)/64 + 3*a*b/32 + 5*a*b*exp(-2*I*t)/64"
+        ]
+      ],
+      "trace_reversed_second": [
+        [
+          "-3*a*b*exp(2*I*t)/64 - a*b*exp(sqrt(2)*I*t)/32 + 5*a*b/32 - a*b*exp(-sqrt(2)*I*t)/32 - 3*a*b*exp(-2*I*t)/64",
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b*exp(sqrt(2)*I*t)/32 + a*b/32 - a*b*exp(-sqrt(2)*I*t)/32 - 7*a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/64 + a*b/32 - a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/64 + a*b/32 - a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b*exp(sqrt(2)*I*t)/32 + a*b/32 - a*b*exp(-sqrt(2)*I*t)/32 - 7*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "5*a*b*exp(2*I*t)/64 - 5*a*b*exp(sqrt(2)*I*t)/32 - 3*a*b/32 - 5*a*b*exp(-sqrt(2)*I*t)/32 + 5*a*b*exp(-2*I*t)/64"
+        ]
+      ],
+      "metric_second": [
+        [
+          "-3*a*b*exp(2*I*t)/32 - a*b*exp(sqrt(2)*I*t)/8 + a*b/16 - a*b*exp(-sqrt(2)*I*t)/8 - 3*a*b*exp(-2*I*t)/32",
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/16 + a*b*exp(sqrt(2)*I*t)/16 + a*b/8 + a*b*exp(-sqrt(2)*I*t)/16 - a*b*exp(-2*I*t)/16",
+          "-a*b*exp(2*I*t)/64 + a*b/32 - a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/64 + a*b/32 - a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/16 + a*b*exp(sqrt(2)*I*t)/16 + a*b/8 + a*b*exp(-sqrt(2)*I*t)/16 - a*b*exp(-2*I*t)/16",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "a*b*exp(2*I*t)/8 - a*b*exp(sqrt(2)*I*t)/16 - a*b*exp(-sqrt(2)*I*t)/16 + a*b*exp(-2*I*t)/8"
+        ]
+      ]
+    },
+    "(0, -2)": {
+      "source": [
+        [
+          "-3*b**2*exp(2*I*t)/32 - b**2/4 - 3*b**2*exp(-2*I*t)/32",
+          "0",
+          "3*b**2*exp(2*I*t)/32 - 3*b**2*exp(-2*I*t)/32",
+          "0"
+        ],
+        [
+          "0",
+          "b**2/16",
+          "0",
+          "0"
+        ],
+        [
+          "3*b**2*exp(2*I*t)/32 - 3*b**2*exp(-2*I*t)/32",
+          "0",
+          "-3*b**2*exp(2*I*t)/32 - 3*b**2*exp(-2*I*t)/32",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "b**2/16"
+        ]
+      ],
+      "trace_reversed_second": [
+        [
+          "-3*I*b**2*t*exp(2*I*t)/64 + 3*I*b**2*t*exp(-2*I*t)/64 - b**2*exp(2*I*t)/16 + b**2/8 - b**2*exp(-2*I*t)/16",
+          "0",
+          "3*I*b**2*t*exp(2*I*t)/64 + 3*I*b**2*t*exp(-2*I*t)/64 + 11*b**2*exp(2*I*t)/128 - 11*b**2*exp(-2*I*t)/128",
+          "0"
+        ],
+        [
+          "0",
+          "-3*b**2*exp(2*I*t)/32 - b**2/32 - 3*b**2*exp(-2*I*t)/32",
+          "0",
+          "0"
+        ],
+        [
+          "3*I*b**2*t*exp(2*I*t)/64 + 3*I*b**2*t*exp(-2*I*t)/64 + 11*b**2*exp(2*I*t)/128 - 11*b**2*exp(-2*I*t)/128",
+          "0",
+          "-3*I*b**2*t*exp(2*I*t)/64 + 3*I*b**2*t*exp(-2*I*t)/64 - 7*b**2*exp(2*I*t)/64 - 7*b**2*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-3*b**2*exp(2*I*t)/32 - b**2/32 - 3*b**2*exp(-2*I*t)/32"
+        ]
+      ],
+      "metric_second": [
+        [
+          "-3*I*b**2*t*exp(2*I*t)/64 + 3*I*b**2*t*exp(-2*I*t)/64 - 23*b**2*exp(2*I*t)/128 + b**2/32 - 23*b**2*exp(-2*I*t)/128",
+          "0",
+          "3*I*b**2*t*exp(2*I*t)/64 + 3*I*b**2*t*exp(-2*I*t)/64 + 11*b**2*exp(2*I*t)/128 - 11*b**2*exp(-2*I*t)/128",
+          "0"
+        ],
+        [
+          "0",
+          "3*b**2*exp(2*I*t)/128 + b**2/16 + 3*b**2*exp(-2*I*t)/128",
+          "0",
+          "0"
+        ],
+        [
+          "3*I*b**2*t*exp(2*I*t)/64 + 3*I*b**2*t*exp(-2*I*t)/64 + 11*b**2*exp(2*I*t)/128 - 11*b**2*exp(-2*I*t)/128",
+          "0",
+          "-3*I*b**2*t*exp(2*I*t)/64 + 3*I*b**2*t*exp(-2*I*t)/64 + b**2*exp(2*I*t)/128 + 3*b**2/32 + b**2*exp(-2*I*t)/128",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "3*b**2*exp(2*I*t)/128 + b**2/16 + 3*b**2*exp(-2*I*t)/128"
+        ]
+      ]
+    },
+    "(0, -1)": {
+      "source": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "b*h*t*exp(I*t)/2 + b*h*t*exp(-I*t)/2 - I*b*h*exp(I*t)/2 + I*b*h*exp(-I*t)/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-b*h*t*exp(I*t)/2 - b*h*t*exp(-I*t)/2 + I*b*h*exp(I*t)/2 - I*b*h*exp(-I*t)/2"
+        ]
+      ],
+      "trace_reversed_second": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "I*b*h*t**2*exp(I*t)/4 - I*b*h*t**2*exp(-I*t)/4 + b*h*t*exp(I*t)/4 + b*h*t*exp(-I*t)/4 + I*b*h*exp(I*t)/4 - I*b*h*exp(-I*t)/4",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-I*b*h*t**2*exp(I*t)/4 + I*b*h*t**2*exp(-I*t)/4 - b*h*t*exp(I*t)/4 - b*h*t*exp(-I*t)/4 - I*b*h*exp(I*t)/4 + I*b*h*exp(-I*t)/4"
+        ]
+      ],
+      "metric_second": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "I*b*h*t**2*exp(I*t)/4 - I*b*h*t**2*exp(-I*t)/4 + b*h*t*exp(I*t)/4 + b*h*t*exp(-I*t)/4 + I*b*h*exp(I*t)/4 - I*b*h*exp(-I*t)/4",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-I*b*h*t**2*exp(I*t)/4 + I*b*h*t**2*exp(-I*t)/4 - b*h*t*exp(I*t)/4 - b*h*t*exp(-I*t)/4 - I*b*h*exp(I*t)/4 + I*b*h*exp(-I*t)/4"
+        ]
+      ]
+    },
+    "(0, 0)": {
+      "source": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "a**2/6 + 7*b**2/24 + (-a**2/4 - b**2/16)*exp(2*I*t) + (-a**2/4 - b**2/16)*exp(-2*I*t)",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "7*a**2/24 + b**2/6 + (-a**2/16 - b**2/4)*exp(2*I*t) + (-a**2/16 - b**2/4)*exp(-2*I*t)",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "7*a**2/24 + 7*b**2/24 + (-a**2/16 - b**2/16)*exp(2*I*t) + (-a**2/16 - b**2/16)*exp(-2*I*t)"
+        ]
+      ],
+      "trace_reversed_second": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-a**2*t**2/6 - a**2*exp(2*I*t)/8 + a**2/4 - a**2*exp(-2*I*t)/8 - 7*b**2*t**2/24 - b**2*exp(2*I*t)/32 + b**2/16 - b**2*exp(-2*I*t)/32",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-7*a**2*t**2/24 - a**2*exp(2*I*t)/32 + a**2/16 - a**2*exp(-2*I*t)/32 - b**2*t**2/6 - b**2*exp(2*I*t)/8 + b**2/4 - b**2*exp(-2*I*t)/8",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-7*a**2*t**2/24 - a**2*exp(2*I*t)/32 + a**2/16 - a**2*exp(-2*I*t)/32 - 7*b**2*t**2/24 - b**2*exp(2*I*t)/32 + b**2/16 - b**2*exp(-2*I*t)/32"
+        ]
+      ],
+      "metric_second": [
+        [
+          "-3*a**2*t**2/8 - 3*a**2*exp(2*I*t)/32 + 3*a**2/16 - 3*a**2*exp(-2*I*t)/32 - 3*b**2*t**2/8 - 3*b**2*exp(2*I*t)/32 + 3*b**2/16 - 3*b**2*exp(-2*I*t)/32",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "5*a**2*t**2/24 - a**2*exp(2*I*t)/32 + a**2/16 - a**2*exp(-2*I*t)/32 + b**2*t**2/12 + b**2*exp(2*I*t)/16 - b**2/8 + b**2*exp(-2*I*t)/16",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "a**2*t**2/12 + a**2*exp(2*I*t)/16 - a**2/8 + a**2*exp(-2*I*t)/16 + 5*b**2*t**2/24 - b**2*exp(2*I*t)/32 + b**2/16 - b**2*exp(-2*I*t)/32",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "a**2*t**2/12 + a**2*exp(2*I*t)/16 - a**2/8 + a**2*exp(-2*I*t)/16 + b**2*t**2/12 + b**2*exp(2*I*t)/16 - b**2/8 + b**2*exp(-2*I*t)/16"
+        ]
+      ]
+    },
+    "(0, 1)": {
+      "source": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "b*h*t*exp(I*t)/2 + b*h*t*exp(-I*t)/2 - I*b*h*exp(I*t)/2 + I*b*h*exp(-I*t)/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-b*h*t*exp(I*t)/2 - b*h*t*exp(-I*t)/2 + I*b*h*exp(I*t)/2 - I*b*h*exp(-I*t)/2"
+        ]
+      ],
+      "trace_reversed_second": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "I*b*h*t**2*exp(I*t)/4 - I*b*h*t**2*exp(-I*t)/4 + b*h*t*exp(I*t)/4 + b*h*t*exp(-I*t)/4 + I*b*h*exp(I*t)/4 - I*b*h*exp(-I*t)/4",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-I*b*h*t**2*exp(I*t)/4 + I*b*h*t**2*exp(-I*t)/4 - b*h*t*exp(I*t)/4 - b*h*t*exp(-I*t)/4 - I*b*h*exp(I*t)/4 + I*b*h*exp(-I*t)/4"
+        ]
+      ],
+      "metric_second": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "I*b*h*t**2*exp(I*t)/4 - I*b*h*t**2*exp(-I*t)/4 + b*h*t*exp(I*t)/4 + b*h*t*exp(-I*t)/4 + I*b*h*exp(I*t)/4 - I*b*h*exp(-I*t)/4",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-I*b*h*t**2*exp(I*t)/4 + I*b*h*t**2*exp(-I*t)/4 - b*h*t*exp(I*t)/4 - b*h*t*exp(-I*t)/4 - I*b*h*exp(I*t)/4 + I*b*h*exp(-I*t)/4"
+        ]
+      ]
+    },
+    "(0, 2)": {
+      "source": [
+        [
+          "-3*b**2*exp(2*I*t)/32 - b**2/4 - 3*b**2*exp(-2*I*t)/32",
+          "0",
+          "-3*b**2*exp(2*I*t)/32 + 3*b**2*exp(-2*I*t)/32",
+          "0"
+        ],
+        [
+          "0",
+          "b**2/16",
+          "0",
+          "0"
+        ],
+        [
+          "-3*b**2*exp(2*I*t)/32 + 3*b**2*exp(-2*I*t)/32",
+          "0",
+          "-3*b**2*exp(2*I*t)/32 - 3*b**2*exp(-2*I*t)/32",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "b**2/16"
+        ]
+      ],
+      "trace_reversed_second": [
+        [
+          "-3*I*b**2*t*exp(2*I*t)/64 + 3*I*b**2*t*exp(-2*I*t)/64 - b**2*exp(2*I*t)/16 + b**2/8 - b**2*exp(-2*I*t)/16",
+          "0",
+          "-3*I*b**2*t*exp(2*I*t)/64 - 3*I*b**2*t*exp(-2*I*t)/64 - 11*b**2*exp(2*I*t)/128 + 11*b**2*exp(-2*I*t)/128",
+          "0"
+        ],
+        [
+          "0",
+          "-3*b**2*exp(2*I*t)/32 - b**2/32 - 3*b**2*exp(-2*I*t)/32",
+          "0",
+          "0"
+        ],
+        [
+          "-3*I*b**2*t*exp(2*I*t)/64 - 3*I*b**2*t*exp(-2*I*t)/64 - 11*b**2*exp(2*I*t)/128 + 11*b**2*exp(-2*I*t)/128",
+          "0",
+          "-3*I*b**2*t*exp(2*I*t)/64 + 3*I*b**2*t*exp(-2*I*t)/64 - 7*b**2*exp(2*I*t)/64 - 7*b**2*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-3*b**2*exp(2*I*t)/32 - b**2/32 - 3*b**2*exp(-2*I*t)/32"
+        ]
+      ],
+      "metric_second": [
+        [
+          "-3*I*b**2*t*exp(2*I*t)/64 + 3*I*b**2*t*exp(-2*I*t)/64 - 23*b**2*exp(2*I*t)/128 + b**2/32 - 23*b**2*exp(-2*I*t)/128",
+          "0",
+          "-3*I*b**2*t*exp(2*I*t)/64 - 3*I*b**2*t*exp(-2*I*t)/64 - 11*b**2*exp(2*I*t)/128 + 11*b**2*exp(-2*I*t)/128",
+          "0"
+        ],
+        [
+          "0",
+          "3*b**2*exp(2*I*t)/128 + b**2/16 + 3*b**2*exp(-2*I*t)/128",
+          "0",
+          "0"
+        ],
+        [
+          "-3*I*b**2*t*exp(2*I*t)/64 - 3*I*b**2*t*exp(-2*I*t)/64 - 11*b**2*exp(2*I*t)/128 + 11*b**2*exp(-2*I*t)/128",
+          "0",
+          "-3*I*b**2*t*exp(2*I*t)/64 + 3*I*b**2*t*exp(-2*I*t)/64 + b**2*exp(2*I*t)/128 + 3*b**2/32 + b**2*exp(-2*I*t)/128",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "3*b**2*exp(2*I*t)/128 + b**2/16 + 3*b**2*exp(-2*I*t)/128"
+        ]
+      ]
+    },
+    "(1, -1)": {
+      "source": [
+        [
+          "-3*a*b*exp(2*I*t)/64 - 5*a*b/32 - 3*a*b*exp(-2*I*t)/64",
+          "-3*a*b*exp(2*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "3*a*b*exp(2*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "-3*a*b*exp(2*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b/32 - 7*a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/64 - a*b/32 - a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "3*a*b*exp(2*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/64 - a*b/32 - a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b/32 - 7*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "5*a*b*exp(2*I*t)/64 + 3*a*b/32 + 5*a*b*exp(-2*I*t)/64"
+        ]
+      ],
+      "trace_reversed_second": [
+        [
+          "-3*a*b*exp(2*I*t)/64 - a*b*exp(sqrt(2)*I*t)/32 + 5*a*b/32 - a*b*exp(-sqrt(2)*I*t)/32 - 3*a*b*exp(-2*I*t)/64",
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b*exp(sqrt(2)*I*t)/32 + a*b/32 - a*b*exp(-sqrt(2)*I*t)/32 - 7*a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/64 + a*b/32 - a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/64 + a*b/32 - a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b*exp(sqrt(2)*I*t)/32 + a*b/32 - a*b*exp(-sqrt(2)*I*t)/32 - 7*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "5*a*b*exp(2*I*t)/64 - 5*a*b*exp(sqrt(2)*I*t)/32 - 3*a*b/32 - 5*a*b*exp(-sqrt(2)*I*t)/32 + 5*a*b*exp(-2*I*t)/64"
+        ]
+      ],
+      "metric_second": [
+        [
+          "-3*a*b*exp(2*I*t)/32 - a*b*exp(sqrt(2)*I*t)/8 + a*b/16 - a*b*exp(-sqrt(2)*I*t)/8 - 3*a*b*exp(-2*I*t)/32",
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/16 + a*b*exp(sqrt(2)*I*t)/16 + a*b/8 + a*b*exp(-sqrt(2)*I*t)/16 - a*b*exp(-2*I*t)/16",
+          "-a*b*exp(2*I*t)/64 + a*b/32 - a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "3*a*b*exp(2*I*t)/64 + sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 - sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 - 3*a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/64 + a*b/32 - a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/16 + a*b*exp(sqrt(2)*I*t)/16 + a*b/8 + a*b*exp(-sqrt(2)*I*t)/16 - a*b*exp(-2*I*t)/16",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "a*b*exp(2*I*t)/8 - a*b*exp(sqrt(2)*I*t)/16 - a*b*exp(-sqrt(2)*I*t)/16 + a*b*exp(-2*I*t)/8"
+        ]
+      ]
+    },
+    "(1, 0)": {
+      "source": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "a*h*t*exp(I*t)/2 + a*h*t*exp(-I*t)/2 - I*a*h*exp(I*t)/2 + I*a*h*exp(-I*t)/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-a*h*t*exp(I*t)/2 - a*h*t*exp(-I*t)/2 + I*a*h*exp(I*t)/2 - I*a*h*exp(-I*t)/2"
+        ]
+      ],
+      "trace_reversed_second": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "I*a*h*t**2*exp(I*t)/4 - I*a*h*t**2*exp(-I*t)/4 + a*h*t*exp(I*t)/4 + a*h*t*exp(-I*t)/4 + I*a*h*exp(I*t)/4 - I*a*h*exp(-I*t)/4",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-I*a*h*t**2*exp(I*t)/4 + I*a*h*t**2*exp(-I*t)/4 - a*h*t*exp(I*t)/4 - a*h*t*exp(-I*t)/4 - I*a*h*exp(I*t)/4 + I*a*h*exp(-I*t)/4"
+        ]
+      ],
+      "metric_second": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "I*a*h*t**2*exp(I*t)/4 - I*a*h*t**2*exp(-I*t)/4 + a*h*t*exp(I*t)/4 + a*h*t*exp(-I*t)/4 + I*a*h*exp(I*t)/4 - I*a*h*exp(-I*t)/4",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-I*a*h*t**2*exp(I*t)/4 + I*a*h*t**2*exp(-I*t)/4 - a*h*t*exp(I*t)/4 - a*h*t*exp(-I*t)/4 - I*a*h*exp(I*t)/4 + I*a*h*exp(-I*t)/4"
+        ]
+      ]
+    },
+    "(1, 1)": {
+      "source": [
+        [
+          "-3*a*b*exp(2*I*t)/64 - 5*a*b/32 - 3*a*b*exp(-2*I*t)/64",
+          "-3*a*b*exp(2*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "-3*a*b*exp(2*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "-3*a*b*exp(2*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b/32 - 7*a*b*exp(-2*I*t)/64",
+          "a*b*exp(2*I*t)/64 + a*b/32 + a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "-3*a*b*exp(2*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "a*b*exp(2*I*t)/64 + a*b/32 + a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b/32 - 7*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "5*a*b*exp(2*I*t)/64 + 3*a*b/32 + 5*a*b*exp(-2*I*t)/64"
+        ]
+      ],
+      "trace_reversed_second": [
+        [
+          "-3*a*b*exp(2*I*t)/64 - a*b*exp(sqrt(2)*I*t)/32 + 5*a*b/32 - a*b*exp(-sqrt(2)*I*t)/32 - 3*a*b*exp(-2*I*t)/64",
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b*exp(sqrt(2)*I*t)/32 + a*b/32 - a*b*exp(-sqrt(2)*I*t)/32 - 7*a*b*exp(-2*I*t)/64",
+          "a*b*exp(2*I*t)/64 - a*b/32 + a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "a*b*exp(2*I*t)/64 - a*b/32 + a*b*exp(-2*I*t)/64",
+          "-7*a*b*exp(2*I*t)/64 - a*b*exp(sqrt(2)*I*t)/32 + a*b/32 - a*b*exp(-sqrt(2)*I*t)/32 - 7*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "5*a*b*exp(2*I*t)/64 - 5*a*b*exp(sqrt(2)*I*t)/32 - 3*a*b/32 - 5*a*b*exp(-sqrt(2)*I*t)/32 + 5*a*b*exp(-2*I*t)/64"
+        ]
+      ],
+      "metric_second": [
+        [
+          "-3*a*b*exp(2*I*t)/32 - a*b*exp(sqrt(2)*I*t)/8 + a*b/16 - a*b*exp(-sqrt(2)*I*t)/8 - 3*a*b*exp(-2*I*t)/32",
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/16 + a*b*exp(sqrt(2)*I*t)/16 + a*b/8 + a*b*exp(-sqrt(2)*I*t)/16 - a*b*exp(-2*I*t)/16",
+          "a*b*exp(2*I*t)/64 - a*b/32 + a*b*exp(-2*I*t)/64",
+          "0"
+        ],
+        [
+          "-3*a*b*exp(2*I*t)/64 - sqrt(2)*a*b*exp(sqrt(2)*I*t)/64 + sqrt(2)*a*b*exp(-sqrt(2)*I*t)/64 + 3*a*b*exp(-2*I*t)/64",
+          "a*b*exp(2*I*t)/64 - a*b/32 + a*b*exp(-2*I*t)/64",
+          "-a*b*exp(2*I*t)/16 + a*b*exp(sqrt(2)*I*t)/16 + a*b/8 + a*b*exp(-sqrt(2)*I*t)/16 - a*b*exp(-2*I*t)/16",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "a*b*exp(2*I*t)/8 - a*b*exp(sqrt(2)*I*t)/16 - a*b*exp(-sqrt(2)*I*t)/16 + a*b*exp(-2*I*t)/8"
+        ]
+      ]
+    },
+    "(2, 0)": {
+      "source": [
+        [
+          "-3*a**2*exp(2*I*t)/32 - a**2/4 - 3*a**2*exp(-2*I*t)/32",
+          "-3*a**2*exp(2*I*t)/32 + 3*a**2*exp(-2*I*t)/32",
+          "0",
+          "0"
+        ],
+        [
+          "-3*a**2*exp(2*I*t)/32 + 3*a**2*exp(-2*I*t)/32",
+          "-3*a**2*exp(2*I*t)/32 - 3*a**2*exp(-2*I*t)/32",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "a**2/16",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "a**2/16"
+        ]
+      ],
+      "trace_reversed_second": [
+        [
+          "-3*I*a**2*t*exp(2*I*t)/64 + 3*I*a**2*t*exp(-2*I*t)/64 - a**2*exp(2*I*t)/16 + a**2/8 - a**2*exp(-2*I*t)/16",
+          "-3*I*a**2*t*exp(2*I*t)/64 - 3*I*a**2*t*exp(-2*I*t)/64 - 11*a**2*exp(2*I*t)/128 + 11*a**2*exp(-2*I*t)/128",
+          "0",
+          "0"
+        ],
+        [
+          "-3*I*a**2*t*exp(2*I*t)/64 - 3*I*a**2*t*exp(-2*I*t)/64 - 11*a**2*exp(2*I*t)/128 + 11*a**2*exp(-2*I*t)/128",
+          "-3*I*a**2*t*exp(2*I*t)/64 + 3*I*a**2*t*exp(-2*I*t)/64 - 7*a**2*exp(2*I*t)/64 - 7*a**2*exp(-2*I*t)/64",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-3*a**2*exp(2*I*t)/32 - a**2/32 - 3*a**2*exp(-2*I*t)/32",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-3*a**2*exp(2*I*t)/32 - a**2/32 - 3*a**2*exp(-2*I*t)/32"
+        ]
+      ],
+      "metric_second": [
+        [
+          "-3*I*a**2*t*exp(2*I*t)/64 + 3*I*a**2*t*exp(-2*I*t)/64 - 23*a**2*exp(2*I*t)/128 + a**2/32 - 23*a**2*exp(-2*I*t)/128",
+          "-3*I*a**2*t*exp(2*I*t)/64 - 3*I*a**2*t*exp(-2*I*t)/64 - 11*a**2*exp(2*I*t)/128 + 11*a**2*exp(-2*I*t)/128",
+          "0",
+          "0"
+        ],
+        [
+          "-3*I*a**2*t*exp(2*I*t)/64 - 3*I*a**2*t*exp(-2*I*t)/64 - 11*a**2*exp(2*I*t)/128 + 11*a**2*exp(-2*I*t)/128",
+          "-3*I*a**2*t*exp(2*I*t)/64 + 3*I*a**2*t*exp(-2*I*t)/64 + a**2*exp(2*I*t)/128 + 3*a**2/32 + a**2*exp(-2*I*t)/128",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "3*a**2*exp(2*I*t)/128 + a**2/16 + 3*a**2*exp(-2*I*t)/128",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "3*a**2*exp(2*I*t)/128 + a**2/16 + 3*a**2*exp(-2*I*t)/128"
+        ]
+      ]
+    }
+  },
+  "response_basis_count": 13,
+  "verdict": "NONPARALLEL_TWO_WAVE_SECOND_ORDER_SOLUTION_CONSTRUCTED",
+  "scope": "all quadratic generated sectors retained; exact symbolic residuals; no finite-amplitude or long-time claim"
+}

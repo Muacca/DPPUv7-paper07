@@ -1,0 +1,2687 @@
+{
+  "checks": [
+    {
+      "name": "Nil Ricci 00",
+      "passed": true
+    },
+    {
+      "name": "Nil Ricci 01",
+      "passed": true
+    },
+    {
+      "name": "Nil Ricci 02",
+      "passed": true
+    },
+    {
+      "name": "Nil Ricci 03",
+      "passed": true
+    },
+    {
+      "name": "Nil Ricci 11",
+      "passed": true
+    },
+    {
+      "name": "Nil Ricci 12",
+      "passed": true
+    },
+    {
+      "name": "Nil Ricci 13",
+      "passed": true
+    },
+    {
+      "name": "Nil Ricci 22",
+      "passed": true
+    },
+    {
+      "name": "Nil Ricci 23",
+      "passed": true
+    },
+    {
+      "name": "Nil Ricci 33",
+      "passed": true
+    },
+    {
+      "name": "Nil Ricci symmetric",
+      "passed": true
+    },
+    {
+      "name": "Nil independent ADM Hamiltonian",
+      "passed": true
+    },
+    {
+      "name": "Nil canonical Hamiltonian",
+      "passed": true
+    },
+    {
+      "name": "Nil homogeneous momentum 0",
+      "passed": true
+    },
+    {
+      "name": "Nil homogeneous momentum 1",
+      "passed": true
+    },
+    {
+      "name": "Nil homogeneous momentum 2",
+      "passed": true
+    },
+    {
+      "name": "Nil ranks",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 000",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 000",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 001",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 001",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 002",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 002",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 003",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 003",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 010",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 010",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 011",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 011",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 012",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 012",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 013",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 013",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 020",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 020",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 021",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 021",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 022",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 022",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 023",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 023",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 030",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 030",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 031",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 031",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 032",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 032",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 033",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 033",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 100",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 100",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 101",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 101",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 102",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 102",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 103",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 103",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 110",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 110",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 111",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 111",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 112",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 112",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 113",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 113",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 120",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 120",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 121",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 121",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 122",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 122",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 123",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 123",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 130",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 130",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 131",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 131",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 132",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 132",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 133",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 133",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 200",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 200",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 201",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 201",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 202",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 202",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 203",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 203",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 210",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 210",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 211",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 211",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 212",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 212",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 213",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 213",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 220",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 220",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 221",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 221",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 222",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 222",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 223",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 223",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 230",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 230",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 231",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 231",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 232",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 232",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 233",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 233",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 300",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 300",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 301",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 301",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 302",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 302",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 303",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 303",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 310",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 310",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 311",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 311",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 312",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 312",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 313",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 313",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 320",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 320",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 321",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 321",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 322",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 322",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 323",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 323",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 330",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 330",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 331",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 331",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 332",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 332",
+      "passed": true
+    },
+    {
+      "name": "Nil torsion 333",
+      "passed": true
+    },
+    {
+      "name": "Nil metric compatibility 333",
+      "passed": true
+    },
+    {
+      "name": "Sol Ricci 00",
+      "passed": true
+    },
+    {
+      "name": "Sol Ricci 01",
+      "passed": true
+    },
+    {
+      "name": "Sol Ricci 02",
+      "passed": true
+    },
+    {
+      "name": "Sol Ricci 03",
+      "passed": true
+    },
+    {
+      "name": "Sol Ricci 11",
+      "passed": true
+    },
+    {
+      "name": "Sol Ricci 12",
+      "passed": true
+    },
+    {
+      "name": "Sol Ricci 13",
+      "passed": true
+    },
+    {
+      "name": "Sol Ricci 22",
+      "passed": true
+    },
+    {
+      "name": "Sol Ricci 23",
+      "passed": true
+    },
+    {
+      "name": "Sol Ricci 33",
+      "passed": true
+    },
+    {
+      "name": "Sol Ricci symmetric",
+      "passed": true
+    },
+    {
+      "name": "Sol independent ADM Hamiltonian",
+      "passed": true
+    },
+    {
+      "name": "Sol canonical Hamiltonian",
+      "passed": true
+    },
+    {
+      "name": "Sol homogeneous momentum 0",
+      "passed": true
+    },
+    {
+      "name": "Sol homogeneous momentum 1",
+      "passed": true
+    },
+    {
+      "name": "Sol homogeneous momentum 2",
+      "passed": true
+    },
+    {
+      "name": "Sol ranks",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 000",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 000",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 001",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 001",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 002",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 002",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 003",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 003",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 010",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 010",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 011",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 011",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 012",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 012",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 013",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 013",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 020",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 020",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 021",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 021",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 022",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 022",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 023",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 023",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 030",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 030",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 031",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 031",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 032",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 032",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 033",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 033",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 100",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 100",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 101",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 101",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 102",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 102",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 103",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 103",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 110",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 110",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 111",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 111",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 112",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 112",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 113",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 113",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 120",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 120",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 121",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 121",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 122",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 122",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 123",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 123",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 130",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 130",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 131",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 131",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 132",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 132",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 133",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 133",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 200",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 200",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 201",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 201",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 202",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 202",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 203",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 203",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 210",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 210",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 211",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 211",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 212",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 212",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 213",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 213",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 220",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 220",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 221",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 221",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 222",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 222",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 223",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 223",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 230",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 230",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 231",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 231",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 232",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 232",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 233",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 233",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 300",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 300",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 301",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 301",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 302",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 302",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 303",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 303",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 310",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 310",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 311",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 311",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 312",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 312",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 313",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 313",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 320",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 320",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 321",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 321",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 322",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 322",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 323",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 323",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 330",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 330",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 331",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 331",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 332",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 332",
+      "passed": true
+    },
+    {
+      "name": "Sol torsion 333",
+      "passed": true
+    },
+    {
+      "name": "Sol metric compatibility 333",
+      "passed": true
+    },
+    {
+      "name": "S3 Ricci 00",
+      "passed": true
+    },
+    {
+      "name": "S3 Ricci 01",
+      "passed": true
+    },
+    {
+      "name": "S3 Ricci 02",
+      "passed": true
+    },
+    {
+      "name": "S3 Ricci 03",
+      "passed": true
+    },
+    {
+      "name": "S3 Ricci 11",
+      "passed": true
+    },
+    {
+      "name": "S3 Ricci 12",
+      "passed": true
+    },
+    {
+      "name": "S3 Ricci 13",
+      "passed": true
+    },
+    {
+      "name": "S3 Ricci 22",
+      "passed": true
+    },
+    {
+      "name": "S3 Ricci 23",
+      "passed": true
+    },
+    {
+      "name": "S3 Ricci 33",
+      "passed": true
+    },
+    {
+      "name": "S3 Ricci symmetric",
+      "passed": true
+    },
+    {
+      "name": "S3 independent ADM Hamiltonian",
+      "passed": true
+    },
+    {
+      "name": "S3 canonical Hamiltonian",
+      "passed": true
+    },
+    {
+      "name": "S3 homogeneous momentum 0",
+      "passed": true
+    },
+    {
+      "name": "S3 homogeneous momentum 1",
+      "passed": true
+    },
+    {
+      "name": "S3 homogeneous momentum 2",
+      "passed": true
+    },
+    {
+      "name": "S3 ranks",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 000",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 000",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 001",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 001",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 002",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 002",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 003",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 003",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 010",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 010",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 011",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 011",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 012",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 012",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 013",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 013",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 020",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 020",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 021",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 021",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 022",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 022",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 023",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 023",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 030",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 030",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 031",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 031",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 032",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 032",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 033",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 033",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 100",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 100",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 101",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 101",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 102",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 102",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 103",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 103",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 110",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 110",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 111",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 111",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 112",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 112",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 113",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 113",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 120",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 120",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 121",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 121",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 122",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 122",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 123",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 123",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 130",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 130",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 131",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 131",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 132",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 132",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 133",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 133",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 200",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 200",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 201",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 201",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 202",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 202",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 203",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 203",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 210",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 210",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 211",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 211",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 212",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 212",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 213",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 213",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 220",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 220",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 221",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 221",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 222",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 222",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 223",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 223",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 230",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 230",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 231",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 231",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 232",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 232",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 233",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 233",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 300",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 300",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 301",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 301",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 302",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 302",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 303",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 303",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 310",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 310",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 311",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 311",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 312",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 312",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 313",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 313",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 320",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 320",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 321",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 321",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 322",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 322",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 323",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 323",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 330",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 330",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 331",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 331",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 332",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 332",
+      "passed": true
+    },
+    {
+      "name": "S3 torsion 333",
+      "passed": true
+    },
+    {
+      "name": "S3 metric compatibility 333",
+      "passed": true
+    }
+  ],
+  "results": {
+    "Nil": {
+      "background": {
+        "time": "u",
+        "N": "3*sqrt(u**4 + 1)",
+        "g": [
+          [
+            "u**4 + 1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "u**4 + 1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "16*u**2/(9*u**4 + 9)"
+          ]
+        ],
+        "n": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1"
+          ]
+        ],
+        "interval": [
+          "1",
+          "2"
+        ],
+        "parameter": "b=1; literature time=u^3"
+      },
+      "ADM": {
+        "volume": "4*u*(u**4 + 1)/sqrt(9*u**4 + 9)",
+        "K": [
+          [
+            "2*u**3/(3*sqrt(u**4 + 1))",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "2*u**3/(3*sqrt(u**4 + 1))",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "(-576*u**5/(9*u**4 + 9)**2 + 32*u/(9*u**4 + 9))/(6*sqrt(u**4 + 1))"
+          ]
+        ],
+        "traceK": "(u**4 + 1/3)/(u*(u**4 + 1)**(3/2))",
+        "pi": [
+          [
+            "-4/(9*u**4 + 9)",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-4/(9*u**4 + 9)",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-u**2"
+          ]
+        ]
+      },
+      "Ricci": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "spatial_scalar": "-8*u**2/(9*(u**4 + 1)**3)",
+      "homogeneous": {
+        "momentum_rank": 2,
+        "constraint_rank": 3,
+        "momentum_minor": {
+          "rows": [
+            0,
+            1
+          ],
+          "cols": [
+            4,
+            5
+          ],
+          "minor": "64/(81*(u**4 + 1)**2)"
+        },
+        "constraint_minor": {
+          "rows": [
+            0,
+            1,
+            2
+          ],
+          "cols": [
+            0,
+            4,
+            5
+          ],
+          "minor": "-4096*u**4/(6561*(u**4 + 1)**4)"
+        },
+        "F": "0",
+        "J": [
+          "0",
+          "0",
+          "0"
+        ],
+        "momentum_jacobian": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "8/(9*(u**4 + 1))",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-16*u**2/(9*u**4 + 9)"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-8/(9*u**4 + 9)",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "16*u**2/(9*(u**4 + 1))",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "constraint_jacobian": [
+          [
+            "-64*u**4/(81*(u**4 + 1)**2)",
+            "-64*u**4/(81*(u**4 + 1)**2)",
+            "8*u**2/9",
+            "0",
+            "0",
+            "0",
+            "16*u**4/9",
+            "16*u**4/9",
+            "128*u**2*(1 - u**4)/(81*(u**4 + 1)**2)",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "8/(9*(u**4 + 1))",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-16*u**2/(9*u**4 + 9)"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-8/(9*u**4 + 9)",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "16*u**2/(9*(u**4 + 1))",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ]
+      },
+      "connection": {
+        "(0, 0, 0)": "2*u**3/(u**4 + 1)",
+        "(0, 0, 1)": "0",
+        "(0, 0, 2)": "0",
+        "(0, 0, 3)": "0",
+        "(0, 1, 0)": "0",
+        "(0, 1, 1)": "2*u**3/(9*(u**4 + 1))",
+        "(0, 1, 2)": "0",
+        "(0, 1, 3)": "0",
+        "(0, 2, 0)": "0",
+        "(0, 2, 1)": "0",
+        "(0, 2, 2)": "2*u**3/(9*(u**4 + 1))",
+        "(0, 2, 3)": "0",
+        "(0, 3, 0)": "0",
+        "(0, 3, 1)": "0",
+        "(0, 3, 2)": "0",
+        "(0, 3, 3)": "-16*u*(u - 1)*(u + 1)*(u**2 + 1)/(81*(u**4 + 1)**3)",
+        "(1, 0, 0)": "0",
+        "(1, 0, 1)": "2*u**3/(u**4 + 1)",
+        "(1, 0, 2)": "0",
+        "(1, 0, 3)": "0",
+        "(1, 1, 0)": "2*u**3/(u**4 + 1)",
+        "(1, 1, 1)": "0",
+        "(1, 1, 2)": "0",
+        "(1, 1, 3)": "0",
+        "(1, 2, 0)": "0",
+        "(1, 2, 1)": "0",
+        "(1, 2, 2)": "0",
+        "(1, 2, 3)": "8*u**2/(9*(u**4 + 1)**2)",
+        "(1, 3, 0)": "0",
+        "(1, 3, 1)": "0",
+        "(1, 3, 2)": "8*u**2/(9*(u**4 + 1)**2)",
+        "(1, 3, 3)": "0",
+        "(2, 0, 0)": "0",
+        "(2, 0, 1)": "0",
+        "(2, 0, 2)": "2*u**3/(u**4 + 1)",
+        "(2, 0, 3)": "0",
+        "(2, 1, 0)": "0",
+        "(2, 1, 1)": "0",
+        "(2, 1, 2)": "0",
+        "(2, 1, 3)": "-8*u**2/(9*(u**4 + 1)**2)",
+        "(2, 2, 0)": "2*u**3/(u**4 + 1)",
+        "(2, 2, 1)": "0",
+        "(2, 2, 2)": "0",
+        "(2, 2, 3)": "0",
+        "(2, 3, 0)": "0",
+        "(2, 3, 1)": "-8*u**2/(9*(u**4 + 1)**2)",
+        "(2, 3, 2)": "0",
+        "(2, 3, 3)": "0",
+        "(3, 0, 0)": "0",
+        "(3, 0, 1)": "0",
+        "(3, 0, 2)": "0",
+        "(3, 0, 3)": "-(u - 1)*(u + 1)*(u**2 + 1)/(u*(u**4 + 1))",
+        "(3, 1, 0)": "0",
+        "(3, 1, 1)": "0",
+        "(3, 1, 2)": "1/2",
+        "(3, 1, 3)": "0",
+        "(3, 2, 0)": "0",
+        "(3, 2, 1)": "-1/2",
+        "(3, 2, 2)": "0",
+        "(3, 2, 3)": "0",
+        "(3, 3, 0)": "-(u - 1)*(u + 1)*(u**2 + 1)/(u*(u**4 + 1))",
+        "(3, 3, 1)": "0",
+        "(3, 3, 2)": "0",
+        "(3, 3, 3)": "0"
+      }
+    },
+    "Sol": {
+      "background": {
+        "time": "t",
+        "N": "exp(t**2/2)/t**(1/4)",
+        "g": [
+          [
+            "exp(t**2)/sqrt(t)",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "t",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "t"
+          ]
+        ],
+        "n": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ]
+        ],
+        "interval": [
+          "1",
+          "2"
+        ],
+        "parameter": "C=1; fixed base length log((3+sqrt(5))/2)"
+      },
+      "ADM": {
+        "volume": "t**(3/4)*exp(t**2/2)",
+        "K": [
+          [
+            "t**(1/4)*(2*sqrt(t)*exp(t**2) - exp(t**2)/(2*t**(3/2)))*exp(-t**2/2)/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "t**(1/4)*exp(-t**2/2)/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "t**(1/4)*exp(-t**2/2)/2"
+          ]
+        ],
+        "traceK": "(t**2 + 3/4)*exp(-t**2/2)/t**(3/4)",
+        "pi": [
+          [
+            "-sqrt(t)*exp(-t**2)",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-t - 1/(4*t)",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-t - 1/(4*t)"
+          ]
+        ]
+      },
+      "Ricci": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "spatial_scalar": "-2*sqrt(t)*exp(-t**2)",
+      "homogeneous": {
+        "momentum_rank": 3,
+        "constraint_rank": 4,
+        "momentum_minor": {
+          "rows": [
+            0,
+            1,
+            2
+          ],
+          "cols": [
+            1,
+            3,
+            4
+          ],
+          "minor": "2*(4*t**2 + 1)*exp(-2*t**2)"
+        },
+        "constraint_minor": {
+          "rows": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "cols": [
+            0,
+            1,
+            3,
+            4
+          ],
+          "minor": "-sqrt(t)*(2*t - 1)*(2*t + 1)*(4*t**2 + 1)*exp(-3*t**2)"
+        },
+        "F": "0",
+        "J": [
+          "0",
+          "0",
+          "0"
+        ],
+        "momentum_jacobian": [
+          [
+            "0",
+            "-2*t - 1/(2*t)",
+            "2*t + 1/(2*t)",
+            "0",
+            "0",
+            "0",
+            "0",
+            "2*t",
+            "-2*t",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "2*sqrt(t)*exp(-t**2)",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-t",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-2*sqrt(t)*exp(-t**2)",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "t",
+            "0"
+          ]
+        ],
+        "constraint_jacobian": [
+          [
+            "sqrt(t)*(1 - 4*t**2)*exp(-t**2)/2",
+            "t - 1/(4*t)",
+            "t - 1/(4*t)",
+            "0",
+            "0",
+            "0",
+            "(4*t**2 - 1)*exp(t**2)/(2*sqrt(t))",
+            "t",
+            "t",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-2*t - 1/(2*t)",
+            "2*t + 1/(2*t)",
+            "0",
+            "0",
+            "0",
+            "0",
+            "2*t",
+            "-2*t",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "2*sqrt(t)*exp(-t**2)",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-t",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-2*sqrt(t)*exp(-t**2)",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "t",
+            "0"
+          ]
+        ]
+      },
+      "connection": {
+        "(0, 0, 0)": "(2*t - 1)*(2*t + 1)/(4*t)",
+        "(0, 0, 1)": "0",
+        "(0, 0, 2)": "0",
+        "(0, 0, 3)": "0",
+        "(0, 1, 0)": "0",
+        "(0, 1, 1)": "(2*t - 1)*(2*t + 1)/(4*t)",
+        "(0, 1, 2)": "0",
+        "(0, 1, 3)": "0",
+        "(0, 2, 0)": "0",
+        "(0, 2, 1)": "0",
+        "(0, 2, 2)": "sqrt(t)*exp(-t**2)/2",
+        "(0, 2, 3)": "0",
+        "(0, 3, 0)": "0",
+        "(0, 3, 1)": "0",
+        "(0, 3, 2)": "0",
+        "(0, 3, 3)": "sqrt(t)*exp(-t**2)/2",
+        "(1, 0, 0)": "0",
+        "(1, 0, 1)": "(2*t - 1)*(2*t + 1)/(4*t)",
+        "(1, 0, 2)": "0",
+        "(1, 0, 3)": "0",
+        "(1, 1, 0)": "(2*t - 1)*(2*t + 1)/(4*t)",
+        "(1, 1, 1)": "0",
+        "(1, 1, 2)": "0",
+        "(1, 1, 3)": "0",
+        "(1, 2, 0)": "0",
+        "(1, 2, 1)": "0",
+        "(1, 2, 2)": "-t**(3/2)*exp(-t**2)",
+        "(1, 2, 3)": "0",
+        "(1, 3, 0)": "0",
+        "(1, 3, 1)": "0",
+        "(1, 3, 2)": "0",
+        "(1, 3, 3)": "t**(3/2)*exp(-t**2)",
+        "(2, 0, 0)": "0",
+        "(2, 0, 1)": "0",
+        "(2, 0, 2)": "1/(2*t)",
+        "(2, 0, 3)": "0",
+        "(2, 1, 0)": "0",
+        "(2, 1, 1)": "0",
+        "(2, 1, 2)": "0",
+        "(2, 1, 3)": "0",
+        "(2, 2, 0)": "1/(2*t)",
+        "(2, 2, 1)": "1",
+        "(2, 2, 2)": "0",
+        "(2, 2, 3)": "0",
+        "(2, 3, 0)": "0",
+        "(2, 3, 1)": "0",
+        "(2, 3, 2)": "0",
+        "(2, 3, 3)": "0",
+        "(3, 0, 0)": "0",
+        "(3, 0, 1)": "0",
+        "(3, 0, 2)": "0",
+        "(3, 0, 3)": "1/(2*t)",
+        "(3, 1, 0)": "0",
+        "(3, 1, 1)": "0",
+        "(3, 1, 2)": "0",
+        "(3, 1, 3)": "0",
+        "(3, 2, 0)": "0",
+        "(3, 2, 1)": "0",
+        "(3, 2, 2)": "0",
+        "(3, 2, 3)": "0",
+        "(3, 3, 0)": "1/(2*t)",
+        "(3, 3, 1)": "-1",
+        "(3, 3, 2)": "0",
+        "(3, 3, 3)": "0"
+      }
+    },
+    "S3": {
+      "background": {
+        "time": "tau",
+        "N": "sqrt(tau**2 + 1)*sqrt(1/(1 - tau**2))",
+        "g": [
+          [
+            "4*tau**2 + 4",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "4*tau**2 + 4",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "(16 - 16*tau**2)/(tau**2 + 1)"
+          ]
+        ],
+        "n": [
+          [
+            "2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "2"
+          ]
+        ],
+        "interval": [
+          "1/4",
+          "1/2"
+        ],
+        "parameter": "ell=1,m=0; sigma=-omega/2"
+      },
+      "ADM": {
+        "volume": "16*sqrt(1 - tau**2)*sqrt(tau**2 + 1)",
+        "K": [
+          [
+            "4*tau/(sqrt(tau**2 + 1)*sqrt(1/(1 - tau**2)))",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "4*tau/(sqrt(tau**2 + 1)*sqrt(1/(1 - tau**2)))",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "(-2*tau*(16 - 16*tau**2)/(tau**2 + 1)**2 - 32*tau/(tau**2 + 1))/(2*sqrt(tau**2 + 1)*sqrt(1/(1 - tau**2)))"
+          ]
+        ],
+        "traceK": "-2*tau**3*sqrt(-1/(tau**2 - 1))/(tau**2 + 1)**(3/2)",
+        "pi": [
+          [
+            "-4*tau*sqrt(1 - tau**2)/(sqrt(-1/(tau**2 - 1))*(tau**4 - 1))",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-4*tau*sqrt(1 - tau**2)/(sqrt(-1/(tau**2 - 1))*(tau**4 - 1))",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-2*tau/(sqrt(-1/(tau**2 - 1))*sqrt(1 - tau**2))"
+          ]
+        ]
+      },
+      "Ricci": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "spatial_scalar": "2*tau**2*(tau**2 + 3)/(tau**2 + 1)**3",
+      "homogeneous": {
+        "momentum_rank": 2,
+        "constraint_rank": 3,
+        "momentum_minor": {
+          "rows": [
+            0,
+            1
+          ],
+          "cols": [
+            4,
+            5
+          ],
+          "minor": "64*tau**2*(tau**2 + 3)**2/(tau**2 + 1)**2"
+        },
+        "constraint_minor": {
+          "rows": [
+            0,
+            1,
+            2
+          ],
+          "cols": [
+            0,
+            4,
+            5
+          ],
+          "minor": "-4096*tau**2*(tau - 1)**2*(tau + 1)**2*(tau**2 + 3)**2/(tau**2 + 1)**4"
+        },
+        "F": "0",
+        "J": [
+          "0",
+          "0",
+          "0"
+        ],
+        "momentum_jacobian": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "8*tau*sqrt(-1/(tau**2 - 1))*sqrt(1 - tau**2)*(tau**2 + 3)/(tau**2 + 1)",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "8*(-tau**4 - 6*tau**2 + 3)/(tau**2 + 1)"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "8*tau*sqrt(-1/(tau**2 - 1))*sqrt(1 - tau**2)*(-tau**2 - 3)/(tau**2 + 1)",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "8*(tau**4 + 6*tau**2 - 3)/(tau**2 + 1)",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "constraint_jacobian": [
+          [
+            "64*(-tau**4 + 2*tau**2 - 1)/(tau**4 + 2*tau**2 + 1)",
+            "64*(-tau**4 + 2*tau**2 - 1)/(tau**4 + 2*tau**2 + 1)",
+            "32 - 32*tau**2",
+            "0",
+            "0",
+            "0",
+            "128*tau*sqrt(1 - tau**2)/sqrt(-1/(tau**2 - 1))",
+            "128*tau*sqrt(1 - tau**2)/sqrt(-1/(tau**2 - 1))",
+            "-1024*tau*sqrt(1 - tau**2)/(sqrt(-1/(tau**2 - 1))*(tau**4 + 2*tau**2 + 1))",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "8*tau*sqrt(-1/(tau**2 - 1))*sqrt(1 - tau**2)*(tau**2 + 3)/(tau**2 + 1)",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "8*(-tau**4 - 6*tau**2 + 3)/(tau**2 + 1)"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "8*tau*sqrt(-1/(tau**2 - 1))*sqrt(1 - tau**2)*(-tau**2 - 3)/(tau**2 + 1)",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "8*(tau**4 + 6*tau**2 - 3)/(tau**2 + 1)",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ]
+      },
+      "connection": {
+        "(0, 0, 0)": "-2*tau/((tau - 1)*(tau + 1)*(tau**2 + 1))",
+        "(0, 0, 1)": "0",
+        "(0, 0, 2)": "0",
+        "(0, 0, 3)": "0",
+        "(0, 1, 0)": "0",
+        "(0, 1, 1)": "-4*tau*(tau - 1)*(tau + 1)/(tau**2 + 1)",
+        "(0, 1, 2)": "0",
+        "(0, 1, 3)": "0",
+        "(0, 2, 0)": "0",
+        "(0, 2, 1)": "0",
+        "(0, 2, 2)": "-4*tau*(tau - 1)*(tau + 1)/(tau**2 + 1)",
+        "(0, 2, 3)": "0",
+        "(0, 3, 0)": "0",
+        "(0, 3, 1)": "0",
+        "(0, 3, 2)": "0",
+        "(0, 3, 3)": "32*tau*(tau - 1)*(tau + 1)/(tau**2 + 1)**3",
+        "(1, 0, 0)": "0",
+        "(1, 0, 1)": "tau/(tau**2 + 1)",
+        "(1, 0, 2)": "0",
+        "(1, 0, 3)": "0",
+        "(1, 1, 0)": "tau/(tau**2 + 1)",
+        "(1, 1, 1)": "0",
+        "(1, 1, 2)": "0",
+        "(1, 1, 3)": "0",
+        "(1, 2, 0)": "0",
+        "(1, 2, 1)": "0",
+        "(1, 2, 2)": "0",
+        "(1, 2, 3)": "4*(tau - 1)*(tau + 1)/(tau**2 + 1)**2",
+        "(1, 3, 0)": "0",
+        "(1, 3, 1)": "0",
+        "(1, 3, 2)": "2*(tau**4 + 4*tau**2 - 1)/(tau**2 + 1)**2",
+        "(1, 3, 3)": "0",
+        "(2, 0, 0)": "0",
+        "(2, 0, 1)": "0",
+        "(2, 0, 2)": "tau/(tau**2 + 1)",
+        "(2, 0, 3)": "0",
+        "(2, 1, 0)": "0",
+        "(2, 1, 1)": "0",
+        "(2, 1, 2)": "0",
+        "(2, 1, 3)": "-4*(tau - 1)*(tau + 1)/(tau**2 + 1)**2",
+        "(2, 2, 0)": "tau/(tau**2 + 1)",
+        "(2, 2, 1)": "0",
+        "(2, 2, 2)": "0",
+        "(2, 2, 3)": "0",
+        "(2, 3, 0)": "0",
+        "(2, 3, 1)": "-2*(tau**4 + 4*tau**2 - 1)/(tau**2 + 1)**2",
+        "(2, 3, 2)": "0",
+        "(2, 3, 3)": "0",
+        "(3, 0, 0)": "0",
+        "(3, 0, 1)": "0",
+        "(3, 0, 2)": "0",
+        "(3, 0, 3)": "2*tau/((tau - 1)*(tau + 1)*(tau**2 + 1))",
+        "(3, 1, 0)": "0",
+        "(3, 1, 1)": "0",
+        "(3, 1, 2)": "-1",
+        "(3, 1, 3)": "0",
+        "(3, 2, 0)": "0",
+        "(3, 2, 1)": "1",
+        "(3, 2, 2)": "0",
+        "(3, 2, 3)": "0",
+        "(3, 3, 0)": "2*tau/((tau - 1)*(tau + 1)*(tau**2 + 1))",
+        "(3, 3, 1)": "0",
+        "(3, 3, 2)": "0",
+        "(3, 3, 3)": "0"
+      }
+    }
+  },
+  "verdict": "THREE_VACUUM_BACKGROUNDS_VERIFIED"
+}

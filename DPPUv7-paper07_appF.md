@@ -1,68 +1,104 @@
-# DPPUv7-paper07 — Appendix F: Finite-Fate Branch Data
+# 付録F. 真空背景・固定商・調和基底
 
-[← Appendix E](DPPUv7-paper07_appE.md) | [Appendix G →](DPPUv7-paper07_appG.md)
+## 背景の導出と商への降下
 
----
+BF-01のNilはTanimotoの斉次真空解のb=1、Kasner指数(2/3,2/3,−1/3)を取り、文献時間をu³へ換えたものである。Solはtwisted Gowdy表示のP=2x,Q=0,R=tであり、S³はbiaxial Taubのℓ=1,m=0をσ=−ω/2へ換算した。全4次元Ricci tensor、Hamiltonian・momentum拘束、同じlapseによるmetricと運動量の発展を直接代入して零を得る。時間変換は固定格子を変えない。 背景の一次資料は[Tanimoto2004](REFERENCES.md#tanimoto2004)、[Rendall2012](REFERENCES.md#rendall2012)、[BeyerHennig2012](REFERENCES.md#beyerhennig2012)である。
 
-## Appendix F. Finite-fate branch data
-
-本 appendix では [Section 7](DPPUv7-paper07_sec07.md) の有限変形 branch データをまとめる。スコープは finite Palatini branch / homogeneous minisuperspace である。
-
-### F.1 Branch parametrization and tangent alignment
-
-kernel 方向ごとに、有限変形パラメータ $\beta$（および必要な補助方向 $u$ ）で background-adapted static Palatini branch を再構成する。branch の接ベクトルが二次解析の kernel 方向と整合すること（tangent alignment）を各 case で確認した。
-
-### F.2 Energy-density expansion versus stationarity
-
-- **energy-density 展開**: 補助場の方程式（auxiliary shell）を解いた上での reduced energy density $\Delta(\beta)$ の評価。本 appendix の主要検証。
-- **停留点判定**: 有限変形点が field equations の停留点であるかの判定。
-
-両者は異なる検査であり、energy-density 展開の結果（ $\Delta$ の値）を停留点判定の定理（stationary branch の存在）と読み替えない。
-
-### F.3 Branch classification summary
-
-**Branch 方向（Milnor frame; tangent alignment 確認済み）.**
-
-| label | 接ベクトル $\boldsymbol\beta$ | 分類 |
-|---|---|---|
-| $T^3$ $e_a$ | $e_1,e_2,e_3$ | exact modulus |
-| $Nil^3$ $\beta_-$ | $(\tfrac12,-\tfrac12,0)$ | exact modulus |
-| $Nil^3$ $\beta_+/u$ | $(-\tfrac12,-\tfrac12,1)$ | curvature wall |
-| $Sol^3$ $\beta_x$ | $(\tfrac13,-\tfrac16,-\tfrac16)$ | curvature wall |
-
-**$\beta_-$ の closed-form branch 式（exact modulus の根拠）.** background-adapted static Palatini branch では scale factors が
+式(BF-02)。
 
 $$
-q_1(s)=q_0\,e^{s/2},\qquad q_2(s)=q_0\,e^{-s/2},\qquad q_3(s)=q_0
+\begin{aligned}
+\pi_{\rm Nil}^{ij}&=\mathrm{diag}(-4/(9A),-4/(9A),-u^2),\\
+\pi_{\rm Sol}^{ij}&=\mathrm{diag}(-1/F,-t-1/(4t),-t-1/(4t)),\\
+\pi^{ij}&=\sqrt{\det G}\thinspace (K^{ij}-G^{ij}K),\qquad K_{ij}=\dot G_{ij}/(2N).
+\end{aligned}
 $$
 
-（ $s$ は沿 $\beta_-$ の有限変形パラメータ、 $q_0$ は参照 scale）と書ける。接続 fluctuation を field equations で解いた reduced EH density $\Delta(s)$ は $s$ の全次数で恒等的に 0 である（4 次まで symbolic 残差 0 と一致）。 $\beta_+/u$ では $\Delta$ の 1 次係数（tadpole）が非零、 $\beta_x$ では線形・二次係数のいずれかが非零となる。
+Nilの三deck生成元はQA-01のcoframeをそのまま保つ。Solの貼り合わせも(eˣdy,e⁻ˣdz)を保ち、S³のcoframeは大域的である。したがって時間だけに依存するGとNは全て固定商に降下する。BF-01の閉区間で正定値性は表示から直接従う。
 
-| 対象 | 検証 | 結果 |
-|---|---|---|
-| $T^3$（3 方向） | $\Delta(\beta)$ 4 次まで symbolic | 恒等的に 0（exact flat moduli） |
-| $Nil^3$ $\beta_-$ | 同上＋線形系 rank 検証（rank = aug rank = 18, 一意可解） | 全次数残差 0（exact modulus） |
-| $Nil^3$ $\beta_+/u$ | 同上 | 曲率由来の非零項＋tadpole（curvature wall; stationary 有限 branch なし） |
-| $Sol^3$ $\beta_x$ | 同上 | 非零（curvature wall; stationary branch absent） |
-| $S^3$ | — | 対象なし（ $d_{\rm zero}=0$ ） |
+## Nilのcentral非零基底とtensor grade
 
-`script/scripts/paper07/finite_fate_branch_witness.py` は上記方向と分類を、finite Palatini branch / homogeneous minisuperspace のスコープ内で独立に再現する。最終的な branch 構成に基づく結果である。
+式(NF-01)。
 
-### F.4 Minisuperspace closure verification
+$$
+\begin{aligned}
+\mu&=m/P_0,\quad m\in\mathbb Z\setminus\lbrace 0\rbrace ,\quad 0\le r<|m|,\quad P_0=2\pi,\\
+\Phi_{m,r,n}&=\sqrt{P_0}\thinspace e^{i\mu z}\sum_{k\in\mathbb Z}
+ e^{i(r+km)y}f_n\left(x+\frac{r+km}{\mu}\right),\\
+f_n(v)&=\frac{(|\mu|/\pi)^{1/4}}{\sqrt{2^nn!}}
+ H_n(\sqrt{|\mu|}v)e^{-|\mu|v^2/2}.
+\end{aligned}
+$$
 
-lever-complete ansatz（ $\log$-scale 変数 $l_a$ ・共役運動量 $p_a$ ・lapse $N$ ）の DBR 閉包:
+測度をdx dy dz/P₀⁴に規格化する。格子のxシフトは和の添字をずらし、y,z周期は整数位相を与えるためNF-01は商に降下する。異なるrとmは直交し、x区間の和を実数直線へ展開するとfₙの正規直交性からΦの正規直交性が従う。
 
-- Hamiltonian constraint を含む閉包が成立（lapse 消去は閉包後）。
-- DeWitt metric の trace-free tangent norm は正（minisuperspace no-ghost）。
-- homogeneous anisotropy の configuration 自由度 = 2。
+式(NF-02)。
 
-### F.5 Scope and limitations (finite-fate sector)
+$$
+\begin{aligned}
+(X-iY)\Phi_n&=\sqrt{2\mu n}\thinspace \Phi_{n-1},&
+(X+iY)\Phi_n&=-\sqrt{2\mu(n+1)}\thinspace \Phi_{n+1},&Z\Phi_n&=i\mu\Phi_n\quad(m>0),\\
+\theta^\pm&=(\sigma^1\pm i\sigma^2)/\sqrt2,&\theta^0&=\sigma^3,& L&=n+\mathrm{sign}(m)s.
+\end{aligned}
+$$
 
-- wall は finite Palatini branch 内で確立されている。full nonlinear lift/mass theorem と呼ばない。
-- energy-density 展開による分類を Hamiltonian-constraint theorem / 停留点判定と同一視しない。
-- finite moduli 数（ $T^3$:3, $Nil^3$:1, $Sol^3$:0）と $d_{\rm zero}$（3, 2, 1）を同一視しない。
-- minisuperspace no-ghost を full field-theory no-ghost と読み替えない。
+対称tensor基底はθ⁺θ⁺、(θ⁺θ⁰+θ⁰θ⁺)/√2、(θ⁺θ⁻+θ⁻θ⁺)/√2、θ⁰θ⁰、負spinの二つで、spinは2,1,0,0,−1,−2である。m>0ではn=L−s≥0の成分だけを残す。LRS背景はspin零であり、微分のladder移動とtensor spin移動がLを保存する。metric、momentum、lapse、shift、Cartanの各tensor型を同じ規則で構成すると有限閉包が得られる。m<0は複素共役であり、rは−r modulo |m|、spinは−sへ移る。
 
----
+このspinは基底を整理する局所の回転gradingであり、固定商の新しい回転KIDではない。非LRS係数はnとn±2を結合し、この有限grade閉包を壊す。非LRSでの解析そのものが不可能という意味ではない。m=0では通常のbase Fourier基底を用いる。
 
-[← Appendix E](DPPUv7-paper07_appE.md) | [Appendix G →](DPPUv7-paper07_appG.md)
+## 固定Sol格子とunfolding
+
+式(SF-01)。
+
+$$
+\begin{aligned}
+\varphi&=(1+\sqrt5)/2,\quad\lambda=\varphi^2,\quad L_{\rm Sol}=\log\lambda,\\
+S&=\frac1{\sqrt{1+\varphi^2}}\begin{pmatrix}1&-\varphi\\
+\varphi&1\end{pmatrix},\quad
+D=\mathrm{diag}(\lambda^{-1},\lambda),\quad SA=DS,\\
+q&=2\pi S(n_1,n_2)^T=(k_0,l_0)^T,\qquad q_j=(D^T)^jq,\\
+k_0l_0&=\frac{4\pi^2}{\sqrt5}(n_1^2-n_1n_2-n_2^2)\ne0\quad(n\ne0).
+\end{aligned}
+$$
+
+fiber格子はSℤ²で面積1である。SF-01の整数二次形式は非零整数対で零にならず、全ての非零dual orbitに両fiber成分が存在する。軸上の連続covectorをこの固定商のmodeに含めない。
+
+式(SF-02)。
+
+$$
+\begin{aligned}
+U_qf&=\sqrt{L_{\rm Sol}}\sum_{j\in\mathbb Z}f(x+jL_{\rm Sol})
+ e^{i(\lambda^{-j}k_0y+\lambda^jl_0z)},\\
+D_1&=\partial_\xi,\quad D_2=iK,\quad D_3=iM,
+\qquad K=k_0e^{-\xi},\quad M=l_0e^\xi,\\
+\mathcal D&=\lbrace f:e^{a|\xi|}\partial_\xi^bf\in L^2(\mathbb R) \text{for all integers }a,b\ge0\rbrace .
+\end{aligned}
+$$
+
+正規化測度 $`dx\,dy\,dz/L_{\rm Sol}`$ ではUはL²(R)からorbit空間への等長写像となる。deck変換の添字移動とfiber直交性から直接確認できる。D上で全係数・微分・形式随伴を扱い、境界項は零である。compact supportを持つ滑らかな関数とHermite関数はDに含まれる。この形式的共通定義域の構成は閉作用素拡張やwellposedness定理ではない。
+
+式(SF-03)。
+
+$$
+[D_1,D_2]=-D_2,\quad[D_1,D_3]=D_3,\quad
+e^\xi\psi_0= e^{1/4}\sum_{n=0}^{\infty}\frac{\psi_n}{2^{n/2}\sqrt{n!}}.
+$$
+
+SF-03の全係数が非零なので有限Hermite切断は厳密には閉じない。無限orbit上では全tensor成分、拘束、gauge、発展が閉じる。共役orbitを合わせて実場とする。一方fiber零ではx周期のbase Fourierが適切で、両sectorを区別する。
+
+## S³のWigner blockと実場
+
+式(TF-01)。
+
+$$
+\begin{aligned}
+Y^j_{mn}&=\sqrt{2j+1}\thinspace D^j_{mn},\quad d=2j+1,\quad
+\overline{Y^j_{mn}}=(-1)^{m-n}Y^j_{-m,-n},\\
+D_a&=2iJ_a,\quad[D_a,D_b]=-2\epsilon_{abc}D_c,\quad
+\sum_aD_a^2=-4j(j+1)I.
+\end{aligned}
+$$
+
+Haar測度を体積で割って正規化する。背景coframeに関する六metric係数をそれぞれ全右添字で展開する。左添字は重複度であり、固定jの完全な実blockはd²実scalar成分を持つ。tensor係数もTF-01と同じ共役条件を満たす。j=0,1/2,1,3/2だけを明示分類し、j=3/2を完全再構成例とする。
+
+[論文の入口](README_ja.md) / [参考文献](REFERENCES.md)

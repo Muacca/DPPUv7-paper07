@@ -1,0 +1,242 @@
+{
+  "checks": [
+    {
+      "name": "linear spacetime Ricci 00",
+      "passed": true
+    },
+    {
+      "name": "second-order spacetime Ricci 00",
+      "passed": true
+    },
+    {
+      "name": "linear spacetime Ricci 01",
+      "passed": true
+    },
+    {
+      "name": "second-order spacetime Ricci 01",
+      "passed": true
+    },
+    {
+      "name": "linear spacetime Ricci 02",
+      "passed": true
+    },
+    {
+      "name": "second-order spacetime Ricci 02",
+      "passed": true
+    },
+    {
+      "name": "linear spacetime Ricci 03",
+      "passed": true
+    },
+    {
+      "name": "second-order spacetime Ricci 03",
+      "passed": true
+    },
+    {
+      "name": "linear spacetime Ricci 11",
+      "passed": true
+    },
+    {
+      "name": "second-order spacetime Ricci 11",
+      "passed": true
+    },
+    {
+      "name": "linear spacetime Ricci 12",
+      "passed": true
+    },
+    {
+      "name": "second-order spacetime Ricci 12",
+      "passed": true
+    },
+    {
+      "name": "linear spacetime Ricci 13",
+      "passed": true
+    },
+    {
+      "name": "second-order spacetime Ricci 13",
+      "passed": true
+    },
+    {
+      "name": "linear spacetime Ricci 22",
+      "passed": true
+    },
+    {
+      "name": "second-order spacetime Ricci 22",
+      "passed": true
+    },
+    {
+      "name": "linear spacetime Ricci 23",
+      "passed": true
+    },
+    {
+      "name": "second-order spacetime Ricci 23",
+      "passed": true
+    },
+    {
+      "name": "linear spacetime Ricci 33",
+      "passed": true
+    },
+    {
+      "name": "second-order spacetime Ricci 33",
+      "passed": true
+    },
+    {
+      "name": "warped-product area",
+      "passed": true
+    },
+    {
+      "name": "warped-product polarization",
+      "passed": true
+    },
+    {
+      "name": "warped-product tt",
+      "passed": true
+    },
+    {
+      "name": "warped-product xx",
+      "passed": true
+    },
+    {
+      "name": "warped-product tx",
+      "passed": true
+    },
+    {
+      "name": "periodic x metric",
+      "passed": true
+    },
+    {
+      "name": "has zero initial displacement and velocity",
+      "passed": true
+    },
+    {
+      "name": "linear metric has intended shear-free homogeneous part",
+      "passed": true
+    },
+    {
+      "name": "wave energy",
+      "passed": true
+    },
+    {
+      "name": "translation charge",
+      "passed": true
+    }
+  ],
+  "parameters": "q0=1; h^2=a^2/24; both signs of h; spatial period 2pi",
+  "ansatz": "A=eps A1+eps^2 A2; B=eps B1+eps^2 B2; P=eps P1+eps^2 P2",
+  "coefficients": {
+    "A1": "h*t",
+    "B1": "h*t",
+    "P1": "a*cos(t)*cos(x)/2",
+    "A2": "a**2*(-cos(2*t) - cos(2*x) + 1)/32 + h**2*t**2/2",
+    "B2": "-a**2*cos(2*t)*cos(2*x)/64 - h**2*t**2",
+    "P2": "a*h*(-t*cos(t) + sin(t))*cos(x)/2"
+  },
+  "metric_first": [
+    [
+      "-2*h*t",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "2*h*t",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "a*cos(t)*cos(x) + 2*h*t",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-a*cos(t)*cos(x) + 2*h*t"
+    ]
+  ],
+  "metric_second": [
+    [
+      "-a**2*(-cos(2*t) - cos(2*x) + 1)/16 - 3*h**2*t**2",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "a**2*(-cos(2*t) - cos(2*x) + 1)/16 + 3*h**2*t**2",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "-a**2*cos(2*t)*cos(2*x)/32 + a*h*(-t*cos(t) + sin(t))*cos(x) - 2*h**2*t**2 + 2*(a*cos(t)*cos(x)/2 + h*t)**2",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-a**2*cos(2*t)*cos(2*x)/32 - a*h*(-t*cos(t) + sin(t))*cos(x) - 2*h**2*t**2 + 2*(-a*cos(t)*cos(x)/2 + h*t)**2"
+    ]
+  ],
+  "ricci_first": [
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "ricci_second": [
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "energy": "a**2",
+  "translation": "0",
+  "verdict": "SECOND_ORDER_LOCAL_VACUUM_SOLUTION_CONSTRUCTED",
+  "scope": "periodic standing wave; fixed finite time interval; not an exact finite-amplitude or long-time solution"
+}
