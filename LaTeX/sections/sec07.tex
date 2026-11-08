@@ -47,7 +47,22 @@ Conjugate sectors add rather than cancel. The condition applies to the sum over 
 
 \subsection{KIDs and periodic reconstruction on Sol}
 
-The fixed Sol quotient has no global KID, so neither the four flat-torus conditions nor the Nil central condition is added to a general orbit. Periodic reconstruction in the fiber-independent Gowdy representation involves the second-order mean correction $\langle\delta p_P^{(2)}\rangle$ of (KG-03). Fixing that correction to zero leaves a source condition on the first-order fields, not a common KID obstruction of the general fiber-dependent system. Nonlinear products generate zero modes and other orbits; their lifting is a separate problem.
+The fixed Sol quotient has no global KID, so neither the four flat-torus conditions nor the Nil central condition is added to a general orbit. Periodic reconstruction in the fiber-independent Gowdy representation involves the second-order mean correction $\langle\delta p_P^{(2)}\rangle$ of (KG-03). Fixing that correction to zero leaves a source condition on the first-order fields, not a common KID obstruction of the general fiber-dependent system. Nonlinear products generate zero modes and other orbits. The following proposition permits those corrections in the full vacuum theory; it does not assert nonlinear closure within a single orbit.
+
+\textbf{Proposition (local integrability on the fixed Sol background).}
+Fix a slice $t=t_0\in[1,2]$ of (BF-01) on the fixed compact Sol quotient and an integer $s\ge6$. Every real solution $(h,p)$ of the full linearized vacuum constraints in $H^s\times H^{s-1}$, with $p$ a momentum-density variation, is tangent to an exact vacuum constraint-data family:
+
+\stepcounter{equation}\begin{equation}\tag{SL-01}\label{eq:SL-01}
+\begin{aligned}
+\Phi(g_\varepsilon,\pi_\varepsilon)&=0,\\
+(g_\varepsilon,\pi_\varepsilon)&=(g_0,\pi_0)+\varepsilon(h,p)
++O_{H^s\times H^{s-1}}(\varepsilon^2).
+\end{aligned}
+\end{equation}
+
+This applies the existing no-KID theorem \cite{FischerMarsdenMoncrief1980}. Appendix G specifies the bundles, function spaces, surjectivity and quotient KIDs. Local Cauchy development and the LC connection give a local family in the same nondegenerate source-free EC theory with constant complete NY coupling.
+
+The proposition includes nonzero-base Gowdy modes and real initial data reconstructed by (SG-04) from the common core of (SF-02), with the conjugate orbit restored. Infinite orbit sums require convergence in the reconstructed global Sobolev norm. Higher-order corrections may contain zero modes and other orbits; fixed mean curvature, the same reduced gauge and preservation of the Gowdy ansatz are not imposed on the family. Local time existence is distinct from a uniform guarantee on the numerical interval, well-posedness or numerical convergence of (SG-05), and nonlinear stability.
 
 \subsection{Four conditions on Taub three-spheres}
 
@@ -65,6 +80,6 @@ The three left $SU(2)$ conditions act on left coefficient indices. The axial $U(
 Background & Global KIDs & Conclusion here\\\midrule
 Fixed flat $T^3$ & 4 & Necessary and sufficient for local integrability under the stated hypotheses\\
 Nil LRS & 1 & Quadratic necessary central-charge condition\\
-Fixed Sol & 0 & No KID obstruction; lifting sufficiency not established here\\
+Fixed Sol & 0 & Local integrability in the stated Sobolev class, (SL-01); mode reconstruction conditions in Appendix G\\
 $S^3$ Taub & 4 & Four quadratic necessary conditions\\
 \bottomrule\end{tabularx}\end{center}

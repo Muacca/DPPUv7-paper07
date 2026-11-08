@@ -5,7 +5,18 @@
   "sol_lorenz_interior_supported": true,
   "sol_reduced_fourth_order_convergence_established": false,
   "whole_line_error_guarantee": false,
-  "curved_nonlinear_lifting_sufficiency_established": false,
+  "all_curved_backgrounds_nonlinear_lifting_sufficiency_established": false,
+  "nil_nonlinear_lifting_sufficiency_established": false,
+  "taub_nonlinear_lifting_sufficiency_established": false,
+  "sol_local_integrability": {
+    "status": "PROVED_SCOPED",
+    "background": "BF-01 on the fixed compact Sol quotient; fixed t0 in [1,2].",
+    "data": "Real metric and momentum-density variations in H^s x H^(s-1), fixed integer s >= 6, satisfying all linearized vacuum constraints.",
+    "conclusion": "Tangency to an exact vacuum constraint-data family, local Cauchy development and LC lift to source-free EC with constant complete NY.",
+    "basis": "Fischer-Marsden-Moncrief (1980), Theorem 2.1, with the function-space and elliptic arguments of SL-01 through SL-05.",
+    "modes": "Nonzero-base Gowdy reconstruction; E(t0)y for y in D^4 with original tensor phases and conjugate orbit restored; continuous SH-03 Hermite initial profile; infinite sums obeying SL-07.",
+    "boundary": "Small family parameter and local time. No fixed CMC value, gauge, Gowdy ansatz or single-orbit closure is imposed. Arbitrary reduced L2 data, numerical trajectory certification, SG-05 well-posedness and nonlinear stability are not established."
+  },
   "max_reduced_comparisons": [
     3.2645146475836454e-08,
     2.768181348374886e-10,
@@ -21,6 +32,7 @@
   "limitations": [
     "Finite-time interior numerical evidence is not a whole-line theorem.",
     "Convergence of the reduced fourth-order system (SG-05) under the Lorenz evolution is not established.",
-    "Finite low-label checks are not an all-j or non-LRS classification."
+    "Finite low-label checks are not an all-j or non-LRS classification.",
+    "Sol local integrability concerns admissible full initial data, not a closed realization of SG-05 or fixed-sector nonlinear families."
   ]
 }

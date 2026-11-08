@@ -6,7 +6,7 @@
 | `initial/` | Fixed 128-coefficient Sol initial profile; identical across all comparisons | Input, preserved and hash checked |
 | `perturbations/` | Flat integrability controls and second-order coefficients; curved reductions; finite examples; Sol Lorenz diagnostics and figure 5 | `perturbations.py recompute --model all`, then `export` |
 
-The manifests give SHA-256 hashes. `perturbations/figures.json` is a saved selection of reconstructed fields at t=1,1.5,2, read by the renderer without evolution. Its full field arrays are reproducible by the model command. `scope.json` records the positive finite-interior statement and the unestablished convergence of the reduced fourth-order system as separate fields.
+The manifests give SHA-256 hashes. `perturbations/figures.json` is a saved selection of reconstructed fields at t=1,1.5,2, read by the renderer without evolution. Its full field arrays are reproducible by the model command. `scope.json` separately records scoped Sol local integrability by the cited theorem, its admissible reconstructed initial data, the finite-interior numerical evidence, and unestablished fourth-order reduced convergence. The theorem is not an output inferred from numerical residuals.
 
 The fixed Sol profile is scientific input, not a physical frequency assertion. Recomputed floating-point results can vary with numerical library versions; exact coefficients can have equivalent but different expression strings. A changed hash is therefore an integrity difference, not by itself a scientific discrepancy. The formulas, initial data, discretization and norms to compare are specified in Appendices F–H.
 

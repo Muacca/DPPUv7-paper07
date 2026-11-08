@@ -203,6 +203,114 @@ $$
 \end{aligned}
 $$
 
-Sol Gowdyの周期metric再構成では、 $`\Pi_PP_x+\Pi_QQ_x`$ のx平均 $`\langle\cdot\rangle`$ が零でなければならない（ $`\Pi_P,\Pi_Q`$ はSG-01の $`P,Q`$ の運動量）。 $`p,r`$ とその運動量 $`\delta p_P,\delta p_r`$ を $`\varepsilon`$ の一次とすると、この平均はKG-03の第1行の $`\varepsilon`$ 倍に等しい。第2行は $`\delta p_P=\delta p_P^{(1)}+\varepsilon\delta p_P^{(2)}+O(\varepsilon^2)`$ と展開したもので、斉次な二次補正を一次の場で定める。一般orbitのKID chargeではない。曲がった三背景では、charge零、KID零のいずれからも非線形持ち上げの十分性を結論しない。
+Sol Gowdyの周期metric再構成では、 $`\Pi_PP_x+\Pi_QQ_x`$ のx平均 $`\langle\cdot\rangle`$ が零でなければならない（ $`\Pi_P,\Pi_Q`$ はSG-01の $`P,Q`$ の運動量）。 $`p,r`$ とその運動量 $`\delta p_P,\delta p_r`$ を $`\varepsilon`$ の一次とすると、この平均はKG-03の第1行の $`\varepsilon`$ 倍に等しい。第2行は $`\delta p_P=\delta p_P^{(1)}+\varepsilon\delta p_P^{(2)}+O(\varepsilon^2)`$ と展開したもので、斉次な二次補正を一次の場で定める。一般orbitのKID chargeではない。NilとS³ Taubでは、ここに示したcharge零だけから非線形持ち上げの十分性を結論しない。SolのKID消失に基づく十分性は、次の関数空間と定理適用により確立する。
+
+## Solの局所可積分性
+
+### 背景と全大域KID
+
+SF-01の商は $`A\in SL(2,\mathbb Z)`$ によるtorus mapping torusであり、連結・コンパクト・境界なしの向き付き3次元多様体である。大域coframe $`(dx,e^xdy,e^{-x}dz)`$ 上のBF-01は全 $`t>0`$ で滑らかで、N>0、G正定値である。各 $`t_0\in[1,2]`$ を含む開時間区間の積時空では、空間のコンパクト性と因果速度の局所有界性により各sliceがCauchy面となる。付録Fの真空性と、次の外部曲率を用いる。
+
+式(SL-02)。
+
+$$
+\begin{aligned}
+K^i{}_j&=\frac1{\sqrt F}\operatorname{diag}
+\left(t-\frac1{4t},\frac1{2t},\frac1{2t}\right),\\
+\tau:=\operatorname{tr}K&=\frac{t+3/(4t)}{\sqrt F},\qquad
+|K|^2=\frac{(t-1/(4t))^2+1/(2t^2)}F>0.
+\end{aligned}
+$$
+
+KIDを(f,X)とする。Kの正符号規約でmetric逆行列の変分も含めてtrace発展を取ると、真空拘束上で $`0=\Delta f-|K|^2f+X(\tau)`$ となる。ここで $`\Delta=\operatorname{div}\nabla`$ 。背景はCMCなのでX(τ)=0であり、境界なしの部分積分がKG-01を与え、f=0となる。残る条件は $`\mathcal L_Xg=\mathcal L_XK=0`$ である。
+
+空間Ricci endomorphismの固有値は(−2/F,0,0)で、負の固有方向は単純である。Killing流はこの方向の単位vectorを保つため $`[X,\partial_x]=0`$ 。残るKilling方程式を解くと、普遍被覆の全局所Killing場は $`a(\partial_x-y\partial_y+z\partial_z)+b\partial_y+c\partial_z`$ と尽くされる。二つのfiber格子並進への降下条件からa=0、base deck変換から $`(b,c)=(\lambda^{-1}b,\lambda c)`$ となりb=c=0である。従って大域KIDは零となる。離散等長変換の不存在は必要としない。
+
+### 関数空間と全射性
+
+整数s≥6を固定し、Densを実density bundleとして次の空間を取る。Sobolev normと形式随伴の内積は滑らかな背景g₀で固定する。
+
+式(SL-03)。
+
+$$
+\begin{aligned}
+\mathcal X_s&=H^s(S^2T^*\Sigma)\times
+H^{s-1}(S^2T\Sigma\otimes\mathrm{Dens}),\\
+\mathcal Y_s&=H^{s-2}(\mathrm{Dens})\times
+H^{s-2}(T^*\Sigma\otimes\mathrm{Dens}),\\
+\Phi(g,\pi)&=(\mathcal H_\perp,\mathcal H_i),\qquad
+P=D\Phi_{(g_0,\pi_0)}=(P_g,P_\pi).
+\end{aligned}
+$$
+
+拘束写像はRG-01の全Hamiltonian・momentum拘束であり、正定値metricの開集合で $`\Phi:\mathcal X_s\to\mathcal Y_s`$ は滑らかである。densityの同定には固定背景の体積densityを用いる。 $`\pi^{ij}=\sqrt g(K^{ij}-g^{ij}\tau)`$ とその逆はこの正則性で滑らかであり、pはδπを表す。[FischerMarsdenMoncrief1980](REFERENCES.md#fischermarsdenmoncrief1980) p.155の空間設定を採用し、最低正則性は主張しない。
+
+Hamiltonian行はgに二階・πに零階、momentum行はgに高々一階・πに一階である。momentum density変分のbundle $`S^2T\Sigma\otimes\mathrm{Dens}`$ に作用する正の二階作用素Bを用いて、次の空間楕円作用素を作る。
+
+式(SL-04)。
+
+$$
+\begin{aligned}
+B&=I+\nabla^*\nabla,\qquad
+\mathscr L=P_gP_g^*+P_\pi BP_\pi^*,\\
+\sigma_4(\mathscr L)(\xi)&=2|\xi|^4
+\operatorname{diag}\left(1,I_3+|\xi|^{-2}\xi\otimes\xi\right),\\
+\langle w,\mathscr Lw\rangle&=\|P_g^*w\|^2+\|P_\pi^*w\|^2
++\|\nabla P_\pi^*w\|^2.
+\end{aligned}
+$$
+
+normは固定背景のL² norm、xiは非零の空間covectorである。背景正規直交frameでHamiltonianの主symbol随伴は符号を除き $`f(\xi\otimes\xi-|\xi|^2I)`$ 、momentumのπ主symbolは $`p\mapsto-2ip(\xi,\cdot)`$ 。非対角blockは高々三階なので、SL-04の四階主symbolは正定値となる。滑らかなwで $`\ker\mathscr L=\ker P^*`$ 。distributionとしてP*w=0ならLw=0であり、楕円正則性によりwは滑らかになるため、上のKID消失が弱いkernelにも及ぶ。
+
+閉多様体上の自己随伴楕円作用素のFredholm理論によりLは可逆で、次が有界右逆と補空間を与える。
+
+式(SL-05)。
+
+$$
+\begin{aligned}
+\mathscr R&=\begin{pmatrix}P_g^*\\BP_\pi^*\end{pmatrix}
+\mathscr L^{-1}:\mathcal Y_s\longrightarrow\mathcal X_s,
+\qquad P\mathscr R=I,\\
+\mathcal X_s&=\ker P\oplus\operatorname{range}\mathscr R,\qquad
+\operatorname{proj}_{\ker P}=I-\mathscr RP.
+\end{aligned}
+$$
+
+L⁻¹は $`H^{s-2}`$ を $`H^{s+2}`$ へ写し、右逆の二成分はそれぞれ高々二階・三階なので、値は正しくXsへ入る。これにより全射性・像の閉性・kernelの分裂を得る。これは同文献Theorem 2.1の楕円的分解を本背景で具体化したものである。空間楕円補助作用素Lは、4階時間発展系SG-05のHamiltonianとは異なる。
+
+### 厳密族・局所発展・LC持ち上げ
+
+x₀=(g₀,π₀)とし、 $`u\in\ker P`$ 、 $`v\in\mathcal Y_s`$ に対して $`\Phi(x_0+u+\mathscr Rv)=0`$ を考える。v微分は恒等写像なので陰関数定理からv=ψ(u)、ψ(0)=Dψ(0)=0を得る。任意のz∈ker Pについて $`x_\varepsilon=x_0+\varepsilon z+\mathscr R\psi(\varepsilon z)`$ がSL-01を満たす。初期データ族はεについて滑らかである。CMCは背景でKIDを除く条件であり、近傍の全データに固定平均曲率を課していない。滑らかさを述べる対象は拘束零集合であって、離散対称性も含む全微分同相商ではない。
+
+Harmonic/wave-map gaugeによる局所Cauchy理論は、十分小さいεの族に共通する短時間の真空発展を与える[HughesKatoMarsden1977](REFERENCES.md#hugheskatomarsden1977)。拘束とgaugeの伝播を含めて全真空方程式を満たし、一意性は微分同相を除いて述べる。発展は $`C^0H^s\cap C^1H^{s-1}`$ に属し、接方向は一階低い $`C^0H^{s-1}\cap C^1H^{s-2}`$ 位相で解釈できる。最高位Sobolev normで発展写像が滑らかであることまでは要求しない。近傍metricの平方根からcoframeを選びLC接続を付ければ、A-02により同じEC＋定数完全NYの局所解族となる。接続はcoframeの一階微分を含む。この初期値問題は二時刻の固定境界データを課す問題ではない。
+
+### 個別modeの適用範囲
+
+Gowdyの非零base modeでは、SG-01の $`\delta a=\delta p_P/(ik)`$ 、 $`\delta p_R=-2tikp`$ と全metric・momentumへの再構成が滑らかな商上の拘束データを与える。実場には反対波数の共役を戻す。有限和に加え、平均零の周期場p,r∈Hˢ、運動量δpP,δpr∈Hˢ⁻¹にも適用できる。逆微分がδaの正則性を一階上げ、δpRはpの一階微分となるためである。k=0にはこの割算を適用しない。KG-03の二次平均補正を許すこととSL-01は整合する。
+
+一般orbitでは、SF-02の等長写像と大域frameを用いる。
+
+式(SL-06)。
+
+$$
+\begin{aligned}
+X_iU_qf&=U_qD_if,\qquad
+U_q\mathcal D\subset\bigcap_{m\ge0}H^m(\Sigma)\subset C^\infty(\Sigma),\\
+E(t_0)\mathcal D^4&\subset\mathcal D^{12},\qquad CE=0.
+\end{aligned}
+$$
+
+各有限word $`D_{i_1}\cdots D_{i_m}`$ は指数関数の重み付き微分の有限和なので、Dの定義によりその結果はL²に入る。閉多様体上のframe微分normとSobolev normの同値性から第1行を得る。重み付きnormでcompact-support cutoff近似を取れば、弱微分の交換も正当化される。SG-03の分母は零から離れ、再構成係数とその各微分は高々指数増大なのでEはDを保つ。CE=0と元のtensor成分への位相復元・共役orbitの加算により、実初期データはSL-01の対象となる。
+
+SH-03の有限Hermite和は多項式とGaussianからなりDに属するため、その実数直線全体の連続初期profileも含む。有限窓の離散軌道を厳密解と認定する結果ではない。複数orbitの和には、共役を処理した再構成成分について
+
+式(SL-07)。
+
+$$
+\sum_{[q]}\left(\|h_{[q]}\|_{H^s(\Sigma)}^2
++\|p_{[q]}\|_{H^{s-1}(\Sigma)}^2\right)<\infty.
+$$
+
+を要する。異なるorbitの直交性とframe微分によるorbit保存から全体がXsで収束し、Pの連続性により全拘束を満たす。各orbitが個別に滑らかであることや、還元係数の重みなし二乗和だけからSL-07は従わない。任意のL²還元データ、SG-05の閉作用素実現・well-posedness・数値収束、全時間安定性、単一sector内の非線形閉包は本結果に含めない。
 
 [論文の入口](README_ja.md) / [参考文献](REFERENCES.md)

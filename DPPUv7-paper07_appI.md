@@ -14,6 +14,6 @@ $$
 
 式(D-04)は初版の最低sphere harmonicのstrict二次trace blockである。接続消去と全primary保存はともに1 pairを与え、H_PPの値も一致する。完全作用由来のscalar比較は付録Cに示した。旧変数の埋込みと26変数blockとの対応は計算補足の比較ガイドに記載する。
 
-本版では、全対称斉次計量の正則拘束計数と非零torus modeの作用還元を導き、Paper06の斉次錐をTT energy・並進chargeを含むcompact条件へ接続した。付録Dの仮定のもとでは、Arms–Marsden–Moncriefの定理によりこれらの条件は局所可積分性に十分である。また、選んだNil・Sol・Taubの真空背景上で線形摂動を還元し、二次KID条件と有限時間例を示した（付録F–H）。Paper03EC・04・06から用いる幾何結果は出典を明示して付録Eにまとめた。本文・付録に仮定と導出を、READMEに添付資料の再現手順を示す。
+本版では、全対称斉次計量の正則拘束計数と非零torus modeの作用還元を導き、Paper06の斉次錐をTT energy・並進chargeを含むcompact条件へ接続した。付録Dの仮定のもとでは、Arms–Marsden–Moncriefの定理によりこれらの条件は局所可積分性に十分である。また、選んだNil・Sol・Taubの真空背景上で線形摂動を還元し、二次KID条件と有限時間例を示した（付録F–H）。固定Sol背景については、Fischer–Marsden–MoncriefのKID消失時の定理を適用し、明示したSobolev級の全線形化拘束データの局所可積分性を追加した（SL-01–07）。これは4階還元系の数値収束や長時間安定性の留保を変更しない。Paper03EC・04・06から用いる幾何結果は出典を明示して付録Eにまとめた。本文・付録に仮定と導出を、READMEに添付資料の再現手順を示す。
 
 [論文の入口](README_ja.md) / [参考文献](REFERENCES.md)

@@ -54,7 +54,23 @@ $$
 
 ## SolのKIDと周期再構成
 
-固定Sol商には大域KIDがないため、flat T³の四条件やNilのcentral条件を一般orbitに追加しない。fiber非依存Gowdy表示の周期再構成にはKG-03の二次の平均補正 $`\langle\delta p_P^{(2)}\rangle`$ が寄与する。その補正を零に固定した一次場だけのsource条件を、一般fiber依存系に共通するKID obstructionとみなさない。非線形の積は零modeや他orbitを生成し、その持ち上げは別問題である。
+固定Sol商には大域KIDがないため、flat T³の四条件やNilのcentral条件を一般orbitに追加しない。fiber非依存Gowdy表示の周期再構成にはKG-03の二次の平均補正 $`\langle\delta p_P^{(2)}\rangle`$ が寄与する。その補正を零に固定した一次場だけのsource条件を、一般fiber依存系に共通するKID obstructionとみなさない。非線形の積は零modeや他orbitを生成する。以下の命題はそれらを許した全真空理論での局所持ち上げを与え、単一orbit内の非線形閉包を意味しない。
+
+**命題（固定Sol背景の局所可積分性）。** BF-01の固定コンパクトSol商上で、初期面 $`t=t_0\in[1,2]`$ と整数 $`s\ge6`$ を固定する。実metric変分とmomentum density変分からなる $`H^s\times H^{s-1}`$ の全線形化真空拘束解 $`(h,p)`$ は、背景を通る厳密真空拘束データ族の接方向となる。
+
+式(SL-01)。
+
+$$
+\begin{aligned}
+\Phi(g_\varepsilon,\pi_\varepsilon)&=0,\\
+(g_\varepsilon,\pi_\varepsilon)&=(g_0,\pi_0)+\varepsilon(h,p)
++O_{H^s\times H^{s-1}}(\varepsilon^2).
+\end{aligned}
+$$
+
+これはKIDのない場合の既知定理の適用である[FischerMarsdenMoncrief1980](REFERENCES.md#fischermarsdenmoncrief1980)。関数空間、全射性、商上のKID消失を付録Gに示す。局所Cauchy発展とLC接続への持ち上げにより、同じ非退化source-free EC＋定数完全NY理論の局所解族を得る。
+
+Gowdyの非零base modeと、SF-02の共通coreからSG-04で再構成し共役orbitを加えた実初期データは、この命題の対象となる。無限orbit和には再構成後の全体Sobolev normの収束を要する。族の高次補正には零mode・他orbitを許し、同じCMC値、還元gauge、Gowdy ansatzの保持は課さない。局所時間の存在を、数値区間全体の一様保証、4階還元系SG-05のwell-posedness・数値収束、非線形安定性とは区別する。
 
 ## S³ Taubの四条件
 
@@ -73,7 +89,7 @@ $$
 | --- | --- | --- |
 | 固定flat T³ | 4 | 仮定内で局所可積分性に必要十分 |
 | Nil LRS | 1 | central chargeの二次必要条件 |
-| 固定Sol | 0 | KID障害なし。十分性は未適用 |
+| 固定Sol | 0 | 明示したSobolev級で全線形化拘束解の局所可積分性（SL-01）。個別modeの再構成条件は付録G |
 | S³ Taub | 4 | 四つの二次必要条件 |
 
 [論文の入口](README_ja.md) / [参考文献](REFERENCES.md)

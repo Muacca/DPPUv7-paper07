@@ -74,6 +74,14 @@ Edition labels refer to the cited manuscripts. A DOI landing page may provide mu
 
 **[ArmsMarsdenMoncrief1982](REFERENCES.md#armsmarsdenmoncrief1982)** J. M. Arms, J. E. Marsden and V. Moncrief. The structure of the space of solutions of Einstein's equations II: Several Killing fields and the Einstein–Yang–Mills equations. Annals of Physics 144(1), 81–106 (1982). [doi:10.1016/0003-4916(82)90105-1](https://doi.org/10.1016/0003-4916(82)90105-1).
 
+<a id="fischermarsdenmoncrief1980"></a>
+
+**[FischerMarsdenMoncrief1980](REFERENCES.md#fischermarsdenmoncrief1980)** A. E. Fischer, J. E. Marsden and V. Moncrief. The structure of the space of solutions of Einstein's equations. I. One Killing field. Annales de l'Institut Henri Poincare, Section A 33(2), 147–194 (1980). [Original article](https://www.numdam.org/item/AIHPA_1980__33_2_147_0/). Theorem 2.1 and Lemma 2.2, pp.161–162; function spaces on p.155.
+
+<a id="hugheskatomarsden1977"></a>
+
+**[HughesKatoMarsden1977](REFERENCES.md#hugheskatomarsden1977)** T. J. R. Hughes, T. Kato and J. E. Marsden. Well-posed quasi-linear second-order hyperbolic systems with applications to nonlinear elastodynamics and general relativity. Archive for Rational Mechanics and Analysis 63, 273–294 (1977). [Original article](https://www.cds.caltech.edu/~marsden/bib/1977/02-HuKaMa1977/HuKaMa1977.pdf). Theorem III and Section 5, including the manifold formulation in Remark 3 on p.292.
+
 <a id="nomizu1954"></a>
 
 **[Nomizu1954](REFERENCES.md#nomizu1954)** K. Nomizu. On the cohomology of compact homogeneous spaces of nilpotent Lie groups. Ann. of Math. 59, 531–538 (1954). [doi:10.2307/1969716](https://doi.org/10.2307/1969716).

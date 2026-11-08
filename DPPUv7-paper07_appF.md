@@ -75,7 +75,7 @@ D_1&=\partial_\xi,\quad D_2=iK,\quad D_3=iM,
 \end{aligned}
 $$
 
-正規化測度 $`dx\,dy\,dz/L_{\rm Sol}`$ ではUはL²(R)からorbit空間への等長写像となる。deck変換の添字移動とfiber直交性から直接確認できる。D上で全係数・微分・形式随伴を扱い、境界項は零である。compact supportを持つ滑らかな関数とHermite関数はDに含まれる。この形式的共通定義域の構成は閉作用素拡張やwellposedness定理ではない。
+正規化測度 $`dx\,dy\,dz/L_{\rm Sol}`$ ではUはL²(R)からorbit空間への等長写像となる。deck変換の添字移動とfiber直交性から直接確認できる。D上で全係数・微分・形式随伴を扱い、境界項は零である。compact supportを持つ滑らかな関数とHermite関数はDに含まれる。この共通定義域から商上の滑らかな拘束データへの対応と、その局所可積分性は付録GのSL-06に示す。共通定義域の構成自体は4階還元系の閉作用素拡張やwellposedness定理ではない。
 
 式(SF-03)。
 
