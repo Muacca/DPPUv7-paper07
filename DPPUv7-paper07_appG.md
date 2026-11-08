@@ -215,14 +215,14 @@ SF-01の商は $`A\in SL(2,\mathbb Z)`$ によるtorus mapping torusであり、
 
 $$
 \begin{aligned}
-K^i{}_j&=\frac1{\sqrt F}\operatorname{diag}
+K^i{}_j&=\frac1{\sqrt F}\mathrm{diag}
 \left(t-\frac1{4t},\frac1{2t},\frac1{2t}\right),\\
-\tau:=\operatorname{tr}K&=\frac{t+3/(4t)}{\sqrt F},\qquad
+\tau:=\mathrm{tr}\thinspace K&=\frac{t+3/(4t)}{\sqrt F},\qquad
 |K|^2=\frac{(t-1/(4t))^2+1/(2t^2)}F>0.
 \end{aligned}
 $$
 
-KIDを(f,X)とする。Kの正符号規約でmetric逆行列の変分も含めてtrace発展を取ると、真空拘束上で $`0=\Delta f-|K|^2f+X(\tau)`$ となる。ここで $`\Delta=\operatorname{div}\nabla`$ 。背景はCMCなのでX(τ)=0であり、境界なしの部分積分がKG-01を与え、f=0となる。残る条件は $`\mathcal L_Xg=\mathcal L_XK=0`$ である。
+KIDを(f,X)とする。Kの正符号規約でmetric逆行列の変分も含めてtrace発展を取ると、真空拘束上で $`0=\Delta f-|K|^2f+X(\tau)`$ となる。ここで $`\Delta=\mathrm{div}\nabla`$ 。背景はCMCなのでX(τ)=0であり、境界なしの部分積分がKG-01を与え、f=0となる。残る条件は $`\mathcal L_Xg=\mathcal L_XK=0`$ である。
 
 空間Ricci endomorphismの固有値は(−2/F,0,0)で、負の固有方向は単純である。Killing流はこの方向の単位vectorを保つため $`[X,\partial_x]=0`$ 。残るKilling方程式を解くと、普遍被覆の全局所Killing場は $`a(\partial_x-y\partial_y+z\partial_z)+b\partial_y+c\partial_z`$ と尽くされる。二つのfiber格子並進への降下条件からa=0、base deck変換から $`(b,c)=(\lambda^{-1}b,\lambda c)`$ となりb=c=0である。従って大域KIDは零となる。離散等長変換の不存在は必要としない。
 
@@ -234,10 +234,10 @@ KIDを(f,X)とする。Kの正符号規約でmetric逆行列の変分も含め�
 
 $$
 \begin{aligned}
-\mathcal X_s&=H^s(S^2T^*\Sigma)\times
+\mathcal X_s&=H^s(S^2T^{\ast}\Sigma)\times
 H^{s-1}(S^2T\Sigma\otimes\mathrm{Dens}),\\
 \mathcal Y_s&=H^{s-2}(\mathrm{Dens})\times
-H^{s-2}(T^*\Sigma\otimes\mathrm{Dens}),\\
+H^{s-2}(T^{\ast}\Sigma\otimes\mathrm{Dens}),\\
 \Phi(g,\pi)&=(\mathcal H_\perp,\mathcal H_i),\qquad
 P=D\Phi_{(g_0,\pi_0)}=(P_g,P_\pi).
 \end{aligned}
@@ -251,32 +251,33 @@ Hamiltonian行はgに二階・πに零階、momentum行はgに高々一階・π�
 
 $$
 \begin{aligned}
-B&=I+\nabla^*\nabla,\qquad
-\mathscr L=P_gP_g^*+P_\pi BP_\pi^*,\\
+B&=I+\nabla^{\ast}\nabla,\qquad
+\mathscr L=P_gP_g^{\ast}+P_\pi BP_\pi^{\ast},\\
 \sigma_4(\mathscr L)(\xi)&=2|\xi|^4
-\operatorname{diag}\left(1,I_3+|\xi|^{-2}\xi\otimes\xi\right),\\
-\langle w,\mathscr Lw\rangle&=\|P_g^*w\|^2+\|P_\pi^*w\|^2
-+\|\nabla P_\pi^*w\|^2.
+\mathrm{diag}\left(1,I_3+|\xi|^{-2}\xi\otimes\xi\right),\\
+\langle w,\mathscr Lw\rangle&=\lVert P_g^{\ast}w\rVert^2+\lVert P_\pi^{\ast}w\rVert^2
++\lVert\nabla P_\pi^{\ast}w\rVert^2.
 \end{aligned}
 $$
 
-normは固定背景のL² norm、xiは非零の空間covectorである。背景正規直交frameでHamiltonianの主symbol随伴は符号を除き $`f(\xi\otimes\xi-|\xi|^2I)`$ 、momentumのπ主symbolは $`p\mapsto-2ip(\xi,\cdot)`$ 。非対角blockは高々三階なので、SL-04の四階主symbolは正定値となる。滑らかなwで $`\ker\mathscr L=\ker P^*`$ 。distributionとしてP*w=0ならLw=0であり、楕円正則性によりwは滑らかになるため、上のKID消失が弱いkernelにも及ぶ。
+normは固定背景のL² norm、 $`\xi\ne0`$ は空間covectorである。背景正規直交frameでHamiltonianの主symbol随伴は符号を除き $`f(\xi\otimes\xi-|\xi|^2I)`$ 、momentumのπ主symbolは $`p\mapsto-2ip(\xi,\cdot)`$ 。非対角blockは高々三階なので、SL-04の四階主symbolは正定値となる。滑らかなwで $`\ker\mathscr L=\ker P^*`$ 。distributionとして $`P^{\ast}w=0`$ なら $`\mathscr Lw=0`$ であり、楕円正則性によりwは滑らかになるため、上のKID消失が弱いkernelにも及ぶ。
 
-閉多様体上の自己随伴楕円作用素のFredholm理論によりLは可逆で、次が有界右逆と補空間を与える。
+閉多様体上の自己随伴楕円作用素のFredholm理論により $`\mathscr L`$ は可逆で、次が有界右逆と補空間を与える。
 
 式(SL-05)。
 
 $$
 \begin{aligned}
-\mathscr R&=\begin{pmatrix}P_g^*\\BP_\pi^*\end{pmatrix}
+\mathscr R&=\begin{pmatrix}P_g^{\ast}\\
+BP_\pi^{\ast}\end{pmatrix}
 \mathscr L^{-1}:\mathcal Y_s\longrightarrow\mathcal X_s,
 \qquad P\mathscr R=I,\\
-\mathcal X_s&=\ker P\oplus\operatorname{range}\mathscr R,\qquad
-\operatorname{proj}_{\ker P}=I-\mathscr RP.
+\mathcal X_s&=\ker P\oplus\mathrm{range}\thinspace\mathscr R,\qquad
+\mathrm{proj}_{\ker P}=I-\mathscr RP.
 \end{aligned}
 $$
 
-L⁻¹は $`H^{s-2}`$ を $`H^{s+2}`$ へ写し、右逆の二成分はそれぞれ高々二階・三階なので、値は正しくXsへ入る。これにより全射性・像の閉性・kernelの分裂を得る。これは同文献Theorem 2.1の楕円的分解を本背景で具体化したものである。空間楕円補助作用素Lは、4階時間発展系SG-05のHamiltonianとは異なる。
+$`\mathscr L^{-1}`$ は $`H^{s-2}`$ を $`H^{s+2}`$ へ写し、右逆の二成分はそれぞれ高々二階・三階なので、値は正しく $`\mathcal X_s`$ へ入る。これにより全射性・像の閉性・kernelの分裂を得る。これは同文献Theorem 2.1の楕円的分解を本背景で具体化したものである。空間楕円補助作用素 $`\mathscr L`$ は、4階時間発展系SG-05のHamiltonianとは異なる。
 
 ### 厳密族・局所発展・LC持ち上げ
 
@@ -300,17 +301,17 @@ E(t_0)\mathcal D^4&\subset\mathcal D^{12},\qquad CE=0.
 \end{aligned}
 $$
 
-各有限word $`D_{i_1}\cdots D_{i_m}`$ は指数関数の重み付き微分の有限和なので、Dの定義によりその結果はL²に入る。閉多様体上のframe微分normとSobolev normの同値性から第1行を得る。重み付きnormでcompact-support cutoff近似を取れば、弱微分の交換も正当化される。SG-03の分母は零から離れ、再構成係数とその各微分は高々指数増大なのでEはDを保つ。CE=0と元のtensor成分への位相復元・共役orbitの加算により、実初期データはSL-01の対象となる。
+各有限word $`D_{i_1}\cdots D_{i_m}`$ は指数関数の重み付き微分の有限和なので、 $`\mathcal D`$ の定義によりその結果はL²に入る。閉多様体上のframe微分normとSobolev normの同値性から第1行を得る。重み付きnormでcompact-support cutoff近似を取れば、弱微分の交換も正当化される。SG-03の分母は零から離れ、再構成係数とその各微分は高々指数増大なのでEは $`\mathcal D`$ を保つ。CE=0と元のtensor成分への位相復元・共役orbitの加算により、実初期データはSL-01の対象となる。
 
-SH-03の有限Hermite和は多項式とGaussianからなりDに属するため、その実数直線全体の連続初期profileも含む。有限窓の離散軌道を厳密解と認定する結果ではない。複数orbitの和には、共役を処理した再構成成分について
+SH-03の有限Hermite和は多項式とGaussianからなり $`\mathcal D`$ に属するため、その実数直線全体の連続初期profileも含む。有限窓の離散軌道を厳密解と認定する結果ではない。複数orbitの和には、共役を処理した再構成成分について
 
 式(SL-07)。
 
 $$
-\sum_{[q]}\left(\|h_{[q]}\|_{H^s(\Sigma)}^2
-+\|p_{[q]}\|_{H^{s-1}(\Sigma)}^2\right)<\infty.
+\sum_{[q]}\left(\lVert h_{[q]}\rVert_{H^s(\Sigma)}^2
++\lVert p_{[q]}\rVert_{H^{s-1}(\Sigma)}^2\right)<\infty.
 $$
 
-を要する。異なるorbitの直交性とframe微分によるorbit保存から全体がXsで収束し、Pの連続性により全拘束を満たす。各orbitが個別に滑らかであることや、還元係数の重みなし二乗和だけからSL-07は従わない。任意のL²還元データ、SG-05の閉作用素実現・well-posedness・数値収束、全時間安定性、単一sector内の非線形閉包は本結果に含めない。
+を要する。異なるorbitの直交性とframe微分によるorbit保存から全体が $`\mathcal X_s`$ で収束し、Pの連続性により全拘束を満たす。各orbitが個別に滑らかであることや、還元係数の重みなし二乗和だけからSL-07は従わない。任意のL²還元データ、SG-05の閉作用素実現・well-posedness・数値収束、全時間安定性、単一sector内の非線形閉包は本結果に含めない。
 
 [論文の入口](README_ja.md) / [参考文献](REFERENCES.md)
